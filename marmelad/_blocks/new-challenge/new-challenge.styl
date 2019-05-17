@@ -1,0 +1,409 @@
+.b-challenge
+	position relative
+	
+	&__close 
+		position absolute
+		right -10px
+		top -5px
+		display block
+		width 50px
+		height 50px
+		background  url(../images/close.png) 50% 50% no-repeat
+	
+	&__inner 
+		padding-bottom 40px
+		
+		& + & 
+			padding-top 30px
+			border-top: 1px solid #E1E4E6;
+			
+	input,
+	textarea
+		max-width: 497px;
+	
+	&__item 
+		display: flex 
+		align-items center 
+		padding-bottom 30px
+		
+		&--large-indent
+			padding-bottom 40px
+
+		&--top 
+			align-items flex-start
+			
+			.b-challenge__item-title
+				padding-top 10px
+		
+		&-title 
+			width 260px
+			color: #2F353B; 
+			font-size: 18px;
+			line-height: 21px;
+			
+			&--bold 
+				font-size 15px
+				font-weight: 500
+		
+		&-content 
+			flex 1
+		
+		&--region
+			
+			.b-main-checkbox
+				margin-top 40px
+	
+	.b-main-radios
+		display: flex 
+		flex-wrap wrap 
+		margin-left 0
+		align-items center 
+		
+		&__item
+			margin 5px 50px 5px 26px
+	
+	&__region
+		max-width 497px
+		position relative
+		z-index 4
+		
+		input 
+			text-transform capitalize
+		
+		&-list 
+			position absolute
+			left 0
+			right 0
+			top 100%
+			border-radius 5px 
+			box-shadow 0 0 20px 0 rgba(162, 174, 183, 0.3)
+			z-index 1
+			background-color #fff
+			padding 0
+			margin 4px 0 0
+			list-style none
+			max-height 400px
+			overflow-x hidden
+			overflow-y auto
+			opacity 0
+			visibility hidden
+			transition .3s linear all 
+			
+			&.js-opened 
+				opacity 1
+				visibility visible
+			
+			li 
+				padding: 8px 6px 9px 10px
+				line-height 1.2
+				color #2F353B
+				font-size 16px
+				display: flex 
+				cursor pointer
+				
+				&:after 
+					content attr(data-region)
+					flex 1 
+					opacity .7
+				
+				span
+					display block
+					width 40%
+				
+				&:hover, &.active
+					background-color #F6F8FA
+					
+
+	&__group
+		padding: 30px 40px 40px 30px
+		max-width: 789px
+		border-radius: 3px
+		background-color: #FAF7DC
+		display: flex 
+		justify-content space-between
+		position relative
+		
+		& + & 
+			margin-top 30px
+		
+		input,
+		textarea
+			background-color #fff
+		
+		&-list 
+			position relative
+			width 53%
+			
+			textarea 
+				min-height 300px
+		
+		&-add-text 
+			width 43%
+			display: flex 
+			flex-direction column 
+			justify-content space-between
+		
+		&-item
+			
+			&-title 
+				color: #2F353B
+				font-weight: 500
+				font-size: 15px
+				line-height: 25px
+				padding-bottom 10px
+				display: flex 
+				flex-wrap wrap 
+				align-items center
+			
+			.b-main-radios
+				padding-bottom 14px
+			
+			&--pages 
+				padding-top 20px
+				display none
+				
+		&-add
+			text-align right
+			line-height 1
+			max-width: 789px
+			
+			a 
+				display inline-block
+				color: #2F353B
+				font-weight: 500
+				font-size: 15px
+				line-height: 1
+				padding: 10px 30px
+				text-decoration none  !important
+				
+				span
+					border-bottom 1px dashed #2F353B
+
+				&:hover span
+					border-bottom-color transparent
+		
+		&-text 
+			color: #A2AEB7
+			font-weight: 500
+			font-size: 13px
+			line-height: 20px
+			padding-top 8px
+		
+		&-footer 
+			padding-left 30px
+		
+		&-delete 
+			display: inline-block
+			position absolute
+			right 30px
+			top 15px
+			font-size 0
+			line-height 0
+			padding 10px
+			opacity 0
+			visibility hidden
+			
+			&.js-show
+				opacity 1
+				visibility visible
+		
+
+	.b-main-button &__batch-upload
+		display inline-block  !important
+		padding 10px 20px !important
+	
+	&__text-add 
+		display none
+		
+		&-button
+			display block
+			background-color #fff 
+			border-radius: 3px;
+			border: 1px solid #E1E4E6;
+			color: #2E97DF;
+			padding: 10px 0px 9px;
+			text-align center
+			text-decoration none !important
+		
+	
+	input.js-text-add
+		display block
+		
+	
+	&__sum 
+		padding-top 12px
+		max-width 360px
+		font-size: 15px;
+		margin-left: 3px;
+		color: #2F353B;
+		
+		&-item 
+			padding-bottom 20px
+			display: flex 
+			justify-content space-between 
+			
+			&--all
+				margin-top: 10px;
+				padding: 22px 0 0;
+				border-top 1px solid #E1E4E6
+				font-weight: 500
+				font-size: 18px;
+				color: #2F353B;
+				
+		&-amount 
+			padding-top 6px
+			padding-left 3px
+			
+			span 
+				font-weight: 500
+				
+	
+	&__footer 
+		display: flex 
+		flex-wrap wrap 
+		padding-top 30px
+		
+		a, button
+			padding: 10px 30px !important
+			margin-right 10px
+
+
+.b-challenge-popup
+	position fixed
+	left 0
+	top 0
+	right 0
+	bottom 0
+	background-color: rgba(0,0,0,.8)
+	z-index 100 
+	overflow-x hidden
+	overflow-y auto
+	text-align center
+	padding 20px
+	opacity 0
+	visibility hidden
+	transition .3s linear all 
+	transform scale(.9)
+	
+	&.js-opened 
+		opacity 1
+		visibility visible
+		transform scale(1)
+	
+	&:before
+		content ''
+		display inline-block
+		vertical-align middle
+		height 100%
+
+	&__form-wrapper 
+		display: inline-block 
+		vertical-align middle
+		width 790px
+		padding 30px
+		background-color #fff
+		border-radius 4px 
+		box-shadow 0 0 8px rgba(0,0,0,.3)
+		text-align: left
+		position relative
+		
+	&__form
+		display none    
+	
+	&__title
+		font-size 30px
+		line-height 1.2
+		color #2f353b
+		margin-bottom 20px
+	
+	&__close 
+		position absolute
+		right 20px
+		top 20px
+		display block
+		font-size 0
+		line-height 0
+		width 40px
+		height 40px
+		z-index 10
+		
+		&:before, &:after 
+			content ''
+			display block
+			position absolute
+			left 50%
+			top 50%
+			margin: -15px 0 0 -1px
+			height 30px
+			width 2px
+			background-color #333
+			border-radius 100px 
+			
+
+		&:before 
+			transform rotate(45deg)
+		
+		&:after 
+			transform rotate(-45deg)    
+	
+	&__item 
+		padding-bottom 30px
+		
+		&-title 
+			padding-bottom 8px
+			font-size 18px
+		
+		&-note 
+			padding-bottom 8px
+			color: #a2aeb7;
+			font-size: 14px;
+			line-height: 1.4;
+	
+	&__footer 
+		display: flex 
+		justify-content flex-end 
+		
+		a, button 
+			padding 10px 15px !important
+
+		
+	&__cancel 
+		width 140px
+	
+	&__save 
+		width 220px
+		margin-left 20px
+
+	input,
+	textarea
+		max-width none
+	
+	textarea
+		line-height 1.8
+	
+	&--calculator
+		
+		.b-challenge-popup__item-title
+			color #2F353B
+	
+
+/* b-his */
+/*========================*/
+.b-his
+	line-height 1
+	
+	a 
+		vertical-align text-bottom
+	
+	&__title 
+		font-size 15px
+	
+	&__delete 
+		margin-left 8px
+		font-size 0
+		line-height 0
+		
+		img 
+			width 10px
+			min-width 10px
+			margin 3px

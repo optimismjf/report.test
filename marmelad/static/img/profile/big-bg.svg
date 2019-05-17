@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="682px" viewBox="0 0 1440 682" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="48.6664057%" cy="94.9061642%" fx="48.6664057%" fy="94.9061642%" r="77.5519812%" gradientTransform="translate(0.486664,0.949062),scale(0.456250,1.000000),rotate(90.000000),scale(1.000000,2.324296),translate(-0.486664,-0.949062)" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#E2342A" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="96.8969228%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index">
+            <g id="bg" transform="translate(-82.000000, 0.000000)">
+                <rect id="Rectangle" fill="#E03632" x="82" y="0" width="1440" height="657"></rect>
+                <rect id="Rectangle" fill="url(#radialGradient-1)" x="82" y="0" width="1440" height="657"></rect>
+                <path d="M0,339.910426 C0,339.910426 49.1063181,229.252893 353.04366,325.9069 C656.981001,422.560908 842.83149,517.128356 1059.0991,409.866939 C1275.3667,302.605523 1236.51633,169.646241 1517.42827,149.36994 C1798.34022,129.093638 1608.21731,552.010578 1608.21731,552.010578 L651.002794,651.663471 L27.7654488,561.251683 L0,339.910426 Z" id="Path-4" fill="#D20601" opacity="0.400000006" style="mix-blend-mode: multiply;"></path>
+                <path d="M121,559.986128 C121,559.986128 694.668179,159.843963 1363.49157,208.026592 C2032.31495,256.209221 1550.49642,572.803983 1550.49642,572.803983 L443.376697,645.97205 L121,559.986128 Z" id="Path-3" fill="#E52929" opacity="0.5" style="mix-blend-mode: multiply;"></path>
+                <path d="M82,490.72424 C82,490.72424 301.157013,621.892948 594.991711,621.892948 C888.826409,621.892948 1364.51953,488.657834 1522.4868,437.037663 C1680.45406,385.417492 1533.47347,681.770491 1522.4868,681.770491 C1511.50013,681.770491 82.1812216,681.770491 82.1812216,681.770491" id="Path-2" fill="#FFFFFF"></path>
+                <rect id="Rectangle-Copy-3" fill="url(#linearGradient-2)" opacity="0.699999988" style="mix-blend-mode: soft-light;" transform="translate(802.000000, 312.000000) scale(-1, -1) translate(-802.000000, -312.000000) " x="82" y="1" width="1440" height="622"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

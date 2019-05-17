@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="ru">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="cleartype" content="on">
+
+        <meta name="theme-color" content="#3E50B4">
+
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+        <meta name="format-detection" content="telephone=no">
+        
+          <meta name="viewport" content="width=1440, user-scalable=no">
+        
+
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <meta name="MobileOptimized" content="320">
+        <meta name="HandheldFriendly" content="True">
+
+
+        <title>Калькулятор вхождений</title>
+
+
+          <meta name="keywords" content="">
+          <meta name="description" content="">
+          <!-- cache-->
+          <meta http-equiv="Cache-Control" content="public">
+          <meta http-equiv="Cache-Control" content="max-age=34700">
+          <link rel="shortcut icon" href="./img/favicon/favicon.ico" type="image/x-icon">
+          <link rel="apple-touch-icon" href="./img/favicon/favicon.ico">
+          <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/favicon.ico">
+          <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/favicon.ico">
+
+          <!-- user css-->
+          <link rel="stylesheet" href="css/plugins.min.css">
+
+          <link property="stylesheet" href="./css/template_styles.css" rel="stylesheet">
+          <link property="stylesheet" href="./css/template_styles_tablet.css" rel="stylesheet" media="(min-width: 768px)">
+          <link property="stylesheet" href="./css/template_styles_desktop.css" rel="stylesheet" media="(min-width: 1025px)">
+
+          <link rel="stylesheet" href="css/style.css">
+
+
+    </head>
+
+    <body class="app app--inquiry-calculator app--inner  nomobile">
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="main-svg-sprite" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 6 9" id="arrow_button" xmlns="http://www.w3.org/2000/svg"><path d="M4.75 8.286a.27.27 0 0 0 .18-.078l.39-.39a.27.27 0 0 0 .078-.18.27.27 0 0 0-.078-.18l-3.07-3.07 3.07-3.07a.27.27 0 0 0 .078-.18.254.254 0 0 0-.078-.18l-.39-.39a.27.27 0 0 0-.18-.079.27.27 0 0 0-.18.078L.93 4.208a.27.27 0 0 0-.078.18.27.27 0 0 0 .078.18l3.64 3.64a.27.27 0 0 0 .18.078z"></path></symbol><symbol viewBox="0 0 20 20" id="chevron-down" xmlns="http://www.w3.org/2000/svg"><path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83a.697.697 0 0 1-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969s.709-.268.979 0L10 13.25l7.418-7.141z"></path></symbol><symbol viewBox="0 0 20 20" id="chevron-left" xmlns="http://www.w3.org/2000/svg"><path d="M13.891 17.418c.268.272.268.709 0 .979s-.701.271-.969 0l-7.83-7.908a.697.697 0 0 1 0-.979l7.83-7.908c.268-.27.701-.27.969 0s.268.709 0 .979L6.75 10l7.141 7.418z"></path></symbol><symbol viewBox="0 0 20 20" id="chevron-right" xmlns="http://www.w3.org/2000/svg"><path d="M13.25 10L6.109 2.58a.697.697 0 0 1 0-.979.68.68 0 0 1 .969 0l7.83 7.908a.697.697 0 0 1 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0s-.268-.707 0-.979L13.25 10z"></path></symbol><symbol viewBox="0 0 20 20" id="chevron-up" xmlns="http://www.w3.org/2000/svg"><path d="M2.582 13.891c-.272.268-.709.268-.979 0s-.271-.701 0-.969l7.908-7.83a.697.697 0 0 1 .979 0l7.908 7.83c.27.268.27.701 0 .969s-.709.268-.978 0L10 6.75l-7.418 7.141z"></path></symbol><symbol viewBox="0 0 24 24" id="close" xmlns="http://www.w3.org/2000/svg"><path d="M18.984 6.422L13.406 12l5.578 5.578-1.406 1.406L12 13.406l-5.578 5.578-1.406-1.406L10.594 12 5.016 6.422l1.406-1.406L12 10.594l5.578-5.578z"></path></symbol><symbol viewBox="-467 269 24 24" id="favorite" xmlns="http://www.w3.org/2000/svg"><path d="M-455 290.4l-1.5-1.3c-5.1-4.7-8.5-7.8-8.5-11.5 0-3.1 2.4-5.5 5.5-5.5 1.7 0 3.4.8 4.5 2.1 1.1-1.3 2.8-2.1 4.5-2.1 3.1 0 5.5 2.4 5.5 5.5 0 3.8-3.4 6.9-8.5 11.5l-1.5 1.3z"></path></symbol><symbol viewBox="-467 269 24 24" id="favorite_border" xmlns="http://www.w3.org/2000/svg"><path d="M-450.5 272c-1.7 0-3.4.8-4.5 2.1-1.1-1.3-2.8-2.1-4.5-2.1-3.1 0-5.5 2.4-5.5 5.5 0 3.8 3.4 6.9 8.5 11.5l1.5 1.3 1.5-1.3c5.1-4.7 8.5-7.8 8.5-11.5 0-3.1-2.4-5.5-5.5-5.5zm-4.4 15.5l-.1.1-.1-.1c-4.8-4.3-7.9-7.2-7.9-10 0-2 1.5-3.5 3.5-3.5 1.5 0 3 1 3.6 2.4h1.9c.5-1.4 2-2.4 3.6-2.4 2 0 3.5 1.5 3.5 3.5-.1 2.9-3.2 5.7-8 10z"></path></symbol><symbol viewBox="0 0 16 16" id="icon1" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M14.329 0H1.703C.768 0 0 .767 0 1.7v12.567C0 15.233.768 16 1.703 16h12.592c.936 0 1.704-.767 1.704-1.7V1.7c.033-.933-.735-1.7-1.67-1.7zM4.576 12.567c0 .3-.267.566-.568.566H3.44a.585.585 0 0 1-.568-.566V9.433c0-.3.268-.566.568-.566h.568c.3 0 .568.266.568.566v3.134zm2.872 0c0 .3-.267.566-.567.566h-.568a.585.585 0 0 1-.568-.566V5.133c0-.3.267-.566.568-.566h.568c.3 0 .567.266.567.566v7.434zm2.873 0c0 .3-.267.566-.568.566h-.568a.585.585 0 0 1-.568-.566V3.433c0-.3.268-.566.568-.566h.568c.3 0 .568.266.568.566v9.134zm2.839 0c0 .3-.267.566-.568.566h-.568a.585.585 0 0 1-.567-.566V7.133c0-.3.267-.566.567-.566h.568c.3 0 .568.266.568.566v5.434z"></path></symbol><symbol viewBox="0 0 15 15" id="icon2" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M14.6 3.138c-.061-.184-.277-.215-.43-.092l-2.493 2.492a.483.483 0 0 1-.677 0L9.246 3.785a.483.483 0 0 1 0-.677L11.77.615c.123-.123.062-.338-.092-.43A4.902 4.902 0 0 0 10.354 0c-2.616 0-4.708 2.246-4.4 4.923.061.43.154.8.308 1.17L.508 11.814c-.677.677-.677 1.785 0 2.431.338.339.8.523 1.23.523.431 0 .893-.184 1.231-.523l5.723-5.723c.37.154.77.246 1.17.308 2.677.307 4.923-1.785 4.923-4.4 0-.462-.062-.893-.185-1.293z"></path></symbol><symbol viewBox="0 0 15 15" id="icon3" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M7.359 4.028l1.445 3.357H5.779l1.31-3.357h.27zm7.426-2.685v12.084c0 .738-.605 1.342-1.344 1.342H1.344C.604 14.77 0 14.165 0 13.427V1.343C0 .604.605 0 1.344 0h12.097c.739 0 1.344.604 1.344 1.343zm-1.848 10.976l-4.033-9.97c-.1-.2-.268-.335-.504-.335H6.015a.505.505 0 0 0-.47.336l-3.697 9.969c-.067.201.067.436.302.436h1.378c.202 0 .403-.168.47-.369l1.076-2.987h4.502l1.176 2.987c.068.201.27.37.47.37h1.379c.235 0 .403-.236.335-.437z"></path></symbol><symbol viewBox="0 0 15 15" id="icon4" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M7.765 12.195l-.647-.093s-.431-.092-.647-.185a.404.404 0 0 0-.37.093l-.153.154c-.894.895-2.341.988-3.265.185-1.048-.895-1.079-2.5-.124-3.457L4.9 6.547c.308-.31.678-.494 1.048-.618a2.418 2.418 0 0 1 1.478.093c.277.123.555.278.801.524.123.124.216.247.308.402.123.216.4.247.554.061l.863-.864c.123-.123.123-.308.03-.463a3.301 3.301 0 0 0-.43-.494 3.441 3.441 0 0 0-.74-.586 3.929 3.929 0 0 0-1.447-.556 4.396 4.396 0 0 0-2.865.432 4.27 4.27 0 0 0-.955.71L1.296 7.442c-1.632 1.636-1.755 4.29-.184 5.957 1.632 1.79 4.404 1.821 6.098.123l.77-.771c.216-.155.062-.525-.215-.556zm5.667-11.081C11.738-.46 9.09-.336 7.488 1.299l-.709.68c-.215.215-.061.586.216.617.431.03.862.123 1.294.247.123.03.277 0 .37-.093l.153-.154c.893-.896 2.341-.988 3.265-.186 1.047.896 1.078 2.5.123 3.457L9.86 8.213c-.309.309-.678.494-1.048.618a2.418 2.418 0 0 1-1.478-.093 2.563 2.563 0 0 1-.801-.525 1.98 1.98 0 0 1-.308-.401c-.123-.216-.4-.247-.555-.062l-.862.865c-.123.123-.123.308-.03.463.122.185.276.34.43.493.216.216.493.433.74.587.43.278.924.463 1.416.556.955.185 2.003.03 2.865-.433.339-.185.678-.432.955-.71l2.34-2.345c1.726-1.698 1.664-4.476-.091-6.112z"></path></symbol><symbol viewBox="0 0 16 16" id="icon5" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M16 .91V2c0 .29-.233.545-.5.545h-9c-.267 0-.5-.254-.5-.545V.91c0-.292.233-.546.5-.546h9c.267 0 .5.254.5.545zM6.5 6.181h6c.267 0 .5-.255.5-.546v-1.09c0-.291-.233-.546-.5-.546h-6c-.267 0-.5.255-.5.545v1.091c0 .291.233.546.5.546zm9 3.273h-9c-.267 0-.5.254-.5.545v1.09c0 .292.233.546.5.546h9c.267 0 .5-.254.5-.545V10c0-.29-.233-.545-.5-.545zm-3 3.636h-6c-.267 0-.5.255-.5.545v1.091c0 .291.233.546.5.546h6c.267 0 .5-.255.5-.546v-1.09c0-.292-.233-.546-.5-.546zM.5 1.455h.833V6c0 .29.234.545.5.545h.334c.266 0 .5-.254.5-.545V.727C2.667.327 2.367 0 2 0H.5C.233 0 0 .255 0 .545V.91c0 .291.233.546.5.546zm2.833 7.272H.5c-.267 0-.5.255-.5.546v.363c0 .291.233.546.5.546h2.167v1.454h-2c-.367 0-.667.328-.667.728v2.909c0 .4.3.727.667.727H3.5c.267 0 .5-.255.5-.545v-.364c0-.291-.233-.545-.5-.545H1.333V13.09h2c.367 0 .667-.327.667-.727v-2.91c0-.4-.3-.727-.667-.727z"></path></symbol><symbol viewBox="0 0 16 16" id="icon6" xmlns="http://www.w3.org/2000/svg"><path d="M10.963 0a5.033 5.033 0 0 0-5.037 5.037c0 .593.118 1.185.296 1.778L0 13.037V16h2.963v-1.778h1.778v-1.778h1.778l2.666-2.666a5.587 5.587 0 0 0 1.778.296A5.033 5.033 0 0 0 16 5.037 5.033 5.033 0 0 0 10.963 0zm1.481 5.333a1.746 1.746 0 0 1-1.777-1.777c0-1.008.77-1.778 1.777-1.778 1.008 0 1.778.77 1.778 1.778 0 1.007-.77 1.777-1.778 1.777z"></path></symbol><symbol viewBox="0 0 24 24" id="menu" xmlns="http://www.w3.org/2000/svg"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></symbol><symbol viewBox="0 0 24 24" id="more_horiz" xmlns="http://www.w3.org/2000/svg"><path d="M12 9.984c1.078 0 2.016.938 2.016 2.016s-.938 2.016-2.016 2.016S9.984 13.078 9.984 12 10.922 9.984 12 9.984zm6 0c1.078 0 2.016.938 2.016 2.016s-.938 2.016-2.016 2.016-2.016-.938-2.016-2.016.938-2.016 2.016-2.016zm-12 0c1.078 0 2.016.938 2.016 2.016S7.078 14.016 6 14.016 3.984 13.078 3.984 12 4.922 9.984 6 9.984z"></path></symbol><symbol viewBox="0 0 24 24" id="more_vert" xmlns="http://www.w3.org/2000/svg"><path d="M12 15.984c1.078 0 2.016.938 2.016 2.016s-.938 2.016-2.016 2.016S9.984 19.078 9.984 18s.938-2.016 2.016-2.016zm0-6c1.078 0 2.016.938 2.016 2.016s-.938 2.016-2.016 2.016S9.984 13.078 9.984 12 10.922 9.984 12 9.984zm0-1.968c-1.078 0-2.016-.938-2.016-2.016S10.922 3.984 12 3.984s2.016.938 2.016 2.016S13.078 8.016 12 8.016z"></path></symbol><symbol viewBox="0 0 12 12" id="romb" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h12v12H0z"></path></symbol><symbol viewBox="0 0 32 32" id="search" xmlns="http://www.w3.org/2000/svg"><path d="M19.427 20.427a8.5 8.5 0 1 1 2-2l5.585 5.585c.55.55.546 1.431 0 1.976l-.023.023a1.398 1.398 0 0 1-1.976 0l-5.585-5.585zM14.5 20a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13z"></path></symbol><symbol viewBox="0 0 32 32" id="spinner" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm0 8a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm9.546 17.546c-2.55 2.55-5.94 3.954-9.546 3.954s-6.996-1.404-9.546-3.954S2.5 19.606 2.5 16c0-3.606 1.404-6.996 3.954-9.546l2.121 2.121c-4.094 4.094-4.094 10.755 0 14.849 1.983 1.983 4.62 3.075 7.425 3.075s5.441-1.092 7.425-3.075c4.094-4.094 4.094-10.755 0-14.849l2.121-2.121c2.55 2.55 3.954 5.94 3.954 9.546s-1.404 6.996-3.954 9.546z"></path></symbol></svg>
+
+
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        
+        
+	<header class="front-page b-profile-page is-auth" id="header">
+		<div class="container">
+			<div class="b-top-wrapper">
+				<div class="b-top-wrapper__item">
+					<div class="hamburger hamburger--slider" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+					<a class="logo" href="/">
+						<span class="logo__company-name">СайтАудитор</span>
+						<img src="images/logo.svg" alt="">
+					</a>
+				</div>
+				<nav class="header__menu" id="navigation">
+					<ul class="header__menu-list">
+						<li>
+							<a href="#" class="sub-menu-link active">
+								<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/cases.svg');"></span>
+								СайтАудитор
+							</a>
+						</li>
+						<li>
+							<div class="sub-menu-title">Текстрактор</div>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">
+										<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/note_copy.svg');"></span>
+										Текстовый анализатор
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/knowledge_base.svg');"></span>
+										Тематические слова
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/table.svg');"></span>
+										Калькулятор вхождений
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="sub-menu-title">Информация</div>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">
+										<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/moneybag.svg');"></span>
+										Цены
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/questions_and_answers.svg');"></span>
+										Помощь
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="b-top-wrapper__item">
+					<nav class="header__menu">
+						<ul class="header__menu-list">
+							<li class="visible-desktop active"><a href="javascript:;">Мои проекты</a></li>
+							<li class="visible-desktop"><a href="javascript:;">Цены</a></li>
+							<li class="visible-desktop"><a href="javascript:;">Помощь</a></li>
+						</ul>
+					</nav>
+					<div class="b-user">
+						<a href="#" class="b-user__item">
+							<div class="b-user__link"><span>Оптимальный</span></div>
+							<div class="b-user__text"> <span class="users-tariff-balance">15 500</span> / 10 дней</div>
+						</a>
+						
+						<div class="b-user__item">
+							<div class="b-user__name-wrapper">
+								<div class="b-user__name-ico" tabindex="0">
+									<img src="./img/profile/user.svg" alt="">
+								</div>
+								<div class="b-user__name">Константин</div>
+								<div class="b-user__helper-wrapper">
+									<div class="b-user__helper">
+										<div class="b-user__helper-container">
+											<ul class="b-user__helper-list">
+												<li><a href="">Профиль</a></li>
+												<li><a href="">Баланс и статистика</a></li>
+												<li><a href="">Партнерка</a></li>
+												<li><a href="">Выйти</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="header__menu" id="navigation-profile">
+				<div class="user-information visible-mobile">
+					<div class="hamburger hamburger--slider is-active close-profile" tabindex="0">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+					<a class="user-card" href="#">
+						<figure class="user-card__photo">
+							<img src="images/demo.jpg" alt="">
+						</figure>
+						<span class="user-card__name">Panarin-Anatoly</span>
+					</a>
+					<ul class="user-balance">
+						<li>
+							<span class="user-balance__title">Оптимальный</span>
+							<span class="user-balance__cash">1 250 Р / 10 дней</span>
+						</li>
+						
+						<li class="user-balance__sign-out">
+							<a class="sign-out" href="#"><span>Выйти</span></a>
+						</li>
+					</ul>
+				</div>
+				<ul class="header__menu-list">
+					<li class="visible-desktop"><a href="javascript:;">О сервисе</a></li>
+					<li class="visible-desktop"><a href="javascript:;">Цены</a></li>
+					<li class="visible-desktop"><a href="javascript:;">Отзывы</a></li>
+					<li class="visible-desktop"><a href="javascript:;">Инструменты</a></li>
+					<li class="visible-mobile">
+						<span class="menu-title">Профиль</span>
+						<ul class="sub-menu">
+							<li><a href="#">Настройки</a></li>
+							<li><a href="#">Баланс и статистика</a></li>
+							<li><a href="#">Партнерские начисления</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+<!-- /header-->
+
+        
+            <!--<section class="b-profile-tabs">
+                <div class="b-profile-tabs__item active"><a href="">СайтАудитор</a></div>
+                <div class="b-profile-tabs__item has-child">
+                    <a href="">Текстратор</a>
+                    <ul class="b-profile-tabs__helper">
+                        <li><a href="">Текстовый анализатор</a></li>
+                        <li><a href="">Подбор тематических слов</a></li>
+                        <li><a href="">Калькулятор вхождений</a></li>
+                    </ul>
+                </div>
+            </section>-->
+        
+        
+            <div class="b-page-topic b-page-topic--checking">
+                
+                <h1 class="b-page-topic__text">
+                  Калькулятор вхождений
+                  
+                </h1>
+                  
+                
+                  <div class="b-page-topic__more">
+                    <div class="b-projects-table__options js-slide-toggle" data-slidetoggle=".b-projects-table__options-body" data-slidecontext=".b-page-topic__more" data-slideeffect="fade" data-thisclass=".b-projects-table__options">
+                      <div class="b-projects-table__option"></div>
+                      <div class="b-projects-table__option"></div>
+                      <div class="b-projects-table__option"></div>
+                    </div>
+                    <div class="b-projects-table__options-body">
+                      <ul>
+                        <li><a href="#"><span>Перезапустить</span></a></li>
+                        <li><a href="#"><span>Скачать ТЗ</span></a></li>
+                        <li class="b-delete-btn js-magnific"><a href="#b-delete-account2">Удалить проект</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                
+            </div>
+        
+
+        
+	
+	<div class="b-site-content">
+	<div class="b-site-content__inner b-site-content__inner--challenge-check">
+		<div class="b-challane-check b-challane-check--calculator">
+			
+			<div class="b-challane-check__content b-challane-check__content--left">
+				<div class="b-challane-check__editor">
+					<div class="b-challane-check__editor-header">
+						<div class="b-challane-check__editor-title">Текст</div><!-- <= editor-title -->
+						<a href="#" class="b-challane-check__editor-clear">Очистить</a><!-- <= editor-clear -->
+						<div class="b-challane-check__download">
+							<a href="#" class="b-challane-check__download-link">Скачать</a>
+							<div class="b-challane-check__download-content">
+								<div class="b-main-checkbox">
+									<input type="checkbox" name="block" checked="checked" id="download1">
+									<label for="download1">Задание и ключевики</label>
+								</div>
+								<div class="b-main-checkbox">
+									<input type="checkbox" name="block" checked="checked" id="download2">
+									<label for="download2">Подсветка вхождений</label>
+								</div>
+								<div class="b-main-checkbox">
+									<input type="checkbox" name="block" checked="checked" id="download3">
+									<label for="download3">HTML-разметка</label>
+								</div>
+							</div><!-- <= download-content -->
+						</div><!-- <= download -->
+					</div><!-- <= editor-header -->
+					<textarea name="editor" cols="30" rows="10"></textarea>
+					<div class="b-challane-check__line">
+						<div class="b-challane-check__line-item">Объем: 2500  сим.</div><!-- <= line-item -->
+						<div class="b-challane-check__line-item">Слов: 86</div><!-- <= line-item -->
+						<div class="b-challane-check__line-item">Уник. лемм: 73</div><!-- <= line-item -->
+						<div class="b-challane-check__line-item">Предложений: 8</div><!-- <= line-item -->
+						<div class="b-challane-check__line-item">Индекс Ганнинга: 10</div><!-- <= line-item -->
+						<div class="b-challane-check__line-item">Индекс Флеша: 29</div><!-- <= line-item -->
+					</div><!-- <= line -->
+				</div><!-- <= editor -->
+			</div><!-- <= content -->
+			<div class="b-challane-check__content b-challane-check__content--right">
+				<div class="b-challane-check__info">
+													
+					<div class="b-challane-check__info-title">
+						<div class="b-challane-check__info-title-text">Ключевые слова</div><!-- <= info-title-text -->
+						<a href="#calculator-popup" class="b-challane-check__reports-add">Добавить</a><!-- <= reports-add -->
+					</div><!-- <= info-title -->
+				</div><!-- <= info -->
+			</div><!-- <= content -->
+		</div><!-- /b-challane-check -->
+	</div><!-- <= inner -->
+</div>
+<div class="b-challenge-popup b-challenge-popup--calculator">
+	<div class="b-challenge-popup__form-wrapper">
+		<a href="#" class="b-challenge-popup__close"></a><!-- <= close -->
+		<form action="#" id="calculator-popup" class="b-challenge-popup__form b-challenge-popup__form--calculator no-validate">
+			<div class="b-challenge-popup__title">Добавление ключевых слов</div><!-- <= title -->
+			<div class="b-challenge-popup__item">
+				<div class="b-challenge-popup__item-title">Ключевые слова</div><!-- <= item-title -->
+				<div class="b-challenge-popup__item-content">
+					<textarea name="group-list" cols="30" rows="7"></textarea>
+				</div><!-- <= item-content -->
+			</div><!-- <= item -->
+			<div class="b-challenge-popup__item">
+				<div class="b-challenge-popup__item-title">Тематические слова</div><!-- <= item-title -->
+				<div class="b-challenge-popup__item-content">
+					<textarea name="thematic-words" cols="30" rows="7"></textarea>
+				</div><!-- <= item-content -->
+			</div><!-- <= item -->
+			<div class="b-challenge-popup__footer">
+				<div class="b-challenge-popup__cancel b-main-button b-main-button_white">
+					<a href="#">Отмена</a>
+				</div><!-- <= cancel -->
+				<div class="b-challenge-popup__save b-main-button">
+					<button>Сохранить</button>
+				</div><!-- <= save -->
+			</div><!-- <= footer -->
+		</form><!-- <= form -->
+	</div><!-- <= form-wrapper -->
+</div><!-- /b-add-text -->
+
+	
+
+
+        
+        
+  <footer class="both" id="footer">
+  <nav class="row__menu">
+    <div class="container">
+      <ul class="social">
+        <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+        <li><a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+      </ul><a class="mobile__menu-btn" id="open__fm" href="javascript:;">Меню</a>
+      <ul class="footer__menu">
+        <li><a href="#">Клиентам</a>
+          <ul>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Инструменты</a></li>
+            <li><a href="#">Технологии</a></li>
+            <li><a href="#">Семантика</a></li>
+          </ul>
+        </li>
+        <li><a href="#">О компании</a>
+          <ul>
+            <li><a href="#">Новости проекта</a></li>
+            <li><a href="#">Карта сайта</a></li>
+            <li><a href="#">Обратная связь</a></li>
+            <li><a href="#">Партнёрам</a></li>
+            <li><a href="#">Наши партнёры</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Технологии</a>
+          <ul>
+            <li><a href="#">Новости проекта</a></li>
+            <li><a href="#">Карта сайта</a></li>
+            <li><a href="#">Наши партнёры</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="row__copyright both">
+    <div class="container">
+      <p class="left">© СайтРепорт 2011—2017, seo-анализ и аудит сайта онлайн</p>
+      <ul class="payments">
+        <li><a href="#"><img src="images/icon/visa.svg" alt=""></a></li>
+        <li><a href="#"><img src="images/icon/master.svg" alt=""></a></li>
+        <li><a href="#"><img src="images/icon/yandex.svg" alt=""></a></li>
+      </ul>
+      <p class="right"><a class="created-by" href="#">Дизайн — И.Г.<span>Сделано с оптимизмом!</span></a></p>
+    </div>
+  </div>
+  </footer>
+
+
+
+        <div class="hidden">
+<!-- 	<div id="add-text">
+		<textarea name="add-text" id="text-added" cols="30" rows="10">
+			<p>sdsdsdsd</p>
+		</textarea>
+	</div> -->
+	<div id="sign-in">
+		<form action="#" method="get" accept-charset="utf-8" novalidate="">
+			<h6 class="sign-in__title">Войти</h6>
+			<div class="form-item">
+				<input class="email" type="email" name="email" value="" placeholder="Email">
+			</div>
+			<div class="form-item">
+				<input class="pass" type="password" name="password" value="" placeholder="Пароль">
+			</div>
+			<div class="form-item form-item--button">
+				<button type="submit" name="send">Войти</button>
+			</div>
+			<div class="form-item">
+				<a class="btn btn-registration js-popup" href="#registration">Регистрация</a>
+			</div>
+			<span>Забыли пароль? <a class="js-popup" href="#restore-password">Восстановить</a></span>
+		</form>
+	</div>
+	<div id="registration">
+		<form action="#" method="get" accept-charset="utf-8" novalidate="">
+			<h6 class="sign-in__title">Регистрация</h6>
+			<div class="form-item">
+				<input id="fname" type="text" name="name" value="" placeholder="Имя">
+			</div>
+			<div class="form-item">
+				<input class="email" type="email" name="email" value="" placeholder="Email">
+			</div>
+			<div class="form-item">
+				<input class="pass" type="password" name="password" value="" placeholder="Пароль">
+			</div>
+			<div class="form-item b-main-checkbox">
+                <input type="checkbox" name="consent" id="b-consent1">
+                <label for="b-consent1">Согласен с <a href="#">правилами сервиса</a></label>
+			</div><!-- <= form-item -->
+			<div class="form-item b-main-checkbox">
+                <input type="checkbox" name="consent" id="b-consent2">
+                <label for="b-consent2">Согласен на обработку персональных данных в соответствии с <a href="#">правилами</a></label>
+			</div><!-- <= form-item -->
+			<div class="form-item form-item--button">
+				<button type="submit" name="send">Зарегистрироваться</button>
+			</div>
+			<a class="btn btn-registration js-popup" href="#sign-in">Войти</a>
+			
+		</form>
+	</div>
+	<div id="restore-password">
+		<form action="#" method="get" accept-charset="utf-8" novalidate="">
+			<h6 class="sign-in__title">Восстановить пароль</h6>
+			<div class="form-item">
+				<input class="email" type="email" name="email" value="" placeholder="Email">
+			</div>
+			<div class="form-item form-item--button">
+				<button type="submit" name="send">Отправить</button>
+			</div>
+			<a class="btn btn-registration js-popup" href="#sign-in">Войти</a>
+		</form>
+	</div>
+  <div class="b-delete-account" id="b-delete-account2">
+	<div class="b-delete-account__container">
+	  <div class="b-delete-account__topic">Удалить проект?</div>
+	  <div class="b-delete-account__aftertopic">Мы не сможем восстановить проект после удаления.</div>
+	  <div class="b-delete-account__btns">
+		<div class="b-delete-account__delete-btn b-main-button b-main-button_white"><a href="#">Удалить</a></div>
+		<div class="b-delete-account__cansel-btn b-main-button">
+		  <button>Отмена</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div class="promo-ok" id="promo-ok">
+	<div class="promo-ok__topic">Промокод успешно активирован</div>
+	<div class="promo-ok__text"></div>
+	<div class="promo-ok__btn b-main-button b-main-button_white"><a href="#">Хорошо</a></div>
+  </div>
+  <div class="b-delete-account" id="b-delete-account">
+	<div class="b-delete-account__container">
+	  <div class="b-delete-account__topic">Удалить аккаунт?</div>
+	  <div class="b-delete-account__aftertopic">Мы уже не сможем  восстановить ваш аккаунт после удаления</div>
+	  <div class="b-delete-account__btns">
+		<div class="b-delete-account__delete-btn b-main-button b-main-button_white"><a href="#">Удалить</a></div>
+		<div class="b-delete-account__cansel-btn b-main-button">
+		  <button>Отмена</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+
+        <script src="js/vendors/jquery-3.2.1.min.js"></script>
+        <script src="js/plugins.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/calculator-popup.js"></script>
+
+    </body><!-- b:w-page -->
+</html>

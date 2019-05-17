@@ -1,0 +1,555 @@
+{% if header == 'main' %}
+	<header class="front-page index-page" id="header">
+		<div class="container">
+			<div class="hamburger-nav hamburger hamburger--slider" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+				<div class="hamburger-box">
+					<div class="hamburger-inner"></div>
+				</div>
+			</div>
+			<a class="logo" href="/">
+				<img src="images/logo.svg" alt="">
+				<span class="logo__company-name">СайтРепорт</span>
+			</a>
+			<a class="btn btn-input js-popup" href="#sign-in">Войти</a>
+			<nav class="header__menu" id="navigation">
+				<ul class="header__menu-list">
+					<li class="visible-desktop"><a href="javascript:;">Цены</a></li>
+					<li class="visible-desktop dropdown-list">
+						<a href="javascript:;">Инструменты</a>
+						<div class="dropdown-block">
+							<div class="dropdown-group">
+								<div class="dropdown-items">
+									<a href="#" class="dropdown-item full-width">
+										<span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/auditor.svg')"></span>
+										<span class="dropdown-item__title">СайтАудитор</span>
+										<span class="dropdown-item__description">
+												Сервис, предоставляющий пользователю инструмент диагностики внутренних
+												и внешних факторов с целью оптимизации сайта. Выбор профессионалов SEO.
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="dropdown-group">
+								<h4 class="dropdown-group__title">Текстрактор</h4>
+								<div class="dropdown-items">
+									<a href="#" class="dropdown-item">
+										<span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/text_analys.svg')"></span>
+										<span class="dropdown-item__title">Текстовый анализатор</span>
+										<span class="dropdown-item__description">
+                                        Диагностики внутренних и внешних факторов с целью оптимизации сайта.
+                                    </span>
+									</a>
+									<a href="#" class="dropdown-item">
+										<span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/knowledge_base.svg')"></span>
+										<span class="dropdown-item__title">Тематические слова</span>
+										<span class="dropdown-item__description">
+                                        Диагностики внутренних и внешних факторов с целью оптимизации сайта.
+                                    </span>
+									</a>
+									<a href="#" class="dropdown-item">
+										<span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/table.svg')"></span>
+										<span class="dropdown-item__title">Калькулятор вхождений</span>
+										<span class="dropdown-item__description">
+                                        Диагностики внутренних и внешних факторов с целью оптимизации сайта.
+                                    </span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="visible-desktop"><a href="javascript:;">Отзывы</a></li>
+					<li class="visible-desktop"><a href="javascript:;">О проекте</a></li>
+					<li class="visible-desktop"><a href="javascript:;">Помощь</a></li>
+					<li class="visible-desktop"><a href="javascript:;">Партнерская <br> программа</a></li>
+					<li class="visible-mobile">
+						<a href="#" class="sub-menu-link">
+							<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/cases.svg');"></span>
+							СайтАудитор
+						</a>
+					</li>
+					<li class="visible-mobile">
+						<div class="sub-menu-title">Текстрактор</div>
+						<ul class="sub-menu">
+							<li>
+								<a href="#">
+									<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/note_copy.svg');"></span>
+									Текстовый анализатор
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/knowledge_base.svg');"></span>
+									Тематические слова
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/table.svg');"></span>
+									Калькулятор вхождений
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="visible-mobile">
+						<div class="sub-menu-title">Информация</div>
+						<ul class="sub-menu">
+							<li>
+								<a href="#">
+									<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/moneybag.svg');"></span>
+									Цены
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/chat.svg');"></span>
+									Отзывы
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/info_alt.svg');"></span>
+									О проекте
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/questions_and_answers.svg');"></span>
+									Помощь
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/groups.svg');"></span>
+									Партнерская программа
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div class="header_content both">
+				<h1>Автоматический анализ сайта</h1>
+				<p>328 800 сайтов уже проверено в нашей системе</p>
+				<form class="site-analysis" action="#" method="get" accept-charset="utf-8">
+					<div class="form-item form-item--input">
+						<input class="input__url" type="text" name="url" value="" placeholder="Адрес вашего сайта">
+					</div>
+					<div class="form-item form-item--button">
+						<button class="input__send" type="submit">Запустить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</header>
+{% elseif  header == 'authorization'  %}
+<header class="front-page b-profile-page regular-page auth-page" id="header">
+	<div class="container">
+		<div class="hamburger hamburger--slider" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+			<div class="hamburger-box">
+				<div class="hamburger-inner"></div>
+			</div>
+		</div>
+		<a class="logo" href="/">
+			<img src="images/logo.svg" alt="">
+			<span class="logo__company-name">СайтРепорт</span>
+		</a>
+		<nav class="header__menu" id="navigation">
+			<ul class="header__menu-list">
+				<li class="visible-desktop active"><a href="javascript:;">Цены</a></li>
+				<li class="visible-desktop dropdown-list">
+					<a href="javascript:;">Инструменты</a>
+					<div class="dropdown-block">
+						<div class="dropdown-group">
+							<div class="dropdown-items">
+								<a href="#" class="dropdown-item full-width">
+									<span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/auditor.svg')"></span>
+									<span class="dropdown-item__title">СайтАудитор</span>
+									<span class="dropdown-item__description">
+                                        Сервис, предоставляющий пользователю инструмент диагностики внутренних
+                                        и внешних факторов с целью оптимизации сайта. Выбор профессионалов SEO.
+                                    </span>
+								</a>
+							</div>
+						</div>
+						<div class="dropdown-group">
+							<h4 class="dropdown-group__title">Текстрактор</h4>
+							<div class="dropdown-items">
+								<a href="#" class="dropdown-item">
+									<span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/text_analys.svg')"></span>
+									<span class="dropdown-item__title">Текстовый анализатор</span>
+									<span class="dropdown-item__description">
+                                        Диагностики внутренних и внешних факторов с целью оптимизации сайта.
+                                    </span>
+								</a>
+								<a href="#" class="dropdown-item">
+									<span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/knowledge_base.svg')"></span>
+									<span class="dropdown-item__title">Тематические слова</span>
+									<span class="dropdown-item__description">
+                                        Диагностики внутренних и внешних факторов с целью оптимизации сайта.
+                                    </span>
+								</a>
+								<a href="#" class="dropdown-item">
+									<span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/table.svg')"></span>
+									<span class="dropdown-item__title">Калькулятор вхождений</span>
+									<span class="dropdown-item__description">
+                                        Диагностики внутренних и внешних факторов с целью оптимизации сайта.
+                                    </span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="visible-desktop"><a href="javascript:;">Отзывы</a></li>
+				<li class="visible-desktop"><a href="javascript:;">О проекте</a></li>
+				<li class="visible-desktop"><a href="javascript:;">Помощь</a></li>
+				<li class="visible-desktop"><a href="javascript:;">Партнерская <br> программа</a></li>
+				<li class="visible-mobile">
+					<a href="#" class="sub-menu-link">
+						<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/cases.svg');"></span>
+						СайтАудитор
+					</a>
+				</li>
+				<li class="visible-mobile">
+					<div class="sub-menu-title">Текстрактор</div>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/note_copy.svg');"></span>
+								Текстовый анализатор
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/knowledge_base.svg');"></span>
+								Тематические слова
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/table.svg');"></span>
+								Калькулятор вхождений
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="visible-mobile">
+					<div class="sub-menu-title">Информация</div>
+					<ul class="sub-menu">
+						<li>
+							<a href="#">
+								<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/moneybag.svg');"></span>
+								Цены
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/chat.svg');"></span>
+								Отзывы
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/info_alt.svg');"></span>
+								О проекте
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/questions_and_answers.svg');"></span>
+								Помощь
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/groups.svg');"></span>
+								Партнерская программа
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+{% elseif  header == 'no_auth'  %}
+<header class="front-page b-profile-page regular-page" id="header">
+    <div class="container">
+        <div class="hamburger hamburger--slider hamburger-nav" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
+        <a class="logo" href="/">
+            <img src="images/logo.svg" alt="">
+            <span class="logo__company-name">СайтРепорт</span>
+        </a>
+        <a class="btn btn-input js-popup" href="#sign-in">Войти</a>
+        <nav class="header__menu" id="navigation">
+            <ul class="header__menu-list">
+                <li class="visible-desktop active"><a href="javascript:;">Цены</a></li>
+                <li class="visible-desktop dropdown-list">
+                    <a href="javascript:;">Инструменты</a>
+                    <div class="dropdown-block">
+                        <div class="dropdown-group">
+                            <div class="dropdown-items">
+                                <a href="#" class="dropdown-item full-width">
+                                    <span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/auditor.svg')"></span>
+                                    <span class="dropdown-item__title">СайтАудитор</span>
+                                    <span class="dropdown-item__description">
+                                        Сервис, предоставляющий пользователю инструмент диагностики внутренних
+                                        и внешних факторов с целью оптимизации сайта. Выбор профессионалов SEO.
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown-group">
+                            <h4 class="dropdown-group__title">Текстрактор</h4>
+                            <div class="dropdown-items">
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/text_analys.svg')"></span>
+                                    <span class="dropdown-item__title">Текстовый анализатор</span>
+                                    <span class="dropdown-item__description">
+                                        Диагностики внутренних и внешних факторов с целью оптимизации сайта.
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/knowledge_base.svg')"></span>
+                                    <span class="dropdown-item__title">Тематические слова</span>
+                                    <span class="dropdown-item__description">
+                                        Диагностики внутренних и внешних факторов с целью оптимизации сайта.
+                                    </span>
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="dropdown-item__icon" style="background-image: url('/images/icon/tools/table.svg')"></span>
+                                    <span class="dropdown-item__title">Калькулятор вхождений</span>
+                                    <span class="dropdown-item__description">
+                                        Диагностики внутренних и внешних факторов с целью оптимизации сайта.
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="visible-desktop"><a href="javascript:;">Отзывы</a></li>
+                <li class="visible-desktop"><a href="javascript:;">О проекте</a></li>
+                <li class="visible-desktop"><a href="javascript:;">Помощь</a></li>
+                <li class="visible-desktop"><a href="javascript:;">Партнерская <br> программа</a></li>
+								<li class="visible-mobile">
+									<a href="#" class="sub-menu-link">
+										<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/cases.svg');"></span>
+										СайтАудитор
+									</a>
+								</li>
+								<li class="visible-mobile">
+									<div class="sub-menu-title">Текстрактор</div>
+									<ul class="sub-menu">
+										<li>
+											<a href="#">
+												<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/note_copy.svg');"></span>
+												Текстовый анализатор
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/knowledge_base.svg');"></span>
+												Тематические слова
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/table.svg');"></span>
+												Калькулятор вхождений
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="visible-mobile">
+								<div class="sub-menu-title">Информация</div>
+								<ul class="sub-menu">
+									<li>
+										<a href="#">
+											<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/moneybag.svg');"></span>
+											Цены
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/chat.svg');"></span>
+											Отзывы
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/info_alt.svg');"></span>
+											О проекте
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/questions_and_answers.svg');"></span>
+											Помощь
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/groups.svg');"></span>
+											Партнерская программа
+										</a>
+									</li>
+								</ul>
+							</li>
+            </ul>
+        </nav>
+    </div>
+</header>
+{% else %}
+	<header class="front-page b-profile-page is-auth" id="header">
+		<div class="container">
+			<div class="b-top-wrapper">
+				<div class="b-top-wrapper__item">
+					<div class="hamburger hamburger--slider" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+					<a class="logo" href="/">
+						<span class="logo__company-name">СайтАудитор</span>
+						<img src="images/logo.svg" alt="">
+					</a>
+				</div>
+				<nav class="header__menu" id="navigation">
+					<ul class="header__menu-list">
+						<li>
+							<a href="#" class="sub-menu-link active">
+								<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/cases.svg');"></span>
+								СайтАудитор
+							</a>
+						</li>
+						<li>
+							<div class="sub-menu-title">Текстрактор</div>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">
+										<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/note_copy.svg');"></span>
+										Текстовый анализатор
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/knowledge_base.svg');"></span>
+										Тематические слова
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/table.svg');"></span>
+										Калькулятор вхождений
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div class="sub-menu-title">Информация</div>
+							<ul class="sub-menu">
+								<li>
+									<a href="#">
+										<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/moneybag.svg');"></span>
+										Цены
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="sub-menu-link__icon" style="background-image: url('/images/icon/utility/questions_and_answers.svg');"></span>
+										Помощь
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="b-top-wrapper__item">
+					<nav class="header__menu">
+						<ul class="header__menu-list">
+							<li class="visible-desktop active"><a href="javascript:;">Мои проекты</a></li>
+							<li class="visible-desktop"><a href="javascript:;">Цены</a></li>
+							<li class="visible-desktop"><a href="javascript:;">Помощь</a></li>
+						</ul>
+					</nav>
+					<div class="b-user">
+						<a href="#" class="b-user__item">
+							<div class="b-user__link"><span>Оптимальный</span></div>
+							<div class="b-user__text"> <span class="users-tariff-balance">15 500</span> / 10 дней</div>
+						</a>
+						{#<div class="b-user__item">
+							<div class="b-user__link"><a href="#">Баланс</a></div>
+							<div class="b-user__text">9 185 ₽</div>
+						</div>#}
+						<div class="b-user__item">
+							<div class="b-user__name-wrapper">
+								<div class="b-user__name-ico" tabindex="0">
+									<img src="./img/profile/user.svg" alt="">
+								</div>
+								<div class="b-user__name">Константин</div>
+								<div class="b-user__helper-wrapper">
+									<div class="b-user__helper">
+										<div class="b-user__helper-container">
+											<ul class="b-user__helper-list">
+												<li><a href="">Профиль</a></li>
+												<li><a href="">Баланс и статистика</a></li>
+												<li><a href="">Партнерка</a></li>
+												<li><a href="">Выйти</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="header__menu" id="navigation-profile">
+				<div class="user-information visible-mobile">
+					<div class="hamburger hamburger--slider is-active close-profile" tabindex="0">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
+					</div>
+					<a class="user-card" href="#">
+						<figure class="user-card__photo">
+							<img src="images/demo.jpg" alt="">
+						</figure>
+						<span class="user-card__name">Panarin-Anatoly</span>
+					</a>
+					<ul class="user-balance">
+						<li>
+							<span class="user-balance__title">Оптимальный</span>
+							<span class="user-balance__cash">1 250 Р / 10 дней</span>
+						</li>
+						{#<li>
+							<span class="user-balance__title">Баланс</span>
+							<span class="user-balance__cash">9 185 Р</span>
+						</li>#}
+						<li class="user-balance__sign-out">
+							<a class="sign-out" href="#"><span>Выйти</span></a>
+						</li>
+					</ul>
+				</div>
+				<ul class="header__menu-list">
+					<li class="visible-desktop"><a href="javascript:;">О сервисе</a></li>
+					<li class="visible-desktop"><a href="javascript:;">Цены</a></li>
+					<li class="visible-desktop"><a href="javascript:;">Отзывы</a></li>
+					<li class="visible-desktop"><a href="javascript:;">Инструменты</a></li>
+					<li class="visible-mobile">
+						<span class="menu-title">Профиль</span>
+						<ul class="sub-menu">
+							<li><a href="#">Настройки</a></li>
+							<li><a href="#">Баланс и статистика</a></li>
+							<li><a href="#">Партнерские начисления</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+{% endif %}
+<!-- /header-->

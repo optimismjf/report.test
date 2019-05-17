@@ -1,0 +1,24 @@
+= yaml =
+pageTitle: Создание новой задачи
+bodyMods: new-challenge inner
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: 'container'
+asideLeft: false
+asideRight: false
+noViewport: true
+layout: !!map
+    header    : inner
+    footer    : inner
+    profile   : true
+    topic     : true
+    tekstrator: true
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+
+	{% include 'new-challenge.html' %}
+
+{% endblock %}

@@ -1,0 +1,190 @@
+.b-reports-table
+    
+    & + & 
+        padding-top 10px
+    
+    &--task 
+        padding-right 45px
+        
+        .b-reports-table__item
+            padding: 2px 4px 2px 10px
+            border-radius 3px
+            &:hover 
+                
+                .b-reports-table__item-delete, 
+                .b-reports-table__item-add
+                    opacity 1
+                    visibility visible
+        
+        .b-reports-table__more
+            margin-left 10px
+    
+    &__hidden 
+        display none
+        
+        .b-reports-table__item-delete
+            display none
+        
+        .b-reports-table__item-add
+            display inline-block
+        
+    &__item 
+        display: flex 
+        padding-bottom 3px
+        position relative
+        transition .3s linear all 
+        
+        
+        &:not(.b-reports-table__item--title)
+            &:hover 
+                background-color #FAF7DC
+            
+            &:before 
+                content ''
+                display inline-block
+                height 30px
+                width 0
+                font-size 0
+                line-height 0
+        
+        &--title 
+            .b-reports-table__name,
+            .b-reports-table__stat
+                font-weight: 500
+        
+        
+        &-delete, &-add
+            position absolute
+            left 100%
+            top 0
+            padding: 2px 0 2px 10px
+            font-size 13px
+            text-decoration none
+            opacity 0
+            visibility hidden
+            transition .3s linear all 
+            
+        &-delete 
+            color: #E03632;
+            display inline-block
+        
+        &-add 
+            display none
+            
+
+        &-mark 
+            width 15px
+            min-width 15px
+            height 15px
+            border-radius 3px 
+            margin-right 10px   
+        
+        input 
+            height 30px
+        
+        &--use 
+            display block
+            margin-top 16px
+            
+            .b-reports-table__name
+                font-weight: 500
+            
+    &__note 
+        display inline-block
+        padding 5px 10px
+        margin-bottom 5px
+        border-radius 3px
+        color: #2F353B;
+        text-decoration none
+        cursor default
+        
+        &:hover 
+            text-decoration none
+        
+        &.js-active 
+            background-color: #C5EFC8;
+        
+        &-wrapper 
+            display flex 
+            flex-direction column 
+            align-items flex-start
+            padding-top 10px
+
+    &__add 
+        display flex 
+        justify-content space-between 
+        align-items center      
+        
+        &-item 
+            display inline-block
+            margin 5px 0
+            
+    &__name 
+        flex 1 
+        display: flex 
+        align-items center 
+        
+        input 
+            max-width 271px
+    
+    &__stat 
+        display: flex 
+        align-items center 
+        width 70px
+        margin: 0 20px 0 10px 
+        text-align right
+        justify-content flex-end
+        color: #A2AEB7;
+    
+    &__mark 
+        width 30px
+        margin-left 3px
+        text-align center
+        color: #A2AEB7;
+        
+        div 
+            display: flex 
+            align-items center 
+            justify-content center 
+            font-size: 13px;
+            color: #2F353B;
+            height 30px
+            border-radius: 3px;
+            background-color: #F6F8FA;
+            // box-shadow inset 0 0 0 1px rgba(0,0,0,.2)
+            
+        .red 
+            background-color #F4C3C7
+        
+        .green 
+            background-color #C4F3C6
+        
+        input 
+            color: #2F353B;
+            border none 
+            padding: 0 5px 
+            text-align center
+        
+        &--no 
+            div 
+                color: #A2AEB7;
+    
+    &__more 
+        font-size 13px
+        line-height 22px
+        text-decoration none
+        color: #a2aeb7;
+        display inline-block
+        margin 5px 0 5px 25px
+        border-bottom 1px dashed #a2aeb7
+        
+        &:hover 
+            text-decoration none
+
+        &:before 
+            content attr(data-open)
+        
+        &.js-opened
+            
+            &:before 
+                content attr(data-close)

@@ -1,0 +1,504 @@
+<div block="b-site-content">
+	<div elem="inner">
+		<form action="#" novalidate block="b-challenge">
+			<a elem="close" href="#"></a><!-- <= close -->
+			<div elem="inner">
+				<div elem="item" mods="large-indent">
+					<div elem="item-title" mods="bold">
+						Название задачи
+					</div><!-- <= item-title -->
+					<div elem="item-content">
+						<input type="text" name="challenge-name">
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+				<div elem="item">
+					<div elem="item-title">
+						Настройки анализа
+					</div><!-- <= item-title -->
+					<div elem="item-content"></div><!-- <= item-content -->
+				</div><!-- <= item -->
+				<div elem="item" mods="picking">
+					<div elem="item-title" mods="bold">
+						Подбор конкурентов
+						{% include 'help.html' %}
+					</div><!-- <= item-title -->
+					<div elem="item-content">
+						<div class="b-main-radios">
+							<div class="b-main-radios__item">
+								<input type="radio" name="picking" id="radio1" checked="checked">
+								<label for="radio1">Автоматический</label>
+							</div>
+							<div class="b-main-radios__item">
+								<input type="radio" name="picking" id="radio2">
+								<label for="radio2">Ручной</label>
+							</div>
+						</div>
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+				<div elem="item" class="js-auto-fit">
+					<div elem="item-title" mods="bold">
+						Регион
+						{% include 'help.html' %}
+					</div><!-- <= item-title -->
+					<div elem="item-content">
+						<div elem="region">
+							<input type="text" data-region="213" value="Москва">
+							<ul elem="region-list">
+							{#
+								<li data-region="Республика Хакасия" data-index="1095"><span>Абакан</span></li>
+								<li data-region="Мангистауская область" data-index="29575"><span>Актау</span></li>
+								<li data-region="Актюбинская область" data-index="20273"><span>Актобе</span></li>
+								<li data-region="Алматинская область" data-index="162"><span>Алматы</span></li>
+								<li data-region="Луганская область" data-index="24885"><span>Алчевск</span></li>
+								<li data-region="Республика Татарстан" data-index="11121"><span>Альметьевск</span></li>
+								<li data-region="Чукотский автономный округ" data-index="11458"><span>Анадырь</span></li>
+								<li data-region="Краснодарский край" data-index="1107"><span>Анапа</span></li>
+								<li data-region="Иркутская область" data-index="11256"><span>Ангарск</span></li>
+								<li data-region="Мурманская область" data-index="10894"><span>Апатиты</span></li>
+								<li data-region="Краснодарский край" data-index="10987"><span>Армавир</span></li>
+								<li data-region="Архангельская область" data-index="20"><span>Архангельск</span></li>
+								<li data-region="Акмолинская область" data-index="163"><span>Астана</span></li>
+								<li data-region="Астраханская область" data-index="37"><span>Астрахань</span></li>
+								<li data-region="Атырауская область" data-index="10291"><span>Атырау</span></li>
+								<li data-region="Красноярский край" data-index="11302"><span>Ачинск</span></li>
+								<li data-region="Саратовская область" data-index="11143"><span>Балаково</span></li>
+								<li data-region="Москва и Московская область" data-index="10716"><span>Балашиха</span></li>
+								<li data-region="Алтайский край" data-index="197"><span>Барнаул</span></li>
+								<li data-region="Киевская область" data-index="10369"><span>Белая Церковь</span></li>
+								<li data-region="Белгородская область" data-index="4"><span>Белгород</span></li>
+								<li data-region="Амурская область" data-index="11374"><span>Белогорск</span></li>
+								<li data-region="Пермский край" data-index="20237"><span>Березники</span></li>
+								<li data-region="Алтайский край" data-index="975"><span>Бийск</span></li>
+								<li data-region="Еврейская автономная область" data-index="11393"><span>Биробиджан</span></li>
+								<li data-region="Амурская область" data-index="77"><span>Благовещенск</span></li>
+								<li data-region="Иркутская область" data-index="976"><span>Братск</span></li>
+								<li data-region="Брестская область" data-index="153"><span>Брест</span></li>
+								<li data-region="Брянская область" data-index="191"><span>Брянск</span></li>
+								<li data-region="Республика Татарстан" data-index="11122"><span>Бугульма</span></li>
+								<li data-region="Псковская область" data-index="10928"><span>Великие Луки</span></li>
+								<li data-region="Новгородская область" data-index="24"><span>Великий Новгород</span></li>
+								<li data-region="Винницкая область" data-index="963"><span>Винница</span></li>
+								<li data-region="Витебская область" data-index="154"><span>Витебск</span></li>
+								<li data-region="Приморский край" data-index="75"><span>Владивосток</span></li>
+								<li data-region="Республика Северная Осетия-Алания" data-index="33"><span>Владикавказ</span></li>
+								<li data-region="Владимирская область" data-index="192"><span>Владимир</span></li>
+								<li data-region="Волгоградская область" data-index="38"><span>Волгоград</span></li>
+								<li data-region="Ростовская область" data-index="11036"><span>Волгодонск</span></li>
+								<li data-region="Волгоградская область" data-index="10951"><span>Волжский</span></li>
+								<li data-region="Вологодская область" data-index="21"><span>Вологда</span></li>
+								<li data-region="Санкт-Петербург и Ленинградская область" data-index="10864"><span>Волхов</span></li>
+								<li data-region="Республика Коми" data-index="10940"><span>Воркута</span></li>
+								<li data-region="Воронежская область" data-index="193"><span>Воронеж</span></li>
+								<li data-region="Москва и Московская область" data-index="10722"><span>Воскресенск</span></li>
+								<li data-region="Санкт-Петербург и Ленинградская область" data-index="10865"><span>Всеволожск</span></li>
+								<li data-region="Санкт-Петербург и Ленинградская область" data-index="969"><span>Выборг</span></li>
+								<li data-region="Нижегородская область" data-index="20040"><span>Выкса</span></li>
+								<li data-region="Санкт-Петербург и Ленинградская область" data-index="10867"><span>Гатчина</span></li>
+								<li data-region="Удмуртская Республика" data-index="11150"><span>Глазов</span></li>
+								<li data-region="Гомельская область" data-index="155"><span>Гомель</span></li>
+								<li data-region="Донецкая область" data-index="21774"><span>Горловка</span></li>
+								<li data-region="Республика Алтай" data-index="11319"><span>Горно-Алтайск</span></li>
+								<li data-region="Гродненская область" data-index="10274"><span>Гродно</span></li>
+								<li data-region="Чеченская Республика" data-index="1106"><span>Грозный</span></li>
+								<li data-region="Нижегородская область" data-index="972"><span>Дзержинск</span></li>
+								<li data-region="Ульяновская область" data-index="11155"><span>Димитровград</span></li>
+								<li data-region="Москва и Московская область" data-index="10723"><span>Дмитров</span></li>
+								<li data-region="Днепропетровская область" data-index="21775"><span>Днепродзержинск</span></li>
+								<li data-region="Днепропетровская область" data-index="141"><span>Днепропетровск</span></li>
+								<li data-region="Москва и Московская область" data-index="214"><span>Долгопрудный</span></li>
+								<li data-region="Донецкая область" data-index="142"><span>Донецк</span></li>
+								<li data-region="Москва и Московская область" data-index="215"><span>Дубна</span></li>
+								<li data-region="Крым" data-index="11463"><span>Евпатория</span></li>
+								<li data-region="Краснодарский край" data-index="10993"><span>Ейск</span></li>
+								<li data-region="Свердловская область" data-index="54"><span>Екатеринбург</span></li>
+								<li data-region="Ставропольский край" data-index="11057"><span>Ессентуки</span></li>
+								<li data-region="Ставропольский край" data-index="11058"><span>Железноводск</span></li>
+								<li data-region="Красноярский край" data-index="20086"><span>Железногорск</span></li>
+								<li data-region="Курская область" data-index="10710"><span>Железногорск</span></li>
+								<li data-region="Москва и Московская область" data-index="21622"><span>Железнодорожный</span></li>
+								<li data-region="Самарская область" data-index="11132"><span>Жигулевск</span></li>
+								<li data-region="Житомирская область" data-index="10343"><span>Житомир</span></li>
+								<li data-region="Москва и Московская область" data-index="20571"><span>Жуковский</span></li>
+								<li data-region="Запорожская область" data-index="960"><span>Запорожье</span></li>
+								<li data-region="Ивановская область" data-index="5"><span>Иваново</span></li>
+								<li data-region="Ивано-Франковская область" data-index="10345"><span>Ивано-Франковск</span></li>
+								<li data-region="Москва и Московская область" data-index="21623"><span>Ивантеевка</span></li>
+								<li data-region="Удмуртская Республика" data-index="44"><span>Ижевск</span></li>
+								<li data-region="Иркутская область" data-index="63"><span>Иркутск</span></li>
+								<li data-region="Тюменская область" data-index="11173"><span>Ишим</span></li>
+								<li data-region="Республика Марий Эл" data-index="41"><span>Йошкар-Ола</span></li>
+								<li data-region="Республика Татарстан" data-index="43"><span>Казань</span></li>
+								<li data-region="Калининградская область" data-index="22"><span>Калининград</span></li>
+								<li data-region="Калужская область" data-index="6"><span>Калуга</span></li>
+								<li data-region="Свердловская область" data-index="11164"><span>Каменск-Уральский</span></li>
+								<li data-region="Ростовская область" data-index="11043"><span>Каменск-Шахтинский</span></li>
+								<li data-region="Волгоградская область" data-index="10959"><span>Камышин</span></li>
+								<li data-region="Карагандинская область" data-index="164"><span>Караганда</span></li>
+								<li data-region="Кемеровская область" data-index="64"><span>Кемерово</span></li>
+								<li data-region="Крым" data-index="11464"><span>Керчь</span></li>
+								<li data-region="Киевская область" data-index="143"><span>Киев</span></li>
+								<li data-region="Санкт-Петербург и Ленинградская область" data-index="10871"><span>Кириши</span></li>
+								<li data-region="Кировская область" data-index="46"><span>Киров</span></li>
+								<li data-region="Кировоградская область" data-index="20221"><span>Кировоград</span></li>
+								<li data-region="Ставропольский край" data-index="11062"><span>Кисловодск</span></li>
+								<li data-region="Москва и Московская область" data-index="37147"><span>Климовск</span></li>
+								<li data-region="Владимирская область" data-index="10664"><span>Ковров</span></li>
+								<li data-region="Акмолинская область" data-index="20809"><span>Кокшетау</span></li>
+								<li data-region="Москва и Московская область" data-index="10734"><span>Коломна</span></li>
+								<li data-region="Хабаровский край" data-index="11453"><span>Комсомольск-на-Амуре</span></li>
+								<li data-region="Республика Карелия" data-index="10934"><span>Кондопога</span></li>
+								<li data-region="Москва и Московская область" data-index="20728"><span>Королёв</span></li>
+								<li data-region="Костанайская область" data-index="10295"><span>Костанай</span></li>
+								<li data-region="Костромская область" data-index="7"><span>Кострома</span></li>
+								<li data-region="Донецкая область" data-index="20554"><span>Краматорск</span></li>
+								<li data-region="Москва и Московская область" data-index="10735"><span>Красногорск</span></li>
+								<li data-region="Краснодарский край" data-index="35"><span>Краснодар</span></li>
+								<li data-region="Красноярский край" data-index="62"><span>Красноярск</span></li>
+								<li data-region="Полтавская область" data-index="21609"><span>Кременчуг</span></li>
+								<li data-region="Днепропетровская область" data-index="10347"><span>Кривой Рог</span></li>
+								<li data-region="Нижегородская область" data-index="20044"><span>Кстово</span></li>
+								<li data-region="Курганская область" data-index="53"><span>Курган</span></li>
+								<li data-region="Курская область" data-index="8"><span>Курск</span></li>
+								<li data-region="Республика Тыва" data-index="11333"><span>Кызыл</span></li>
+								<li data-region="Кызылординская область" data-index="21050"><span>Кызылорда</span></li>
+								<li data-region="Липецкая область" data-index="9"><span>Липецк</span></li>
+								<li data-region="Луганская область" data-index="222"><span>Луганск</span></li>
+								<li data-region="Волынская область" data-index="20222"><span>Луцк</span></li>
+								<li data-region="Львовская область" data-index="144"><span>Львов</span></li>
+								<li data-region="Магаданская область" data-index="79"><span>Магадан</span></li>
+								<li data-region="Республика Ингушетия" data-index="20181"><span>Магас</span></li>
+								<li data-region="Челябинская область" data-index="235"><span>Магнитогорск</span></li>
+								<li data-region="Республика Адыгея" data-index="1093"><span>Майкоп</span></li>
+								<li data-region="Донецкая область" data-index="24876"><span>Макеевка</span></li>
+								<li data-region="Донецкая область" data-index="10366"><span>Мариуполь</span></li>
+								<li data-region="Республика Дагестан" data-index="28"><span>Махачкала</span></li>
+								<li data-region="Кемеровская область" data-index="11287"><span>Междуреченск</span></li>
+								<li data-region="Челябинская область" data-index="11212"><span>Миасс</span></li>
+								<li data-region="Ставропольский край" data-index="11063"><span>Минеральные Воды</span></li>
+								<li data-region="Минская область" data-index="157"><span>Минск</span></li>
+								<li data-region="Красноярский край" data-index="11310"><span>Минусинск</span></li>
+								<li data-region="Могилёвская область" data-index="158"><span>Могилёв</span></li>
+								<li data-region="Москва и Московская область" data-index="10739"><span>Можайск</span></li>
+								<li data-region="Москва и Московская область" data-index="213"><span>Москва</span></li>
+								<li data-region="Мурманская область" data-index="23"><span>Мурманск</span></li>
+								<li data-region="Владимирская область" data-index="10668"><span>Муром</span></li>
+								<li data-region="Республика Татарстан" data-index="236"><span>Набережные Челны</span></li>
+								<li data-region="Кабардино-Балкарская Республика" data-index="30"><span>Нальчик</span></li>
+								<li data-region="Ненецкий автономный округ" data-index="10902"><span>Нарьян-Мар</span></li>
+								<li data-region="Приморский край" data-index="974"><span>Находка</span></li>
+								<li data-region="Ставропольский край" data-index="11064"><span>Невинномысск</span></li>
+								<li data-region="Республика Башкортостан" data-index="11114"><span>Нефтекамск</span></li>
+								<li data-region="Ханты-Мансийский автономный округ" data-index="11184"><span>Нефтеюганск</span></li>
+								<li data-region="Ханты-Мансийский автономный округ" data-index="1091"><span>Нижневартовск</span></li>
+								<li data-region="Республика Татарстан" data-index="11127"><span>Нижнекамск</span></li>
+								<li data-region="Нижегородская область" data-index="47"><span>Нижний Новгород</span></li>
+								<li data-region="Свердловская область" data-index="11168"><span>Нижний Тагил</span></li>
+								<li data-region="Николаевская область" data-index="148"><span>Николаев</span></li>
+								<li data-region="Днепропетровская область" data-index="21773"><span>Никополь</span></li>
+								<li data-region="Кемеровская область" data-index="237"><span>Новокузнецк</span></li>
+								<li data-region="Тульская область" data-index="10830"><span>Новомосковск</span></li>
+								<li data-region="Краснодарский край" data-index="970"><span>Новороссийск</span></li>
+								<li data-region="Новосибирская область" data-index="65"><span>Новосибирск</span></li>
+								<li data-region="Чувашская Республика" data-index="37133"><span>Новочебоксарск</span></li>
+								<li data-region="Ростовская область" data-index="238"><span>Новочеркасск</span></li>
+								<li data-region="Ямало-Ненецкий автономный округ" data-index="11230"><span>Новый Уренгой</span></li>
+								<li data-region="Красноярский край" data-index="11311"><span>Норильск</span></li>
+								<li data-region="Ямало-Ненецкий автономный округ" data-index="11231"><span>Ноябрьск</span></li>
+								<li data-region="Калужская область" data-index="967"><span>Обнинск</span></li>
+								<li data-region="Одесская область" data-index="145"><span>Одесса</span></li>
+								<li data-region="Челябинская область" data-index="11214"><span>Озерск</span></li>
+								<li data-region="Республика Башкортостан" data-index="20235"><span>Октябрьский</span></li>
+								<li data-region="Омская область" data-index="66"><span>Омск</span></li>
+								<li data-region="Орловская область" data-index="10"><span>Орел</span></li>
+								<li data-region="Оренбургская область" data-index="48"><span>Оренбург</span></li>
+								<li data-region="Москва и Московская область" data-index="10745"><span>Орехово-Зуево</span></li>
+								<li data-region="Оренбургская область" data-index="11091"><span>Орск</span></li>
+								<li data-region="Днепропетровская область" data-index="28401"><span>Павлоград</span></li>
+								<li data-region="Павлодарская область" data-index="190"><span>Павлодар</span></li>
+								<li data-region="Пензенская область" data-index="49"><span>Пенза</span></li>
+								<li data-region="Свердловская область" data-index="11171"><span>Первоуральск</span></li>
+								<li data-region="Пермский край" data-index="50"><span>Пермь</span></li>
+								<li data-region="Республика Карелия" data-index="18"><span>Петрозаводск</span></li>
+								<li data-region="Северо-Казахстанская область" data-index="10298"><span>Петропавловск</span></li>
+								<li data-region="Камчатский край" data-index="78"><span>Петропавловск-Камчатский</span></li>
+								<li data-region="Москва и Московская область" data-index="10747"><span>Подольск</span></li>
+								<li data-region="Полтавская область" data-index="964"><span>Полтава</span></li>
+								<li data-region="Псковская область" data-index="25"><span>Псков</span></li>
+								<li data-region="Москва и Московская область" data-index="217"><span>Пущино</span></li>
+								<li data-region="Ставропольский край" data-index="11067"><span>Пятигорск</span></li>
+								<li data-region="Москва и Московская область" data-index="10750"><span>Раменское</span></li>
+								<li data-region="Ровенская область" data-index="10355"><span>Ровно</span></li>
+								<li data-region="Ростовская область" data-index="39"><span>Ростов-на-Дону</span></li>
+								<li data-region="Ярославская область" data-index="10839"><span>Рыбинск</span></li>
+								<li data-region="Рязанская область" data-index="11"><span>Рязань</span></li>
+								<li data-region="Республика Башкортостан" data-index="11115"><span>Салават</span></li>
+								<li data-region="Ямало-Ненецкий автономный округ" data-index="58"><span>Салехард</span></li>
+								<li data-region="Самарская область" data-index="51"><span>Самара</span></li>
+								<li data-region="Санкт-Петербург и Ленинградская область" data-index="2"><span>Санкт-Петербург</span></li>
+								<li data-region="Республика Мордовия" data-index="42"><span>Саранск</span></li>
+								<li data-region="Удмуртская Республика" data-index="11152"><span>Сарапул</span></li>
+								<li data-region="Саратовская область" data-index="194"><span>Саратов</span></li>
+								<li data-region="Нижегородская область" data-index="11083"><span>Саров</span></li>
+								<li data-region="Челябинская область" data-index="11217"><span>Сатка</span></li>
+								<li data-region="Крым" data-index="959"><span>Севастополь</span></li>
+								<li data-region="Архангельская область" data-index="10849"><span>Северодвинск</span></li>
+								<li data-region="Луганская область" data-index="24893"><span>Северодонецк</span></li>
+								<li data-region="Томская область" data-index="11351"><span>Северск</span></li>
+								<li data-region="Восточно-Казахстанская область" data-index="165"><span>Семей</span></li>
+								<li data-region="Москва и Московская область" data-index="10752"><span>Сергиев Посад</span></li>
+								<li data-region="Москва и Московская область" data-index="10754"><span>Серпухов</span></li>
+								<li data-region="Крым" data-index="146"><span>Симферополь</span></li>
+								<li data-region="Смоленская область" data-index="12"><span>Смоленск</span></li>
+								<li data-region="Республика Карелия" data-index="10937"><span>Сортавала</span></li>
+								<li data-region="Санкт-Петербург и Ленинградская область" data-index="10891"><span>Сосновый Бор</span></li>
+								<li data-region="Краснодарский край" data-index="239"><span>Сочи</span></li>
+								<li data-region="Ставропольский край" data-index="36"><span>Ставрополь</span></li>
+								<li data-region="Белгородская область" data-index="10649"><span>Старый Оскол</span></li>
+								<li data-region="Республика Башкортостан" data-index="11116"><span>Стерлитамак</span></li>
+								<li data-region="Сумская область" data-index="965"><span>Сумы</span></li>
+								<li data-region="Ханты-Мансийский автономный округ" data-index="973"><span>Сургут</span></li>
+								<li data-region="Самарская область" data-index="11139"><span>Сызрань</span></li>
+								<li data-region="Республика Коми" data-index="19"><span>Сыктывкар</span></li>
+								<li data-region="Ростовская область" data-index="971"><span>Таганрог</span></li>
+								<li data-region="Алматинская область" data-index="10303"><span>Талдыкорган</span></li>
+								<li data-region="Тамбовская область" data-index="13"><span>Тамбов</span></li>
+								<li data-region="Жамбылская область" data-index="21094"><span>Тараз</span></li>
+								<li data-region="Тверская область" data-index="14"><span>Тверь</span></li>
+								<li data-region="Тернопольская область" data-index="10357"><span>Тернополь</span></li>
+								<li data-region="Санкт-Петербург и Ленинградская область" data-index="10892"><span>Тихвин</span></li>
+								<li data-region="Тюменская область" data-index="11175"><span>Тобольск</span></li>
+								<li data-region="Самарская область" data-index="240"><span>Тольятти</span></li>
+								<li data-region="Томская область" data-index="67"><span>Томск</span></li>
+								<li data-region="Краснодарский край" data-index="1058"><span>Туапсе</span></li>
+								<li data-region="Тульская область" data-index="15"><span>Тула</span></li>
+								<li data-region="Ярославская область" data-index="21154"><span>Тутаев</span></li>
+								<li data-region="Амурская область" data-index="11391"><span>Тында</span></li>
+								<li data-region="Тюменская область" data-index="55"><span>Тюмень</span></li>
+								<li data-region="Закарпатская область" data-index="10358"><span>Ужгород</span></li>
+								<li data-region="Республика Бурятия" data-index="198"><span>Улан-Удэ</span></li>
+								<li data-region="Ульяновская область" data-index="195"><span>Ульяновск</span></li>
+								<li data-region="Западно-Казахстанская область" data-index="10305"><span>Уральск</span></li>
+								<li data-region="Республика Коми" data-index="10944"><span>Усинск</span></li>
+								<li data-region="Приморский край" data-index="11426"><span>Уссурийск</span></li>
+								<li data-region="Иркутская область" data-index="11273"><span>Усть-Илимск</span></li>
+								<li data-region="Восточно-Казахстанская область" data-index="10306"><span>Усть-Каменогорск</span></li>
+								<li data-region="Республика Башкортостан" data-index="172"><span>Уфа</span></li>
+								<li data-region="Республика Коми" data-index="10945"><span>Ухта</span></li>
+								<li data-region="Крым" data-index="11469"><span>Феодосия</span></li>
+								<li data-region="Москва и Московская область" data-index="21619"><span>Фрязино</span></li>
+								<li data-region="Хабаровский край" data-index="76"><span>Хабаровск</span></li>
+								<li data-region="Ханты-Мансийский автономный округ" data-index="57"><span>Ханты-Мансийск</span></li>
+								<li data-region="Харьковская область" data-index="147"><span>Харьков</span></li>
+								<li data-region="Херсонская область" data-index="962"><span>Херсон</span></li>
+								<li data-region="Хмельницкая область" data-index="961"><span>Хмельницкий</span></li>
+								<li data-region="Чувашская Республика" data-index="45"><span>Чебоксары</span></li>
+								<li data-region="Челябинская область" data-index="56"><span>Челябинск</span></li>
+								<li data-region="Вологодская область" data-index="968"><span>Череповец</span></li>
+								<li data-region="Черкасская область" data-index="10363"><span>Черкассы</span></li>
+								<li data-region="Карачаево-Черкесская Республика" data-index="1104"><span>Черкесск</span></li>
+								<li data-region="Черниговская область" data-index="966"><span>Чернигов</span></li>
+								<li data-region="Черновицкая область" data-index="10365"><span>Черновцы</span></li>
+								<li data-region="Москва и Московская область" data-index="219"><span>Черноголовка</span></li>
+								<li data-region="Забайкальский край" data-index="68"><span>Чита</span></li>
+								<li data-region="Ростовская область" data-index="11053"><span>Шахты</span></li>
+								<li data-region="Южно-Казахстанская область" data-index="221"><span>Шымкент</span></li>
+								<li data-region="Москва и Московская область" data-index="10765"><span>Щелково</span></li>
+								<li data-region="Республика Калмыкия" data-index="1094"><span>Элиста</span></li>
+								<li data-region="Саратовская область" data-index="11147"><span>Энгельс</span></li>
+								<li data-region="Москва и Московская область" data-index="21620"><span>Юбилейный</span></li>
+								<li data-region="Сахалинская область" data-index="80"><span>Южно-Сахалинск</span></li>
+								<li data-region="Республика Саха (Якутия)" data-index="74"><span>Якутск</span></li>
+								<li data-region="Крым" data-index="11470"><span>Ялта</span></li>
+								<li data-region="Ярославская область" data-index="16"><span>Ярославль</span></li>
+							#}
+							</ul><!-- <= region-list -->
+						</div><!-- <= region -->
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+				<div elem="item" class="js-auto-fit">
+					<div elem="item-title"></div><!-- <= item-title -->
+					<div elem="item-content">
+						<div class="b-main-checkbox">
+							<input type="checkbox" checked="checked" name="block1" id="b-challenge2">
+							<label for="b-challenge2">Ручное подтверждение конкурентов</label>
+							{% include 'help.html' %}
+						</div>
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+				<div elem="item">
+					<div elem="item-title"></div><!-- <= item-title -->
+					<div elem="item-content">
+						<div class="b-main-checkbox">
+							<input type="checkbox" checked="checked" name="block1" id="b-challenge1">
+							<label for="b-challenge1">Пропускать текст в noindex</label>
+							{% include 'help.html' %}
+						</div>
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+			</div><!-- <= inner -->
+			<div elem="inner">
+				<div elem="item" mods="top">
+					<div elem="item-title">
+						Ключевые слова
+					</div><!-- <= item-title -->
+					<div elem="item-content">
+						<div elem="group">
+							<a elem="group-delete" href="#">
+								<img src="images/icon/back_red.svg" alt="delete">
+							</a><!-- <= group-delete -->
+							<div elem="group-list">
+								<textarea name="group-list" cols="30" rows="10" placeholder="Список запросов"></textarea>	
+							</div><!-- <= group-list -->
+							<div elem="group-add-text">
+								<div elem="group-item">
+									<div elem="group-item-title">
+										Добавить свой текст
+										{% include 'help.html' %}
+									</div><!-- <= group-item-title -->
+									<div class="b-main-radios">
+										<div class="b-main-radios__item">
+											<input type="radio" name="selection" id="radio3" checked="">
+											<label for="radio3">по URL</label>
+										</div>
+										<div class="b-main-radios__item">
+											<input type="radio" name="selection" id="radio4">
+											<label for="radio4">через форму</label>
+										</div>
+									</div>
+									<input type="text" name="add-url" placeholder="http://" class="js-text-add">
+									<div elem="text-add" class="js-text-add">
+										<a elem="text-add-button" href="#add-text">Добавить текст</a>
+									</div>
+								</div><!-- <= group-item -->
+								<div elem="group-item" mods="pages" class="js-auto-fit">
+									<textarea name="group-pages" cols="30" rows="7" placeholder="Страницы конкурентов"></textarea>
+								</div><!-- <= group-item -->
+							</div><!-- <= group-add -->
+						</div><!-- <= group -->
+						<div elem="group-add">
+							<a href="#"><span>+ добавить группу</span></a>
+						</div><!-- <= group-add -->
+						<div elem="group-footer" class="b-main-button b-main-button_white">
+							<a elem="batch-upload" href="#batch-upload">Пакетное добавление ключевых слов</a><!-- <= batch-upload -->
+							<div elem="group-text">
+								После загрузки ключевых слов вы можете отредактировать группы и добавить свои тексты для анализа.
+							</div><!-- <= group-text -->
+						</div><!-- <= group-footer -->
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+			</div><!-- <= inner -->
+			<div elem="inner">
+				<div elem="item" mods="top">
+					<div elem="item-title">
+						Запуск
+					</div><!-- <= item-title -->
+					<div elem="item-content">
+						<div elem="sum">
+							<div elem="sum-item">
+								<div elem="sum-item-content">
+									<div elem="sum-checkbox" class="b-main-checkbox disabled">
+										<input type="checkbox" name="challengeSum" checked="checked" disabled="disabled" id="b-checkSum1">
+										<label for="b-checkSum1">Текстовый анализ</label>
+										<div elem="sum-amount">
+											Ключевых слов - 
+											<span elem="word-amount">0</span><!-- <= word-amount -->,
+											групп - 
+											<span elem="group-amount">1</span><!-- <= group-amount -->
+										</div><!-- <= sum-amount -->
+									</div>
+								</div><!-- <= sum-item-content -->
+								<div elem="sum-item-price" mods="amount">0</div><!-- <= sum-item-price -->
+							</div><!-- <= sum-item -->
+							<div elem="sum-item">
+								<div elem="sum-item-content">
+									<div class="b-user-counts__checkbox b-main-checkbox">
+										<input type="checkbox" name="challengeSum" id="b-checkSum2">
+										<label for="b-checkSum2">Поиск тематических слов</label>
+									</div>
+								</div><!-- <= sum-item-content -->
+								<div elem="sum-item-price" mods="word">0</div><!-- <= sum-item-price -->
+							</div><!-- <= sum-item -->
+							<div elem="sum-item" mods="all">
+								<div elem="sum-item-content">Итого</div><!-- <= sum-item-content -->
+								<div elem="sum-item-price" mods="all">0</div><!-- <= sum-item-price -->
+							</div><!-- <= sum-all -->
+						</div><!-- <= sum -->
+						<div class="b-user-counts__notify few-limits">
+							<span>Для запуска аудита не хватает лимитов:</span> <strong><span class="limits-amount">500</span>.</strong>
+							<a target="blank" class="buy-limits" href="/settings01.html#buy">Купить лимиты</a> <span>или</span>
+							<a target="blank" href="/settings01.html#start[1]">приобрести подписку</a>
+						</div>
+						<div elem="footer">
+							<div elem="save" class="b-main-button b-main-button_white">
+								<a href="#">Сохранить и запустить позже</a>
+							</div>
+							<div elem="button" class="b-main-button">
+								<button type="submit">Запустить задачу</button>
+							</div>
+						</div><!-- <= footer -->
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+			</div><!-- <= inner -->
+		</form><!-- /b-challenge -->
+	</div><!-- <= inner -->
+</div><!-- /b-site-content -->
+<div block="b-challenge-popup" class="b-challenge">
+	<div elem="form-wrapper">
+		<a elem="close" href="#"></a><!-- <= close -->
+		<form elem="form" action="#" id="add-text" mods="add-text">
+			<div elem="title">Добавление своего текста</div><!-- <= title -->
+			<div elem="item">
+				<div elem="item-title">Title</div><!-- <= item-title -->
+				<div elem="item-content">
+					<input type="text" name="add-text-title">
+				</div><!-- <= item-content -->
+			</div><!-- <= item -->
+			<div elem="item">
+				<div elem="item-title">Текст</div><!-- <= item-title -->
+				<div elem="item-note">
+					Вы можете добавить как готовую вёрстку, так и чистый текст, разместив его с помощью редактора. <br>
+					Обязательно выделите заголовки в тексте в соответствии с тем, как они будут размещены на сайте.
+				</div><!-- <= item-note -->
+				<div elem="item-content">
+					<textarea name="add-text" id="text-added" cols="30" rows="10"></textarea>
+				</div><!-- <= item-content -->
+			</div><!-- <= item -->
+			<div elem="footer">
+				<div elem="cancel" class="b-main-button b-main-button_white">
+					<a href="#">Отмена</a>
+				</div><!-- <= cancel -->
+				<div elem="save" class="b-main-button">
+					<button>Сохранить</button>
+				</div><!-- <= save -->
+			</div><!-- <= footer -->
+		</form><!-- <= form -->
+		<form elem="form" action="#" id="batch-upload" mods="batch-upload">
+			<div elem="title">Пакетное добавление ключевых слов</div><!-- <= title -->
+			<div elem="item">
+				<div elem="item-note">
+					Вставьте в поле ввода ключевые слова и URL, к которым они относятся. Разделитель - табуляция. Вместо URL <br>
+					можно использовать названия групп ключевых слов. 
+				</div><!-- <= item-note -->
+				<div elem="item-content">
+					<textarea name="batch-upload" cols="30" rows="10" placeholder="seo аудит сайта	https://saitreport.ru/
+seo аудит сайта онлайн	https://saitreport.ru/
+seo аудит сайта цены	https://saitreport.ru/prices
+аудит сайта цены	https://saitreport.ru/prices
+ссылочный анализ	группа 1
+ссылочный анализ сайта	группа 1
+сбор семантики сайта онлайн	группа 2
+подбор семантики сайта онлайн	группа 2"></textarea>
+				</div><!-- <= item-content -->
+			</div><!-- <= item -->
+			<div elem="footer">
+				<div elem="cancel" class="b-main-button b-main-button_white">
+					<a href="#">Отмена</a>
+				</div><!-- <= cancel -->
+				<div elem="save" class="b-main-button">
+					<button>Сохранить</button>
+				</div><!-- <= save -->
+			</div><!-- <= footer -->
+		</form><!-- <= form -->
+	</div><!-- <= form-wrapper -->
+</div><!-- /b-add-text -->
+

@@ -1,0 +1,29 @@
+= yaml =
+pageTitle: Проверка  ТЗ по заданию
+bodyMods: challenge-check inner
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: 'container'
+asideLeft: false
+asideRight: false
+noViewport: true
+more : true
+layout: !!map
+    header    : inner
+    footer    : inner
+    profile   : true
+    topic     : {
+    	class : b-page-topic--checking
+    }
+    tekstrator: true
+    tekstratorHide: true
+pagePath : <a href="#">Текстовый анализатор</a><span class="path-separator"></span><a href="#">Komus.ru - офисная мебель</a><span class="path-separator"></span>
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+	
+	{% include 'challenge-check.html' %}
+	
+{% endblock %}

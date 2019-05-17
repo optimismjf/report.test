@@ -1,0 +1,22 @@
+= yaml =
+pageTitle: Авторизация
+bodyMods: authorization inner
+bodyClasses: ''
+scrollFixClasses: ''
+contentClasses: 'container'
+asideLeft: false
+asideRight: false
+layout: !!map
+    header    : authorization
+    footer    : authorization
+    profile   : false
+    topic     : false
+= yaml =
+
+{% extends '_layout.html' %}
+
+{% block main %}
+
+  {% include 'authorization.html' %}
+
+{% endblock %}

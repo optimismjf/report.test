@@ -1,0 +1,95 @@
+<div class="hidden">
+<!-- 	<div id="add-text">
+		<textarea name="add-text" id="text-added" cols="30" rows="10">
+			<p>sdsdsdsd</p>
+		</textarea>
+	</div> -->
+	<div id="sign-in">
+		<form action="#" method="get" accept-charset="utf-8" novalidate>
+			<h6 class="sign-in__title">Войти</h6>
+			<div class="form-item">
+				<input class="email" type="email" name="email" value="" placeholder="Email">
+			</div>
+			<div class="form-item">
+				<input class="pass" type="password" name="password" value="" placeholder="Пароль">
+			</div>
+			<div class="form-item form-item--button">
+				<button type="submit" name="send">Войти</button>
+			</div>
+			<div class="form-item">
+				<a class="btn btn-registration js-popup" href="#registration">Регистрация</a>
+			</div>
+			<span>Забыли пароль? <a class="js-popup" href="#restore-password">Восстановить</a></span>
+		</form>
+	</div>
+	<div id="registration">
+		<form action="#" method="get" accept-charset="utf-8" novalidate>
+			<h6 class="sign-in__title">Регистрация</h6>
+			<div class="form-item">
+				<input id="fname" type="text" name="name" value="" placeholder="Имя">
+			</div>
+			<div class="form-item">
+				<input class="email" type="email" name="email" value="" placeholder="Email">
+			</div>
+			<div class="form-item">
+				<input class="pass" type="password" name="password" value="" placeholder="Пароль">
+			</div>
+			<div class="form-item b-main-checkbox">
+                <input type="checkbox" name="consent" id="b-consent1">
+                <label for="b-consent1">Согласен с <a href="#">правилами сервиса</a></label>
+			</div><!-- <= form-item -->
+			<div class="form-item b-main-checkbox">
+                <input type="checkbox" name="consent" id="b-consent2">
+                <label for="b-consent2">Согласен на обработку персональных данных в соответствии с <a href="#">правилами</a></label>
+			</div><!-- <= form-item -->
+			<div class="form-item form-item--button">
+				<button type="submit"  name="send">Зарегистрироваться</button>
+			</div>
+			<a class="btn btn-registration js-popup" href="#sign-in">Войти</a>
+			{#
+				<p>Указанные вами данные будут использоваться для получения информации о новых возможностях, информации по проектам и восстановления доступа к сервису. Регистрируясь, вы соглашаетесь с правилами использования сервиса</p>
+			#}
+		</form>
+	</div>
+	<div id="restore-password">
+		<form action="#" method="get" accept-charset="utf-8" novalidate>
+			<h6 class="sign-in__title">Восстановить пароль</h6>
+			<div class="form-item">
+				<input class="email" type="email" name="email" value="" placeholder="Email">
+			</div>
+			<div class="form-item form-item--button">
+				<button type="submit" name="send">Отправить</button>
+			</div>
+			<a class="btn btn-registration js-popup" href="#sign-in">Войти</a>
+		</form>
+	</div>
+  <div class="b-delete-account" id="b-delete-account2">
+	<div class="b-delete-account__container">
+	  <div class="b-delete-account__topic">Удалить проект?</div>
+	  <div class="b-delete-account__aftertopic">Мы не сможем восстановить проект после удаления.</div>
+	  <div class="b-delete-account__btns">
+		<div class="b-delete-account__delete-btn b-main-button b-main-button_white"><a href="#">Удалить</a></div>
+		<div class="b-delete-account__cansel-btn b-main-button">
+		  <button>Отмена</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div class="promo-ok" id="promo-ok">
+	<div class="promo-ok__topic">Промокод успешно активирован</div>
+	<div class="promo-ok__text"></div>
+	<div class="promo-ok__btn b-main-button b-main-button_white"><a href="#">Хорошо</a></div>
+  </div>
+  <div class="b-delete-account" id="b-delete-account">
+	<div class="b-delete-account__container">
+	  <div class="b-delete-account__topic">Удалить аккаунт?</div>
+	  <div class="b-delete-account__aftertopic">Мы уже не сможем  восстановить ваш аккаунт после удаления</div>
+	  <div class="b-delete-account__btns">
+		<div class="b-delete-account__delete-btn b-main-button b-main-button_white"><a href="#">Удалить</a></div>
+		<div class="b-delete-account__cansel-btn b-main-button">
+		  <button>Отмена</button>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 12.7 8.7312502"
+   height="33"
+   width="48"
+   sodipodi:docname="highlighter-on.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <g
+     transform="translate(0,-288.26873)"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;stroke:#e1e4e6;stroke-width:0.26137257;stroke-opacity:1"
+       ry="0.78213662"
+       rx="0.7861039"
+       y="288.3996"
+       x="0.12927514"
+       height="8.4731464"
+       width="12.446645"
+       id="rect3699" />
+    <g
+       id="Icons with numbers"
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+       transform="matrix(0.26458334,0,0,0.26458334,7.4083334,290.3854)">
+      <g
+         transform="matrix(1.1007615,0,0,1.1252954,-422.79318,-218.06144)"
+         id="Group"
+         style="fill:#000000">
+        <path
+           style="fill:#a2aeb7;fill-opacity:1"
+           id="Triangle 313"
+           d="M 385,203.95081 389,208 h -4 z M 392,196 l 4,4 -6.02136,7.04419 L 386,203 Z m 2.08462,-2.2185 c 0.62484,-0.62484 1.82467,-0.43807 2.6799,0.41715 l 0.77426,0.77427 c 0.85523,0.85523 1.042,2.05506 0.41716,2.6799 l -1.23555,1.23554 -3.87132,-3.87132 z m 0,0" />
+      </g>
+    </g>
+
+    <rect
+       y="290.85202"
+       x="1.3454958"
+       height="3.7606642"
+       width="6.0071855"
+       id="rect4567"
+       style="fill:#ddff55;fill-opacity:0.99537039;stroke:none;stroke-width:0.88189751;stroke-opacity:1" />
+    <text
+       id="text4559"
+       y="294.46262"
+       x="1.952738"
+       style="font-style:normal;font-weight:normal;font-size:10.58333397px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#2f353b;fill-opacity:1;stroke:none;stroke-width:0.26458335;"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333359px;font-family:'Bliss Pro';-inkscape-font-specification:'Bliss Pro, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458335;fill:#2f353b;fill-opacity:1;"
+         y="294.46262"
+         x="1.952738"
+         id="tspan4557">Аб</tspan></text>
+  </g>
+</svg>

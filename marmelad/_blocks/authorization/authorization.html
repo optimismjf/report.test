@@ -1,0 +1,75 @@
+<div block="b-authorization">
+	<div elem="content" id="sign-in">
+		<form elem="item" action="#" method="get" accept-charset="utf-8" novalidate>
+			<h6 class="sign-in__title">Войти</h6>
+			<div class="form-item">
+				<input class="email" type="email" name="email" value="" placeholder="Email">
+			</div>
+			<div class="form-item">
+				<input class="pass" type="password" name="password" value="" placeholder="Пароль">
+			</div>
+			<div class="form-item form-item--button">
+				<button type="submit" name="send">Войти</button>
+			</div>
+			<div class="form-item">
+				<a class="btn btn-registration b-authorization__event" href="#registration">Регистрация</a>
+			</div>
+			<span>Забыли пароль? <a href="#restore-password" class="b-authorization__event">Восстановить</a></span>
+		</form>
+	</div>
+	<div elem="content" id="registration">
+		<form elem="item" action="#" method="get" accept-charset="utf-8" novalidate>
+			<h6 class="sign-in__title">Регистрация</h6>
+			<div class="form-item">
+				<input class="fname" type="text" name="name" value="" placeholder="Имя">
+			</div>
+			<div class="form-item">
+				<input class="email" type="email" name="email" value="" placeholder="Email">
+			</div>
+			<div class="form-item">
+				<input class="pass" type="password" name="password" value="" placeholder="Пароль">
+			</div>
+			<div class="form-item b-main-checkbox">
+                <input type="checkbox" name="consent" id="b-consent1">
+                <label for="b-consent1">Согласен с <a href="#">правилами сервиса</a></label>
+			</div><!-- <= form-item -->
+			<div class="form-item b-main-checkbox">
+                <input type="checkbox" name="consent" id="b-consent2">
+                <label for="b-consent2">Согласен на обработку персональных данных в соответствии с <a href="#">правилами</a></label>
+			</div><!-- <= form-item -->
+			<div class="form-item form-item--button">
+				<button type="submit"  name="send">Зарегистрироваться</button>
+			</div>
+			<a class="btn btn-registration b-authorization__event" href="#sign-in">Войти</a>
+			{#
+				<p>Указанные вами данные будут использоваться для получения информации о новых возможностях, информации по проектам и восстановления доступа к сервису. Регистрируясь, вы соглашаетесь с правилами использования сервиса</p>
+			#}
+		</form>
+	</div>
+	<div elem="content" id="restore-password">
+		<form elem="item" mods="restore-password" action="#" method="get" accept-charset="utf-8" novalidate>
+			<h6 class="sign-in__title">Пароль отправлен</h6>
+			<div class="form-item">
+				<input class="email" type="email" name="email" value="" placeholder="Email">
+			</div>
+			<div class="form-item form-item--button">
+				<button type="submit" name="send">Отправить</button>
+			</div>
+			<a class="btn btn-registration b-authorization__event" href="#sign-in">Войти</a>
+		</form>
+	</div>
+	<div elem="content" id="password-sent">
+		<h6 class="sign-in__title">Пароль отправлен</h6>
+		<ol elem="list">
+			<li>Проверьте почту email@site.ru.</li>
+			<li><a class="b-authorization__event" href="#sign-in">Войдите</a> с новым паролем.</li>
+		</ol><!-- <= list -->
+		<a elem="find" href="#">Не можете найти письмо <br>с подтверждением?</a>
+		<ol elem="list" mods="hidden">
+			<li>Проверьте правильность адреса.</li>
+			<li>Проверьте папку Спам.</li>
+			<li><a href="#restore-password" class="b-authorization__event">Отправьте запрос ещё раз.</a></li>
+			<li>Обратитесь в службу поддержки.</li>
+		</ol><!-- <= list -->
+	</div>
+</div><!-- /b-authorization -->

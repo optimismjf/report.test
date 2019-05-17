@@ -1,0 +1,2771 @@
+@import "bourbon/_bourbon.scss"
+@import "_fonts.sass"
+@import "_base.sass"
+@import "_style.scss"
+@import "_typography.scss"
+
+//h1, h2, h3, h4, h5, h6, p
+//	line-height: normal
+//	margin: 0
+body
+	margin: 0
+ul
+	//padding: 0px
+	//margin: 0px
+	//list-style-type: none !important
+
+section
+	ul
+		padding-left: 27px
+/*magnific settings*/
+.b-hidden
+	display: none
+
+/* delay + transitions */
+
+
+/* overlay at start */
+.mfp-fade.mfp-bg
+	opacity: 0
+
+	-webkit-transition: all 0.25s ease-out
+	-moz-transition: all 0.25s ease-out
+	transition: all 0.25s ease-out
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready
+	opacity: 0.8
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing
+	opacity: 0
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content
+	opacity: 0
+
+	-webkit-transition: all 0.25s ease-out
+	-moz-transition: all 0.25s ease-out
+	transition: all 0.25s ease-out
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content
+	opacity: 1
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content
+	opacity: 0
+
+.inputfile-2
+	width: 0.1px
+	height: 0.1px
+	opacity: 0
+	overflow: hidden
+	position: absolute
+	z-index: -1
+	& + label
+		font-size: 15px
+		color: #2E97DF
+		border: 1px solid #E1E4E6
+		background-color: #FFF
+		+b-rounded(3px)
+		padding: 10px 19px
+		cursor: pointer
+		max-width: 73%
+		text-overflow: ellipsis
+		white-space: nowrap
+		display: inline-block
+		overflow: hidden
+	&:focus + label,
+	& + label:hover
+		background-color: rgba(255,255,255,.9)
+
+
+.inputfile-1
+	width: 0.1px
+	height: 0.1px
+	opacity: 0
+	overflow: hidden
+	position: absolute
+	z-index: -1
+	& + label
+		border: 1px solid #E1E4E6
+		border-radius: 3px
+		background-color: #F6F8FA
+		cursor: pointer
+		min-height: 100px
+		+b-block
+		width: 100%
+		max-width: 100px
+		+b-flex
+		+b-justify-center
+		+b-flex-align(center)
+		color: rgba(47, 53, 59, .3)
+		font-size: 30px
+		+b-relative
+		&.active
+			background-image: url('./../img/profile/dots.png')
+			background-repeat: no-repeat
+			left: 120px
+			min-height: 15px
+			max-width: 40px
+			border: none
+			background-color: transparent
+			top: 15px
+			span
+				display: none
+		span
+			margin-top: -4px
+
+
+.b-profile-page
+	& > .container
+		padding-right: 9px
+#header.front-page.b-profile-page
+	min-height: 60px
+	max-height: 60px
+	background-image: none
+	padding-top: 10px
+	background-image: url('./../img/profile/big-bg.svg')
+	background-size: cover !important
+
+	.logo
+		height: auto
+		line-height: 10px
+		width: 140px
+
+	.logo, .hamburger
+		float: left
+	@media only screen and (min-width : 1024px)
+		.header__menu-list
+			display: none
+		.header__menu-list li
+			display: none
+.b-top-wrapper
+	+b-flex
+	+b-justify
+	&__sections
+		display: none
+
+
+.b-user
+	&__name
+		display: none
+
+		&-wrapper
+			&:hover
+				.b-user__helper-wrapper
+					display: block
+
+	&__helper-wrapper
+		+b-absolute
+		top: 0
+		margin-top: 53px
+		right: -17px
+		left: -10px
+		display: none
+		z-index: 3
+	&__helper
+		background-color: #fff
+		+b-box-shadow(0 0 20px 0 rgba(162,174,183,0.3))
+		// top: 53px
+		+b-rounded(5px)
+		&:before
+			content: "\f0d8"
+			position: absolute
+			left: 50%
+			margin-left: -10px
+			top: -18px
+			display: inline-block
+			font: normal normal normal 28px/1 FontAwesome
+			color: #fff
+			text-rendering: auto
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 98%
+			height: 30px
+
+	&__helper-list
+		padding: 12px 20px 20px 20px
+		li
+			list-style-type: none
+			margin-top: 10px
+			&:last-child
+				a
+					color: #A2AEB7
+					&:hover
+						border-bottom: none
+
+		a
+			font-size: 15px
+			line-height: 25px
+			color: #2F353B
+			text-decoration: none
+			&:hover
+				border-bottom: 1px solid #2F353B
+	&__item
+		color: #fff
+		&:nth-child(1)
+			display: none
+		&:nth-child(2)
+			+b-flex
+			+b-flex-align(center)
+			min-width: 100px
+			min-height: 46px
+	&__name-wrapper
+		margin-right: 3px
+.b-profile-tabs
+	+b-flex
+	clear: both
+	border-bottom: 1px solid #E1E4E6
+	&__item
+		width: 50%
+		text-align: center
+		&.active
+			a
+				background-color: #ffffff
+		a
+			background-color: #F6F8FA
+			color: #2F353B
+			font-size: 15px
+			line-height: 25px
+			text-decoration: none
+			+b-block
+			padding: 12px 0px
+.b-page-topic
+	border-bottom: 1px solid #E1E4E6
+	background-color: #fff
+	box-shadow: 0 0 10px rgba(162, 174, 183, 0.2)
+	padding: 12px 0
+	&__text
+		color: #2F353B
+		font-size: 30px
+		line-height: 35px
+		text-align: center
+		margin: 0 auto
+		margin: 0
+	&_projects
+		border-bottom: none
+	&.b-btn-flex
+		+b-flex
+		.b-page-topic__text
+			margin-left: 15px
+			margin-right: 20px
+		.b-page-topic__btn
+			margin-top: 2.5px
+			a
+				padding: 5px 20px 5px 32px !important
+				&:before
+					top: 4px
+	&__btn
+		margin-top: 30px
+		margin-left: 20px
+		a
+			padding-left: 32px
+			+b-relative
+			&:before
+				content: ''
+				+b-absolute
+				top: 10px
+				left: 8px
+				background-repeat: no-repeat
+				background-image: url('./../img/audit/arrow.png')
+				padding: 10px
+.b-personal-form
+	padding-left: 20px
+	padding-right: 20px
+	&__topic
+		color: #2F353B
+		font-size: 18px
+		margin-top: 24px
+		margin-bottom: 30px
+	&__input-label
+		font-weight: 500
+		font-size: 15px
+		margin-top: 24px
+		margin-bottom: 10px
+		color: #2F353B
+	&__input
+		&_inputfile
+			+b-relative
+			min-height: 100px
+	&__checkbox
+		position: relative
+		margin-left: 26px
+		margin-top: 13px
+	&__requisites
+		display: none
+	&__line
+		&_inputfile
+			margin-top: 35px
+.b-prev-img
+	+b-absolute
+	top: 0
+	left: 0
+	max-width: 100px
+	max-height: 100px
+	min-height: 100px
+	min-width: 100px
+	pointer-events: none
+	display: none
+	+b-rounded(3px)
+
+.b-personal-data
+	&__btn
+			display: inline-block
+			color: #2E97DF
+			font-size: 15px
+			line-height: 25px
+			margin-top: 20px
+			span
+				cursor: pointer
+
+	&__item
+		&:last-child
+			display: none
+	&__save-btn
+		margin-top: 30px
+	//  +b-rounded(3px)
+	//  background-color: #2F353B
+	//  color: #fff
+	//  text-align: center
+	//  font-size: 15px
+	//  font-family: BlissPro-Medium
+	//  padding: 16px 0px
+	//  cursor: pointer
+	&__delete-btn
+		text-align: center
+		margin-top: 30px
+		a
+			color: #E03632
+			font-size: 15px
+			text-decoration: none
+	&__container
+		padding-bottom: 64px
+.b-card-list
+	display: none
+	.b-card-list__container
+		ul
+			padding: 0
+			li
+				&:before
+					display: none
+.b-delete-account
+	background-color: #fff
+	+b-relative
+	text-align: center
+	// margin: 0 auto
+	// max-width: 400px
+	padding: 50px 40px 50px 40px
+	margin-left: 15px
+	margin-right: 15px
+	&__topic
+		font-size: 18px
+		line-height: 21px
+		color: #2F353B
+	&__aftertopic
+		font-size: 15px
+		color: #2F353B
+		line-height: 25px
+		margin-top: 20px
+	&__delete-btn
+		margin-top: 20px
+	&__cansel-btn
+		margin-top: 16px
+		button
+			padding: 17px 0px !important
+	@media only screen and (min-width : 430px)
+		margin: 0 auto
+		max-width: 400px
+.b-settings-topic
+	max-width: 286px
+.b-user-settings
+	padding-bottom: 55px
+	padding-left: 20px
+	padding-right: 20px
+	// input
+	//  padding: 10px 0px
+	//  padding-left: 10px
+	&__topic
+		font-size: 18px
+		color: #2F353B
+		margin-top: 28px
+	&__line-topic
+		font-weight: 500
+		font-size: 15px
+		color: #2F353B
+		margin-top: 12px
+		&_start
+			font-size: 18px
+	&__limit, &__index
+		color: #2F353B
+		font-size: 15px
+	&__index-md
+		display: none
+	&__line
+		&:not(:first-child)
+			margin-top: 27px
+	&__limit-md, &__index-xs
+		font-weight: 500
+		font-size: 15px
+		color: #2F353B
+		margin-top: 12px
+		margin-bottom: 10px
+	&__index-xs
+		margin-top: 20px
+		margin-bottom: 0px
+.b-user-robotx
+	&__topic
+		color: #2F353B
+		font-size: 15px
+		margin-top: 15px
+		margin-bottom: 11px
+	&__container
+		+b-flex
+		+b-flex-direction(column)
+	&__radio
+		margin-top: 15px
+	&__notify
+		color: #A2AEB7
+		font-weight: 500
+		font-size: 13px
+		line-height: 20px
+		margin-top: 6px
+	&__item
+		&:first-child
+			margin-top: 5px
+	&__inputfile-wrapper
+		display: none
+	&__inputfile
+		margin-top: 23px
+		+b-relative
+		.b-input-counts
+			+b-absolute
+			top: 10px
+			left: 146px
+			font-size: 15px
+			margin-left: 3px
+			color: #2F353B
+			text-overflow: ellipsis
+			white-space: nowrap
+			display: inline-block
+			overflow: hidden
+			max-width: 121px
+	&__checkbox
+		margin-top: 20px
+
+.b-site-load
+	&__input-topic
+		@extend .b-user-robotx__topic
+	&__notify
+		@extend .b-user-robotx__notify
+		margin-top: 12px
+	&__checkbox
+		margin-top: 14px
+	&__input
+		&_net
+			+b-flex
+			+b-flex-align(center)
+	&__afterinput
+		font-size: 15px
+		color: #2F353B
+		margin-left: 11px
+.b-user-reports
+	&__notify
+		@extend .b-user-robotx__notify
+		margin-top: 25px
+	&__btn
+		margin-top: 19px
+		cursor: pointer
+		span
+			color: #2E97DF
+			font-size: 15px
+			border-bottom: 1px dashed #2E97DF
+			line-height: 25px
+	&__checkbox
+		margin-top: 15px
+	&__textarea
+		margin-top: 7px
+		display: none
+
+.b-settings-autostart
+	&.disabled
+		.b-settings-autostart__text
+			p
+				color: #A2AEB7
+		.b-settings-autostart__period
+			span, strong
+				color: #A2AEB7
+		.b-settings-autostart__select-topic
+			color: #A2AEB7
+	&__select-topic
+		@extend .b-user-robotx__topic
+		margin-top: 18px
+	&__period
+		margin-top: 15px
+		span, strong
+			font-size: 15px
+			color: #2F353B
+		strong
+			margin-left: 5px
+	&__text
+		p
+			font-size: 13px
+			// color: #A2AEB7
+			color: #2F353B
+			line-height: 25px
+			&:first-child
+				margin-top: 20px
+			&:not(:first-child)
+				margin-top: 9px
+.b-user-counts
+	&__total-item-text
+		font-weight: 500
+		font-size: 18px
+		color: #2F353B
+	&__total-item
+		font-weight: 500
+		font-size: 18px
+		color: #2F353B
+		.fa
+			font-size: 15px
+	&__date
+		@extend .b-settings-autostart__period
+		text-align: right
+	&__notify
+		background-color: #FAF7DC
+		+b-rounded(3px)
+		padding: 20px 30px 24px 13px
+		margin-top: 25px
+		display: none
+		strong, span
+			font-size: 15px
+			color: #2F353B
+			line-height: 25px
+			display: inline-block
+		strong
+			margin-left: 5px
+			margin-right: 5px
+			font-weight: 500
+		a
+			text-decoration: none
+			outline: none
+			color: #2E97DF
+			font-weight: 500
+			font-size: 15px
+			line-height: 25px
+	&__number
+		.b-numb
+			font-size: 16px
+			color: #2F353B
+		.fa
+			font-weight: normal
+			font-size: 15px
+	&__checkbox-number
+		font-size: 16px
+		color: #2F353B
+		.fa
+			font-size: 15px
+	&__btn-save
+		margin-top: 20px
+	&__btn-start
+		font-weight: 500
+		margin-top: 10px
+	&__top-line, &__total-container
+		+b-flex
+		+b-justify
+		+b-flex-align(center)
+	&__total-container
+		margin-top: 25px
+		padding-top: 20px
+		border-top: 1px solid #E1E4E6
+	&__input
+		max-width: 117px
+		// input
+		//  padding: 10px 0px
+		//  padding-left: 10px
+	&__top-line
+		margin-top: 15px
+		&_yandex
+			margin-top: 11px
+.b-user-balance
+	&__money-content
+		display: none
+	&__status-content
+		display: none
+		border-top: 1px solid #F0F1F2
+		padding: 20px 20px 0px 20px
+		margin: 15px -20px 0 -20px
+	&__status-wrapper
+		padding-left: 20px
+		border-bottom: 1px solid #E1E4E6
+		padding-bottom: 20px
+	&__status-topic
+		font-weight: 500
+		font-size: 30px
+		color: #2F353B
+		margin-top: 18px
+	&__status-aftertopic
+		color: #2F353B
+		font-weight: 500
+		font-size: 15px
+		margin-top: 1px
+	&__status-btn
+		margin-top: 20px
+	&__money-topic
+		@extend .b-user-balance__status-aftertopic
+		margin-top: 22px
+	&__money-wrapper
+		@extend .b-user-balance__status-wrapper
+		border-bottom: none
+	&__money-count
+		font-size: 30px
+		color: #2F353B
+		margin-top: 5px
+		.fa
+			font-size: 28px
+			font-weight: normal
+	&__money-status
+		font-size: 15px
+		color: #A2AEB7
+		margin-top: 3px
+		.fa
+			font-size: 14px
+	&__money-btn
+		margin-top: 20px
+	&__input-topic
+		font-size: 15px
+		color: #2E97DF
+		margin-top: 22px
+		cursor: pointer
+	&__notify
+		background-color: #FAF7DC
+		+b-rounded(3px)
+		padding: 20px 18px 19px 20px
+		line-height: 25px
+		color: #2F353B
+		margin-left: 20px
+		margin-right: 20px
+		&_up
+			margin-left: 0px
+			margin-right: 0px
+			margin-top: 18px
+	&__checkbox
+		margin-top: 14px
+		&_subscribe
+			margin-top: 17px
+			input:disabled + label
+				color: #A2AEB7 !important
+				pointer-events: none
+				cursor: default
+	&__buy-btns-wrapper
+		display: none
+	&__buy-btns
+		+b-flex
+		margin-top: 35px
+		& > div
+			width: 50%
+			&:first-child
+				margin-right: 10px
+			&:last-child
+				margin-left: 10px
+	&__form-docs-link
+		margin-top: 10px
+		display: none
+		a
+			@extend .b-user-balance__select-text
+			text-decoration: none
+			cursor: pointer
+			&:hover
+				border-bottom: 1px dashed #2E97DF
+
+	&__accbalance-wrapper
+		display: flex
+		padding-top: 21px
+
+		& > *
+			width: 48%
+			padding-right: 2%
+			line-height: 1
+
+	&__title
+		font-size: 15px
+		font-weight: 500
+
+	&__price
+		font-weight: 500
+		font-size: 30px
+
+		span
+			font-size: 20px
+
+	&__accbalance
+		color: #2f353b
+
+	&__money-blocked
+		color: #b9c1c9
+
+	&__limit
+		color: #2f353b
+		font-size: 15px
+		font-weight: 500
+		line-height: 1
+		padding-top: 6px
+
+	&__select-text
+		text-align: right
+		font-size: 15px
+		color: #2E97DF
+		margin-top: 14px
+		cursor: pointer
+	&__select
+		&_price
+			margin-top: 15px
+		&_payment
+			margin-top: 13px
+	&__cansel-btn
+		margin-top: 20px
+	&__check-text
+		font-size: 13px
+		color: #A2AEB7
+		line-height: 25px
+		margin-left: 29px
+		margin-top: 10px
+	&__total-wrapper
+		+b-flex
+		+b-justify
+		margin-top: 19px
+	&__total-text
+		font-weight: 500
+		font-size: 18px
+		color: #2F353B
+	&__total-count, &__total-limit
+		font-size: 18px
+		color: #2F353B
+		.fa
+			font-size: 17px
+			margin-left: 5px
+	&__notify-btn
+		margin-top: 20px
+		a
+			padding: 12px 0px
+	&__money-push
+		margin-top: 20px
+		&_docs
+			display: none
+	&__promo-code-text
+		margin-top: 22px
+		// display: none
+		span
+			cursor: pointer
+			@extend .b-user-balance__input-topic
+			border-bottom: 1px dashed #2E97DF
+	&__notify-text
+		font-size: 15px
+		color: #2F353B
+		line-height: 25px
+		.fa
+			font-size: 13px
+
+		b
+			font-weight: 500
+
+.b-promo-input
+	display: none
+	margin-top: 20px
+	max-width: 360px
+	+b-relative
+	input[type='text']
+		width: 100%
+		border: 1px solid #E1E4E6
+		+b-rounded(3px)
+		color: #2f353b
+		background-color: #F6F8FA
+		width: 100%
+		padding: 10px 0px
+		padding-left: 10px
+		padding-right: 50px
+		outline: none
+		&:focus
+			border: solid #909090 1px
+	input[type='submit']
+		border: none
+		background-color: #2F353B
+		+b-rounded(3px)
+		color: #fff
+		text-transform: uppercase
+		font-weight: 500
+		font-size: 15px
+		text-align: center
+		padding: 7px 7px
+		+b-absolute
+		top: 4px
+		right: 5px
+		cursor: pointer
+	&__warning
+		font-size: 13px
+		color: #E03632
+		margin-top: 5px
+		display: none
+.b-user-fileters
+	padding-left: 20px
+	padding-right: 20px
+	&__topic
+		font-weight: 500
+		font-size: 15px
+		color: #2F353B
+		margin-top: 30px
+	&__select
+		margin-top: 10px
+.b-user-table
+	margin-top: 20px
+	&__top-line
+		display: none
+	&__item-time, &__item-operation, &__item-rate
+		color: #2F353B
+		font-size: 15px
+	&__item-operation
+		font-weight: 500
+		margin-top: 5px
+	&__item-money
+		font-size: 15px
+		margin-top: 5px
+		text-align: right
+		.fa
+			font-size: 14px
+			margin-left: 3px
+		&.minus
+			color: #E03632
+	&__item-text
+		margin-top: 5px
+
+		a, span
+			font-size: 15px
+			color: #2F353B
+		a
+			color: #2E97DF
+			margin-right: 5px
+	&__item
+		border-top: 1px solid #E1E4E6
+		padding-left: 20px
+		padding-right: 20px
+		padding-top: 24px
+		padding-bottom: 24px
+		+b-flex
+		+b-flex-wrap
+		&:last-child
+			border-bottom: 1px solid #E1E4E6
+	&__item-time, &__item-operation, &__item-rate, &__item-text
+		width: 100%
+	&__item-rate
+		margin-top: 5px
+	&__item-operation, &__item-money
+		width: 50%
+.b-user-rate
+	padding-bottom: 54px
+	&__btn-more
+		margin-top: 20px
+		margin-left: 20px
+		margin-right: 20px
+.select2-container .select2-selection--single .select2-selection__rendered,
+.select2-results__option
+	.b-offer1, .b-offer2, .b-offer3
+		+b-flex
+		span
+			+b-block
+			&:first-child
+				font-size: 15px
+				color: #2F353B
+				min-width: 153px
+			&:nth-child(2)
+				font-weight: 500
+				font-size: 13px
+				color: #E03632
+				margin-left: 4px
+				min-width: 29px
+			&:nth-child(3), &:nth-child(4)
+				font-weight: 500
+				color: #2F353B
+				margin-left: 10px
+			&:nth-child(4)
+				margin-left: 2px
+.promo-ok
+	@extend .b-delete-account
+	&__topic
+		@extend .b-delete-account__topic
+	&__text
+		@extend .b-delete-account__aftertopic
+	&__btn
+		@extend .b-delete-account__delete-btn
+.b-copywriter
+	&__container
+		padding-left: 20px
+		padding-right: 20px
+.b-rewrite
+	&__topic
+		font-size: 15px
+		color: #2F353B
+		margin-top: 30px
+		line-height: 22px
+	&__textarea
+		margin-top: 20px
+	&__btn
+		+b-flex
+		+b-justify-end
+		margin-top: 16px
+		a
+			padding: 16px 30px
+	&__main-topic
+		font-size: 18px
+		color: #2F353B
+		margin-top: 38px
+	&__text
+		font-size: 15px
+		color: #2F353B
+		line-height: 25px
+		margin-top: 22px
+	&__list
+		li
+			font-size: 15px
+			color: #2F353B
+			padding-left: 26px
+			+b-relative
+			margin-top: 16px
+			list-style-type: none
+			line-height: 25px
+			&:before
+				content: ''
+				+b-absolute
+				top: 7px
+				left: 0
+				height: 12px
+				width: 12px
+				+b-rounded(50%)
+				border: 1px solid #A2AEB7
+		&_number
+			ul
+				list-style: none
+				// counter-reset: li
+			li
+				padding-left: 26px
+				// counter-increment: li
+				list-style-type: none
+				+b-relative
+				span
+					+b-absolute
+					top: 0
+					left: 0
+					color: #A2AEB7
+				// &:after
+				//  content: counter(li)
+				//  color: #A2AEB7
+				//  display: inline-block
+				//  width: 1em
+				//  position: absolute
+				//  top: 0
+				//  left: 0
+				&:before
+					content: none
+	&__form
+		margin-top: 40px
+	&__select-wrap
+		margin-top: 25px
+		&_hidden
+			display: none
+	&__select-topic
+		min-width: 200px
+		margin-bottom: 8px
+		color: #2F353B
+		font-size: 15px
+		font-weight: 500
+	&__textarea-topic
+		color: #2F353B
+		font-size: 15px
+		font-weight: 500
+	&__checks
+		.b-main-checkbox
+			margin-top: 15px
+	&__textarea-wrap
+		margin-top: 20px
+	&__result
+		background-color: #FAF7DC
+		margin-left: -20px
+		margin-right: -20px
+		padding: 25px 20px
+		margin-top: 40px
+	&__result-topic
+		font-weight: 500
+		font-size: 15px
+		color: #2F353B
+	&__result-item-wrap
+		+b-flex
+		margin-top: 17px
+		strong
+			font-weight: 500
+			margin-left: 10px
+			font-size: 15px
+			color: #2F353B
+	&__result-item
+		font-weight: 500
+		font-size: 15px
+		color: #2F353B
+.b-tools
+	background-color: #F6F8FA
+	margin-left: -20px
+	margin-right: -20px
+	padding-left: 20px
+	padding-right: 20px
+	padding: 30px 20px 40px 20px
+	&__topic
+		font-weight: 500
+		font-size: 18px
+		color: #2F353B
+	&__list
+		margin-top: 24px
+		li
+			margin-top: 11px
+			list-style-type: none
+		a
+			text-decoration: none
+			outline: none
+			color: #2E97DF
+			font-size: 15px
+	&__link
+		border-top: 1px solid #E1E4E6
+		padding-top: 18px
+		margin-top: 23px
+		a
+			font-size: 15px
+			color: #E03632
+			text-decoration: none
+			outline: none
+.b-news-wrap
+	&__item
+		&:last-child
+			display: none
+	&__container
+		padding-left: 20px
+		padding-right: 20px
+	&__btn-wrap
+		padding: 40px 20px
+		background-color: #F6F8FA
+		border-top: 1px solid rgba(225, 228, 230, .5)
+.b-news
+	&__img
+		float: left
+		margin-right: 11px
+		img
+			max-width: 70px
+	&__item
+		margin-left: -20px
+		margin-right: -20px
+		padding: 16px 20px 20px 20px
+		+b-block
+		text-decoration: none
+		outline: none
+		&:not(:last-child)
+			border-bottom: 1px solid #E1E4E6
+	&__about-text
+		clear: both
+	&__about-topic
+		font-size: 15px
+		color: #2E97DF
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	&__about-date
+		font-size: 13px
+		color: #A2AEB7
+		margin-top: 5px
+	&__about-text
+		font-size: 15px
+		color: #2F353B
+		line-height: 25px
+		padding-top: 5px
+.b-faq-wrap
+	&__item
+		&:last-child
+			display: none
+.b-faq
+	&__list-topic
+		font-weight: 500
+		font-size: 18px
+		color: #2F353B
+		padding: 20px
+		padding-right: 41px
+		+b-relative
+		cursor: pointer
+		&:before
+			content: ''
+			+b-absolute
+			top: 31px
+			right: 18px
+			width: 16px
+			height: 2px
+			background-color: #a2aeb7
+		&:after
+			content: ''
+			+b-absolute
+			top: 24px
+			right: 25px
+			width: 2px
+			height: 16px
+			background-color: #a2aeb7
+		&.activate
+			&:before
+				background-color: #e03632
+			&:after
+				opacity: 0
+	&__list-content
+		// margin-top: -10px
+		display: none
+		padding: 0px 20px 20px 20px
+		p
+			color: #2F353B
+			font-size: 15px
+			line-height: 25px
+	&__list-item
+		// padding: 20px
+		border-top: 1px solid #E1E4E6
+		&:first-child
+			border-top: none
+	&__link-wrap
+		@extend .b-news-wrap__btn-wrap
+		padding-top: 20px
+	&__link-text
+		font-size: 16px
+		color: #2F353B
+	&__link
+		display: inline-block
+		a
+			font-size: 18px
+			color: #2E97DF
+			text-decoration: none
+			outline: none
+.b-projects
+	&__container
+		padding-left: 20px
+		padding-right: 20px
+		// padding-bottom: 30px
+	&__search
+		margin-top: 20px
+		min-height: 50px
+		input
+			min-height: 50px
+
+.b-projects-table
+	margin-top: 20px
+	&__top-wrap
+		display: none
+	&__link
+		a
+			font-size: 18px
+			color: #2E97DF
+			outline: none
+			text-decoration: none
+		img
+			width: auto
+			box-shadow: none
+			border-radius: 0
+			margin: 0 10px 0 0
+			display: inline
+			max-width: none
+			max-height: none
+	&__line
+		border-bottom: 1px solid rgba(225, 228, 230, .5)
+		margin-left: -20px
+		margin-right: -20px
+		padding: 20px
+		+b-relative
+		+b-flex
+		+b-flex-wrap
+		+b-flex-column
+		& > div
+			&:nth-child(2)
+				order: 2
+			&:nth-child(3)
+				order: 1
+			&:nth-child(4)
+				order: 1
+		&:first-child
+			border-top: 1px solid rgba(225, 228, 230, .5)
+		&:last-child
+			border-bottom: none
+	&__limit-wrap
+		+b-flex
+		+b-flex-align(center)
+		margin-top: 7px
+	&__limit-text
+		font-size: 15px
+		color: #2F353B
+	&__limit
+		font-size: 13px
+		color: #A2AEB7
+		margin-left: 23px
+		span
+			&:last-child
+				margin-left: 4px
+			&:first-child
+				color: #2F353B
+	&__date
+		margin-top: 10px
+		span
+			&:not(:first-child)
+				font-size: 13px
+				color: #A2AEB7
+			&:last-child
+				margin-left: 5px
+			&:nth-child(2)
+				color: #2F353B
+		.b-icon
+			+b-relative
+			padding-left: 16px
+			margin-right: 8px
+			&:before
+				content: ""
+				+b-absolute
+				top: 0
+				left: 0
+				width: 16px
+				height: 16px
+				display: inline-block
+				font: normal normal normal 14px/1 FontAwesome
+				text-rendering: auto
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+			&_timer
+				&:before
+					content: "\f017"
+					// background-image: url('./../img/projects/timer.png')
+			&_loading
+				&:before
+					// background-image: url('./../img/projects/loading.png')
+					content: "\f021"
+					color: #a7b2bb
+					top: 2px
+			&_time
+				&:before
+					content: "\f017"
+					color: #a7b2bb
+					top: 2px
+					// background-image: url('./../img/projects/timer.png')
+			&_flag
+				&:before
+					content: "\f11e"
+					color: #91da41
+					top: 2px
+	&__action, &__start
+		display: none
+	&__options
+		+b-flex
+		+b-absolute
+		top: 23px
+		right: 15px
+		padding: 5px
+		cursor: pointer
+		&.activate
+			.b-projects-table__option
+				background-color: #2F353B
+	&__option
+		width: 8px
+		height: 8px
+		min-width: 8px
+		+b-rounded(50%)
+		background-color: #E1E4E6
+		margin-left: 5px
+	&__options-body
+		background-color: #fff
+		+b-box-shadow(0 0 20px 0 rgba(162,174,183,0.3))
+		+b-absolute
+		+b-rounded(5px)
+		top: 55px
+		right: 10px
+		padding: 0px 20px
+		padding-top: 7px
+		padding-bottom: 17px
+		z-index: 2
+		display: none
+		&:before
+			content: ''
+			+b-absolute
+			top: -21px
+			left: 50%
+			margin-left: 42px
+			border: 9px solid transparent
+			border-bottom: 12px solid #fff
+
+		li
+			&.b-delete-btn
+				a
+					color: #A2AEB7
+					&:hover
+						border-bottom: none
+
+		a
+			font-size: 15px
+			color: #2F353B
+			text-decoration: none
+			outline: none
+			+b-block
+			padding-top: 20px
+			span
+				border-bottom: 1px solid transparent
+			&:hover
+				span
+					border-bottom: 1px solid rgba(47, 53, 59, .3)
+.b-projects-faq
+	margin-left: -20px
+	margin-right: -20px
+	a
+		padding: 20px
+		font-size: 15px
+		color: #2E97DF
+		text-decoration: none
+		outline: none
+		border-top: 1px solid #E1E4E6
+		border-bottom: 1px solid #E1E4E6
+		+b-block
+		+b-relative
+		&:before
+			content: ''
+			+b-absolute
+			top: 50%
+			margin-top: -4px
+			right: 15px
+			border: 4px solid transparent
+			border-left: 4px solid #A2AEB7
+.b-projects-analist
+	margin-left: -20px
+	margin-right: -20px
+	padding: 20px 20px 30px 20px
+	background-color: #f6f8fa
+	&__container
+		background-color: #fff
+		+b-box-shadow(0 0 10px 0 rgba(162,174,183,0.2))
+		min-height: 139px
+		max-height: 139px
+		background-repeat: no-repeat
+		background-image: url('./../img/projects/ask_bg.png')
+		background-position: right
+		padding: 30px 40px 30px 30px
+		+b-rounded(5px)
+	&__text
+		font-size: 18px
+		color: #2F353B
+		line-height: 27px
+		max-width: 155px
+.b-page-nav
+	display: none
+
+.b-audit
+	&__item
+		&:last-child
+			display: none
+.b-audit-form
+	padding: 32px 20px 48px 20px
+	&__warning-wrap
+		display: none
+	&__warning-img-wrap
+		width: 38px
+		height: 38px
+		border: 2px solid #E1E4E6
+		+b-rounded(50%)
+		+b-flex
+		+b-flex-align(center)
+		+b-justify-center
+		.fa
+			color: #D61F26
+	&__warning-img
+		min-width: 38px
+	&__warning
+		+b-flex
+	&__warning-topic
+		font-weight: 500
+		font-size: 15px
+		color: #D61F26
+		margin-top: 5px
+	&__warning-aftertopic
+		font-size: 15px
+		color: #D61F26
+		margin-top: 8px
+	&__warning-text
+		margin-left: 12px
+	&__warning
+		margin-top: 27px
+	&__btn
+		margin-top: 40px
+.b-analysis
+	clear: both
+	background-color: #fff
+	&__site-name-wrap
+		+b-relative
+		cursor: pointer
+	&__options-wrap
+		cursor: pointer
+	&__item
+		&:first-child
+			+b-flex
+			+b-flex-align(center)
+	&__btns, &__time
+		+b-flex
+	&__site-name
+		font-size: 22px
+		color: #2F353B
+		+b-relative
+		cursor: default
+		padding-left: 23px
+		padding-right: 30px
+		&:before
+			content: ''
+			+b-absolute
+			top: 6px
+			left: 0
+			width: 16px
+			height: 16px
+			background-repeat: no-repeat
+			background-image: url('./../img/report/square.png')
+		&:after
+			content: "\f107"
+			+b-absolute
+			top: 8px
+			right: 0
+			width: 16px
+			height: 16px
+			background-repeat: no-repeat
+			display: inline-block
+			font: normal normal normal 14px/1 FontAwesome
+			text-rendering: auto
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			color: #c7d1da
+	&__options-wrap
+		&.active
+			.b-analysis__option
+				background-color: #2F353B
+	&__options-body-wrapp
+		+b-absolute
+		top: 0
+		right: 0
+		padding-top: 66px
+		display: none
+	&__options-body
+		@extend .b-projects-table__options-body
+		top: 0px
+		+b-relative
+		+b-block
+		&:before
+			margin-left: 28px
+	&__container
+		padding: 17px 30px 16px 50px
+		+b-flex
+		+b-flex-align(center)
+		+b-justify
+		border-bottom: 1px solid #E1E4E6
+	&__time-date-wrap
+		+b-relative
+		cursor: pointer
+		&:before
+			content: "\f11e"
+			+b-absolute
+			top: 3px
+			left: 0
+			width: 13px
+			height: 13px
+			display: inline-block
+			font: normal normal normal 14px/1 FontAwesome
+			text-rendering: auto
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			color: #91da41
+			// background-repeat: no-repeat
+			// background-image: url('./../img/report/flag.png')
+		&:after
+			content: "\f107"
+			+b-absolute
+			top: 4px
+			right: 0
+			width: 16px
+			height: 16px
+			background-repeat: no-repeat
+			display: inline-block
+			font: normal normal normal 14px/1 FontAwesome
+			text-rendering: auto
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			color: #c7d1da
+		span
+			&:first-child
+				font-size: 15px
+				color: #2F353B
+				padding-left: 20px
+			&:last-child
+				font-size: 15px
+				color: #A2AEB7
+				margin-left: 5px
+				padding-right: 25px
+	&__select-item
+		padding: 8px 20px
+		&:hover
+			background-color: #F6F8FA
+			cursor: pointer
+		&.active
+			span
+				font-weight: 500
+		span
+			&:first-child
+				font-size: 15px
+				color: #2F353B
+				// padding-left: 20px
+			&:last-child
+				font-size: 15px
+				color: #A2AEB7
+				margin-left: 5px
+				// padding-right: 25px
+	&__select
+		background-color: #fff
+		+b-box-shadow(0 0 20px 0 rgba(162, 174, 183, 0.3))
+		+b-rounded(5px)
+		padding-top: 7px
+		padding-bottom: 17px
+		max-height: 122px
+		overflow: hidden
+	&__select-wrap
+		z-index: 2
+		+b-absolute
+		// top: 33px
+		padding-top: 17px
+		right: 7px
+		min-width: 140px
+		display: none
+		&:before
+			content: ''
+			+b-absolute
+			top: -3px
+			left: 50%
+			margin-left: -6px
+			border: 9px solid transparent
+			border-bottom: 12px solid #fff
+			z-index: 2
+	&__time-date
+		margin-left: 46px
+		cursor: default
+		+b-relative
+		min-width: 136px
+	&__time-cost
+		@extend .b-analysis__time-date-wrap
+		margin-left: 14px
+		&:before, &:after
+			content: none
+		span
+			&:first-child
+				padding-left: 0px
+			&:last-child
+				padding-right: 0px
+	&__btn-rebuild, &__btn-download
+		font-size: 15px
+		color: #2E97DF
+		+b-relative
+		padding-left: 20px
+		margin-left: 30px
+		cursor: pointer
+		.fa, img
+			+b-absolute
+			top: 50%
+			transform: translateY(-44%)
+			left: 0
+			font-size: 14px
+			color: #2e97df
+			// display: none
+		// &:before
+		//  content: ''
+		//  +b-absolute
+		//  top: 2px
+		//  left: 0
+		//  width: 15px
+		//  height: 15px
+		//  background-repeat: no-repeat
+		//  background-image: url('./../img/report/rebuild.png')
+	&__btn-calendar
+		@extend .b-analysis__btn-rebuild
+		margin-left: 30px
+		.fa
+			color: #aeb9c0
+			font-size: 13px
+	&__btn-settings
+		@extend .b-analysis__btn-rebuild
+		margin-left: 30px
+		.fa
+			color: #69839b
+	&__options
+		padding: 5px
+		cursor: pointer
+		+b-flex
+	&__option
+		@extend .b-projects-table__option
+.b-analysis-nav__container ul
+	padding-left: 0
+.b-analysis-nav
+	max-width: 250px
+	background-color: #fff
+	min-height: 680px
+	height: 100%
+	padding-left: 0
+	// height: 100vh
+	+b-relative
+	// #E1E4E6
+	// width: 0
+	// overflow: hidden
+	// display: none
+	// left: -250px
+	width: 250px
+	li
+		list-style-type: none
+		.fa
+			+b-absolute
+			top: 2px
+			left: 4px
+			font-size: 19px
+		&:before
+			display: none
+	&__wrap
+		overflow: hidden
+		border-right: 4px solid transparent
+		left: 0
+		margin-right: 17px
+		width: 250px
+		height: 100%
+		&:not(.active)
+			border-right: 4px solid #2E97DF
+		&.border
+			border-right: 1px solid #E1E4E6
+	&__container
+		padding-top: 18px
+		padding-left: 17px
+		border-right: 1px solid #E1E4E6
+		min-width: 250px
+		width: 250px
+	&__list-item
+		font-weight: 500
+		font-size: 15px
+		color: #262A2F
+		text-decoration: none
+		+b-block
+		padding-left: 30px
+		padding-top: 2px
+		padding-bottom: 2px
+		&:hover
+			text-decoration: none
+			background-color: #e1e4e6
+
+	&__topic
+		font-weight: 500
+		font-size: 15px
+		color: #262A2F
+		margin-bottom: 9px
+	&__inner
+		li
+			// padding-left: 29px
+			margin-top: 4px
+		a
+			padding-left: 29px
+			font-size: 13px
+			outline: none
+			color: #262A2F
+			+b-block
+			text-decoration: none
+			padding-top: 3px
+			padding-bottom: 3px
+			&:hover
+				background-color: #e1e4e6
+	.b-report1, .b-report2, .b-report3, .b-report4, .b-report5, .b-report6, .b-report7, .b-report8
+		+b-relative
+		// padding-left: 30px
+		margin-top: 20px
+	.b-report2
+		.fa
+			font-size: 16px
+	.b-report3
+		.fa
+			font-size: 20px
+	.b-report4
+		padding-left: 30px
+		.fa
+			font-size: 17px
+			top: -2px
+	.b-report5
+		padding-left: 30px
+		.fa
+			font-size: 18px
+			top: -2px
+	.b-report6
+		padding-left: 30px
+		.fa
+			font-size: 18px
+			top: 0px
+	.b-report7, .b-report8
+		.fa
+			font-size: 18px
+	.b-report1
+		margin-top: 0px
+.b-analysi-preload-wrap
+	display: none
+.b-analysis-container
+	background-color: #f6f8fa
+	clear: both
+	+b-relative
+.b-analysi-preload
+	+b-absolute
+	top: 91px
+	left: 0
+	z-index: 5
+	background-color: #fff
+	height: 90%
+	height: -webkit-calc(100% - 91px)
+	height: -moz-calc(100% - 91px)
+	height: calc(100% - 91px)
+	height: calc(100% - 91px)
+	width: 100%
+	+b-flex
+	+b-justify-center
+	+b-flex-align(center)
+	text-align: center
+	&__container
+		margin-top: -91px
+	&__topic
+		font-size: 23px
+		color: #2F353B
+		margin-top: 7px
+	&__text
+		max-width: 500px
+		margin: 0 auto
+		font-size: 15px
+		line-height: 21px
+		color: #2F353B
+		margin-top: 13px
+		a
+			font-size: 15px
+			line-height: 21px
+			text-decoration: none
+			outline: none
+			margin-left: 5px
+.b-analysis-content
+	+b-relative
+	min-height: 680px
+	height: 100vh
+	&__wrap
+		+b-flex
+		height: 100%
+	&__show-btn
+		width: 25px
+		height: 29px
+		background-color: #2E97DF
+		background-position: 8px 10px
+		cursor: pointer
+		+b-absolute
+		top: -30px
+		left: 0
+		&:before
+			+b-absolute
+			top: 7px
+			left: 8px
+			content: "\f105"
+			display: inline-block
+			font: normal normal normal 14px/1 FontAwesome
+			text-rendering: auto
+			color: #fff
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+		&.active
+			&:before
+				content: "\f104"
+.b-analysis-total
+	width: 100%
+	// max-width: 1140px
+	transition: linear .5s, padding .5s
+	flex: 1
+	&.js-opened
+		padding-left: 300px
+	&__container
+		padding-left: 35px
+		padding-right: 15px
+	&__topic-date-wrap
+		+b-flex
+		+b-relative
+		cursor: pointer
+	&__topic-date-body
+		@extend .b-analysis__select-wrap
+		padding-top: 40px
+		&:before
+			top: 20px
+	&__topic-date-text
+		font-size: 15px
+		color: #2F353B
+		padding-top: 6px
+		margin-left: 22px
+		cursor: default
+	&__topic-text
+		font-size: 23px
+		color: #2F353B
+	&__topic-date
+		padding-top: 6px
+		cursor: default
+		margin-left: 5px
+		min-width: 116px
+		+b-relative
+		&:before
+			content: "\f107"
+			+b-absolute
+			top: 10px
+			right: 0
+			width: 16px
+			height: 16px
+			background-repeat: no-repeat
+			display: inline-block
+			font: normal normal normal 14px/1 FontAwesome
+			text-rendering: auto
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			color: #c7d1da
+		span
+			&:first-child
+				font-size: 15px
+				color: #2F353B
+			&:last-child
+				font-size: 15px
+				color: #A2AEB7
+				margin-left: 5px
+				+b-relative
+				padding-right: 25px
+
+	&__head
+		padding: 20px 0
+	&__head, &__topic, &__head-links
+		+b-flex
+		+b-justify
+		+b-flex-align(center)
+	&__head-pdf, &__head-report
+		font-size: 15px
+		color: #69839B
+		cursor: pointer
+	&__head-report
+		+b-relative
+		margin-left: 24px
+		padding-left: 20px
+		.fa
+			+b-absolute
+			top: 2px
+			left: 0
+			color: #6c869d
+.b-analysis-info
+	margin-top: 7px
+	min-height: 84px
+	&__table
+		background-color: #fff
+		border: 1px solid #E1E4E6
+		&.fixed
+			position: fixed
+			top: 0
+			width: 100%
+			max-width: 1112px
+		&.bottom //do stuff when get to bottom
+			top: auto
+			position: absolute
+	&__table-top
+		+b-flex
+	&__table-item
+		min-height: 82px
+	&__table-item-warning
+		color: #E94F57
+		font-size: 12px
+		+b-relative
+		padding-left: 14px
+		top: -3px
+		&:before
+			content: "\f071"
+			+b-absolute
+			top: 7px
+			left: 0
+			width: 12px
+			height: 12px
+			display: inline-block
+			font: normal normal normal 10px/1 FontAwesome
+			text-rendering: auto
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+	&__table-item-topic
+		font-size: 15px
+		color: #668099
+	&__table-item
+		line-height: 24px
+		padding-top: 10px
+		padding-left: 15px
+		+b-block
+		&:hover
+			text-decoration: none
+			background-color: #e1e4e6
+		&:last-child
+			background-color: transparent
+		&.pl-10
+			padding-left: 24px
+		&.b-justify-end
+			+b-justify-end
+			+b-flex
+
+		&:nth-child(1)
+			width: 11%
+		&:nth-child(2)
+			width: 11%
+		&:nth-child(3)
+			width: 10%
+		&:nth-child(4)
+			width: 11%
+		&:nth-child(5)
+			width: 11%
+		&:nth-child(6)
+			width: 11%
+		&:nth-child(7)
+			width: 14%
+		&:nth-child(8)
+			width: 20%
+	&__btn
+		background-color: #2E97DF
+		padding: 9px 23px
+		color: #fff
+		font-size: 17px
+		text-align: center
+		cursor: pointer
+		max-width: 195px
+		max-height: 44px
+		+b-relative
+		top: 9px
+.b-analysis-name
+	+b-absolute
+	top: 0
+	left: 0
+	z-index: 2
+	padding-top: 41px
+	display: none
+	&:after
+		content: ''
+		+b-absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 22px
+		+b-box-shadow(0px -20px 20px 0px #fff inset)
+	&__container
+		+b-relative
+		+b-box-shadow(0 0 20px 0 rgba(162,174,183,0.3))
+		background-color: #fff
+		+b-rounded(5px)
+		min-width: 390px
+		padding: 20px 20px 0px 20px
+		&:before
+			content: ''
+			+b-absolute
+			top: -20px
+			left: 50%
+			margin-left: -153px
+			border: 9px solid transparent
+			border-bottom: 12px solid #fff
+	&__head
+		+b-flex
+		+b-justify
+	&__btn
+		width: 39%
+		margin-left: 10px
+
+	&__search
+		width: 61%
+		input
+			min-height: 40px
+			width: 100%
+	&__item
+		border-top: 1px solid #E1E4E6
+		+b-flex
+		+b-flex-align(center)
+		padding: 15px 0px
+
+		&:hover
+			background-color: #FAF7DC
+			text-decoration: none
+
+	&__icon
+		+b-flex
+		+b-flex-align(center)
+	&__body
+		margin-top: 20px
+		max-height: 420px
+		overflow: hidden
+		padding-bottom: 15px
+	&__sitename
+		width: 220px
+		overflow: hidden
+		text-overflow: ellipsis
+		margin-left: 10px
+		a
+			color: #2E97DF
+			text-decoration: none
+			outline: none
+			font-size: 15px
+	&__date-wrap
+		+b-flex
+		+b-flex-align(center)
+		+b-justify-end
+		width: 39%
+		padding-right: 15px
+	&__date
+		color: #A2AEB7
+		font-size: 13px
+		margin-left: 15px
+	&__status
+		width: 15px
+		height: 15px
+		background-repeat: no-repeat
+		+b-relative
+		&.done
+			&:before
+				+b-absolute
+				content: "\f11e"
+				position: absolute
+				top: 3px
+				left: 0
+				width: 13px
+				height: 13px
+				display: inline-block
+				font: normal normal normal 14px/1 FontAwesome
+				text-rendering: auto
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+				color: #91da41
+		&.loading
+			&:before
+				content: "\f021"
+				position: absolute
+				top: 3px
+				left: 0
+				width: 13px
+				height: 13px
+				display: inline-block
+				font: normal normal normal 14px/1 FontAwesome
+				text-rendering: auto
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+				color: #A2AEB7
+.b-prices-tariffs, .b-prices-clients
+	display: none
+.b-prices-clients
+	img
+		width: auto
+		max-width: none
+		max-height: none
+		margin: 0
+		border-radius: 0
+		box-shadow: none
+.b-prices
+	&__top-text
+		font-size: 16px
+		line-height: 27px
+		color: #2F353B
+		padding-left: 20px
+		padding-right: 20px
+		padding-top: 31px
+	&__buy-btn
+		margin-top: 30px
+		margin-left: 20px
+		margin-right: 20px
+		a
+			+b-rounded(100px)
+			padding: 10px 0px
+		&.js-popup-hide
+			display: none
+	&__warning
+		margin: 0 auto
+		ext-align: center
+		line-height: 25px
+		font-size: 13px
+		color: #A2AEB7
+		max-width: 200px
+		text-align: center
+		margin-top: 15px
+	&__reviews
+		background-color: #F6F8FA
+		margin-top: 118px
+
+
+.price_discount
+	span
+		&:first-child
+			color: #2F353B
+			font-size: 15px
+		&:last-child
+			color: #E03632
+			font-weight: 500
+			font-size: 13px
+			margin-left: 10px
+.b-prices-content
+	&__options
+		+b-flex
+		padding-left: 20px
+		padding-right: 20px
+		margin-top: 10px
+	&__tariff
+		padding-bottom: 5px
+	&__option
+		&:last-child
+			margin-left: 40px
+	&__tariff_off
+		.b-prices-content__select
+			pointer-events: none
+	&__current-off
+		font-size: 18px
+		.fa
+			font-size: 15px
+		.not-check
+			&:before
+				margin-left: -5px !important
+		color: #2F353B
+	&__table-elems
+		.owl-dots
+			display: none
+	&__tariff-slider
+		border-top: 1px solid #E1E4E6
+		margin-top: 47px
+		.owl-dots
+			display: none
+		.owl-nav
+			+b-absolute
+			color: #bdbdbe
+			font-size: 50px
+			width: 100%
+			top: 0
+			div
+				cursor: pointer
+				z-index: 15
+				position: absolute
+				outline: none
+			.owl-prev
+				left: 0
+				// opacity: .7
+				transition: all .5s ease
+				width: 34px
+				height: 74px
+				top: 7px
+				left: 15px
+				// &:hover
+				//  opacity: 1
+				//  transition: all .5s ease
+				&:before
+					// content: "\f104"
+					content: ""
+					position: absolute
+					top: 24px
+					left: 0
+					// display: inline-block
+					// font: normal normal normal 14px/1 FontAwesome
+					// font-size: inherit
+					// text-rendering: auto
+					// -webkit-font-smoothing: antialiased
+					// -moz-osx-font-smoothing: grayscale
+					// color: #3b9de1
+					padding: 11px 7px
+					background-repeat: no-repeat
+					background-image: url('./../img/prices/arrow1.png')
+			.owl-next
+				// opacity: .7
+				transition: all .5s ease
+				width: 34px
+				height: 74px
+				top: 7px
+				right: 15px
+				// &:hover
+				//  opacity: 1
+				//  transition: all .5s ease
+				&:before
+					// content: "\f105"
+					content: ""
+					position: absolute
+					top: 24px
+					right: 0px
+					padding: 0px 1px
+					padding: 11px 7px
+					background-repeat: no-repeat
+					background-image: url('./../img/prices/arrow2.png')
+					// display: inline-block
+					// font: normal normal normal 14px/1 FontAwesome
+					// font-size: inherit
+					// text-rendering: auto
+					// -webkit-font-smoothing: antialiased
+					// -moz-osx-font-smoothing: grayscale
+					// color: #3b9de1
+	&__tariff-topic
+		text-align: center
+		font-size: 18px
+		color: #2F353B
+		margin-top: 25px
+	&__tariff-aftertopic
+		color: #A2AEB7
+		font-size: 13px
+		text-align: center
+		margin-top: 20px
+	&__current-price-wrap
+		.b-prices-content__old-price
+			display: none
+		&.active
+			.b-prices-content__old-price
+				+b-block
+	&__current-price
+		color: #E03632
+		font-size: 18px
+		.fa
+			font-size: 15px
+			margin-left: 3px
+	&__old-price
+		color: #A2AEB7
+		font-size: 15px
+		text-align: center
+		text-decoration: line-through
+		margin-top: 5px
+		.fa
+			font-size: 14px
+	&__month-token, &__token-cost, &__period, &__session, &__min-audit, &__max-audit, &__price-per-page, &__max-pages, &__claster, &__request, &__key-words, &__calc, &__api
+		font-size: 15px
+		color: #2F353B
+		font-weight: 500
+		.fa
+			font-size: 14px
+			margin-left: 3px
+			+b-relative
+			top: 1px
+	&__min-audit, &__max-audit, &__price-per-page, &__max-pages, &__claster, &__request, &__key-words
+		.icon
+			display: none
+		&.active
+			.icon
+				+b-block
+
+	&__select
+		padding-left: 20px
+		padding-right: 20px
+		margin-top: 20px
+		.price_discount
+			span
+				&:last-child
+					color: #E03632
+					font-weight: 500
+					font-size: 13px
+					margin-left: 10px
+	&__table
+		+b-flex
+		margin-top: 23px
+		& > div
+			&:first-child
+				width: 70%
+			&:last-child
+				width: 30%
+	.not-check
+		+b-block
+		min-height: 20px
+		+b-relative
+		&:before
+			content: "—"
+			+b-absolute
+			top: 50%
+			left: 50%
+			margin-top: -6px
+			margin-left: -12px
+			width: 12px
+			height: 12px
+			//border: 1px solid #2F353B
+			+b-rounded(50%)
+	.check
+		+b-block
+		min-height: 20px
+		+b-relative
+		&:before
+			content: "\f00c"
+			+b-absolute
+			top: 50%
+			left: 50%
+			margin-top: -8px
+			margin-left: -12px
+			display: inline-block
+			font: normal normal normal 14px/1 FontAwesome
+			font-size: inherit
+			text-rendering: auto
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			color: #70b77c
+	&__table-elem
+		border-top: 1px solid rgba(225, 228, 230, .5)
+		font-size: 15px
+		color: #2F353B
+		padding-left: 20px
+		&.topic
+			font-weight: 500
+		&:first-child
+			height: 80px
+			+b-flex
+			+b-flex-align(center)
+		&:last-child
+			border-bottom: 1px solid rgba(225, 228, 230, .5)
+		&:not(:first-child)
+			height: 40px
+			+b-flex
+			+b-flex-align(center)
+	&__current-price-container
+		height: 80px
+		+b-flex
+		+b-flex-align(center)
+		+b-justify-center
+	&__table-elem-item
+		& > div
+			border-top: 1px solid rgba(225, 228, 230, .5)
+			padding-right: 15px
+			&:not(:first-child)
+				height: 40px
+				+b-flex
+				+b-flex-align(center)
+				+b-justify-center
+			&:last-child
+				border-bottom: 1px solid rgba(225, 228, 230, .5)
+.b-prices-howto
+	padding: 40px 20px
+
+	&__topic
+		color: #2F353B
+		font-size: 30px
+		text-align: center
+		margin-top: 80px
+
+		@media screen and (max-width: 767px)
+			margin-top: 0
+
+	&__text
+		color: #2F353B
+		font-size: 16px
+		line-height: 27px
+		margin-top: 18px
+.infinite
+	font-size: 18px !important
+
+.b-page-nav
+		+b-block
+		text-align: center
+		margin-top: 30px
+		.b-page-nav__list
+			margin: 0
+		.b-page-nav__amount
+			ul
+				margin: 0
+				padding: 0
+		li
+			display: inline-block
+			position: static
+			margin-bottom: 0
+			&:before
+				display: none
+			&.active
+				a
+					background-color: #E03632
+					color: #fff
+		a
+			font-size: 16px
+			text-decoration: none
+			outline: none
+			color: #2F353B
+			+b-flex
+			+b-flex-align(center)
+			+b-justify-center
+			min-width: 40px
+			min-height: 40px
+			+b-rounded(50%)
+
+			&:not(.ellipsis):not(.b-page-nav__prev):not(.b-page-nav__next):hover
+				color: #2F353B
+				background-color: #E1E4E6
+
+.b-projects
+	padding-bottom: 30px
+
+
+#header.index-page
+	.sub-menu-link
+		line-height: 25px
+		font-size: 15px
+		letter-spacing: -0.1px
+		color: #FFFFFF
+		text-decoration: none
+	.header__menu-list li
+		padding: 6px 0 0
+		margin-bottom: 19px
+		a
+			padding: 0 20px
+			text-decoration: none
+			color: #fff
+			letter-spacing: 0.4px
+		ul li
+			border: none
+			float: none
+			margin-bottom: 8px
+
+	.sub-menu-link__icon
+		display: inline-block
+		height: 20px
+		width: 20px
+		background-repeat: no-repeat
+		background-position: 0 50%
+		position: relative
+		top: 5px
+	.sub-menu-title
+		line-height: 25px
+		font-size: 18px
+		letter-spacing: -0.5px
+		color: #FFFFFF
+		opacity: .6
+		padding: 0 20px
+		margin-bottom: 9px
+	.logo
+		position: relative
+		z-index: 16
+
+
+#header.front-page
+	.hamburger
+		float: left
+		margin-left: 0
+		padding: 9px 4px
+		.hamburger-inner,
+		.hamburger-inner::after,
+		.hamburger-inner::before
+			width: 21px
+		.hamburger-inner
+			top: 5px
+			&:before
+				top: 6px
+			&:after
+				top: 12px
+
+	.logo
+		float: left
+		margin-left: 11px
+		margin-top: 6px
+		letter-spacing: 0.6px
+		text-decoration: none
+		img
+			display: none
+		.logo__company-name
+			display: block
+			line-height: 25px
+			font-size: 24px
+			color: #FFFFFF
+#header.front-page.b-profile-page.regular-page
+	.sub-menu-link
+		line-height: 25px
+		font-size: 15px
+		letter-spacing: -0.1px
+		color: #FFFFFF
+		text-decoration: none
+	.header__menu-list li
+		padding: 6px 0 0
+		margin-bottom: 19px
+		a
+			padding: 0 20px
+			text-decoration: none
+			color: #fff
+			letter-spacing: 0.4px
+		ul li
+			border: none
+			float: none
+			margin-bottom: 8px
+
+	.sub-menu-link__icon
+		display: inline-block
+		height: 20px
+		width: 20px
+		background-repeat: no-repeat
+		background-position: 0 50%
+		position: relative
+		top: 5px
+	.sub-menu-title
+		line-height: 25px
+		font-size: 18px
+		letter-spacing: -0.5px
+		color: #FFFFFF
+		opacity: .6
+		padding: 0 20px
+		margin-bottom: 9px
+	.logo
+		position: relative
+		z-index: 16
+	@media only screen and (max-width: 1024px)
+		background-color: #E03632
+		background-image: url('../../images/background/header-tablet.svg')
+		background-repeat: no-repeat
+		background-size: 300px !important
+		background-position: 51px 0
+
+#header.front-page.b-profile-page.is-auth
+	background-color: #E03632
+	background-image: url(../../images/background/header-tablet.svg)
+	background-repeat: no-repeat
+	background-size: 300px !important
+	background-position: 51px 0
+	#navigation-profile
+		position: fixed
+		left: 0
+		top: 0
+		height: 100%
+		width: 100%
+		z-index: 30
+		background-color: #2f353b
+		.user-information
+			width: 100%
+			padding: 20px 20px 20px
+			margin: 0
+		.header__menu-list
+			padding: 0 20px
+			li
+				float: left
+				width: 100%
+				clear: none
+				text-align: left
+				margin-right: 5%
+				border-bottom: 0
+				padding: 23px 0 23px
+				&:before
+					display: none
+				.menu-title
+					font-size: 18px
+					line-height: 27px
+					color: #fff
+					padding-bottom: 8px
+					display: block
+				ul
+					li
+						text-align: left
+						border-top: 1px solid #44494e
+						clear: both
+						width: 100%
+						padding: 8px 0
+						margin: 0
+						&:before
+							display: none
+						a
+							font-size: 15px
+							line-height: 25px
+							color: #a2aeb7
+							display: block
+							font-size: 15px
+							line-height: 25
+							text-decoration: none
+				a.external
+					color: #a2aeb7
+					font-size: 15px
+				a.external:after
+						content: "\f08e"
+						display: inline-block
+						font: normal normal normal 14px/1 FontAwesome
+						font-size: inherit
+						text-rendering: auto
+						-webkit-font-smoothing: antialiased
+						-moz-osx-font-smoothing: grayscale
+						margin-left: 15px
+	.container
+		padding-left: 20px
+		padding-right: 20px
+	.b-user__item:nth-child(2)
+		min-width: auto
+		cursor: pointer
+	.logo
+		margin-left: 15px
+		position: relative
+		z-index: 16
+		margin-top: 8px
+		.logo__company-name
+			display: block
+	.hamburger
+		float: left
+		padding: 9px 0
+		margin-left: 0
+	.hamburger-box
+		width: 25px
+		height: 24px
+		display: inline-block
+		position: relative
+		.hamburger-inner
+			top: 8px
+			width: 21px
+			&:before
+				top: 6px
+			&:after
+				top: 12px
+				bottom: auto
+	.b-top-wrapper__item
+		position: relative
+		z-index: 16
+	#navigation
+		display: none
+		position: fixed
+		top: 59px
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 15
+		background-color: #E03632
+		box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
+		padding: 10px 0 0
+		background-image: url(../../images/background/header-tablet.svg)
+		background-repeat: no-repeat
+		background-position: 51px -60px
+		@media (min-width: 768px)
+			height: auto
+		.header__menu-list
+			height: auto
+			display: block
+			li
+				clear: none
+				border: none
+				text-align: left
+				margin-right: 0
+				float: none
+				border-bottom: 0
+				margin-bottom: 13px
+				display: block
+				padding: 0
+				.sub-menu-link
+					line-height: 25px
+					font-size: 15px
+					letter-spacing: 1.5px
+					color: #FFFFFF
+					text-decoration: none
+				a
+					padding: 6px 20px
+					text-decoration: none
+					color: #fff
+					font-size: 15px
+					line-height: 25px
+					letter-spacing: 0.4px
+					transition: background-color .2s
+					&:hover
+						background: rgba(198, 48, 44, 0.6)
+					&.active
+						background: rgba(198, 48, 44, 0.6)
+						position: relative
+						&:before
+							content: ''
+							background-color: #fff
+							height: 100%
+							width: 4px
+							top: 0
+							left: 0
+							position: absolute
+			.sub-menu-title
+				line-height: 25px
+				font-size: 18px
+				letter-spacing: -0.5px
+				color: #FFFFFF
+				opacity: .6
+				padding: 0 20px
+				margin-bottom: 9px
+			.sub-menu-link__icon
+				display: inline-block
+				height: 20px
+				width: 20px
+				background-repeat: no-repeat
+				background-position: 0 50%
+				position: relative
+				top: 5px
+			.sub-menu
+				li
+					margin-bottom: 8px
+#header .hamburger--slider.is-active .hamburger-inner::after
+	-webkit-transform: translate3d(0, -12px, 0) rotate(-90deg)
+	transform: translate3d(0, -12px, 0) rotate(-90deg)
+.main-container
+	max-width: 1160px
+	margin: 0 auto
+	padding-bottom: 30px
+.main-wrapper
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	color: #2F353B
+	.main-content
+		flex-basis: 100%
+		max-width: 100%
+		background: #FFFFFF
+		box-shadow: 0 0 10px rgba(162, 174, 183, 0.2)
+		border-radius: 5px
+		padding: 30px 20px
+	.main-menu
+		background: #FFFFFF
+		box-shadow: 0 0 10px rgba(162, 174, 183, 0.2)
+		border-radius: 5px
+		padding: 10px 34px
+		display: none
+	.banners-list
+		display: flex
+		flex-wrap: wrap
+		padding: 0 25px
+		.banner
+			width: 100%
+			.banner-logo
+				height: auto
+
+body
+	&.is-hidden
+		height: 100%
+		overflow: hidden
+.sub-menu
+	padding: 0
+
+#header
+	position: relative
+
+.menu-is-open
+	#header
+		&:before
+			content: ''
+			height: 60px
+			width: 250px
+			position: absolute
+			top: 0
+			left: 0
+			background-color: #000
+			opacity: .3
+			@media (max-width: 767px)
+				width: 100%
+
+#header.front-page.b-profile-page.is-auth .hamburger.close-profile
+	position: absolute
+	right: 20px
+
+.b-user__helper-wrapper
+	margin-top: 43px
+	ul
+		margin: 0
+.selection
+	img
+		max-width: none
+		max-height: none
+		display: inline
+		margin: 0
+		width: auto
+		box-shadow: none
+		border-radius: 0
+
+.b-projects-table__options-body ul
+	margin: 0
+	padding: 0
+	li
+		&:before
+			display: none
+.l-menu__list
+	padding-left: 0
+	li
+		&:before
+			display: none

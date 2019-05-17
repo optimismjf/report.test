@@ -1,0 +1,245 @@
+.b-task
+	line-height: 25px
+	font-size: 15px
+	color: #2F353B
+	&__content 
+		display: flex 
+		justify-content space-between 
+		
+		& + & 
+			padding-top 30px
+			border-top: 1px solid #E1E4E6
+	
+		&-item 
+			
+			&--left 
+				width 47%
+			
+			&--right 
+				width 45.3%
+		
+	&__buttons 
+		display: flex 
+		flex-wrap wrap 
+		justify-content flex-end 
+		padding-bottom 30px
+		
+		&-text 
+			text-align right
+			width 100%
+			padding-top 26px
+		
+		.b-main-button
+			
+			a, button 
+				padding 8px 30px !important
+				margin-left 10px
+	
+	&__item 
+		padding-bottom 30px
+		
+		&:not(.b-task__item--full)
+			display: flex 
+			align-items flex-start
+			
+			.b-task__item
+				&-content 
+					flex 1 
+		
+		&:not(.b-task__item--full):not(.b-task__item--no-title)
+			.b-task__item
+				&-title 
+					width 150px 
+					padding-top 9px
+		
+		&--no-title
+			.b-task__item
+				&-title 
+					width 22px
+					padding-top 0
+					
+					.b-main-checkbox
+						margin-right 0
+						
+
+		
+		&-content
+			
+			&--several
+				display: flex 
+				align-items center 
+				flex-wrap wrap
+				
+				input 
+					max-width 80px
+			
+			&.js-disabled 
+				opacity .8
+				pointer-events none
+			
+			&-title 
+				display inline-block
+				padding 0 0 26px 10px
+				font-size 18px
+				line-height 18px
+		
+		&-title
+			display: flex 
+			align-items center 
+			flex-wrap wrap 
+			padding-bottom 16px
+			
+			&--big
+				font-size 18px
+				line-height 18px 
+				.b-main-checkbox label
+					font-size 18px
+					line-height 18px 
+					
+			&--bold 
+				font-weight: 500
+			
+			&--justify 
+				justify-content space-between
+			
+			.b-main-checkbox
+				margin-right 10px
+		
+		&-text 
+			margin-left 20px
+			
+			& + * 
+				margin-left 20px
+		
+		&-note 
+			color: #A2AEB7
+			
+				
+/* b-task-tabs */
+/*========================*/			
+.b-task-tabs
+	display: inline-flex 
+	align-items center 
+	margin-left 10px
+	
+	a 
+		font-size: 13px
+		text-decoration none
+		display inline-block
+		margin-left 20px
+		line-height 1.4
+		border-bottom 1px dashed currentColor
+		
+		&:hover 
+			text-decoration none
+			border-bottom-color transparent
+			
+		&.js-active
+			color: #2F353B
+			border-bottom-color transparent
+	
+	&-block 
+		display none
+		
+/* b-task-word */
+/*========================*/
+.b-task-word
+	display: flex 		
+	background-color: #F6F8FA
+	border: 1px solid #E1E4E6
+	borde-radius 3px 
+	height 286px
+	font-size 13px
+	line-height 25px
+	
+	&__content
+		width 50%
+		display: flex 
+		padding: 10px
+		
+		& + & 
+			box-shadow inset 1px 0 0 #E1E4E6 
+		
+		textarea 
+			padding 5px 10px 
+			height 100% !important
+			min-height 100%
+			max-height 100%
+			min-width 100%
+			width 100% !important
+			border none
+			font-size 13px
+			line-height 26px
+			color #2F353B
+		
+		&-inner 
+			padding 0 10px
+			height 100%
+			width 100%
+			overflow-y auto
+	
+	&__item 
+		display: flex 
+		padding-bottom 5px
+		
+		&--title 
+			color: #A2AEB7
+			pointer-events none
+
+		
+		&-title 
+			flex 1 
+			width 60%
+			line-height 1
+			
+			&-inner 
+				position relative
+				display inline-block
+				max-width 100%
+				cursor pointer
+				line-height 1
+			
+				&:before 
+					content attr(data-text)
+					position absolute
+					left 0
+					top 0
+					right 0
+					z-index 2
+					line-height 1.2
+					border-radius 3px 
+					padding: 5px 08px
+					opacity 0
+					visibility hidden
+					transition .3s linear all 
+					background-color #F6F8FA
+			
+				&:hover 
+					&:before 
+						opacity 1
+						visibility visible
+			span 
+				display inline-block
+				max-width 100%
+				padding: 0 8px
+				white-space: nowrap
+				overflow: hidden
+				text-overflow: ellipsis
+				border-radius 3px 
+				transition .3s linear all 
+				line-height 25px
+				
+			&.js-selected
+				.b-task-word__item-title-inner
+					&:before 
+						background-color: #C5EFC8;
+						box-shadow 0 0 0 2px #F6F8FA
+						
+					span 
+						background-color: #C5EFC8;
+			
+		&-number 
+			width 30px
+			text-align right
+			
+			

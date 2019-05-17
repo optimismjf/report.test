@@ -1,0 +1,130 @@
+.b-top-wrapper
+
+	&__section
+		position: relative
+
+		&:hover
+			@media screen and (min-width: 1000px)
+				&:after
+					content ''
+					display block
+					position absolute
+					left 50%
+					width 220px
+					margin-left -110px
+					top 100%
+					height 40px
+
+			.b-top-wrapper__helper-wrapper
+				display: block
+
+		@media screen and (max-width: 999px)
+
+			&:after
+				position absolute
+				content ''
+				top 0
+				left 0
+				right 0
+				bottom 0
+				z-index 1
+
+			&:hover
+
+				&:after
+					bottom auto
+					right auto
+					left 50%
+					width 220px
+					margin-left -110px
+					height 65px
+
+
+	&__helper-wrapper
+		position absolute
+		top: 0
+		margin-top: 53px
+		left: 50%
+		width: 220px
+		margin-left: -110px
+		display: none
+		z-index: 3
+
+		@media screen and (max-width: 999px)
+			margin-top 41px
+
+	&__helper
+		background-color: #fff
+		box-shadow 0 0 20px 0 rgba(162,174,183,0.3)
+		border-radius 5px
+
+		&:before
+			content: "\f0d8"
+			position: absolute
+			left: 50%
+			margin-left: -10px
+			top: -18px
+			display: inline-block
+			font: normal normal normal 28px/1 FontAwesome
+			color: #fff
+			text-rendering: auto
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+
+	&__helper-list
+		padding: 12px 20px 20px 20px
+		li
+			list-style-type: none
+			margin-top: 10px
+
+		a
+			font-size: 15px
+			line-height: 25px
+			color: #2F353B!important
+			text-decoration: none
+			border-bottom: 1px solid transparent
+			&:hover
+				border-bottom: 1px solid #2F353B
+
+
+.b-profile-tabs
+	position relative
+
+	&__helper
+		position absolute
+		left 0
+		right 0
+		top 100%
+		z-index 10
+		background-color inherit
+		display none
+
+	&__item.has-child
+		a
+			pointer-events: none;
+
+		&:hover
+			.b-profile-tabs__helper
+				display block
+
+
+
+.site-analysis
+
+	.form-item
+		padding 0
+
+		&--button
+			.error-text
+				display none
+
+		&--input
+
+			.error-text
+				color #fff
+				left 20px
+
+	@media screen and (max-width: 767px)
+
+		.form-item
+			padding-bottom 20px

@@ -1,0 +1,232 @@
+.b-challane-check
+	display: flex 
+	flex-wrap wrap 
+	justify-content space-between
+	color: #2F353B;
+	font-size 15px
+	line-height 25px
+	
+	input, 
+	textarea,
+	select 
+		background-color #fff
+	
+	&__task-button 
+		margin-bottom 15px
+		width 100%
+		
+		a
+			display inline-block
+			vertical-align top
+			text-decoration none
+			color #2f353b
+			font-size 24px
+			border-bottom 1px dashed #2f353b
+			
+			&:hover 
+				text-decoration none
+				border-bottom-color transparent
+	
+	&__content 
+		padding-bottom 10px
+		
+		&--left 
+			width 58%
+		
+		&--right 
+			width: 39%;
+		
+		&--task 
+			padding-right 39%   
+			padding-bottom 20px        
+	
+	&__text 
+		display: flex 
+		padding-bottom 10px
+		
+		&-title 
+			width 135px
+			padding-right 5px
+			font-weight: 500
+		
+		&-content 
+			width 60%
+			flex 1
+			display: flex 
+			flex-wrap wrap 
+			align-items center 
+			
+			input 
+				max-width 70px
+				text-align center
+	
+	&__settings 
+		display: flex 
+		flex-direction column 
+		align-items flex-end 
+		text-align right
+		
+		.b-main-checkbox
+			text-align left
+			min-width 140px
+			margin-bottom 4px
+	
+	// &__download 
+	//  margin-bottom 20px
+		
+	//  a, button 
+	//      padding-left 30px
+	//      padding-right 30px
+	
+	&__editor 
+		position relative
+		
+		textarea 
+			min-height 720px
+			background-color #fff
+			max-width 100%
+			border none 
+		
+		&-header
+			display: flex 
+			flex-wrap wrap
+			align-items center 
+			padding-bottom 15px
+		
+		&-title 
+			font-size 24px
+			margin-right auto
+		
+		&-clear 
+			display inline-block
+			vertical-align middle
+			text-decoration none
+			line-height 1
+			border-bottom 1px dashed currentColor
+			
+			&:hover 
+				text-decoration none
+				border-bottom-color transparent
+	
+	&__download 
+		position relative
+		margin-left 20px
+		
+		
+		&:hover 
+			.b-challane-check__download-content
+				display block
+			
+		&-link 
+			color: #2b579a;
+			display: flex 
+			align-items center 
+			
+			&:before 
+				margin-right 6px
+				font-size: 22px;
+				font-family: FontAwesome;
+				display: inline-block;
+				vertical-align: middle;
+				font-weight: 900;
+				content: "\f1c2";
+		
+		&-content 
+			position absolute
+			display none
+			left 50%
+			top 100%
+			margin-top 10px
+			background-color: #fff;
+			box-shadow: 0 0 20px 0 rgba(162,174,183,0.3);
+			border-radius: 5px;
+			white-space nowrap
+			transform translateX(-50%)
+			z-index 10
+			padding 10px 15px
+			
+			&:before 
+				content: "\f0d8";
+				position: absolute;
+				left: 50%;
+				margin-left: -10px;
+				top: -18px;
+				display: inline-block;
+				font: normal normal normal 28px/1 FontAwesome;
+				color: #fff;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			
+			&:after 
+				content ''
+				display block
+				position absolute
+				left 0
+				right 0
+				bottom 100%
+				height 10px
+			
+			
+			
+	&__line 
+		position sticky
+		left 0
+		right 0
+		bottom 0
+		background-color: #FAF7DC;
+		border-radius 3px 
+		display: flex 
+		justify-content space-around 
+		padding 8px 
+	
+	.b-task__item-content--several input
+		max-width 97px
+	
+	.b-task__item-text
+		margin-left 10px
+		
+		&:first-child 
+			margin-left 25px
+			
+		& + *
+			margin-left 10px
+	
+	.b-task__item
+		margin-bottom 10px
+	
+	&__info 
+		
+		&-title 
+			display: flex 
+			flex-wrap wrap 
+			justify-content space-between 
+			align-items center 
+			padding-left 25px
+			padding-bottom 8px
+			
+			&-text
+				font-size 24px
+				padding-bottom 7px
+	
+	.b-reports-table__mark div
+		box-shadow inset 0 0 0 1px #e1e4e6
+		
+		&:not(.green):not(.red)
+			background-color #fff 
+	
+	.b-reports-table__item
+		line-height 15px
+		
+		&:not(.b-reports-table__item--title):not(.b-reports-table__item--use):hover 
+			cursor pointer	
+		
+		&--use
+			&:hover 
+				.b-reports-table__name
+					cursor pointer
+
+		&:hover	
+			
+			&.b-reports-table__item--use
+				background-color transparent !important
