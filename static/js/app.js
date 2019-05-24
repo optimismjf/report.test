@@ -78,6 +78,129 @@ function debounce(func, wait, immediate) {
 
 ;
 
+function sortColumn() {
+	$(document).on('click', '.b-reports__table thead th', function() {
+		var $target = $('.b-reports__table thead th:eq(' + $(this).index() + ')');
+		$target.each(function(i,target) {
+			$(target).hasClass('sort-asc') ? $(target).removeClass('sort-asc').addClass('sort-desc') : $(target).removeClass('sort-desc').addClass('sort-asc');
+			$(target).siblings().removeClass('sort-asc sort-desc');
+		});
+		$('.freeze-table').freezeTable('update');
+	});
+};
+
+function fullscreenToggle() {
+	$(this).toggleClass('close');
+	$('.b-reports').toggleClass('fullscreen');
+	$('#header').toggle();
+	$('.sticky').removeAttr('style').removeClass('sticky');
+	stickyCust('.b-reports__filters.sticked', $('.b-reports__filters').offset().top, 0, '.b-reports__filters');
+
+	$('.freeze-table').freezeTable('update');
+	sortColumn();
+
+	$('body,html').animate({scrollTop: 0}, 0);
+};
+
+function stickyCust(t, offset=false, mt, width=false) {
+	var o = !offset ? $(t).offset().top : offset;
+	
+	function stickThis() {
+		var w = !width ? $(t).outerWidth() : $(width).outerWidth();
+		if($(window).scrollTop() > o) {
+			$(t).css({'position' : 'fixed', 'top' : mt, 'width' : w}).addClass('sticky');
+		} else {
+			$(t).removeAttr('style').removeClass('sticky');
+		}
+	};
+	$(window).on('scroll', stickThis)	
+}
+
+function showInform() {
+	$('[data-action=show-hover]').hover(function() {
+		var $this = $(this),
+			content = $this.data('content'),
+			top = $this.offset().top - $(window).scrollTop() + $this.outerHeight() + 20,
+			horisont = $(window).width() - $this.offset().left < 310 ? 'right' : 'left',
+			left,
+			right;
+		if(horisont == 'right') {
+			left = 'unset';
+			right = $(window).width() - $this.offset().left;
+		} else {
+			right = 'unset'
+			left =  $this.offset().left + $this.outerWidth();
+		};
+		$this.addClass('inform-showed');
+		$this.after('<div class="b-inform_content">' + content + '</div>');
+		$this.next('.b-inform_content').css({
+			'top' : top, 
+			'left' : left,
+			'right' : right
+		});
+	}, function() {
+		$(this).removeClass('inform-showed');
+		$(this).next('[class*=b-inform_content]').remove();
+	});
+};
+
+(function () {
+
+	/* новые вспомогательные */
+
+	/* Тоглим информацию на страницах отчетов */
+	$('[data-action=slide-target]').on('click', function() {
+		$($(this).data('target')).toggle();
+		if($('.freeze-table').length) $('.freeze-table').freezeTable('update');
+	});
+
+	/* Свитчер в сайдбаре */
+	$('[data-action=switcher] [class*=-item]').on('click', function() {
+		var $i = $(this).index(),
+			$t = $(this).parent().data('target'),
+			$target = $($t + ':eq(' + $i + ')');
+		$(this).addClass('active').siblings().removeClass('active');
+		$target.addClass('active').siblings().removeClass('active');
+	});
+
+	/* Показываем подсказки */
+
+	function freezePlugins() {
+		showInform();
+
+		$('.freeze-table table tbody tr').hover(function() {
+			var i = $(this).index();
+			$('.freeze-table table').each(function(index, table) {
+				$(table).find('tbody tr:eq('+ i +') td').addClass('hover');
+			})
+		}, function() {
+			$('.freeze-table td').removeClass('hover');
+		})
+
+	};
+
+	
+
+	$('.b-pagination__fullscreen').click(fullscreenToggle);
+	
+	stickyCust('.b-reports__aside', $('.b-reports__aside').offset().top, 0);
+	stickyCust('.b-reports__filters.sticked', $('.b-reports__filters').offset().top, 0, '.b-reports__filters');
+	$('.freeze-table').freezeTable({
+		fixedNavbar: $('.b-reports__filters'),
+		//columnKeep: true,
+		scrollBar: true,
+		callback: freezePlugins
+	});
+
+	sortColumn();
+
+})();
+
+;
+
+
+
+
 (function () {
   // Test via a getter in the options object to see if the passive property is accessed
   var supportsPassiveOpts = null;
