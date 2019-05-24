@@ -393,38 +393,38 @@
 					<table class="b-reports__table table" id="svodnaya">
 						<thead>
 							<tr>
-								<th class="w-400">
+								<th class="w-400" data-sortable="url">
 									<div class="b-reports__table-edit"></div>
 									<div class="b-reports__table-headname">
 										<span>URL</span>
 										<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
 									</div>
 								</th>
-								<th class="w-400">
+								<th class="w-400" data-sortable="link">
 									<div class="b-reports__table-headname">
 										<span>Ссылка</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
-								<th class="w-100">
+								<th class="w-100" data-sortable="type">
 									<div class="b-reports__table-headname">
 										<span>Тип <br>анкора</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
-								<th class="w-300">
+								<th class="w-300" data-sortable="anchor">
 									<div class="b-reports__table-headname">
 										<span>Анкор</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
-								<th class="w-200">
+								<th class="w-200" data-sortable="backlinks">
 									<div class="b-reports__table-headname">
 										<span>Обратные ссылки</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
-								<th class="w-400">
+								<th class="w-400" data-sortable="linkclone">
 									<div class="b-reports__table-headname">
 										<span>Ссылка</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
@@ -704,9 +704,27 @@
 		</main>
 	</div>
 
+	<div id="table-actions" class="b-actions__helper-wrapper" style="display: none">
+		<div class="b-actions__helper">
+			<div class="b-actions__helper-container">
+				<ul class="b-actions__helper-list">
+					<li><a class="b-actions_icon" id="item-copy" href="#$">Копировать</a></li>
+					<li><a class="b-actions_icon" id="item-open" target="_blank" href="#$">Открыть во вкладке</a></li>
+					<li><a class="b-actions_icon" id="item-reinit" href="#$">Переснять</a></li>
+					<li><a class="b-actions_icon" id="item-remove" href="#$">Удалить</a></li>
+				</ul>
+				<hr>
+				<ul class="b-actions__helper-list">
+					<li><a id="item-export" href="#$">Экспортировать</a></li>
+					<li><a href="#$">Обратные ссылки</a></li>
+					<li><a href="#$">Google PageSpeed Insights</a></li>
+					<li><a href="#$">Google Mobile-Friendly Test</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
-
-    <div class="hidden">
+    <div class="hidden"> 	
 
 		<div id="sign-in">
 			<form action="#" method="get" accept-charset="utf-8" novalidate="">

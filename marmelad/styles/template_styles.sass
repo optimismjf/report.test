@@ -3421,7 +3421,6 @@ body
 				border-right: 1px solid #E1E4E6
 				background-position: center center
 				background-repeat: no-repeat
-
 		thead
 			tr
 				th
@@ -3471,7 +3470,9 @@ body
 					.b-reports__table-edit
 						background-image: url(../images/icon/dots-vertical.svg)
 						cursor: pointer
-							
+						&:hover, &.actions-showed
+							background-color: #F2F4F6
+							box-shadow: inset 0px 0px 20px rgba(162, 174, 183, 0.29546)
 
 		&-headname
 			display: flex
@@ -3508,7 +3509,7 @@ body
 				padding-top: 15px
 	&__helper
 		@extend %helper
-		&:before
+		&:after
 			top: -3px
 		&-wrapper
 			@extend %helper-wrapper
@@ -3613,6 +3614,7 @@ body
 	background-position: center center
 	cursor: pointer
 	position: relative
+	white-space: normal !important
 	&_content
 		position: fixed
 		z-index: 2
@@ -3627,6 +3629,69 @@ body
 			left: unset
 			right: 100%
 
+.b-actions
+	&__helper
+		border: 1px solid #E1E4E6
+		z-index: 4
+		@extend %helper
+		&:after
+			content: "\f0d9"
+			top: 10px
+			left: 3px
+		&:before
+			content: "\f0d9"
+			position: absolute
+			z-index: 1
+			left: 1px
+			margin-left: -10px
+			top: 10px
+			display: inline-block
+			font: normal normal normal 28px/1 FontAwesome
+			color: #E1E4E6
+			text-rendering: auto
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+		&-wrapper
+			display: none
+			position: fixed
+			left: unset
+			right: unset
+		&-container
+			padding-bottom: 15px
+			& hr
+				background-color: #E1E4E6
+				border: none
+				height: 1px
+				margin-top: 4px
+				margin-bottom: 4px
+		&-list
+			@extend %helper-list
+			padding-bottom: 0
+			li
+				&:hover
+					background-color: rgb(246, 248, 250)
+					margin: 0 -20px
+					cursor: pointer
+					padding: 0 20px
+				@extend %helper-item
+				line-height: 34px
+				a
+					padding-left: 22px
+					padding-right: 22px
+					line-height: 34px
+					color: #2F353B
+					text-decoration: none
+					background-repeat: no-repeat
+					background-position: left 2px
+					&#item-copy
+						background-image: url(../images/icon/action-copy.svg)						
+					&#item-open
+						background-image: url(../images/icon/action-open.svg)						
+					&#item-reinit
+						background-image: url(../images/icon/action-reinit.svg)						
+					&#item-remove
+						background-image: url(../images/icon/action-remove.svg)
+						
 .w
 	&-100
 		min-width: 100px

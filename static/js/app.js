@@ -78,16 +78,31 @@ function debounce(func, wait, immediate) {
 
 ;
 
-function sortColumn() {
-	$(document).on('click', '.b-reports__table thead th', function() {
-		var $target = $('.b-reports__table thead th:eq(' + $(this).index() + ')');
-		$target.each(function(i,target) {
-			$(target).hasClass('sort-asc') ? $(target).removeClass('sort-asc').addClass('sort-desc') : $(target).removeClass('sort-desc').addClass('sort-asc');
-			$(target).siblings().removeClass('sort-asc sort-desc');
-		});
-		$('.freeze-table').freezeTable('update');
-	});
+/* новые вспомогательные */
+
+/* Сортировка по колонке */
+
+function sortColumn(c) {
+	var t = document.querySelectorAll('[data-sortable=' + c + ']'),
+		a = document.querySelectorAll('[data-sortable]:not([data-sortable=' + c + '])');
+
+	for (var i = 0; i < a.length; i++) {
+	 	a[i].classList.remove('sort-asc');
+	 	a[i].classList.remove('sort-desc');
+	};
+
+	for (var i = 0; i < t.length; i++) {
+		if(t[i].classList.contains('sort-asc')) {
+			t[i].classList.remove('sort-asc');
+			t[i].classList.add('sort-desc');
+		} else {
+			t[i].classList.remove('sort-desc')
+			t[i].classList.add('sort-asc')
+		};
+	};
 };
+
+/* Тоглим на весь экран */
 
 function fullscreenToggle() {
 	$(this).toggleClass('close');
@@ -97,10 +112,11 @@ function fullscreenToggle() {
 	stickyCust('.b-reports__filters.sticked', $('.b-reports__filters').offset().top, 0, '.b-reports__filters');
 
 	$('.freeze-table').freezeTable('update');
-	sortColumn();
 
 	$('body,html').animate({scrollTop: 0}, 0);
 };
+
+/* Крепим фильтры */
 
 function stickyCust(t, offset=false, mt, width=false) {
 	var o = !offset ? $(t).offset().top : offset;
@@ -113,40 +129,164 @@ function stickyCust(t, offset=false, mt, width=false) {
 			$(t).removeAttr('style').removeClass('sticky');
 		}
 	};
+	stickThis();
 	$(window).on('scroll', stickThis)	
+};
+
+/* Показываем подсказки */
+
+function showInform(event, show) {
+	if(event) {
+		var $this = event,
+			offset = $this.target.getBoundingClientRect(),
+			content = $this.target.getAttribute('data-content'),
+			top = offset.bottom + 20 + 'px',
+			horisont = window.outerWidth - $this.clientX < 310 ? 'right' : 'left',
+			left,
+			insertdiv,
+			right;	
+		if(show == 'show') {
+			if(horisont == 'right') {
+				left = 'unset';
+				right = window.outerWidth - offset.right + 'px';
+			} else {
+				right = 'unset';
+				left =  offset.left + $this.target.clientWidth + 'px';
+			};
+			$this.target.classList.add('inform-showed');
+			insertdiv = document.createElement('div');
+		    insertdiv.className = 'b-inform_content';
+		    insertdiv.textContent = content;
+			insertdiv.style.top = top;
+			insertdiv.style.left = left;			
+			insertdiv.style.right = right;
+			$this.target.appendChild(insertdiv);
+		} else if (show=="hide") {
+			$this.target.classList.remove('inform-showed');
+			$this.target.removeChild($this.target.firstChild);
+		}
+	}
+};
+
+/* Показываем действия с элементами */
+
+function showActions(elem, action) {
+	if(elem) {
+		if(action = "show") {
+			var $this = elem,
+				offset = $this.target.getBoundingClientRect(),
+				actions = document.getElementById('table-actions'),
+				top = offset.top + 3 + 'px',
+				left = offset.right + 10 + 'px',
+				a = document.querySelectorAll('.actions-showed');
+
+			actions.removeAttribute("style");
+
+			for (var i = 0; i < a.length; i++) {
+			 	a[i].classList.remove('actions-showed');
+			};
+
+			actions.style.display = 'block';
+			actions.style.top = top;
+			actions.style.left = left;
+				
+			$this.target.classList.add('actions-showed');	
+		}
+	} else if (action == "hide") {
+		var a = document.querySelectorAll('.actions-showed');
+		document.getElementById('table-actions').removeAttribute("style");
+
+		for (var i = 0; i < a.length; i++) {
+		 	a[i].classList.remove('actions-showed');
+		};
+	}	
+};
+
+/* Наводим на строки во всех склонированных таблицах одновременно */
+
+function hoverTr(tr, action='out') {
+	if(action == 'hover') {
+		var i = tr.index();
+		$('.freeze-table table').each(function(index, table) {
+			$(table).find('tbody tr:eq('+ i +') td').addClass('hover');
+		})
+	} else if (action == 'out') {
+		$('.freeze-table td').removeClass('hover');
+	};	
 }
 
-function showInform() {
-	$('[data-action=show-hover]').hover(function() {
-		var $this = $(this),
-			content = $this.data('content'),
-			top = $this.offset().top - $(window).scrollTop() + $this.outerHeight() + 20,
-			horisont = $(window).width() - $this.offset().left < 310 ? 'right' : 'left',
-			left,
-			right;
-		if(horisont == 'right') {
-			left = 'unset';
-			right = $(window).width() - $this.offset().left;
+function findAncestor (el, cls) {
+	if(el) {
+		var elem = el.target;
+		if(elem.getAttribute(cls)) {
+			return elem.getAttribute(cls);
 		} else {
-			right = 'unset'
-			left =  $this.offset().left + $this.outerWidth();
-		};
-		$this.addClass('inform-showed');
-		$this.after('<div class="b-inform_content">' + content + '</div>');
-		$this.next('.b-inform_content').css({
-			'top' : top, 
-			'left' : left,
-			'right' : right
-		});
-	}, function() {
-		$(this).removeClass('inform-showed');
-		$(this).next('[class*=b-inform_content]').remove();
-	});
+			while (elem = elem.parentElement) {
+				if(elem.getAttribute(cls)) {
+					return elem.getAttribute(cls);
+				}
+			}
+		}
+	}
+}
+
+function addListenerMulti(el, s, fn) {
+	if(el) {
+		s.split(' ').forEach(e => el.addEventListener(e, fn, false));
+	};
 };
+
 
 (function () {
 
-	/* новые вспомогательные */
+
+	addListenerMulti(document, 'mouseover mouseout', function(event){
+		var e = event || window.event;
+		if(e.target.getAttribute('data-action') == 'show-hover') {
+			var action = e.type == 'mouseover' ? 'show' : 'hide';
+	        showInform(e, action);
+	    }
+	});
+
+	document.addEventListener("click", function(event) {
+		var e = event || window.event,
+			t;
+		if(t = findAncestor(e, 'data-sortable')) {
+			sortColumn(t);
+		}
+	});
+
+	document.addEventListener("click", function(event) {
+		var e = event || window.event,
+			t = e.target;
+		if(t.classList.contains('b-reports__table-edit')) {
+			if(t.classList.contains('actions-showed')) {
+				showActions(false, 'hide');
+			} else {
+				showActions(e, 'show');
+			}			
+		} else {
+			showActions(false, 'hide');
+		}
+	});
+
+	window.onscroll = function() {
+		showActions(false, 'hide');
+	}
+
+	/* fu***ng mutation of Native and jQuery*/
+
+	addListenerMulti(document, 'mouseover mouseout', function(event){
+
+		var e = event || window.event,
+			t = $(event.target),
+			tr = t.closest('.b-reports__table-item').length ? t.closest('.b-reports__table-item') : false,
+			action = e.type == 'mouseover' ? 'hover' : 'out';
+		if(tr) {
+
+			hoverTr(tr, action);
+		}
+	});
 
 	/* Тоглим информацию на страницах отчетов */
 	$('[data-action=slide-target]').on('click', function() {
@@ -163,24 +303,6 @@ function showInform() {
 		$target.addClass('active').siblings().removeClass('active');
 	});
 
-	/* Показываем подсказки */
-
-	function freezePlugins() {
-		showInform();
-
-		$('.freeze-table table tbody tr').hover(function() {
-			var i = $(this).index();
-			$('.freeze-table table').each(function(index, table) {
-				$(table).find('tbody tr:eq('+ i +') td').addClass('hover');
-			})
-		}, function() {
-			$('.freeze-table td').removeClass('hover');
-		})
-
-	};
-
-	
-
 	$('.b-pagination__fullscreen').click(fullscreenToggle);
 	
 	stickyCust('.b-reports__aside', $('.b-reports__aside').offset().top, 0);
@@ -188,17 +310,13 @@ function showInform() {
 	$('.freeze-table').freezeTable({
 		fixedNavbar: $('.b-reports__filters'),
 		//columnKeep: true,
-		scrollBar: true,
-		callback: freezePlugins
+		scrollBar: true
 	});
 
-	sortColumn();
 
 })();
 
 ;
-
-
 
 
 (function () {
