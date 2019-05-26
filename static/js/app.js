@@ -109,29 +109,15 @@ function fullscreenToggle() {
 	$('.b-reports').toggleClass('fullscreen');
 	$('#header').toggle();
 	$('.sticky').removeAttr('style').removeClass('sticky');
-	stickyCust('.b-reports__filters.sticked', $('.b-reports__filters').offset().top, 0, '.b-reports__filters');
-
-	$('.freeze-table').freezeTable('update');
 
 	$('body,html').animate({scrollTop: 0}, 0);
-};
 
-/* Крепим фильтры */
-
-function stickyCust(t, offset=false, mt, width=false) {
-	var o = !offset ? $(t).offset().top : offset;
 	
-	function stickThis() {
-		var w = !width ? $(t).outerWidth() : $(width).outerWidth();
-		if($(window).scrollTop() > o) {
-			$(t).css({'position' : 'fixed', 'top' : mt, 'width' : w}).addClass('sticky');
-		} else {
-			$(t).removeAttr('style').removeClass('sticky');
-		}
-	};
-	stickThis();
-	$(window).on('scroll', stickThis)	
+	$('.freeze-table').freezeTable('update');
+	$('.b-reports__filters').justFeelStick('update');
 };
+
+
 
 /* Показываем подсказки */
 
@@ -228,7 +214,7 @@ function findAncestor (el, cls) {
 			}
 		}
 	}
-}
+};
 
 function addListenerMulti(el, s, fn) {
 	if(el) {
@@ -236,6 +222,93 @@ function addListenerMulti(el, s, fn) {
 	};
 };
 
+
+/* Крепим фильтры */
+
+function stickyAside(t, mt) {
+	var offset = $(t).offset().top;	
+	function stickThis() {
+		if($(window).scrollTop() > offset) {
+			$(t).css({'position' : 'fixed', 'top' : mt}).addClass('sticky');
+		} else {
+			$(t).removeAttr('style').removeClass('sticky');
+		}
+	};
+	stickThis();
+	$(window).on('scroll', stickThis)	
+};
+
+(function () {
+
+	var methods = {
+		// инициализация плагина
+		init:function(params) {
+			console.log(this);
+			// значение по умолчанию
+			var defaults = {
+				dempfer: false,
+				offset: this.offset().top,
+				width: this.outerWidth(),
+				height: this.outerHeight(),
+				point: 0
+			};
+			// актуальные настройки, будут индивидуальными при каждом запуске
+			var options = $.extend({}, defaults, params);
+
+			return this.each(function(){
+				var target = $(this);
+				target.data('justFeelStick', options.offset);
+				if(options.dempfer)  {
+					var dempfer = $('<div class="justFeelStick-dempfer"></div>').insertAfter(this).css('height', options.height).hide();
+				};
+				target.css({'top' : options.point, 'width' : options.width})
+				$(window).on('scroll.justFeelStick', function(){
+					if($(window).scrollTop() > target.data('justFeelStick')) {
+						target.css({'position' : 'fixed'});
+						if(options.dempfer) dempfer.show();
+					} else {
+						target.css({'position' : 'static'});
+						if(options.dempfer) dempfer.hide();
+					}
+				});
+			});
+	    },
+	    // обновление ширины
+	    update:function() {
+	    	$(this).css({'position' : 'static'});
+			if($(this).next('.justFeelStick-dempfer').length) $(this).next('.justFeelStick-dempfer').hide();
+	        $(this)
+	        	.css({
+		        	'width' : $(this).parent().outerWidth()
+		        })
+		        .data('justFeelStick', $(this).offset().top)
+	    },
+	    destroy:function() {
+	    	$(window).off('scroll.justFeelStick');
+	   		$(this).removeAttr('style');
+	   		$(this).next('.justFeelStick-dempfer').remove()
+	   	}
+	};
+	 
+	$.fn.justFeelStick = function(method){
+	 
+	    // немного магии
+	    if ( methods[method] ) {
+	        // если запрашиваемый метод существует, мы его вызываем
+	        // все параметры, кроме имени метода прийдут в метод
+	        // this так же перекочует в метод
+	        return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+	    } else if ( typeof method === 'object' || ! method ) {
+	        // если первым параметром идет объект, либо совсем пусто
+	        // выполняем метод init
+	        return methods.init.apply( this, arguments );
+	    } else {
+	        // если ничего не получилось
+	        $.error( 'Метод "' +  method + '" не найден в плагине jQuery.justFeelStick' );
+	    }
+	};
+
+})(jQuery);
 
 (function () {
 
@@ -274,18 +347,10 @@ function addListenerMulti(el, s, fn) {
 		showActions(false, 'hide');
 	}
 
-	/* fu***ng mutation of Native and jQuery*/
-
-	addListenerMulti(document, 'mouseover mouseout', function(event){
-
+	$(document).on('mouseover mouseout', '.b-reports__table-item', function(event) {
 		var e = event || window.event,
-			t = $(event.target),
-			tr = t.closest('.b-reports__table-item').length ? t.closest('.b-reports__table-item') : false,
 			action = e.type == 'mouseover' ? 'hover' : 'out';
-		if(tr) {
-
-			hoverTr(tr, action);
-		}
+		hoverTr($(this), action)
 	});
 
 	/* Тоглим информацию на страницах отчетов */
@@ -304,9 +369,10 @@ function addListenerMulti(el, s, fn) {
 	});
 
 	$('.b-pagination__fullscreen').click(fullscreenToggle);
-	
-	stickyCust('.b-reports__aside', $('.b-reports__aside').offset().top, 0);
-	stickyCust('.b-reports__filters.sticked', $('.b-reports__filters').offset().top, 0, '.b-reports__filters');
+
+	$('.b-reports__filters').justFeelStick({'dempfer' : true});
+	stickyAside('.b-reports__aside', 0)
+
 	$('.freeze-table').freezeTable({
 		fixedNavbar: $('.b-reports__filters'),
 		//columnKeep: true,
