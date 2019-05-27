@@ -3432,6 +3432,8 @@ body
 					color: $color_grey
 					padding-right: 19px
 					height: 40px
+					&.sort-asc:after, &.sort-desc:after					
+						background-image: url(../images/icon/sort.svg)	
 					&:after
 						content: ''
 						position: absolute
@@ -3443,10 +3445,7 @@ body
 						margin: auto
 						background-repeat: no-repeat
 						background-size: 7px 10px
-					&.sort-asc:after
-						background-image: url(../images/icon/sort.svg)	
 					&.sort-desc:after
-						background-image: url(../images/icon/sort.svg)
 						transform: scaleY(-1)
 					&:hover
 						background-color: #E4E8EC
@@ -3485,6 +3484,8 @@ body
 				width: 14px
 				height: 14px
 				background-image: url(../images/icon/info_alt.svg)
+				&:hover
+					background-image: url(../images/icon/info_alt-h.svg)
 				
 
 #svodnaya
@@ -3662,8 +3663,8 @@ body
 				background-color: #E1E4E6
 				border: none
 				height: 1px
-				margin-top: 4px
-				margin-bottom: 4px
+				margin-top: 12px
+				margin-bottom: 0
 		&-list
 			@extend %helper-list
 			padding-bottom: 0
@@ -3691,7 +3692,292 @@ body
 						background-image: url(../images/icon/action-reinit.svg)						
 					&#item-remove
 						background-image: url(../images/icon/action-remove.svg)
-						
+
+.b-filters
+	&__helper
+		border: 1px solid #E1E4E6
+		z-index: 4
+		@extend %helper
+		&:after
+			top: -15px
+			left: 13px
+			margin-left: 0
+		&:before
+			content: "\f0d8"
+			top: -16px
+			left: 13px
+			margin-left: 0
+			position: absolute
+			z-index: 1
+			display: inline-block
+			font: normal normal normal 28px/1 FontAwesome
+			color: #E1E4E6
+			text-rendering: auto
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+		&-wrapper
+			position: fixed
+			z-index: 3
+			display: none
+			left: unset
+			right: unset
+			width: 350px
+		&-container
+			background-color: #fff 
+			position: relative
+			z-index: 2
+			border-radius: 5px
+			padding: 10px 0 0
+			& hr
+				background-color: #E1E4E6
+				border: none
+				height: 1px
+				margin: 12px -20px 0
+	&__header
+		padding: 0 20px 10px
+		position: relative
+		z-index: 1
+		&-select
+			line-height: 34px
+			background: #FFFFFF
+			color: #AFBAC1
+			padding: 0 10px
+			border: 1px solid #C2CAD8
+			width: 100%
+			cursor: pointer
+			&.changed
+				color: #2F353B
+			&.opened:after
+				transform: scaleY(-1)
+			&:after
+				content: "\f0d7"
+				position: absolute
+				top: 10px
+				right: 10px
+				display: inline-block
+				font: normal normal normal 14px/1 FontAwesome
+				text-rendering: auto
+				color: #2F353B
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+				pointer-events: none
+			&-wrapper
+				position: relative
+				font-size: 15px
+			&-list
+				display: none
+				position: absolute
+				top: calc(100% - 1px)
+				left: 0
+				width: 100%
+				list-style: none
+				padding: 0
+				margin: 0
+				border: 1px solid #C2CAD8
+				background-color: #fff
+			&-item
+				padding: 0 10px
+				line-height: 34px
+				&:hover
+					background: rgba(198, 207, 217, 0.45)
+					cursor: pointer
+
+	&__body
+		border-top: 1px solid #E1E4E6
+		&-row
+			padding: 5px 0
+			&.flex
+				display: flex
+			&-item:last-child
+				flex-grow: 1
+			&-group
+				display: none
+				padding-left: 15px
+				line-height: 34px
+				&.active
+					display: flex
+				& input
+					appearance: none
+					box-shadow: none
+					border: 0
+					outline: 0
+					padding: 0 10px
+					border: 1px solid #C2CAD8
+					line-height: 34px
+					max-width: 72px
+					&:focus
+						border-color: #2E97DF
+				& span
+					display: inline-block
+					padding: 0 5px
+
+		&-group
+			display: none
+			max-height: 300px
+			padding: 10px 20px
+			overflow-y: auto
+			&.active
+				display: block
+			.custom-radio
+				&:checked,
+				&:not(:checked)
+					display: none
+					& + label
+						position: relative
+						padding-left: 24px
+						font-size: 15px
+						cursor: pointer
+						line-height: 20px
+						display: inline-block
+						color: #666
+						&:before
+							content: ''
+							position: absolute
+							left: 0
+							top: 2px
+							width: 16px
+							height: 16px
+							border: 1px solid #C2CAD8
+							border-radius: 100%
+							background: #fff
+
+						&:after 
+							content: ''
+							width: 8px
+							height: 8px
+							background: #2E97DF
+							position: absolute
+							top: 6px
+							left: 4px
+							border-radius: 100%
+							-webkit-transition: all 0.2s ease
+							transition: all 0.2s ease
+				&:not(:checked) + label
+					&:after 
+						opacity: 0
+						-webkit-transform: scale(0)
+						transform: scale(0)
+					&:hover:before
+						border-color: #AFBAC1
+				&:checked + label
+					&:after
+						opacity: 1
+						-webkit-transform: scale(1)
+						transform: scale(1)
+					&:before
+						border-color: #AFBAC1
+
+			.custom-checkbox
+				&:checked,
+				&:not(:checked)
+					display: none
+					& + label
+						position: relative
+						padding-left: 24px
+						font-size: 15px
+						cursor: pointer
+						line-height: 20px
+						display: inline-block
+						color: #666
+						&:before
+							content: ''
+							position: absolute
+							left: 0
+							top: 2px
+							width: 16px
+							height: 16px
+							border: 1px solid #C2CAD8
+							background-color: #fff
+							background-repeat: no-repeat
+							background-position: center center
+						&:hover:before
+							border-color: #AFBAC1
+				&:checked + label
+					&:before
+						border-color: #AFBAC1
+						background-image: url(../images/icon/checked.svg)
+			.custom-textarea
+				resize: none
+				height: 170px
+				width: 100%
+				font-size: 14px
+				line-height: 16px
+				padding: 6px 10px
+				border: 1px solid #C2CAD8
+				&::placeholder
+					line-height: 21px
+				&:focus
+					border-color: #2E97DF
+			p
+				color: #697882
+				font-size: 13px
+				margin: 0
+				line-height: 17px
+				span
+					color: #2E97DF
+		&-select
+			line-height: 34px
+			background: #FFFFFF
+			color: #AFBAC1
+			padding: 0 10px
+			width: 100px
+			border: 1px solid #C2CAD8
+			cursor: pointer
+			&.changed
+				color: #2F353B
+			&.opened:after
+				transform: scaleY(-1)
+			&:after
+				content: "\f0d7"
+				position: absolute
+				top: 10px
+				right: 10px
+				display: inline-block
+				font: normal normal normal 14px/1 FontAwesome
+				text-rendering: auto
+				color: #2F353B
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+				pointer-events: none
+			&-wrapper
+				position: relative
+				font-size: 15px
+			&-list
+				display: none
+				position: absolute
+				top: calc(100% - 1px)
+				left: 0
+				width: 100%
+				list-style: none
+				padding: 0
+				margin: 0
+				border: 1px solid #C2CAD8
+				background-color: #fff
+			&-item
+				padding: 0 10px
+				line-height: 34px
+				&:hover
+					background: rgba(198, 207, 217, 0.45)
+					cursor: pointer	
+	&__footer
+		padding: 10px 20px
+		border-top: 1px solid #E1E4E6
+	&__submit
+		appearance: unset
+		box-shadow: none
+		border: 0
+		outline: 0
+		background-color: #2E97DF
+		width: 155px
+		text-align: center
+		font-size: 15px
+		line-height: 24px
+		padding: 5px 0
+		color: #FFFFFF
+		cursor: pointer
+		&[disabled]
+			background-color: #C2CAD8
+
 .w
 	&-100
 		min-width: 100px

@@ -102,22 +102,16 @@ function sortColumn(c) {
 	};
 };
 
-/* Тоглим на весь экран */
+/* Тоглим рабочую область на весь экран */
 
 function fullscreenToggle() {
 	$(this).toggleClass('close');
-	$('.b-reports').toggleClass('fullscreen');
+	$('.b-reports').toggleClass('fullscreen').trigger('resize');
 	$('#header').toggle();
 	$('.sticky').removeAttr('style').removeClass('sticky');
-
-	$('body,html').animate({scrollTop: 0}, 0);
-
 	
 	$('.freeze-table').freezeTable('update');
-	$('.b-reports__filters').justFeelStick('update');
 };
-
-
 
 /* Показываем подсказки */
 
@@ -201,6 +195,8 @@ function hoverTr(tr, action='out') {
 	};	
 }
 
+/* ищем родителя по классу */
+
 function findAncestor (el, cls) {
 	if(el) {
 		var elem = el.target;
@@ -216,14 +212,14 @@ function findAncestor (el, cls) {
 	}
 };
 
+/* Мульти прослушка */
 function addListenerMulti(el, s, fn) {
 	if(el) {
 		s.split(' ').forEach(e => el.addEventListener(e, fn, false));
 	};
 };
 
-
-/* Крепим фильтры */
+/* Функция для заурепления сайдбара */
 
 function stickyAside(t, mt) {
 	var offset = $(t).offset().top;	
@@ -238,59 +234,82 @@ function stickyAside(t, mt) {
 	$(window).on('scroll', stickThis)	
 };
 
-(function () {
+/* Мини-плагин для закрепления фильтры */
 
+(function () {
 	var methods = {
 		// инициализация плагина
 		init:function(params) {
-			console.log(this);
 			// значение по умолчанию
 			var defaults = {
-				dempfer: false,
-				offset: this.offset().top,
+				dempfer: false,				
 				width: this.outerWidth(),
 				height: this.outerHeight(),
+				offset: this.next().offset().top - this.outerHeight(),
+				namespace: 'stickyFilters',
+				container: $(window),
+				containerEvent: 'resize',
 				point: 0
 			};
 			// актуальные настройки, будут индивидуальными при каждом запуске
-			var options = $.extend({}, defaults, params);
+			var options = $.extend({}, defaults, params),
+				dempferClass = options.namespace + '-dempfer';
 
 			return this.each(function(){
 				var target = $(this);
-				target.data('justFeelStick', options.offset);
 				if(options.dempfer)  {
-					var dempfer = $('<div class="justFeelStick-dempfer"></div>').insertAfter(this).css('height', options.height).hide();
+					var dempfer = $('<div class="' + dempferClass + '"></div>')
+						.insertAfter(this)
+						.css('height', options.height)
+						.hide();
 				};
-				target.css({'top' : options.point, 'width' : options.width})
-				$(window).on('scroll.justFeelStick', function(){
-					if($(window).scrollTop() > target.data('justFeelStick')) {
-						target.css({'position' : 'fixed'});
+				target.css({
+					'top' : options.point, 
+					'width' : options.width
+				});
+				$(window).on('load.stickyFilters, scroll.stickyFilters', function(){
+					if($(window).scrollTop() > options.offset) {
+						target
+							.css({'position' : 'fixed'});
 						if(options.dempfer) dempfer.show();
 					} else {
 						target.css({'position' : 'static'});
 						if(options.dempfer) dempfer.hide();
 					}
 				});
+				options.container.bind(options.namespace + '-update');
+
+				options.container.on(options.containerEvent, function() {
+					target.trigger(options.namespace + '-update')
+				});
+
+				target.on('update', function() {
+					target.trigger(options.namespace + '-update')
+				});
+
+				target.on(options.namespace + '-update', function() {
+					$('body,html').animate({scrollTop: 0}, 0);
+					setTimeout(function() {
+						if(options.dempfer) dempfer.css('height', 0)
+						options.offset = target.offset().top;
+						options.width = target.parent().outerWidth();
+						options.height = target.outerHeight();
+
+						target.css('width', options.width);
+						if(options.dempfer) dempfer.css('height', options.height);
+					}, 100)
+				});
+				
 			});
 	    },
-	    // обновление ширины
-	    update:function() {
-	    	$(this).css({'position' : 'static'});
-			if($(this).next('.justFeelStick-dempfer').length) $(this).next('.justFeelStick-dempfer').hide();
-	        $(this)
-	        	.css({
-		        	'width' : $(this).parent().outerWidth()
-		        })
-		        .data('justFeelStick', $(this).offset().top)
-	    },
 	    destroy:function() {
-	    	$(window).off('scroll.justFeelStick');
+	    	$(window).off('scroll.stickyFilters');
 	   		$(this).removeAttr('style');
-	   		$(this).next('.justFeelStick-dempfer').remove()
+	   		$(this).next('[class*=dempfer]').remove()
 	   	}
 	};
 	 
-	$.fn.justFeelStick = function(method){
+	$.fn.stickyFilters = function(method){
 	 
 	    // немного магии
 	    if ( methods[method] ) {
@@ -304,14 +323,36 @@ function stickyAside(t, mt) {
 	        return methods.init.apply( this, arguments );
 	    } else {
 	        // если ничего не получилось
-	        $.error( 'Метод "' +  method + '" не найден в плагине jQuery.justFeelStick' );
+	        $.error( 'Метод "' +  method + '" не найден в плагине jQuery.stickyFilters' );
 	    }
 	};
 
 })(jQuery);
 
-(function () {
+function showFilters(e, method=false) {
+	var that = $(e.target),
+		filters = $('#table-filters'),
+		offsets;
+	if(e !== undefined && that.hasClass('filters-show')) {
+		method = 'hide'
+	};
+	if(method == 'add') {
+		offsets = e.target.getBoundingClientRect()
+		if(!that.hasClass('filters-show')) {
+			filters.css({
+				'top' : offsets.bottom,
+				'left' : offsets.left
+			}).show();
 
+			that.addClass('filters-show');
+		}
+	} else if(method == 'hide') {
+		$('.filters-show').removeClass('filters-show');
+		filters.removeAttr('style');
+	}
+};
+
+(function () {
 
 	addListenerMulti(document, 'mouseover mouseout', function(event){
 		var e = event || window.event;
@@ -345,6 +386,14 @@ function stickyAside(t, mt) {
 
 	window.onscroll = function() {
 		showActions(false, 'hide');
+		showFilters(false, 'hide');
+
+		$('.b-filters__body-select').removeClass('opened');
+		$('.b-filters__body-select-list').hide().removeAttr('style');
+
+		$('.b-filters__header-select').removeClass('opened');
+		$('.b-filters__header-select-list').hide().removeAttr('style');
+
 	}
 
 	$(document).on('mouseover mouseout', '.b-reports__table-item', function(event) {
@@ -353,10 +402,78 @@ function stickyAside(t, mt) {
 		hoverTr($(this), action)
 	});
 
+	$(document).on('click', '.b-reports__addfilter', function(event){
+		var e = event || window.event;
+		showFilters(e, 'add')
+	});
+
 	/* Тоглим информацию на страницах отчетов */
 	$('[data-action=slide-target]').on('click', function() {
 		$($(this).data('target')).toggle();
+		$('.b-reports').trigger('resize');
 		if($('.freeze-table').length) $('.freeze-table').freezeTable('update');
+	});
+
+	$(document).on('click', '.b-filters__header-select', function() {
+		$(this).toggleClass('opened');
+		$('.b-filters__header-select-list').toggle();
+		$('.b-filters__body-select').removeClass('opened');
+		$('.b-filters__body-select-list').hide().removeAttr('style');		
+	});
+
+	$(document).on('click', '.b-filters__header-select-item', function() {
+		var formGroup = $(this).data('filter-type'),
+			text = $(this).text();
+		$('.b-filters__header-select').removeClass('opened').addClass('changed');
+		$('.b-filters__header-select-list').hide();
+		$('.b-filters__header-select').text(text);
+		$('.b-filters__footer').removeAttr('hidden');
+		$('.b-filters__body').removeAttr('hidden')
+			.find('[data-filter-type=' + formGroup + ']').addClass('active')
+			.siblings().removeClass('active');
+		$('.b-filters__helper-container')[0].reset();
+		$('.b-filters__helper-container [type=submit]').attr('disabled', true);
+	});
+
+	$(document).on('click', '.b-filters__body-select', function() {
+		$(this).toggleClass('opened');
+		$('.b-filters__header-select').removeClass('opened');
+		$('.b-filters__header-select-list').hide();
+		if($(this).hasClass('opened')) {
+			$('.b-filters__body-select-list').toggle().css({
+				'position' : 'fixed',
+				'top' : $(this).offset().top + $(this).outerHeight() - 1,
+				'left' : $(this).offset().left,
+				'width' : $(this).outerWidth()
+			});
+		} else {
+			$('.b-filters__body-select-list').toggle().removeAttr('style');
+		};
+	});
+
+	$(document).on('click', '.b-filters__body-select-item', function() {
+		var formGroup = $(this).data('filter-count-type'),
+		 	text = $(this).text();
+		$('.b-filters__body-select').removeClass('opened');
+		$('.b-filters__body-select-list').hide().removeAttr('style');
+		$('.b-filters__body-select').text(text);
+		$('.b-filters__body-row-group[data-filter-count-type=' + formGroup + ']').addClass('active')
+			.siblings().removeClass('active');
+		$('.b-filters__helper-container')[0].reset();
+		$('.b-filters__helper-container [type=submit]').attr('disabled', true);
+	});
+
+	$('.b-filters__body-group .custom-checkbox, .b-filters__body-group .custom-radio').change(function() {
+		$('.b-filters__body-group.active :checked').length ? $('.b-filters__submit').removeAttr('disabled') : $('.b-filters__submit').attr('disabled', true) ;
+	});
+
+	$('.b-filters__body-group textarea').keyup(function() {
+		$(this).val() != '' ? $('.b-filters__submit').removeAttr('disabled') : $('.b-filters__submit').attr('disabled', true);
+	});
+
+	$('.b-filters__body-group input').keyup(function() {
+		if($(this).val().match(/[^0-9]/g)) $(this).val($(this).val().replace(/[^0-9]/g, ''));
+		$(this).val() != '' ? $('.b-filters__submit').removeAttr('disabled') : $('.b-filters__submit').attr('disabled', true);
 	});
 
 	/* Свитчер в сайдбаре */
@@ -370,7 +487,7 @@ function stickyAside(t, mt) {
 
 	$('.b-pagination__fullscreen').click(fullscreenToggle);
 
-	$('.b-reports__filters').justFeelStick({'dempfer' : true});
+	$('.b-reports__filters').stickyFilters({'dempfer' : true});
 	stickyAside('.b-reports__aside', 0)
 
 	$('.freeze-table').freezeTable({
