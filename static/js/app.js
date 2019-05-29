@@ -109,8 +109,10 @@ function fullscreenToggle() {
 	$('.b-reports').toggleClass('fullscreen').trigger('resize');
 	$('#header').toggle();
 	$('.sticky').removeAttr('style').removeClass('sticky');
-	
-	$('.freeze-table').freezeTable('update');
+	$(window).trigger('resize');
+	setTimeout(function() {
+		$('.freeze-table').freezeTable('update');
+	}, 100)
 };
 
 /* Показываем подсказки */
@@ -143,7 +145,7 @@ function showInform(event, show) {
 			$this.target.appendChild(insertdiv);
 		} else if (show=="hide") {
 			$this.target.classList.remove('inform-showed');
-			$this.target.removeChild($this.target.firstChild);
+			$this.target.lastChild.remove();
 		}
 	}
 };
@@ -277,20 +279,15 @@ function stickyAside(t, mt) {
 						if(options.dempfer) dempfer.hide();
 					}
 				});
-				options.container.bind(options.namespace + '-update');
 
 				options.container.on(options.containerEvent, function() {
-					target.trigger(options.namespace + '-update')
-				});
-
-				target.on('update', function() {
 					target.trigger(options.namespace + '-update')
 				});
 
 				target.on(options.namespace + '-update', function() {
 					$('body,html').animate({scrollTop: 0}, 0);
 					setTimeout(function() {
-						if(options.dempfer) dempfer.css('height', 0)
+						if(options.dempfer) dempfer.css('height', 0);
 						options.offset = target.offset().top;
 						options.width = target.parent().outerWidth();
 						options.height = target.outerHeight();
@@ -309,8 +306,7 @@ function stickyAside(t, mt) {
 	   	}
 	};
 	 
-	$.fn.stickyFilters = function(method){
-	 
+	$.fn.stickyFilters = function(method){	 
 	    // немного магии
 	    if ( methods[method] ) {
 	        // если запрашиваемый метод существует, мы его вызываем
@@ -329,7 +325,95 @@ function stickyAside(t, mt) {
 
 })(jQuery);
 
-function showFilters(e, method=false) {
+;(function ( $ ) {
+	var options,
+		methods = {
+		init:function( params ) {
+			// значение по умолчанию
+			var defaults = {
+				action: 'onetitle',
+				namespace: 'overflowed'
+			};
+			// актуальные настройки, будут индивидуальными при каждом запуске
+			options = $.extend({}, defaults, params);
+			var action = options.action;
+
+			if(action == 'onehover') {
+				$(this).each(function(i, el) {
+
+					if($(el)[0].getClientRects().length > 2) {
+				        $(el).css({
+				            'overflow' : 'hidden',
+				            'max-height' : 27,
+				            'display' : 'block'
+				        }).attr('data-action', 'show-hover').attr('data-content',  $(el).text()).addClass(options.namespace)
+				    }
+				})
+			} else if (action == 'allhover') {
+				$(this).each(function(i, el) {
+			        $(el).css({
+			            'overflow' : 'hidden',
+			            'max-height' : 27,
+			            'display' : 'block'
+			        }).attr('data-action', 'show-hover').attr('data-content',  $(el).text()).addClass(options.namespace)
+				})
+			} else if(action == 'onetitle') {
+				$(this).each(function(i, el) {
+					if($(el)[0].getClientRects().length > 2) {
+				        $(el).css({
+				            'overflow' : 'hidden',
+				            'max-height' : 27,
+				            'display' : 'block'
+				        }).addClass(options.namespace)
+				    }
+				})
+			} else if (action == 'alltitle') {
+				$(this).each(function(i, el) {
+			        $(el).css({
+			            'overflow' : 'hidden',
+			            'max-height' : 27,
+			            'display' : 'block'
+			        }).addClass(options.namespace)
+				})
+			}
+			return this;
+		},
+		update:function( params ) {
+			if(options == undefined) {
+				this.hidenLinks(params);
+				return this;
+			};
+			this.hidenLinks('destroy');
+			options = $.extend({}, options, params);			
+			this.hidenLinks(options);
+			return this;
+		},
+		destroy:function( params ) {
+			$('.b-reports__table tbody tr td a').each(function(i, el) {
+		        $(el).removeAttr('style').removeAttr('data-action').removeAttr('data-content').removeAttr(options.namespace);
+			});
+			return this;
+		}
+	}
+	$.fn.hidenLinks = function (method) {
+		// немного магии
+	    if ( methods[method] ) {
+	        // если запрашиваемый метод существует, мы его вызываем
+	        // все параметры, кроме имени метода прийдут в метод
+	        // this так же перекочует в метод
+	        return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+	    } else if ( typeof method === 'object' || ! method ) {
+	        // если первым параметром идет объект, либо совсем пусто
+	        // выполняем метод init
+	        return methods.init.apply( this, arguments );
+	    } else {
+	        // если ничего не получилось
+	        $.error( 'Метод "' +  method + '" не найден в плагине jQuery.stickyFilters' );
+	    }
+	}
+})(jQuery);
+
+function showFilters(e, method=false, action=false) {
 	var that = $(e.target),
 		filters = $('#table-filters'),
 		offsets;
@@ -351,6 +435,138 @@ function showFilters(e, method=false) {
 		filters.removeAttr('style');
 	}
 };
+
+
+(function( $ ) {
+
+	var methods = {
+		init:function(options) {
+			this.container = $('#table-filters');
+			this.options = options || {};
+
+
+			$(document).on('click.filters', function(event){
+				var e = event || window.event,
+					that = e.target,
+					$that = $(that);
+				if($that.hasClass('b-reports__addfilter') && !$that.hasClass('filters-show')) {
+					showFilters(e, 'show')
+				} else if(!$that.hasClass('b-filters__helper-wrapper') && !$that.closest('.b-filters__helper-wrapper').length) {
+					showFilters(e, 'hide')
+				} else if ($that.hasClass('b-filters__header-select')) {
+					toggle($that, $('.b-filters__body-select'));
+				} else if ($that.hasClass('b-filters__body-select')) {
+					toggle($that, $('.b-filters__header-select'), true);
+				} else if ($that.hasClass('b-filters__header-select-item') || $that.hasClass('b-filters__body-select-item')) {
+					showGroup($that);
+				}
+			});
+
+
+			$('.b-filters__body-group textarea, .b-filters__body-group input').on('change.filters keyup.filters keydown.filters keypress.filters', function(e) {
+				var check = $(this).val() == '',
+					type = $(this)[0].type;
+				if(type == 'text' && $(this).val().match(/[^0-9]/g)) {
+					$(this).val($(this).val().replace(/[^0-9]/g, ''));
+					check = $(this).val() == '';
+				} else if (type == 'checkbox' || type == "radio") {
+					check = $('.b-filters__body :checked').length ? false : true;
+				}
+				$('.b-filters__submit').attr('disabled', check);
+			});
+
+
+		},
+		update:function( options ) {
+			return this
+		},
+		destroy:function( options ) {
+			$(document).off('click.filters');
+			return this
+		}
+
+	}
+
+	$.fn.filters = function( method ){
+		// немного магии
+		if ( methods[method] ) {
+			// если запрашиваемый метод существует, мы его вызываем
+			// все параметры, кроме имени метода прийдут в метод
+			// this так же перекочует в метод
+			return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+		} else if ( typeof method === 'object' || ! method ) {
+			// если первым параметром идет объект, либо совсем пусто
+			// выполняем метод init
+			return methods.init.apply( this, arguments );
+		} else {
+			// если ничего не получилось
+			$.error( 'Метод "' +  method + '" не найден в плагине jQuery.filters' );
+		}
+	};
+
+	function toggle(target, enemy, fixed = false) {
+		console.log(target)
+		$(target).toggleClass('opened');
+		enemy.removeClass('opened');
+		enemy.next('[class$=list]').removeAttr('style');
+		if(fixed) {
+			if(target.hasClass('opened')) {
+				target.next('[class$=list]').show().css({
+					'position' : 'fixed',
+					'top' : target.offset().top - $(window).scrollTop() + target.outerHeight() - 1,
+					'left' : target.offset().left,
+					'width' : target.outerWidth()
+				});
+			} else {
+				target.next('[class$=list]').hide().removeAttr('style');
+			}
+		} else {
+			target.next('[class$=list]').toggle()
+		}
+	}
+
+	function showFilters(e, method = false) {
+		var that = e.target,
+			$that = $(e.target),
+			filters = $('#table-filters'),
+			offsets;
+		if(method == 'show') {
+			offsets = that.getBoundingClientRect();			
+			filters.css({
+				'top' : offsets.bottom,
+				'left' : offsets.left
+			}).show();
+
+			$that.addClass('filters-show');
+		} else {
+			$('.filters-show').removeClass('filters-show');
+			filters.find('.opened').removeClass('opened');
+			filters.find('[style]').removeAttr('style');
+			filters.removeAttr('style');
+		}
+	};
+
+	function showGroup(target) {		
+		var formGroup = target.data('filter-type'),
+			text = target.text(),
+			parent = target.closest('[class$="select-wrapper"]'),
+			list = target.closest('[class$="select-list"]'),
+			select = list.prev();
+		select.removeClass('opened')
+			.addClass('changed')
+			.html(text);
+		list.removeAttr('style');
+		$('.b-filters__footer').removeAttr('hidden');
+		$('.b-filters__body').removeAttr('hidden')
+			.find('[data-filter-type=' + formGroup + ']').addClass('active')
+			.siblings().removeClass('active');
+		$('.b-filters__helper-container')[0].reset();
+		$('.b-filters__helper-container [type=submit]').attr('disabled', true);
+	}
+ 
+}( jQuery ));
+
+
 
 (function () {
 
@@ -384,27 +600,10 @@ function showFilters(e, method=false) {
 		}
 	});
 
-	window.onscroll = function() {
-		showActions(false, 'hide');
-		showFilters(false, 'hide');
-
-		$('.b-filters__body-select').removeClass('opened');
-		$('.b-filters__body-select-list').hide().removeAttr('style');
-
-		$('.b-filters__header-select').removeClass('opened');
-		$('.b-filters__header-select-list').hide().removeAttr('style');
-
-	}
-
 	$(document).on('mouseover mouseout', '.b-reports__table-item', function(event) {
 		var e = event || window.event,
 			action = e.type == 'mouseover' ? 'hover' : 'out';
 		hoverTr($(this), action)
-	});
-
-	$(document).on('click', '.b-reports__addfilter', function(event){
-		var e = event || window.event;
-		showFilters(e, 'add')
 	});
 
 	/* Тоглим информацию на страницах отчетов */
@@ -414,68 +613,20 @@ function showFilters(e, method=false) {
 		if($('.freeze-table').length) $('.freeze-table').freezeTable('update');
 	});
 
-	$(document).on('click', '.b-filters__header-select', function() {
-		$(this).toggleClass('opened');
-		$('.b-filters__header-select-list').toggle();
-		$('.b-filters__body-select').removeClass('opened');
-		$('.b-filters__body-select-list').hide().removeAttr('style');		
-	});
+	$(document).filters();
 
-	$(document).on('click', '.b-filters__header-select-item', function() {
-		var formGroup = $(this).data('filter-type'),
-			text = $(this).text();
-		$('.b-filters__header-select').removeClass('opened').addClass('changed');
-		$('.b-filters__header-select-list').hide();
-		$('.b-filters__header-select').text(text);
-		$('.b-filters__footer').removeAttr('hidden');
-		$('.b-filters__body').removeAttr('hidden')
-			.find('[data-filter-type=' + formGroup + ']').addClass('active')
-			.siblings().removeClass('active');
-		$('.b-filters__helper-container')[0].reset();
-		$('.b-filters__helper-container [type=submit]').attr('disabled', true);
-	});
-
-	$(document).on('click', '.b-filters__body-select', function() {
-		$(this).toggleClass('opened');
-		$('.b-filters__header-select').removeClass('opened');
-		$('.b-filters__header-select-list').hide();
-		if($(this).hasClass('opened')) {
-			$('.b-filters__body-select-list').toggle().css({
-				'position' : 'fixed',
-				'top' : $(this).offset().top + $(this).outerHeight() - 1,
-				'left' : $(this).offset().left,
-				'width' : $(this).outerWidth()
-			});
+	$('.b-reports__search-input').on('change keyup keydown', function() {
+		if($(this).val() !== '') {
+			$(this).next('[class$=clear]').show()
 		} else {
-			$('.b-filters__body-select-list').toggle().removeAttr('style');
-		};
+			$(this).next('[class$=clear]').hide()
+		}
 	});
 
-	$(document).on('click', '.b-filters__body-select-item', function() {
-		var formGroup = $(this).data('filter-count-type'),
-		 	text = $(this).text();
-		$('.b-filters__body-select').removeClass('opened');
-		$('.b-filters__body-select-list').hide().removeAttr('style');
-		$('.b-filters__body-select').text(text);
-		$('.b-filters__body-row-group[data-filter-count-type=' + formGroup + ']').addClass('active')
-			.siblings().removeClass('active');
-		$('.b-filters__helper-container')[0].reset();
-		$('.b-filters__helper-container [type=submit]').attr('disabled', true);
+	$('[data-action="clear-target"]').on('click', function() {
+		var t = $(this).data('target');
+		$(t).val('').trigger('change');
 	});
-
-	$('.b-filters__body-group .custom-checkbox, .b-filters__body-group .custom-radio').change(function() {
-		$('.b-filters__body-group.active :checked').length ? $('.b-filters__submit').removeAttr('disabled') : $('.b-filters__submit').attr('disabled', true) ;
-	});
-
-	$('.b-filters__body-group textarea').keyup(function() {
-		$(this).val() != '' ? $('.b-filters__submit').removeAttr('disabled') : $('.b-filters__submit').attr('disabled', true);
-	});
-
-	$('.b-filters__body-group input').keyup(function() {
-		if($(this).val().match(/[^0-9]/g)) $(this).val($(this).val().replace(/[^0-9]/g, ''));
-		$(this).val() != '' ? $('.b-filters__submit').removeAttr('disabled') : $('.b-filters__submit').attr('disabled', true);
-	});
-
 	/* Свитчер в сайдбаре */
 	$('[data-action=switcher] [class*=-item]').on('click', function() {
 		var $i = $(this).index(),
@@ -492,11 +643,20 @@ function showFilters(e, method=false) {
 
 	$('.freeze-table').freezeTable({
 		fixedNavbar: $('.b-reports__filters'),
-		//columnKeep: true,
+		callback: function() {$('.b-reports__table tbody tr td a').hidenLinks('update')},
 		scrollBar: true
 	});
 
+	window.onscroll = function() {
+		showActions(false, 'hide');
+		showFilters(false, 'hide');
 
+		$('.b-filters__body-select').removeClass('opened');
+		$('.b-filters__body-select-list').hide().removeAttr('style');
+
+		$('.b-filters__header-select').removeClass('opened');
+		$('.b-filters__header-select-list').hide().removeAttr('style');
+	}
 })();
 
 ;

@@ -3288,6 +3288,7 @@ body
 		border-right: 0
 		border-bottom: 0
 		display: flex
+		flex-wrap: wrap
 		align-items: center
 		justify-content: space-between
 		background-color: #fff
@@ -3301,13 +3302,54 @@ body
 			top: 0
 			&.sticky
 				display: flex
+		&-row
+			width: 100%
+			display: flex
+			flex-wrap: nowrap
+		&-part
+			&-l
+				padding-right: 10px
+				padding-top: 15px
+				line-height: 30px
+				font-size: 14px
+				color: #697882
+				white-space: nowrap
+			&-r
+				display: flex
+				flex-wrap: wrap
+		&-filter
+			line-height: 30px
+			border-radius: 100px
+			background-color: #D9DEE2
+			margin-right: 10px
+			margin-top: 15px
+			padding: 0 30px 0 15px
+			font-size: 14px
+			color: #2F353B
+			position: relative
+			& span
+				line-height: 30px
+				display: inline-block
+			&-remove
+				position: absolute
+				right: 0
+				top: 8px
+				right: 10px
+				width: 14px
+				height: 14px
+				cursor: pointer
+				background-image: url(../images/icon/clear.svg)
+				background-repeat: no-repeat
+				background-position: center center
+				&:hover
+					background-image: url(../images/icon/remove.svg)
 	&__search
 		position: relative
 		&-input
 			-moz-appearance: none
 			-webkit-appearance: none
 			width: 400px
-			line-height: 30px
+			line-height: 28px
 			box-shadow: unset
 			padding: 0 25px 0 11px
 			border: 1px solid $color_easygrey
@@ -3331,7 +3373,7 @@ body
 	&__addfilter, &__export
 		border: 1px solid $color_easygrey
 		margin-left: 10px
-		line-height: 30px
+		line-height: 28px
 		padding-left: 28px
 		padding-right: 8px
 		font-size: 14px
@@ -3455,10 +3497,11 @@ body
 				td
 					font-size: 13px
 					line-height: 13px
-					overflow: hidden
 					background-color: #ffffff
 					&.hover
 						background-color: #F2F4F6
+						.overflowed:after
+							background-color: #F2F4F6
 					a
 						overflow-wrap: break-word
 						word-wrap: break-word
@@ -4000,3 +4043,28 @@ body
 	&-400
 		min-width: 400px
 		max-width: 400px
+
+a.overflowed
+	position: relative
+	&:after
+		content: '...'
+		position: absolute
+		bottom: 0px
+		right: 0
+		height: calc(50% + 1px)
+		width: 13px
+		text-align: right
+		display: inline-block
+		background-color: #fff
+	&:hover
+		position: absolute
+		z-index: 2
+		left: 20px
+		top: 0
+		max-height: unset !important
+		overflow: visible !important
+		padding: 5.5px 10px
+		background-color: #fff
+		box-shadow: 0 0 20px 0 rgba(162, 174, 183, 0.3)
+		&:after
+			display: none

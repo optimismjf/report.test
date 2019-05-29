@@ -281,11 +281,11 @@
 			<div class="b-inform" data-action="slide-target" data-target=".b-reports__main-desc"></div>
 			<div class="b-reports__main-desc hidden">Большинство создают внешние ссылки через target="_blank" и не знают одного интересного нюанса — страница, на которую мы попадем таким образом, получит частичный контроль над ссылающейся на нее страницей через js свойство window.opener.</div>
 			<div class="b-reports__workarea">
-				<div class="b-reports__filters 1">
+				<div class="b-reports__filters">
 					<div class="b-reports__filters-item">
-						<form action="" class="b-reports__search">
-							<input type="text" class="b-reports__search-input" placeholder="Поиск по таблице">
-							<div class="b-reports__search-clear"></div>
+						<form class="b-reports__search">
+							<input name="search" type="text" class="b-reports__search-input" placeholder="Поиск по таблице">
+							<div class="b-reports__search-clear" data-action="clear-target" data-target=".b-reports__search-input"></div>
 						</form>
 						<div class="b-reports__addfilter">Фильтр</div>
 						<div class="b-reports__export" data-action="show-helper">Выгрузить
@@ -331,6 +331,14 @@
 							<div class="b-pagination__fullscreen">
 								<span>Во весь экран</span>
 							</div>
+						</div>
+					</div>
+					<div class="b-reports__filters-row">
+						<div class="b-reports__filters-part-l">Фильтрация по:</div>
+						<div class="b-reports__filters-part-r">
+							<div class="b-reports__filters-filter"><span>Url: 111111 или 22222222222</span><div class="b-reports__filters-filter-remove"></div></div>
+							<div class="b-reports__filters-filter"><span>Url: 111111 или 22222222222</span><div class="b-reports__filters-filter-remove"></div></div>
+							<div class="b-reports__filters-filter"><span>Url: 111111 или 22222222222 555555555555555555555555555 666666666666666666666666666 88888888888888</span><div class="b-reports__filters-filter-remove"></div></div>
 						</div>
 					</div>
 				</div>
@@ -393,7 +401,8 @@
 							<tr class="b-reports__table-item">
 								<td>
 									<div class="b-reports__table-edit"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png
+									</a>
 								</td>
 								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 								<td>Картинка</td>
@@ -762,21 +771,21 @@
 								<div class="b-filters__body-select-wrapper">
 									<div class="b-filters__body-select changed">Больше</div>
 									<ul class="b-filters__body-select-list">
-										<li class="b-filters__body-select-item" data-filter-count-type="over">Больше</li>
-										<li class="b-filters__body-select-item" data-filter-count-type="less">Меньше</li>
-										<li class="b-filters__body-select-item" data-filter-count-type="range">От — до</li>
+										<li class="b-filters__body-select-item" data-filter-type="count-over">Больше</li>
+										<li class="b-filters__body-select-item" data-filter-type="count-less">Меньше</li>
+										<li class="b-filters__body-select-item" data-filter-type="count-range">От — до</li>
 									</ul>
 								</div>
 							</div>
 							<div class="b-filters__body-row-item">
-								<div class="b-filters__body-row-group active" data-filter-count-type="over">
-									<input type="text" name="countlinks-over">
+								<div class="b-filters__body-row-group active" data-filter-type="count-over">
+									<input type="text" name="countlinks-over" value>
 								</div>
-								<div class="b-filters__body-row-group" data-filter-count-type="less">
-									<input type="text" name="countlinks-less">
+								<div class="b-filters__body-row-group" data-filter-type="count-less">
+									<input type="text" name="countlinks-less" value>
 								</div>
-								<div class="b-filters__body-row-group" data-filter-count-type="range">
-									<input type="text" name="countlinks-from"> <span>—</span> <input type="text" name="countlinks-to">
+								<div class="b-filters__body-row-group" data-filter-type="count-range">
+									<input type="text" name="countlinks-from" value> <span>—</span> <input type="text" name="countlinks-to" value>
 								</div>
 							</div>
 						</div>
