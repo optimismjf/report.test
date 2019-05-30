@@ -8581,13 +8581,15 @@ body.is-hidden {
         display: flex; }
     .b-reports__filters-row {
       width: 100%;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
+      display: none;
       -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
       flex-wrap: nowrap; }
+      .b-reports__filters-row.showed {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
     .b-reports__filters-part-l {
       padding-right: 10px;
       padding-top: 15px;
@@ -8602,7 +8604,8 @@ body.is-hidden {
       display: flex;
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+      overflow: hidden; }
     .b-reports__filters-filter {
       line-height: 30px;
       -webkit-border-radius: 100px;
@@ -8613,10 +8616,15 @@ body.is-hidden {
       padding: 0 30px 0 15px;
       font-size: 14px;
       color: #2F353B;
-      position: relative; }
+      position: relative;
+      max-width: 100%; }
       .b-reports__filters-filter span {
         line-height: 30px;
-        display: inline-block; }
+        white-space: nowrap;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block; }
       .b-reports__filters-filter-remove {
         position: absolute;
         right: 0;
@@ -9040,6 +9048,18 @@ body.is-hidden {
         .b-actions__helper-list li a#item-remove {
           background-image: url(../images/icon/action-remove.svg); }
 
+#table-filters[data-action=edit-filter] .b-filters__header {
+  display: none; }
+
+#table-filters[data-action=edit-filter] .b-filters__body {
+  display: block;
+  border-top-color: transparent; }
+  #table-filters[data-action=edit-filter] .b-filters__body-group {
+    padding-top: 0; }
+
+#table-filters[data-action=edit-filter] .b-filters__footer {
+  display: block; }
+
 .b-filters__helper {
   border: 1px solid #E1E4E6;
   z-index: 4; }
@@ -9169,6 +9189,10 @@ body.is-hidden {
         max-width: 72px; }
         .b-filters__body-row-group input:focus {
           border-color: #2E97DF; }
+        .b-filters__body-row-group input::-webkit-outer-spin-button, .b-filters__body-row-group input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          appearance: none;
+          margin: 0; }
       .b-filters__body-row-group span {
         display: inline-block;
         padding: 0 5px; }

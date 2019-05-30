@@ -3304,8 +3304,10 @@ body
 				display: flex
 		&-row
 			width: 100%
-			display: flex
+			display: none
 			flex-wrap: nowrap
+			&.showed
+				display: flex
 		&-part
 			&-l
 				padding-right: 10px
@@ -3317,6 +3319,7 @@ body
 			&-r
 				display: flex
 				flex-wrap: wrap
+				overflow: hidden
 		&-filter
 			line-height: 30px
 			border-radius: 100px
@@ -3327,9 +3330,13 @@ body
 			font-size: 14px
 			color: #2F353B
 			position: relative
+			max-width: 100%
 			& span
 				line-height: 30px
-				display: inline-block
+				white-space: nowrap
+				text-overflow: ellipsis
+				overflow: hidden
+				display: block
 			&-remove
 				position: absolute
 				right: 0
@@ -3736,6 +3743,17 @@ body
 					&#item-remove
 						background-image: url(../images/icon/action-remove.svg)
 
+#table-filters[data-action=edit-filter]
+	.b-filters
+		&__header
+			display: none
+		&__body
+			display: block
+			border-top-color: transparent
+			&-group
+				padding-top: 0
+		&__footer
+			display: block
 .b-filters
 	&__helper
 		border: 1px solid #E1E4E6
@@ -3850,6 +3868,10 @@ body
 					max-width: 72px
 					&:focus
 						border-color: #2E97DF
+					&::-webkit-outer-spin-button,
+					&::-webkit-inner-spin-button
+						appearance: none
+						margin: 0
 				& span
 					display: inline-block
 					padding: 0 5px

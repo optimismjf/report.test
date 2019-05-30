@@ -49,21 +49,21 @@ gulp.task('stylus', function() {
     .pipe(notify('Stylus SUCCESS'));
 });
  
-gulp.task('deploy', function () {
+gulp.task('deploy', async function () {
 
 	// Файлы для копирования по ftp
 	var globs = [
 	    'static/**/*.*'
 	],
 
-		conn = ftp.create({
-	        host:     'testfront.saitreport.ru',
-		    user:     'testfront_sitereport',
-		    password: 'sedrw12'
-	    });
-    return gulp.src(globs, {buffer: false})
-        .pipe( conn.newer( '/public_html' ) ) // only upload newer files
-        .pipe( conn.dest( '/public_html' ) );
+	conn = ftp.create({
+    host:     'testfront.saitreport.ru',
+    user:     'testfront_sitereport',
+    password: 'sedrw12'
+  });
+  gulp.src(globs, {buffer: false})
+    .pipe( conn.newer( '/public_html' ) ) // only upload newer files
+    .pipe( conn.dest( '/public_html' ) );
 });
 
 gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus'));

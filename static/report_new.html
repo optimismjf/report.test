@@ -335,11 +335,7 @@
 					</div>
 					<div class="b-reports__filters-row">
 						<div class="b-reports__filters-part-l">Фильтрация по:</div>
-						<div class="b-reports__filters-part-r">
-							<div class="b-reports__filters-filter"><span>Url: 111111 или 22222222222</span><div class="b-reports__filters-filter-remove"></div></div>
-							<div class="b-reports__filters-filter"><span>Url: 111111 или 22222222222</span><div class="b-reports__filters-filter-remove"></div></div>
-							<div class="b-reports__filters-filter"><span>Url: 111111 или 22222222222 555555555555555555555555555 666666666666666666666666666 88888888888888</span><div class="b-reports__filters-filter-remove"></div></div>
-						</div>
+						<div class="b-reports__filters-part-r"></div>
 					</div>
 				</div>
 
@@ -679,35 +675,34 @@
 		</div>
 	</div>
 
-	<div id="table-filters" class="b-filters__helper-wrapper">
+	<div id="table-filters" class="b-filters__helper-wrapper" data-action="add-filter">
 		<div class="b-filters__helper">
 			<form class="b-filters__helper-container">
 				<div class="b-filters__header">
 					<div class="b-filters__header-select-wrapper">
 						<div class="b-filters__header-select">Выберите колонку</div>
 						<ul class="b-filters__header-select-list">
-							<li class="b-filters__header-select-item" data-filter-type="nofollow">Nofollow</li>
-							<li class="b-filters__header-select-item" data-filter-type="url">URL</li>
-							<li class="b-filters__header-select-item" data-filter-type="rel">REL</li>
-							<li class="b-filters__header-select-item" data-filter-type="countlinks">Количество ссылок</li>
+							<li class="b-filters__header-select-item" data-filter-type="radio">Nofollow</li>
+							<li class="b-filters__header-select-item" data-filter-type="text">URL</li>
+							<li class="b-filters__header-select-item" data-filter-type="checkbox">REL</li>
+							<li class="b-filters__header-select-item" data-filter-type="count">Количество ссылок</li>
 						</ul>
 					</div>
 				</div>
 				<div class="b-filters__body" hidden>
-					<div class="b-filters__body-group" data-filter-type="nofollow">
+					<div class="b-filters__body-group" data-filter-type="radio">
 						<div class="b-filters__body-row">
-							<input type="radio" class="custom-radio" name="radio-value" id="radio-value-yes" value="yes">
+							<input type="radio" class="custom-radio" name="radio-value" id="radio-value-yes" value="да">
 							<label for="radio-value-yes">Да</label>
 						</div>
 						<div class="b-filters__body-row">
-							<input type="radio" class="custom-radio" name="radio-value" id="radio-value-no" value="no">
+							<input type="radio" class="custom-radio" name="radio-value" id="radio-value-no" value="нет">
 							<label for="radio-value-no">Нет</label>
 						</div>
 					</div>
-					<div class="b-filters__body-group" data-filter-type="url">
+					<div class="b-filters__body-group" data-filter-type="text">
 						<div class="b-filters__body-row">
 							<textarea class="custom-textarea" name="urls" id="urls-value" placeholder='https://saitreport.ru https://saitreport.ru/projects/* @/projects/sait/'></textarea>
-
 						</div>
 						<div class="b-filters__body-row">
 							<p>Операторы нестрого соответствия:</p>
@@ -719,53 +714,53 @@
 							</p>
 						</div>
 					</div>
-					<div class="b-filters__body-group" data-filter-type="rel">
+					<div class="b-filters__body-group" data-filter-type="checkbox">
 						<div class="b-filters__body-row">
 							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-1" value="checkbox">
 							<label for="checkbox-value-1">checkbox</label>
 						</div>
 						<div class="b-filters__body-row">
-							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-2" value="last">
-							<label for="checkbox-value-2">last</label>
+							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-2" value="last1">
+							<label for="checkbox-value-2">last1</label>
 						</div>
 						<div class="b-filters__body-row">
-							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-3" value="last">
-							<label for="checkbox-value-3">last</label>
+							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-3" value="last2">
+							<label for="checkbox-value-3">last2</label>
 						</div>
 						<div class="b-filters__body-row">
-							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-4" value="last">
-							<label for="checkbox-value-4">last</label>
+							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-4" value="last3">
+							<label for="checkbox-value-4">last3</label>
 						</div>
 						<div class="b-filters__body-row">
-							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-5" value="last">
-							<label for="checkbox-value-5">last</label>
+							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-5" value="last4">
+							<label for="checkbox-value-5">last4</label>
 						</div>
 						<div class="b-filters__body-row">
-							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-6" value="last">
-							<label for="checkbox-value-6">last</label>
+							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-6" value="last5">
+							<label for="checkbox-value-6">last5</label>
 						</div>
 						<div class="b-filters__body-row">
-							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-7" value="last">
-							<label for="checkbox-value-7">last</label>
+							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-7" value="last6">
+							<label for="checkbox-value-7">last6</label>
 						</div>
 						<div class="b-filters__body-row">
-							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-8" value="last">
-							<label for="checkbox-value-8">last</label>
+							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-8" value="last7">
+							<label for="checkbox-value-8">last7</label>
 						</div>
 						<div class="b-filters__body-row">
-							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-9" value="last">
-							<label for="checkbox-value-9">last</label>
+							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-9" value="last8">
+							<label for="checkbox-value-9">last8</label>
 						</div>
 						<div class="b-filters__body-row">
-							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-10" value="last">
-							<label for="checkbox-value-10">last</label>
+							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-10" value="last9">
+							<label for="checkbox-value-10">last9</label>
 						</div>
 						<div class="b-filters__body-row">
-							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-11" value="last">
-							<label for="checkbox-value-11">last</label>
+							<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-11" value="last10">
+							<label for="checkbox-value-11">last10</label>
 						</div>
 					</div>
-					<div class="b-filters__body-group" data-filter-type="countlinks">
+					<div class="b-filters__body-group" data-filter-type="count">
 						<div class="b-filters__body-row flex">
 							<div class="b-filters__body-row-item">
 								<div class="b-filters__body-select-wrapper">
@@ -779,13 +774,13 @@
 							</div>
 							<div class="b-filters__body-row-item">
 								<div class="b-filters__body-row-group active" data-filter-type="count-over">
-									<input type="text" name="countlinks-over" value>
+									<input type="number" min="0" name="countlinks-from" value>
 								</div>
 								<div class="b-filters__body-row-group" data-filter-type="count-less">
-									<input type="text" name="countlinks-less" value>
+									<input type="number"min="0"  name="countlinks-to" value>
 								</div>
 								<div class="b-filters__body-row-group" data-filter-type="count-range">
-									<input type="text" name="countlinks-from" value> <span>—</span> <input type="text" name="countlinks-to" value>
+									<input type="number" min="0" name="countlinks-min" value> <span>—</span> <input type="number" min="0" name="countlinks-max" value>
 								</div>
 							</div>
 						</div>
