@@ -7994,7 +7994,7 @@ body.is-hidden {
   .l-menu__list li:before {
     display: none; }
 
-/* единые выпадающие */
+/* Common dropdown */
 .b-project__helper-wrapper, .b-reports__export-helper-wrapper, .b-pagination__helper-wrapper {
   position: absolute;
   top: 0;
