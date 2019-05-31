@@ -9376,32 +9376,25 @@ body.is-hidden {
     background-color: #C2CAD8; }
 
 .w-100 {
-  min-width: 100px;
-  max-width: 100px; }
+  min-width: 100px; }
 
 .w-150 {
-  min-width: 150px;
-  max-width: 150px; }
+  min-width: 150px; }
 
 .w-200 {
-  min-width: 200px;
-  max-width: 200px; }
+  min-width: 200px; }
 
 .w-250 {
-  min-width: 250px;
-  max-width: 250px; }
+  min-width: 250px; }
 
 .w-300 {
-  min-width: 300px;
-  max-width: 300px; }
+  min-width: 300px; }
 
 .w-350 {
-  min-width: 350px;
-  max-width: 350px; }
+  min-width: 350px; }
 
 .w-400 {
-  min-width: 400px;
-  max-width: 400px; }
+  min-width: 400px; }
 
 a.overflowed {
   position: relative; }
