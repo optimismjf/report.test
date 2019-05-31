@@ -158,7 +158,8 @@ function showActions(elem, action) {
 			var $this = elem,
 				offset = $this.target.getBoundingClientRect(),
 				actions = document.getElementById('table-actions'),
-				top = offset.top + 3 + 'px',
+				vertical,
+				top,
 				left = offset.right + 10 + 'px',
 				a = document.querySelectorAll('.actions-showed');
 
@@ -168,15 +169,37 @@ function showActions(elem, action) {
 			 	a[i].classList.remove('actions-showed');
 			};
 
+			actions.classList.remove('center-position');
+			actions.classList.remove('top-position');
+			actions.classList.remove('bottom-position');
+
 			actions.style.display = 'block';
+
+			if(document.body.clientHeight - offset.top < actions.clientHeight && offset.top < actions.clientHeight) {
+				vertical = 'center';
+				top = offset.bottom - actions.clientHeight / 2 + 'px'		
+				
+			} else if (document.body.clientHeight - offset.top < actions.clientHeight) {
+				vertical = 'top';
+				top = offset.bottom - actions.clientHeight - 3 + 'px'
+			} else {
+				vertical = 'bottom';
+				top = offset.top + 3 + 'px';
+			};
+
 			actions.style.top = top;
 			actions.style.left = left;
-				
+			actions.classList.add(vertical+'-position');			
+
 			$this.target.classList.add('actions-showed');	
 		}
 	} else if (action == "hide") {
-		var a = document.querySelectorAll('.actions-showed');
-		document.getElementById('table-actions').removeAttribute("style");
+		var a = document.querySelectorAll('.actions-showed'),
+			actions = document.getElementById('table-actions');
+		actions.removeAttribute("style");
+		actions.classList.remove('center-position');
+		actions.classList.remove('top-position');
+		actions.classList.remove('bottom-position');
 
 		for (var i = 0; i < a.length; i++) {
 		 	a[i].classList.remove('actions-showed');
@@ -429,7 +452,7 @@ function stickyAside(t, mt) {
 					$that = $(that);
 				if($that.hasClass('b-reports__addfilter') && !$that.hasClass('filters-show')) {
 					showFilters(e, 'show')
-				} else if(($that.hasClass('b-reports__filters-filter') || $that.parent().hasClass('b-reports__filters-filter')) && !$that.hasClass('b-reports__filters-filter-remove')) {
+				} else if(($that.hasClass('b-reports__filters-badge') || $that.parent().hasClass('b-reports__filters-badge')) && !$that.hasClass('b-reports__filters-badge-remove')) {
 					showFilters(e, 'edit')
 				} else if(!$that.hasClass('b-filters__helper-wrapper') && !$that.closest('.b-filters__helper-wrapper').length) {
 					showFilters(e, 'hide')
@@ -452,7 +475,7 @@ function stickyAside(t, mt) {
 			});
 
 			$('.b-reports__filters-row').on('update', function () {
-				if($('.b-reports__filters-filter').length) {
+				if($('.b-reports__filters-badge').length) {
 					$('.b-reports__filters-row').addClass('showed');
 				} else {
 					$('.b-reports__filters-row').removeClass('showed');
@@ -821,10 +844,10 @@ function stickyAside(t, mt) {
 		}
 
 		var filterType = result.typeparent ? result.typeparent : result.type,
-			item = '<div class="b-reports__filters-filter" data-filter-type="' + filterType + '" data-filter-options=\'' + JSON.stringify(result) + '\'><span title="' + result.name + ': ' + result.textval + '">' + result.name + ': ' + result.textval + '</span><div class="b-reports__filters-filter-remove" data-action="remove-target" data-target=".b-reports__filters-filter[data-filter-type=' + filterType + ']"></div></div>';
+			item = '<div class="b-reports__filters-badge" data-filter-type="' + filterType + '" data-filter-options=\'' + JSON.stringify(result) + '\'><span title="' + result.name + ': ' + result.textval + '">' + result.name + ': ' + result.textval + '</span><div class="b-reports__filters-badge-remove" data-action="remove-target" data-target=".b-reports__filters-badge[data-filter-type=' + filterType + ']"></div></div>';
 
-		if($('.b-reports__filters-filter[data-filter-type=' + filterType + ']').length) {
-			$('.b-reports__filters-filter[data-filter-type=' + filterType + ']').replaceWith(item);
+		if($('.b-reports__filters-badge[data-filter-type=' + filterType + ']').length) {
+			$('.b-reports__filters-badge[data-filter-type=' + filterType + ']').replaceWith(item);
 		} else {
 			$('.b-reports__filters-part-r').append(item);
 		}

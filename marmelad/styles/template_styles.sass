@@ -3320,7 +3320,7 @@ body
 				display: flex
 				flex-wrap: wrap
 				overflow: hidden
-		&-filter
+		&-badge
 			line-height: 30px
 			border-radius: 100px
 			background-color: #D9DEE2
@@ -3331,6 +3331,7 @@ body
 			color: #2F353B
 			position: relative
 			max-width: 100%
+			cursor: pointer
 			& span
 				line-height: 30px
 				white-space: nowrap
@@ -3707,6 +3708,15 @@ body
 			position: fixed
 			left: unset
 			right: unset
+			z-index: 3
+			&.center-position
+				.b-actions__helper
+					&:after, &:before
+						top: calc(50% - 34px)
+			&.top-position
+				.b-actions__helper
+					&:after, &:before
+						top: calc(100% - 34px)							
 		&-container
 			padding-bottom: 15px
 			& hr
