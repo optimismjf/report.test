@@ -80,41 +80,6 @@ function debounce(func, wait, immediate) {
 
 /* новые вспомогательные */
 
-/* Сортировка по колонке */
-
-function sortColumn(c) {
-	var t = document.querySelectorAll('[data-sortable=' + c + ']'),
-		a = document.querySelectorAll('[data-sortable]:not([data-sortable=' + c + '])');
-
-	for (var i = 0; i < a.length; i++) {
-	 	a[i].classList.remove('sort-asc');
-	 	a[i].classList.remove('sort-desc');
-	};
-
-	for (var i = 0; i < t.length; i++) {
-		if(t[i].classList.contains('sort-asc')) {
-			t[i].classList.remove('sort-asc');
-			t[i].classList.add('sort-desc');
-		} else {
-			t[i].classList.remove('sort-desc')
-			t[i].classList.add('sort-asc')
-		};
-	};
-};
-
-/* Тоглим рабочую область на весь экран */
-
-function fullscreenToggle() {
-	$(this).toggleClass('close');
-	$('.b-reports').toggleClass('fullscreen').trigger('resize');
-	$('#header').toggle();
-	$('.sticky').removeAttr('style').removeClass('sticky');
-	$(window).trigger('resize');
-	setTimeout(function() {
-		$('.freeze-table').freezeTable('update');
-	}, 100)
-};
-
 /* Показываем подсказки */
 
 function showInform(event, show) {
@@ -153,15 +118,15 @@ function showInform(event, show) {
 /* Показываем действия с элементами */
 
 function showActions(elem, action) {
+	let actions = document.getElementById('table-actions'),
+		a = document.querySelectorAll('.actions-showed');
 	if(elem) {
 		if(action = "show") {
 			var $this = elem,
 				offset = $this.target.getBoundingClientRect(),
-				actions = document.getElementById('table-actions'),
 				vertical,
 				top,
-				left = offset.right + 10 + 'px',
-				a = document.querySelectorAll('.actions-showed');
+				left = offset.right + 10 + 'px';
 
 			actions.removeAttribute("style");
 
@@ -194,8 +159,6 @@ function showActions(elem, action) {
 			$this.target.classList.add('actions-showed');	
 		}
 	} else if (action == "hide") {
-		var a = document.querySelectorAll('.actions-showed'),
-			actions = document.getElementById('table-actions');
 		actions.removeAttribute("style");
 		actions.classList.remove('center-position');
 		actions.classList.remove('top-position');
@@ -213,10 +176,10 @@ function hoverTr(tr, action='out') {
 	if(action == 'hover') {
 		var i = tr.index();
 		$('.freeze-table table').each(function(index, table) {
-			$(table).find('tbody tr:eq('+ i +') td').addClass('hover');
+			$(table).find('tbody tr:eq('+ i +')').addClass('hover');
 		})
 	} else if (action == 'out') {
-		$('.freeze-table td').removeClass('hover');
+		$('.freeze-table tbody tr').removeClass('hover');
 	};	
 }
 
@@ -244,9 +207,10 @@ function addListenerMulti(el, s, fn) {
 	};
 };
 
-/* Функция для заурепления сайдбара */
+/* Функция для закрепления сайдбара */
 
 function stickyAside(t, mt) {
+	if(!$(t).length) return false;
 	var offset = $(t).offset().top;	
 	function stickThis() {
 		if($(window).scrollTop() > offset) {
@@ -256,15 +220,19 @@ function stickyAside(t, mt) {
 		}
 	};
 	stickThis();
-	$(window).on('scroll', stickThis)	
+	$(window).on('scroll.aside', stickThis)	
 };
 
-/* Мини-плагин для закрепления фильтры */
+/* Мини-плагин для закрепления фильтров */
 
 (function () {
 	var methods = {
 		// инициализация плагина
 		init:function(params) {
+			if(!this.length) {
+				console.warn('Plugin stickyFilters couldn\'t find target. Check the DOM'); 
+				return false;
+			};
 			// значение по умолчанию
 			var defaults = {
 				dempfer: false,				
@@ -329,8 +297,7 @@ function stickyAside(t, mt) {
 	   	}
 	};
 	 
-	$.fn.stickyFilters = function(method){	 
-	    // немного магии
+	$.fn.stickyFilters = function(method){
 	    if ( methods[method] ) {
 	        // если запрашиваемый метод существует, мы его вызываем
 	        // все параметры, кроме имени метода прийдут в метод
@@ -436,7 +403,7 @@ function stickyAside(t, mt) {
 	}
 })(jQuery);
 
-
+/* Плагин для работы с фильтрами */
 
 (function( $ ) {
 
@@ -555,20 +522,20 @@ function stickyAside(t, mt) {
 
 			offsets = that.getBoundingClientRect();			
 			filters.css({
-				'top' : offsets.bottom,
+				'top' : offsets.bottom + 10,
 				'left' : offsets.left
 			}).show();
 
-			if(filters.attr('data-action') != 'add-filter') {
+			if(filters.attr('data-filter-action') != 'add-filter') {
 				filtersForm[0].reset();
-				filters.attr('data-action', 'add-filter');
+				filters.attr('data-filter-action', 'add-filter');
 				$('.b-filters__header-select').text('Выберите колонку').removeClass('changed');
 				$('.b-filters__header-select-list .active').removeClass('active');
 				$('.b-filters__body-select-item:first-child').trigger('click');
 				$('.b-filters__body, .b-filters__footer').attr('hidden', true);
 			};
 
-			$('[data-action=add-filter] .b-filters__body-group textarea, [data-action=add-filter] .b-filters__body-group input').off('keyup.filters change.filters').on('keyup.filters change.filters', function(e) {
+			$('[data-filter-action=add-filter] .b-filters__body-group textarea, [data-filter-action=add-filter] .b-filters__body-group input').off('keyup.filters change.filters').on('keyup.filters change.filters', function(e) {
 				var check,
 					type = $(this)[0].type,
 					valThis;
@@ -589,8 +556,6 @@ function stickyAside(t, mt) {
 					check = $(this).val() == '';
 				};
 
-				console.log(check);
-
 				$('.b-filters__submit').attr('disabled', check);
 			});
 
@@ -605,15 +570,15 @@ function stickyAside(t, mt) {
 			filters.css({
 				'top' : offsets.bottom,
 				'left' : offsets.left
-			}).show().attr('data-action', 'edit-filter');
+			}).show().attr('data-filter-action', 'edit-filter');
 
 			$that.addClass('filters-show');
 			$('.b-filters__header-select').text(options.name).addClass('changed');
-			$('.b-filters__header-select-item[data-filter-type=' + options.type + ']').addClass('active');
-			$('.b-filters__body-group[data-filter-type], .b-filters__body-row-group[data-filter-type]').removeClass('active');
-			$('.b-filters__body').find('[data-filter-type=' + options.type + ']').addClass('active');
+			$('.b-filters__header-select-item[data-filter-group=' + options.group + ']').addClass('active');
+			$('.b-filters__body-group[data-filter-group], .b-filters__body-row-group[data-filter-type]').removeClass('active');
+			$('.b-filters__body').find('[data-filter-group=' + options.group + ']').addClass('active');
 			if(options.typeparent) {
-				$('.b-filters__body-group[data-filter-type=' + options.typeparent + '], .b-filters__header-select-item[data-filter-type=' + options.typeparent + ']').addClass('active');
+				$('.b-filters__body-group[data-filter-group=' + options.group + '], .b-filters__header-select-item[data-filter-group=' + options.typeparent + ']').addClass('active');
 				$('.b-filters__body-select-item[data-filter-type=' + options.type + ']').trigger('click');
 			}
 
@@ -629,7 +594,7 @@ function stickyAside(t, mt) {
 
 			$('.b-filters__submit').attr('disabled', true);
 
-			$('[data-action=edit-filter] .b-filters__body-group textarea, [data-action=edit-filter] .b-filters__body-group input').off('keyup.filters change.filters').on('keyup.filters change.filters', function(e) {
+			$('[data-filter-action=edit-filter] .b-filters__body-group textarea, [data-filter-action=edit-filter] .b-filters__body-group input').off('keyup.filters change.filters').on('keyup.filters change.filters', function(e) {
 				var check,
 					checkResult,
 					checkNumber,
@@ -664,7 +629,7 @@ function stickyAside(t, mt) {
 	};
 
 	function showGroup(target) {		
-		var formGroup = target.data('filter-type'),
+		var formGroup = target.data('filter-group') ? '[data-filter-group=' + target.data('filter-group') + ']' : '[data-filter-type=' + target.data('filter-type') + ']',
 			text = target.text(),
 			parent = target.closest('[class$="select-wrapper"]'),
 			list = target.closest('[class$="select-list"]'),
@@ -675,13 +640,90 @@ function stickyAside(t, mt) {
 		list.removeAttr('style');
 		$('.b-filters__footer').removeAttr('hidden');
 		$('.b-filters__body').removeAttr('hidden')
-			.find('[data-filter-type=' + formGroup + ']').addClass('active')
+			.find(formGroup).addClass('active')
 			.siblings().removeClass('active');
 		$('.b-filters__helper-container')[0].reset();
 		$('.b-filters__helper-container [type=submit]').attr('disabled', true);
 	}
  
 }( jQuery ));
+
+function dataAction(e) {
+	var action = $(this).data('action'),
+		target = $(this).data('target') || undefined;
+	switch(action) {
+		case 'slide-target':
+			/* Тоглим информацию на страницах отчетов */
+			$(target).toggle();
+			$(window).trigger('resize');
+			if($('.freeze-table').length) setTimeout(function() {$('.freeze-table').freezeTable('update')}, 100);
+
+			break;
+		case 'clear-target':
+			// Чистим инпуты
+			$(target).val('').trigger('change');
+
+			break;
+
+		case 'remove-target':
+			// удаляем цели
+			var trigger = $(target).attr('data-filter-group') ? {'elem' : '.b-reports__filters-row', 'type' : 'update'} : false;
+			target = $(this).data('target');
+			$(target).remove();
+			if(trigger) {
+				$(trigger.elem).trigger(trigger.type);
+			}		
+
+			break;
+
+		case 'sort-column':
+			/* Сортировка по колонке */
+			var s = $(this).data('sortable'),
+				tc = $('[data-sortable=' + s + ']'),
+				ac = $('[data-sortable]:not([data-sortable=' + s + '])');
+			ac.removeClass('sort-asc sort-desc');
+
+			if(tc.hasClass('sort-asc')) {
+				tc.removeClass('sort-asc').addClass('sort-desc');
+			} else {
+				tc.removeClass('sort-desc').addClass('sort-asc');
+			}
+
+			break;
+
+		case 'switcher':
+			/* Свитчер в сайдбаре */
+			var target = $(e.target),
+				$i = target.index(),
+				$t = target.parent().data('target'),
+				$target = $($t + ':eq(' + $i + ')');
+			target.addClass('active').siblings().removeClass('active');
+			$target.addClass('active').siblings().removeClass('active');
+
+			break;
+
+		case 'toggle-fullscreen':
+			/* Тоглим рабочую область на весь экран */
+			// $(this).toggleClass('close');
+			// $('.b-reports').toggleClass('fullscreen');
+			// $('#header').toggle();
+
+			$('body').toggleClass('fullscreen');
+
+			$(window).trigger('resize');
+			if($('.freeze-table').length) $('.freeze-table').freezeTable('update');
+			
+			break;
+
+		case 'show-hover':
+			/* Чтобы варны не выбивало */
+			break;
+
+		default:
+			console.warn('Action for clicker \'dataAction()\' not found');
+			break;
+	}
+};
 
 ;
 
@@ -697,20 +739,12 @@ function stickyAside(t, mt) {
 
 	document.addEventListener("click", function(event) {
 		var e = event || window.event,
-			t;
-		if(t = findAncestor(e, 'data-sortable')) {
-			sortColumn(t);
-		}
-	});
-
-	document.addEventListener("click", function(event) {
-		var e = event || window.event,
 			t = e.target;
-		if(t.classList.contains('b-reports__table-edit')) {
+		if(t.classList.contains('b-reports__table-edit') && e.target.getAttribute('data-item-id')) {
 			if(t.classList.contains('actions-showed')) {
 				showActions(false, 'hide');
 			} else {
-				showActions(e, 'show');
+				showActions(e, 'show', e.target.getAttribute('data-item-id'));
 			}			
 		} else {
 			showActions(false, 'hide');
@@ -723,41 +757,6 @@ function stickyAside(t, mt) {
 		hoverTr($(this), action)
 	});
 
-	/* Тоглим информацию на страницах отчетов */
-	$('[data-action=slide-target]').on('click', function() {
-		$($(this).data('target')).toggle();
-		$('.b-reports').trigger('resize');
-		if($('.freeze-table').length) $('.freeze-table').freezeTable('update');
-	});
-
-	$('[data-action=clear-target]').on('click', function() {
-		var t = $(this).data('target');
-		$(t).val('').trigger('change');
-	});
-
-	$(document).on('click', '[data-action="remove-target"]', function (e) {
-		var t = $(this).data('target'),
-			$t = $(t);
-		console.log($t);
-		var trigger = $(t).attr('data-filter-type') ? {'elem' : '.b-reports__filters-row', 'type' : 'update'} : false;
-		$t.remove();
-		if(trigger) {
-			$(trigger.elem).trigger(trigger.type);
-		}
-		
-	});
-
-	/* Свитчер в сайдбаре */
-	$('[data-action=switcher] [class*=-item]').on('click', function() {
-		var $i = $(this).index(),
-			$t = $(this).parent().data('target'),
-			$target = $($t + ':eq(' + $i + ')');
-		$(this).addClass('active').siblings().removeClass('active');
-		$target.addClass('active').siblings().removeClass('active');
-	});
-
-	$(document).filters();
-
 	$('.b-reports__search-input').on('change keyup keydown', function() {
 		if($(this).val() !== '') {
 			$(this).siblings('[class$=clear]').show()
@@ -766,16 +765,20 @@ function stickyAside(t, mt) {
 		}
 	});
 
-	$('.b-pagination__fullscreen').click(fullscreenToggle);
+	$(document)
+		.on('click', '[data-action]', dataAction)
+		.filters();
 
-	$('.b-reports__filters').stickyFilters({'dempfer' : true});
-	stickyAside('.b-reports__aside', 0)
+	if($('.b-reports__filters').length) $('.b-reports__filters').stickyFilters({'dempfer' : true});
+	if($('.b-reports__aside').length) stickyAside('.b-reports__aside', 0);
 
-	$('.freeze-table').freezeTable({
-		fixedNavbar: $('.b-reports__filters'),
-		callback: function() {$('.b-reports__table tbody tr td a').hidenLinks('update')},
-		scrollBar: true
-	});
+	if($('.freeze-table').length) {
+		$('.freeze-table').freezeTable({
+			fixedNavbar: $('.b-reports__filters'),
+			callback: function() {$('.b-reports__table tbody tr td a').hidenLinks('update')},
+			scrollBar: true
+		});
+	};
 
 	window.onscroll = function() {
 		showActions(false, 'hide');
@@ -795,6 +798,7 @@ function stickyAside(t, mt) {
 		result.getstring = $(this).serialize();
 
 		result.type = $(this).find('[data-filter-type].active [data-filter-type].active').length ? $(this).find('[data-filter-type].active [data-filter-type].active').data('filter-type') : $(this).find('.b-filters__body-group.active').data('filter-type');
+		result.group = $(this).find('.b-filters__body-group.active').data('filter-group');
 		result.name = $(this).find('.b-filters__header-select.changed').text();
 		
 
@@ -843,11 +847,10 @@ function stickyAside(t, mt) {
 			result.typeparent = 'count';
 		}
 
-		var filterType = result.typeparent ? result.typeparent : result.type,
-			item = '<div class="b-reports__filters-badge" data-filter-type="' + filterType + '" data-filter-options=\'' + JSON.stringify(result) + '\'><span title="' + result.name + ': ' + result.textval + '">' + result.name + ': ' + result.textval + '</span><div class="b-reports__filters-badge-remove" data-action="remove-target" data-target=".b-reports__filters-badge[data-filter-type=' + filterType + ']"></div></div>';
+		var item = '<div class="b-reports__filters-badge" data-filter-group="' + result.group + '" data-filter-options=\'' + JSON.stringify(result) + '\'><span title="' + result.name + ': ' + result.textval + '">' + result.name + ': ' + result.textval + '</span><div class="b-reports__filters-badge-remove" data-action="remove-target" data-target=".b-reports__filters-badge[data-filter-group=' + result.group + ']"></div></div>';
 
-		if($('.b-reports__filters-badge[data-filter-type=' + filterType + ']').length) {
-			$('.b-reports__filters-badge[data-filter-type=' + filterType + ']').replaceWith(item);
+		if($('.b-reports__filters-badge[data-filter-group=' + result.group + ']').length) {
+			$('.b-reports__filters-badge[data-filter-group=' + result.group + ']').replaceWith(item);
 		} else {
 			$('.b-reports__filters-part-r').append(item);
 		}
@@ -1743,7 +1746,7 @@ $(function () {
 
         if ($('.b-his.js-opened').length) {
           console.log('editor');
-          $('.b-his.js-opened').find('.b-his__title').html(hisTitle);
+          $('.b-his.js-opened').find('.b-his__title').html(hisTitlse);
           $('.b-his.js-opened').find('.b-his__content').html(hisContent);
         } else {
           console.log('new');

@@ -2782,6 +2782,7 @@ body
 
 %helper
 	background-color: #fff
+	border: 1px solid #E1E4E6
 	box-shadow: 0 0 20px 0 rgba(162, 174, 183, 0.3)
 	border-radius: 5px
 
@@ -2798,6 +2799,26 @@ body
 	text-rendering: auto
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
+
+%helper:before
+	content: "\f0d8"
+	position: absolute
+	z-index: 1
+	left: 50%
+	margin-left: -10px
+	top: -19px
+	display: inline-block
+	font: normal normal normal 28px/1 FontAwesome
+	color: #E1E4E6
+	text-rendering: auto
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+%helper-container
+	background-color: #fff
+	position: relative
+	z-index: 2
+	border-radius: 5px
 
 %helper-list
 	padding: 12px 20px 20px 20px
@@ -2833,6 +2854,9 @@ body
 	-webkit-background-size: 300px
 	background-size: 300px
 	background-position: 51px 0
+
+	body.fullscreen &
+		display: none
 
 	#header-left
 		width: 250px
@@ -2946,13 +2970,30 @@ body
 						transition: 0.2s all linear
 		&__helper
 			@extend %helper
+			&:after
+				top: -15px
+			&:before
+				top: -16px
 			&-wrapper
 				left: unset
-				right: -15px				
+				right: -15px
+			&-container
+				@extend %helper-container				
 			&-list
 				@extend %helper-list
 				li
-					@extend %helper-item
+					@extend %helper-item					
+					padding: 0 20px
+					margin: 0 -20px
+					&:hover
+						background-color: #F6F8FA
+					a
+						display: block
+						line-height: 35px
+						&:hover
+							text-decoration: none
+							border-bottom: 0
+
 	#navigation
 		display: none
 		position: fixed
@@ -3132,9 +3173,13 @@ body
 	&__helper
 		@extend %helper
 		&:after
-			top: -3px
+			top: -0px
+		&:before
+			top: -1px
 		&-wrapper
 			@extend %helper-wrapper
+		&-container
+			@extend %helper-container
 		&-list
 			@extend %helper-list
 			li
@@ -3241,8 +3286,8 @@ body
 			line-height: 25px
 			color: #2F353B
 			width: calc(100% - 20px)
-	&.fullscreen
-		.b-reports__aside
+	.fullscreen &
+		&__aside
 			left: -250px
 			position: fixed
 			top: 0 !important
@@ -3277,7 +3322,7 @@ body
 				&:after
 					left: 254px
 					content: "\f104"
-		.b-reports__main
+		&__main
 			width: 100%
 			margin-left: 0
 	&__workarea
@@ -3400,20 +3445,16 @@ body
 				top: -5px
 				left: 25px
 			&:before
-				content: "\f0d8"
-				position: absolute
-				z-index: 1
 				left: 25px
 				margin-left: -10px
 				top: -6px
-				display: inline-block
-				font: normal normal normal 28px/1 FontAwesome
-				color: #E1E4E6
-				text-rendering: auto
-				-webkit-font-smoothing: antialiased
-				-moz-osx-font-smoothing: grayscale
 			&-wrapper
 				@extend %helper-wrapper
+			&-container
+				position: relative
+				z-index: 2
+				background-color: #fff
+				border-radius: 5px
 			&-list
 				@extend %helper-list
 				li
@@ -3461,20 +3502,22 @@ body
 			position: relative
 			height: 40px
 			&:first-child
-				padding-left: 30px
-			.b-reports__table-edit
-				position: absolute
-				top: 0
-				left: 0
-				height: 40px
-				width: 20px
-				border-right: 1px solid #E1E4E6
-				background-position: center center
-				background-repeat: no-repeat
+				padding-left: 10px
+		th &-edit, td &-edit
+			position: absolute
+			top: 0
+			left: 0
+			height: 39px
+			width: 20px
+			border-right: 1px solid #E1E4E6
+			background-position: center center
+			background-repeat: no-repeat
+		th &-edit
+			background-color: #F2F4F6
 		thead
 			tr
-				th
-					background-color: #F2F4F6
+				background-color: #F2F4F6
+				th					
 					font-size: 13px
 					line-height: 15px
 					font-weight: normal
@@ -3502,20 +3545,20 @@ body
 						cursor: pointer
 		tbody
 			tr
+				background-color: #ffffff
+				&.hover
+					background-color: #F2F4F6
+					.overflowed:after
+						background-color: #F2F4F6
 				td
 					font-size: 13px
-					line-height: 13px
-					background-color: #ffffff
-					&.hover
-						background-color: #F2F4F6
-						.overflowed:after
-							background-color: #F2F4F6
+					line-height: 13px					
 					a
 						overflow-wrap: break-word
 						word-wrap: break-word
 						word-break: break-all
 						line-break: auto
-						hyphens: manual
+						hyphens: auto
 						color: #0044BB
 					.b-reports__table-edit
 						background-image: url(../images/icon/dots-vertical.svg)
@@ -3537,11 +3580,42 @@ body
 				background-image: url(../images/icon/info_alt.svg)
 				&:hover
 					background-image: url(../images/icon/info_alt-h.svg)
+	&-list
+		list-style: none
+		margin: 0
+		padding: 0
+		li
+			display: flex
+			flex-wrap: nowrap
+			justify-content: space-between
+			align-items: center		
+			font-size: 13px
+			line-height: 26px
+			color: #2F353B
+			&:not(:last-child)
+				border-bottom: 1px solid #F1F1F1
+		&__key
+			padding-right: 10px
+		&__value
+			color: #0044BB
 				
 
 #svodnaya
 	td, th
 		height: 40px
+
+#kollektor
+	td
+		height: auto
+	tbody
+		td:not(:first-child)
+			vertical-align: text-top
+
+
+.editable-items 
+	th, td
+		&:first-child
+			padding-left: 30px
 
 .b-pagination
 	display: flex
@@ -3557,14 +3631,18 @@ body
 			&:hover .b-pagination__helper-wrapper
 				display: block
 				top: calc(100% - 3px)
-				left: -20px
+				left: -30px
 				padding-top: 15px
 	&__helper
 		@extend %helper
 		&:after
-			top: -3px
+			top: 0px
+		&:before
+			top: -1px
 		&-wrapper
 			@extend %helper-wrapper
+		&-container
+			@extend %helper-container
 		&-list
 			@extend %helper-list
 			li
@@ -3651,8 +3729,7 @@ body
 				background-size: 14px 14px
 				background-image: url(../images/icon/fullscreen-open.svg)
 				display: inline-block
-		&.close span
-			&:after
+			body.fullscreen &:after
 				background-image: url(../images/icon/fullscreen-close.svg)
 				width: 20px
 				height: 20px
@@ -3718,6 +3795,7 @@ body
 					&:after, &:before
 						top: calc(100% - 34px)							
 		&-container
+			@extend %helper-container
 			padding-bottom: 15px
 			& hr
 				background-color: #E1E4E6
@@ -3753,8 +3831,8 @@ body
 					&#item-remove
 						background-image: url(../images/icon/action-remove.svg)
 
-#table-filters[data-action=edit-filter]
-	.b-filters
+.b-filters
+	#table-filters[data-filter-action=edit-filter] &
 		&__header
 			display: none
 		&__body
@@ -3764,7 +3842,6 @@ body
 				padding-top: 0
 		&__footer
 			display: block
-.b-filters
 	&__helper
 		border: 1px solid #E1E4E6
 		z-index: 4
@@ -3794,10 +3871,7 @@ body
 			right: unset
 			width: 350px
 		&-container
-			background-color: #fff 
-			position: relative
-			z-index: 2
-			border-radius: 5px
+			@extend %helper-container
 			padding: 10px 0 0
 			& hr
 				background-color: #E1E4E6
@@ -3868,7 +3942,8 @@ body
 				&.active
 					display: flex
 				& input
-					appearance: none
+					-webkit-appearance: none
+					-moz-appearance: textfield
 					box-shadow: none
 					border: 0
 					outline: 0
@@ -4052,6 +4127,8 @@ body
 		cursor: pointer
 		&[disabled]
 			background-color: #C2CAD8
+
+
 
 .w
 	&-100

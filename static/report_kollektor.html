@@ -24,7 +24,7 @@
         <meta name="HandheldFriendly" content="True">
 
 
-        <title>Сводный отчет (new)</title>
+        <title>Коллектор анкоров</title>
 
 
           <meta name="keywords" content="">
@@ -277,9 +277,9 @@
 			</ul>
 		</aside>
 		<main class="b-reports__main">
-			<h1 class="b-reports__main-name">Внешние без target="blank"</h1>
+			<h1 class="b-reports__main-name">Коллектор анкоров</h1>
 			<div class="b-inform" data-action="slide-target" data-target=".b-reports__main-desc"></div>
-			<div class="b-reports__main-desc hidden">Большинство создают внешние ссылки через target="_blank" и не знают одного интересного нюанса — страница, на которую мы попадем таким образом, получит частичный контроль над ссылающейся на нее страницей через js свойство window.opener.</div>
+			<div class="b-reports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!</div>
 			<div class="b-reports__workarea">
 				<div class="b-reports__filters">
 					<div class="b-reports__filters-item">
@@ -340,43 +340,24 @@
 				</div>
 
 				<div class="freeze-table">
-					<table class="b-reports__table table editable-items" id="svodnaya">
+					<table class="b-reports__table table" id="kollektor">
 						<thead>
 							<tr>
-								<th class="w-400" width="400" data-action="sort-column" data-sortable="url">
-									<div class="b-reports__table-edit"></div>
+								<th class="w-400" width="33%" data-action="sort-column" data-sortable="url">
 									<div class="b-reports__table-headname">
 										<span>URL</span>
 										<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
 									</div>
 								</th>
-								<th class="w-400" width="400" data-action="sort-column" data-sortable="link">
+								<th class="w-400" width="33%" data-action="sort-column" data-sortable="link">
 									<div class="b-reports__table-headname">
 										<span>Ссылка</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
-								<th class="w-100" width="100" data-action="sort-column" data-sortable="type">
+								<th class="w-400" width="33%" data-action="sort-column" data-sortable="type">
 									<div class="b-reports__table-headname">
-										<span>Тип <br>анкора</span>
-										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
-									</div>
-								</th>
-								<th class="w-300" width="300" data-action="sort-column" data-sortable="anchor">
-									<div class="b-reports__table-headname">
-										<span>Анкор</span>
-										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
-									</div>
-								</th>
-								<th class="w-200" width="200" data-action="sort-column" data-sortable="backlinks">
-									<div class="b-reports__table-headname">
-										<span>Обратные ссылки</span>
-										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
-									</div>
-								</th>
-								<th class="w-400" data-action="sort-column" data-sortable="linkclone">
-									<div class="b-reports__table-headname">
-										<span>Ссылка</span>
+										<span>Анкоры и количество</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
@@ -385,268 +366,372 @@
 						<tbody>
 							<tr class="b-reports__table-item">
 								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.</a>
+									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+								<td>
+									<ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Всего ссылок</span>
+											<span class="b-reports-list__value">1 230</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Nofollow</span>
+											<span class="b-reports-list__value">207</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Пустые анкоры</span>
+											<span class="b-reports-list__value">8</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Содержание Alt</span>
+											<span class="b-reports-list__value">35</span>
+										</li>
+									</ul>
+								</td>
+								<td><ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн аудит</span>
+											<span class="b-reports-list__value">92</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+											<span class="b-reports-list__value">85</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн</span>
+											<span class="b-reports-list__value">0</span>
+										</li>
+										<li><a href="#$">Все анкоры</a></li>
+									</ul>
+								</td>
 							</tr>
 							<tr class="b-reports__table-item">
 								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png
-									</a>
+									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+								<td>
+									<ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Всего ссылок</span>
+											<span class="b-reports-list__value">1 230</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Nofollow</span>
+											<span class="b-reports-list__value">207</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Пустые анкоры</span>
+											<span class="b-reports-list__value">8</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Содержание Alt</span>
+											<span class="b-reports-list__value">35</span>
+										</li>
+									</ul>
+								</td>
+								<td><ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн аудит</span>
+											<span class="b-reports-list__value">92</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
+											<span class="b-reports-list__value">85</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн</span>
+											<span class="b-reports-list__value">0</span>
+										</li>
+										<li><a href="#$">Все анкоры</a></li>
+									</ul>
+								</td>
 							</tr>
 							<tr class="b-reports__table-item">
 								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+								<td>
+									<ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Всего ссылок</span>
+											<span class="b-reports-list__value">1 230</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Nofollow</span>
+											<span class="b-reports-list__value">207</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Пустые анкоры</span>
+											<span class="b-reports-list__value">8</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Содержание Alt</span>
+											<span class="b-reports-list__value">35</span>
+										</li>
+									</ul>
+								</td>
+								<td><ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн аудит</span>
+											<span class="b-reports-list__value">92</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
+											<span class="b-reports-list__value">85</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн</span>
+											<span class="b-reports-list__value">0</span>
+										</li>
+										<li><a href="#$">Все анкоры</a></li>
+									</ul>
+								</td>
 							</tr>
 							<tr class="b-reports__table-item">
 								<td>
-									<div class="b-reports__table-edit"  data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+								<td>
+									<ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Всего ссылок</span>
+											<span class="b-reports-list__value">1 230</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Nofollow</span>
+											<span class="b-reports-list__value">207</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Пустые анкоры</span>
+											<span class="b-reports-list__value">8</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Содержание Alt</span>
+											<span class="b-reports-list__value">35</span>
+										</li>
+									</ul>
+								</td>
+								<td><ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн аудит</span>
+											<span class="b-reports-list__value">92</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
+											<span class="b-reports-list__value">85</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн</span>
+											<span class="b-reports-list__value">0</span>
+										</li>
+										<li><a href="#$">Все анкоры</a></li>
+									</ul>
+								</td>
 							</tr>
 							<tr class="b-reports__table-item">
 								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+								<td>
+									<ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Всего ссылок</span>
+											<span class="b-reports-list__value">1 230</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Nofollow</span>
+											<span class="b-reports-list__value">207</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Пустые анкоры</span>
+											<span class="b-reports-list__value">8</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Содержание Alt</span>
+											<span class="b-reports-list__value">35</span>
+										</li>
+									</ul>
+								</td>
+								<td><ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн аудит</span>
+											<span class="b-reports-list__value">92</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
+											<span class="b-reports-list__value">85</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн</span>
+											<span class="b-reports-list__value">0</span>
+										</li>
+										<li><a href="#$">Все анкоры</a></li>
+									</ul>
+								</td>
 							</tr>
 							<tr class="b-reports__table-item">
 								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+								<td>
+									<ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Всего ссылок</span>
+											<span class="b-reports-list__value">1 230</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Nofollow</span>
+											<span class="b-reports-list__value">207</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Пустые анкоры</span>
+											<span class="b-reports-list__value">8</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Содержание Alt</span>
+											<span class="b-reports-list__value">35</span>
+										</li>
+									</ul>
+								</td>
+								<td><ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн аудит</span>
+											<span class="b-reports-list__value">92</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
+											<span class="b-reports-list__value">85</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн</span>
+											<span class="b-reports-list__value">0</span>
+										</li>
+										<li><a href="#$">Все анкоры</a></li>
+									</ul>
+								</td>
 							</tr>
 							<tr class="b-reports__table-item">
 								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+								<td>
+									<ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Всего ссылок</span>
+											<span class="b-reports-list__value">1 230</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Nofollow</span>
+											<span class="b-reports-list__value">207</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Пустые анкоры</span>
+											<span class="b-reports-list__value">8</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Содержание Alt</span>
+											<span class="b-reports-list__value">35</span>
+										</li>
+									</ul>
+								</td>
+								<td><ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн аудит</span>
+											<span class="b-reports-list__value">92</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
+											<span class="b-reports-list__value">85</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн</span>
+											<span class="b-reports-list__value">0</span>
+										</li>
+										<li><a href="#$">Все анкоры</a></li>
+									</ul>
+								</td>
 							</tr>
 							<tr class="b-reports__table-item">
 								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+								<td>
+									<ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Всего ссылок</span>
+											<span class="b-reports-list__value">1 230</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Nofollow</span>
+											<span class="b-reports-list__value">207</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Пустые анкоры</span>
+											<span class="b-reports-list__value">8</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Содержание Alt</span>
+											<span class="b-reports-list__value">35</span>
+										</li>
+									</ul>
+								</td>
+								<td><ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн аудит</span>
+											<span class="b-reports-list__value">92</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
+											<span class="b-reports-list__value">85</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн</span>
+											<span class="b-reports-list__value">0</span>
+										</li>
+										<li><a href="#$">Все анкоры</a></li>
+									</ul>
+								</td>
 							</tr>
 							<tr class="b-reports__table-item">
 								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
 								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+									<ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Всего ссылок</span>
+											<span class="b-reports-list__value">1 230</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Nofollow</span>
+											<span class="b-reports-list__value">207</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Пустые анкоры</span>
+											<span class="b-reports-list__value">8</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Содержание Alt</span>
+											<span class="b-reports-list__value">35</span>
+										</li>
+									</ul>
 								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+								<td><ul class="b-reports-list">
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн аудит</span>
+											<span class="b-reports-list__value">92</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
+											<span class="b-reports-list__value">85</span>
+										</li>
+										<li>
+											<span class="b-reports-list__key">Проводим онлайн</span>
+											<span class="b-reports-list__value">0</span>
+										</li>
+										<li><a href="#$">Все анкоры</a></li>
+									</ul>
 								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
-								</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
-								<td>Картинка</td>
-								<td>2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
-								<td>105</td>
-								<td><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -675,7 +760,7 @@
 		</div>
 	</div>
 
-	<div id="table-filters" class="b-filters__helper-wrapper" data-filter-action="add-filter">
+		<div id="table-filters" class="b-filters__helper-wrapper" data-filter-action="add-filter">
 		<div class="b-filters__helper">
 			<form class="b-filters__helper-container">
 				<div class="b-filters__header">
