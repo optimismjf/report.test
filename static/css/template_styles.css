@@ -8579,7 +8579,8 @@ body.is-hidden {
     width: 100%;
     margin-left: 0; }
   .b-reports__workarea {
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
   .b-reports__filters {
     padding: 15px 20px 20px;
     border: 1px solid #E1E4E6;
@@ -8788,8 +8789,6 @@ body.is-hidden {
       padding: 0 10px;
       position: relative;
       height: 40px; }
-      .b-reports__table th:first-child, .b-reports__table td:first-child {
-        padding-left: 10px; }
     th .b-reports__table-edit, td .b-reports__table-edit {
       position: absolute;
       top: 0;
@@ -8829,9 +8828,22 @@ body.is-hidden {
           -webkit-transform: scaleY(-1);
           -ms-transform: scaleY(-1);
           transform: scaleY(-1); }
-        .b-reports__table thead tr th:hover {
+        .b-reports__table thead tr th[data-sortable]:hover {
           background-color: #E4E8EC;
           cursor: pointer; }
+        .b-reports__table thead tr th[colspan] {
+          height: 22px; }
+          .b-reports__table thead tr th[colspan] .b-reports__table-headname {
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center; }
+      .b-reports__table thead tr:not(:first-child) th:not([colspan]) {
+        height: 18px;
+        font-size: 12px;
+        line-height: 13px; }
+    .b-reports__table thead tr:first-child th:first-child {
+      padding-left: 20px; }
     .b-reports__table tbody tr {
       background-color: #ffffff; }
       .b-reports__table tbody tr.hover {
@@ -8857,6 +8869,8 @@ body.is-hidden {
             background-color: #F2F4F6;
             -webkit-box-shadow: inset 0px 0px 20px rgba(162, 174, 183, 0.29546);
             box-shadow: inset 0px 0px 20px rgba(162, 174, 183, 0.29546); }
+        .b-reports__table tbody tr td:first-child {
+          padding-left: 20px; }
     .b-reports__table-headname {
       display: -webkit-box;
       display: -webkit-flex;
@@ -8878,6 +8892,26 @@ body.is-hidden {
         background-image: url(../images/icon/info_alt.svg); }
         .b-reports__table-headname .b-inform:hover {
           background-image: url(../images/icon/info_alt-h.svg); }
+    .b-reports__table-item-head-container {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding-right: 10px; }
+    .b-reports__table-item-head:not(:first-of-type) td {
+      border-top-width: 2px; }
+    .b-reports__table-item-cell.yellow-bg {
+      background-color: rgba(245, 166, 35, 0.07); }
+    .b-reports__table-item-cell.green-bg {
+      background-color: rgba(40, 167, 69, 0.07); }
+    .b-reports__table-item-cell.red-bg {
+      background-color: rgba(224, 54, 50, 0.07); }
+    .b-reports__table-item-cell.blue-bg {
+      background-color: rgba(0, 68, 187, 0.07); }
   .b-reports-list {
     list-style: none;
     margin: 0;
@@ -8917,7 +8951,20 @@ body.is-hidden {
 #kollektor tbody td:not(:first-child) {
   vertical-align: text-top; }
 
-.editable-items th:first-child, .editable-items td:first-child {
+#relative th:not([rowspan]) {
+  height: 22px; }
+  #relative th:not([rowspan]):not([colspan]) {
+    height: 18px;
+    font-size: 12px;
+    line-height: 13px; }
+
+#relative th[colspan] .b-reports__table-headname {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.editable-items thead tr:first-child th:first-child, .editable-items tbody tr td:first-child {
   padding-left: 30px; }
 
 .b-pagination {
@@ -9506,3 +9553,16 @@ a.overflowed {
     box-shadow: 0 0 20px 0 rgba(162, 174, 183, 0.3); }
     a.overflowed:hover:after {
       display: none; }
+
+.clone-head-table-wrap:not(.clone-column-head-table-wrap) {
+  -webkit-box-shadow: 5px 0 4px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 0 4px 1px rgba(0, 0, 0, 0.2); }
+
+.clone-head-table-wrap thead:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: -1px;
+  height: 1px;
+  overflow: hidden;
+  border: 1px solid #E1E4E6; }

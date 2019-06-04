@@ -24,7 +24,7 @@
         <meta name="HandheldFriendly" content="True">
 
 
-        <title>Коллектор анкоров</title>
+        <title>Отчёт по релевантности ключей на сайте</title>
 
 
           <meta name="keywords" content="">
@@ -277,7 +277,7 @@
 			</ul>
 		</aside>
 		<main class="b-reports__main">
-			<h1 class="b-reports__main-name">Коллектор анкоров</h1>
+			<h1 class="b-reports__main-name">Отчёт по релевантности ключей на сайте</h1>
 			<div class="b-inform" data-action="slide-target" data-target=".b-reports__main-desc"></div>
 			<div class="b-reports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!</div>
 			<div class="b-reports__workarea">
@@ -340,398 +340,437 @@
 				</div>
 
 				<div class="freeze-table">
-					<table class="b-reports__table table" id="kollektor">
+					<table class="b-reports__table table" id="relative">
 						<thead>
 							<tr>
-								<th class="w-400" width="33%" data-action="sort-column" data-sortable="url">
+								<th class="w-400" rowspan="2" data-action="sort-column" data-sortable="url">
 									<div class="b-reports__table-headname">
-										<span>URL</span>
+										<span>Ключи для URL</span>
 										<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
 									</div>
 								</th>
-								<th class="w-400" width="33%" data-action="sort-column" data-sortable="link">
+								<th class="w-500" width="500" colspan="6">
 									<div class="b-reports__table-headname">
-										<span>Ссылка</span>
+										<span>Вхождений</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
-								<th class="w-400" width="33%" data-action="sort-column" data-sortable="anchors">
+								<th class="w-150" width="150" rowspan="2" data-action="sort-column" data-sortable="rel">
 									<div class="b-reports__table-headname">
-										<span>Анкоры и количество</span>
+										<span>Релевантность</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+									</div>
+								</th>
+								<th class="w-100" width="100" rowspan="2" data-action="sort-column" data-sortable="wordstat">
+									<div class="b-reports__table-headname">
+										<span>Wordstat</span>
+										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+									</div>
+								</th>
+							</tr>
+							<tr>
+								<th class="w-100" width="100" data-action="sort-column" data-sortable="containsall">
+									<div class="b-reports__table-headname">
+										<span>Все</span>										
+									</div>
+								</th>
+								<th class="w-100" width="100" data-action="sort-column" data-sortable="containstext">
+									<div class="b-reports__table-headname">
+										<span>Текст</span>										
+									</div>
+								</th>
+								<th class="w-100" width="100" data-action="sort-column" data-sortable="containstitle">
+									<div class="b-reports__table-headname">
+										<span>Title</span>										
+									</div>
+								</th>
+								<th class="w-100" width="100" data-action="sort-column" data-sortable="containsh1">
+									<div class="b-reports__table-headname">
+										<span>H1</span>										
+									</div>
+								</th>
+								<th class="w-100" width="100" data-action="sort-column" data-sortable="containsanchors">
+									<div class="b-reports__table-headname">
+										<span>Анкоры</span>										
+									</div>
+								</th>
+								<th class="w-100" width="100" data-action="sort-column" data-sortable="containsanchorslist">
+									<div class="b-reports__table-headname">
+										<span>Анкорлист</span>										
 									</div>
 								</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="b-reports__table-item">
-								<td>
-									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
-								</td>
-								<td>
-									<ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
-										</li>
-									</ul>
-								</td>
-								<td><ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
-											<span class="b-reports-list__value">85</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
-										</li>
-										<li><a href="#$">Все анкоры</a></li>
-									</ul>
+							<tr class="b-reports__table-item-head" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td colspan="9">
+									<div class="b-reports__table-item-head-container">
+										<a href="https://www.optimism.ru/services/content/copywriting/">https://www.optimism.ru/services/content/copywriting/</a>
+										<a href="#$">Все ключи (45)</a>
+									</div> 
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
-								</td>
-								<td>
-									<ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
-										</li>
-									</ul>
-								</td>
-								<td><ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
-											<span class="b-reports-list__value">85</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
-										</li>
-										<li><a href="#$">Все анкоры</a></li>
-									</ul>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>оптимизация сайта поисковая оптимизация</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell yellow-bg">15.766</td>
+								<td>~ 52</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>заказать копирайтинг для сайта</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell green-bg">13.836</td>
+								<td>~ 1</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>написание текстов</td>
+								<td>2</td>
+								<td>1</td>
+								<td>q</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell green-bg">12.963</td>
+								<td>~ 74</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>заказать тексты для сайтов</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell red-bg">12.867</td>
+								<td>~ 8366</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>оптимизация сайта продвижение</td>
+								<td>2</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>2</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell blue-bg">12.752</td>
+								<td>~ 8</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>услуги копирайтинга</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell yellow-bg">12.752</td>
+								<td>~ 2</td>
+							</tr>
+							<tr class="b-reports__table-item-head" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td colspan="9">
+									<div class="b-reports__table-item-head-container">
+										<a href="https://www.optimism.ru/services/content/copywriting/">https://www.optimism.ru/services/content/copywriting/</a>
+										<a href="#$">Все ключи (45)</a>
+									</div> 
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
-								</td>
-								<td>
-									<ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
-										</li>
-									</ul>
-								</td>
-								<td><ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
-											<span class="b-reports-list__value">85</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
-										</li>
-										<li><a href="#$">Все анкоры</a></li>
-									</ul>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>оптимизация сайта поисковая оптимизация</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell yellow-bg">15.766</td>
+								<td>~ 52</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>заказать копирайтинг для сайта</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell green-bg">13.836</td>
+								<td>~ 1</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>написание текстов</td>
+								<td>2</td>
+								<td>1</td>
+								<td>q</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell green-bg">12.963</td>
+								<td>~ 74</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>заказать тексты для сайтов</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell red-bg">12.867</td>
+								<td>~ 8366</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>оптимизация сайта продвижение</td>
+								<td>2</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>2</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell blue-bg">12.752</td>
+								<td>~ 8</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>услуги копирайтинга</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell yellow-bg">12.752</td>
+								<td>~ 2</td>
+							</tr>
+							<tr class="b-reports__table-item-head" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td colspan="9">
+									<div class="b-reports__table-item-head-container">
+										<a href="https://www.optimism.ru/services/content/copywriting/">https://www.optimism.ru/services/content/copywriting/</a>
+										<a href="#$">Все ключи (45)</a>
+									</div> 
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
-								</td>
-								<td>
-									<ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
-										</li>
-									</ul>
-								</td>
-								<td><ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
-											<span class="b-reports-list__value">85</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
-										</li>
-										<li><a href="#$">Все анкоры</a></li>
-									</ul>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>оптимизация сайта поисковая оптимизация</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell yellow-bg">15.766</td>
+								<td>~ 52</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>заказать копирайтинг для сайта</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell green-bg">13.836</td>
+								<td>~ 1</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>написание текстов</td>
+								<td>2</td>
+								<td>1</td>
+								<td>q</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell green-bg">12.963</td>
+								<td>~ 74</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>заказать тексты для сайтов</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell red-bg">12.867</td>
+								<td>~ 8366</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>оптимизация сайта продвижение</td>
+								<td>2</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>2</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell blue-bg">12.752</td>
+								<td>~ 8</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>услуги копирайтинга</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell yellow-bg">12.752</td>
+								<td>~ 2</td>
+							</tr>
+							<tr class="b-reports__table-item-head" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td colspan="9">
+									<div class="b-reports__table-item-head-container">
+										<a href="https://www.optimism.ru/services/content/copywriting/">https://www.optimism.ru/services/content/copywriting/</a>
+										<a href="#$">Все ключи (45)</a>
+									</div> 
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
-								</td>
-								<td>
-									<ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
-										</li>
-									</ul>
-								</td>
-								<td><ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
-											<span class="b-reports-list__value">85</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
-										</li>
-										<li><a href="#$">Все анкоры</a></li>
-									</ul>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>оптимизация сайта поисковая оптимизация</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell yellow-bg">15.766</td>
+								<td>~ 52</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>заказать копирайтинг для сайта</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell green-bg">13.836</td>
+								<td>~ 1</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>написание текстов</td>
+								<td>2</td>
+								<td>1</td>
+								<td>q</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell green-bg">12.963</td>
+								<td>~ 74</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>заказать тексты для сайтов</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell red-bg">12.867</td>
+								<td>~ 8366</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>оптимизация сайта продвижение</td>
+								<td>2</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>2</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell blue-bg">12.752</td>
+								<td>~ 8</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>услуги копирайтинга</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell yellow-bg">12.752</td>
+								<td>~ 2</td>
+							</tr>
+							<tr class="b-reports__table-item-head" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td colspan="9">
+									<div class="b-reports__table-item-head-container">
+										<a href="https://www.optimism.ru/services/content/copywriting/">https://www.optimism.ru/services/content/copywriting/</a>
+										<a href="#$">Все ключи (45)</a>
+									</div> 
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
-								</td>
-								<td>
-									<ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
-										</li>
-									</ul>
-								</td>
-								<td><ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
-											<span class="b-reports-list__value">85</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
-										</li>
-										<li><a href="#$">Все анкоры</a></li>
-									</ul>
-								</td>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>оптимизация сайта поисковая оптимизация</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell yellow-bg">15.766</td>
+								<td>~ 52</td>
 							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
-								</td>
-								<td>
-									<ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
-										</li>
-									</ul>
-								</td>
-								<td><ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
-											<span class="b-reports-list__value">85</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
-										</li>
-										<li><a href="#$">Все анкоры</a></li>
-									</ul>
-								</td>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>заказать копирайтинг для сайта</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell green-bg">13.836</td>
+								<td>~ 1</td>
 							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
-								</td>
-								<td>
-									<ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
-										</li>
-									</ul>
-								</td>
-								<td><ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
-											<span class="b-reports-list__value">85</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
-										</li>
-										<li><a href="#$">Все анкоры</a></li>
-									</ul>
-								</td>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>написание текстов</td>
+								<td>2</td>
+								<td>1</td>
+								<td>q</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell green-bg">12.963</td>
+								<td>~ 74</td>
 							</tr>
-							<tr class="b-reports__table-item">
-								<td>
-									<a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
-								</td>
-								<td>
-									<ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
-										</li>
-									</ul>
-								</td>
-								<td><ul class="b-reports-list">
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проконсультируйтесь с нашим специалистом и закажите интернет-исследование.</span>
-											<span class="b-reports-list__value">85</span>
-										</li>
-										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
-										</li>
-										<li><a href="#$">Все анкоры</a></li>
-									</ul>
-								</td>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>заказать тексты для сайтов</td>
+								<td>1</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell red-bg">12.867</td>
+								<td>~ 8366</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>оптимизация сайта продвижение</td>
+								<td>2</td>
+								<td>0</td>
+								<td>1</td>
+								<td>0</td>
+								<td>2</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell blue-bg">12.752</td>
+								<td>~ 8</td>
+							</tr>
+							<tr class="b-reports__table-item-content" data-table-item="https://www.optimism.ru/services/content/copywriting/">
+								<td>услуги копирайтинга</td>
+								<td>1</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td>0</td>
+								<td class="b-reports__table-item-cell yellow-bg">12.752</td>
+								<td>~ 2</td>
 							</tr>
 						</tbody>
 					</table>

@@ -751,7 +751,7 @@ function dataAction(e) {
 		}
 	});
 
-	$(document).on('mouseover mouseout', '.b-reports__table-item', function(event) {
+	$(document).on('mouseover mouseout', '.freeze-table tbody tr', function(event) {
 		var e = event || window.event,
 			action = e.type == 'mouseover' ? 'hover' : 'out';
 		hoverTr($(this), action)

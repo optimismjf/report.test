@@ -3327,6 +3327,7 @@ body
 			margin-left: 0
 	&__workarea
 		position: relative
+		overflow: hidden
 	&__filters
 		padding: 15px 20px 20px
 		border: 1px solid $color_easygrey
@@ -3501,8 +3502,6 @@ body
 			padding: 0 10px
 			position: relative
 			height: 40px
-			&:first-child
-				padding-left: 10px
 		th &-edit, td &-edit
 			position: absolute
 			top: 0
@@ -3540,9 +3539,20 @@ body
 						background-size: 7px 10px
 					&.sort-desc:after
 						transform: scaleY(-1)
-					&:hover
+					&[data-sortable]:hover
 						background-color: #E4E8EC
 						cursor: pointer
+					&[colspan] 
+						height: 22px
+						& .b-reports__table-headname
+							justify-content: center
+				&:not(:first-child)
+					th:not([colspan])
+						height: 18px
+						font-size: 12px
+						line-height: 13px
+			& tr:first-child th:first-child
+				padding-left: 20px
 		tbody
 			tr
 				background-color: #ffffff
@@ -3566,6 +3576,8 @@ body
 						&:hover, &.actions-showed
 							background-color: #F2F4F6
 							box-shadow: inset 0px 0px 20px rgba(162, 174, 183, 0.29546)
+					&:first-child
+						padding-left: 20px
 
 		&-headname
 			display: flex
@@ -3580,6 +3592,24 @@ body
 				background-image: url(../images/icon/info_alt.svg)
 				&:hover
 					background-image: url(../images/icon/info_alt-h.svg)
+		&-item
+			&-head
+				&-container
+					display: flex
+					justify-content: space-between
+					padding-right: 10px
+				&:not(:first-of-type)
+					td
+						border-top-width: 2px
+			&-cell
+				&.yellow-bg
+					background-color: rgba(245, 166, 35, 0.07)
+				&.green-bg
+					background-color: rgba(40, 167, 69, 0.07)
+				&.red-bg
+					background-color: rgba(224, 54, 50, 0.07)
+				&.blue-bg
+					background-color: rgba(0, 68, 187, 0.07)
 	&-list
 		list-style: none
 		margin: 0
@@ -3611,9 +3641,19 @@ body
 		td:not(:first-child)
 			vertical-align: text-top
 
+#relative
+	th
+		&:not([rowspan])
+			height: 22px
+			&:not([colspan])
+				height: 18px
+				font-size: 12px
+				line-height: 13px
+		&[colspan] .b-reports__table-headname
+			justify-content: center
 
-.editable-items 
-	th, td
+.editable-items
+	thead tr:first-child th, tbody tr td
 		&:first-child
 			padding-left: 30px
 
@@ -4170,3 +4210,15 @@ a.overflowed
 		box-shadow: 0 0 20px 0 rgba(162, 174, 183, 0.3)
 		&:after
 			display: none
+
+.clone-head-table-wrap
+	&:not(.clone-column-head-table-wrap)
+		box-shadow: 5px 0 4px 1px rgba(0,0,0,0.2)
+	thead:after
+		content: ''
+		position: absolute
+		width: 100%
+		bottom: -1px
+		height: 1px
+		overflow: hidden
+		border: 1px solid #E1E4E6
