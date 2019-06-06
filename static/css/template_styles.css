@@ -4962,7 +4962,9 @@ section ul {
 .b-hidden {
   display: none; }
 
-/* delay + transitions */
+.text-center {
+  text-align: center; }
+
 /* overlay at start */
 .mfp-fade.mfp-bg {
   opacity: 0;
@@ -5377,7 +5379,7 @@ section ul {
     margin-top: 20px;
     margin-bottom: 0px; }
 
-.b-user-robotx__topic, .b-site-load__input-topic, .b-settings-autostart__select-topic {
+.b-user-robotx__topic, .b-site-load__input-topic, .b-settings-autostart__select-topic, .b-settings-autostart__input-topic {
   color: #2F353B;
   font-size: 15px;
   margin-top: 15px;
@@ -5475,10 +5477,10 @@ section ul {
 .b-settings-autostart.disabled .b-settings-autostart__period span, .b-settings-autostart.disabled .b-user-counts__date span, .b-settings-autostart.disabled .b-settings-autostart__period strong, .b-settings-autostart.disabled .b-user-counts__date strong {
   color: #A2AEB7; }
 
-.b-settings-autostart.disabled .b-settings-autostart__select-topic {
+.b-settings-autostart.disabled .b-settings-autostart__select-topic, .b-settings-autostart.disabled .b-settings-autostart__input-topic {
   color: #A2AEB7; }
 
-.b-settings-autostart__select-topic {
+.b-settings-autostart__select-topic, .b-settings-autostart__input-topic {
   margin-top: 18px; }
 
 .b-settings-autostart__period, .b-user-counts__date {
@@ -8904,14 +8906,20 @@ body.is-hidden {
       padding-right: 10px; }
     .b-reports__table-item-head:not(:first-of-type) td {
       border-top-width: 2px; }
-    .b-reports__table-item-cell.yellow-bg {
+    .b-reports__table-item .yellow-bg {
       background-color: rgba(245, 166, 35, 0.07); }
-    .b-reports__table-item-cell.green-bg {
+    .b-reports__table-item .green-bg {
       background-color: rgba(40, 167, 69, 0.07); }
-    .b-reports__table-item-cell.red-bg {
+    .b-reports__table-item .green-color {
+      color: #28a745; }
+    .b-reports__table-item .red-bg {
       background-color: rgba(224, 54, 50, 0.07); }
-    .b-reports__table-item-cell.blue-bg {
+    .b-reports__table-item .red-color {
+      color: #e03632; }
+    .b-reports__table-item .blue-bg {
       background-color: rgba(0, 68, 187, 0.07); }
+    .b-reports__table-item[data-parent] {
+      display: none; }
   .b-reports-list {
     list-style: none;
     margin: 0;
@@ -9506,6 +9514,9 @@ body.is-hidden {
   .b-filters__submit[disabled] {
     background-color: #C2CAD8; }
 
+.w-75 {
+  min-width: 75px; }
+
 .w-100 {
   min-width: 100px; }
 
@@ -9526,6 +9537,9 @@ body.is-hidden {
 
 .w-400 {
   min-width: 400px; }
+
+.w-500 {
+  min-width: 500px; }
 
 a.overflowed {
   position: relative; }

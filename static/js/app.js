@@ -118,9 +118,9 @@ function showInform(event, show) {
 /* Показываем действия с элементами */
 
 function showActions(elem, action) {
-	let actions = document.getElementById('table-actions'),
+	let actions = document.getElementById('table-actions') || false,
 		a = document.querySelectorAll('.actions-showed');
-	if(elem) {
+	if(elem && actions) {
 		if(action = "show") {
 			var $this = elem,
 				offset = $this.target.getBoundingClientRect(),
@@ -158,7 +158,7 @@ function showActions(elem, action) {
 
 			$this.target.classList.add('actions-showed');	
 		}
-	} else if (action == "hide") {
+	} else if (action == "hide" && actions) {
 		actions.removeAttribute("style");
 		actions.classList.remove('center-position');
 		actions.classList.remove('top-position');
@@ -713,6 +713,12 @@ function dataAction(e) {
 			$(window).trigger('resize');
 			if($('.freeze-table').length) $('.freeze-table').freezeTable('update');
 			
+			break;
+
+		case 'toggle-childs':
+			/* Тоглим строки в таблице */
+			$(this).toggleClass('open');
+			$(target).toggle().toggleClass('show');;
 			break;
 
 		case 'show-hover':
@@ -2983,12 +2989,18 @@ $(function () {
     autostartDate();
   });
 
+  $('.b-settings-autostart__input input').on('keyup', function (e) {
+    autostartDate();
+  });
+
   function autostartDate() {
     var period = $('.b-settings-autostart__select--period select option:selected').val();
     var week = '.b-settings-autostart__select--week';
     var month = '.b-settings-autostart__select--month';
+    var ndays = '.b-settings-autostart__input--ndays';
     var weekIndex = $(week).find('select option:selected').val();
     var monthIndex = $(month).find('select option:selected').val();
+    var ndaysIndex = $(ndays).find('input').val();
     var date = new Date();
     var dayIndex = date.getDay();
     var days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']; // Определяем сегодняшнее число в формате dd.mm.yy
@@ -3003,13 +3015,19 @@ $(function () {
     var daysNextMonth = new Date(yy, mm + 1, 0);
     daysNextMonth = daysNextMonth.getDate(); // изменение даты автозапуска относительно выбранного периода
 
+    if(ndaysIndex > daysNextMonth) {
+    	$(ndays).find('input').val(daysNextMonth);
+    	ndaysIndex = daysNextMonth;
+    }; // задаем максимальное число дней для произвольного периода
+
     if (period == 'День') {
-      $(week + ', ' + month).fadeOut();
+      $(week + ', ' + month + ', ' + ndays).fadeOut();
       dd = dd + 1;
       necessarytest(daysInMonth, dd, mm, yy);
     } else if (period == 'Неделя') {
       $(week).fadeIn();
       $(month).hide();
+      $(ndays).hide();
 
       for (var i = 0; i < days.length; i++) {
         if (days[i] == weekIndex) {
@@ -3031,6 +3049,7 @@ $(function () {
     } else if (period == 'Месяц') {
       $(month).fadeIn();
       $(week).hide();
+      $(ndays).hide();
       mm = mm + 1;
 
       if (monthIndex > daysNextMonth) {
@@ -3038,6 +3057,18 @@ $(function () {
       } else {
         dd = monthIndex;
       }
+
+      necessarytest(daysInMonth, dd, mm, yy);
+    } else if (period == 'N дней') {
+      $(ndays).fadeIn();
+      $(week).hide();
+      $(month).hide();
+
+      console.log(ndaysIndex);
+
+      dd = dd + parseInt(ndaysIndex);
+
+      console.log({daysInMonth, dd, mm, yy});
 
       necessarytest(daysInMonth, dd, mm, yy);
     }

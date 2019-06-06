@@ -21,7 +21,8 @@ section
 .b-hidden
 	display: none
 
-/* delay + transitions */
+.text-center
+	text-align: center
 
 
 /* overlay at start */
@@ -499,9 +500,9 @@ section
 		.b-settings-autostart__period
 			span, strong
 				color: #A2AEB7
-		.b-settings-autostart__select-topic
+		.b-settings-autostart__select-topic, .b-settings-autostart__input-topic
 			color: #A2AEB7
-	&__select-topic
+	&__select-topic, &__input-topic
 		@extend .b-user-robotx__topic
 		margin-top: 18px
 	&__period
@@ -3601,15 +3602,20 @@ body
 				&:not(:first-of-type)
 					td
 						border-top-width: 2px
-			&-cell
-				&.yellow-bg
-					background-color: rgba(245, 166, 35, 0.07)
-				&.green-bg
-					background-color: rgba(40, 167, 69, 0.07)
-				&.red-bg
-					background-color: rgba(224, 54, 50, 0.07)
-				&.blue-bg
-					background-color: rgba(0, 68, 187, 0.07)
+			.yellow-bg
+				background-color: rgba(245, 166, 35, 0.07)
+			.green-bg
+				background-color: rgba(40, 167, 69, 0.07)
+			.green-color
+				color: rgb(40, 167, 69)
+			.red-bg
+				background-color: rgba(224, 54, 50, 0.07)
+			.red-color
+				color: rgb(224, 54, 50)
+			.blue-bg
+				background-color: rgba(0, 68, 187, 0.07)
+			&[data-parent]
+				display: none
 	&-list
 		list-style: none
 		margin: 0
@@ -4171,6 +4177,8 @@ body
 
 
 .w
+	&-75
+		min-width: 75px
 	&-100
 		min-width: 100px
 	&-150
@@ -4185,6 +4193,8 @@ body
 		min-width: 350px
 	&-400
 		min-width: 400px
+	&-500
+		min-width: 500px
 
 a.overflowed
 	position: relative
