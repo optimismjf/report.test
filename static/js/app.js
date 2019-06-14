@@ -713,10 +713,6 @@ function dataAction(e) {
 
 		case 'toggle-fullscreen':
 			/* Тоглим рабочую область на весь экран */
-			// $(this).toggleClass('close');
-			// $('.b-reports').toggleClass('fullscreen');
-			// $('#header').toggle();
-
 			$('body').toggleClass('fullscreen');
 
 			$(window).trigger('resize');
@@ -730,7 +726,9 @@ function dataAction(e) {
 			$(target).toggle().toggleClass('show');
 
 			hideChilds(target);
-			$('.b-reports__table tbody tr td a').hidenLinks('update')
+			$('.b-reports__table tbody tr td a').hidenLinks('update');
+			$(window).trigger('resize');
+			if($('.freeze-table').length) $('.freeze-table').freezeTable('update');
 			break;
 
 		case 'show-hover':
