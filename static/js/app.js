@@ -366,6 +366,15 @@ function stickyAside(t, mt) {
 			        }).addClass(options.namespace)
 				})
 			}
+			$(this).each(function(i, el) {
+				if($(el)[0].scrollWidth <= $(el)[0].clientWidth) {
+
+					$(el).data('title', $(el).attr('title')).removeAttr('title')
+				} else {
+					$(el).attr('title', $(el).data('title'))
+				}
+			});
+
 			return this;
 		},
 		update:function( params ) {
@@ -718,7 +727,10 @@ function dataAction(e) {
 		case 'toggle-childs':
 			/* Тоглим строки в таблице */
 			$(this).toggleClass('open');
-			$(target).toggle().toggleClass('show');;
+			$(target).toggle().toggleClass('show');
+
+			hideChilds(target);
+			$('.b-reports__table tbody tr td a').hidenLinks('update')
 			break;
 
 		case 'show-hover':
@@ -731,6 +743,15 @@ function dataAction(e) {
 	}
 };
 
+function hideChilds(t) {
+	let childToggles = $(t).find('[data-action=toggle-childs]');
+	childToggles.each(function(e, child) {
+		let childTarget = $(child).data('target');
+		$(child).removeClass('open');
+		$(childTarget).hide().removeClass('show')
+		if($(childTarget).find('[data-action=toggle-childs]')) hideChilds(childTarget);
+	});
+}
 ;
 
 ;(function () {

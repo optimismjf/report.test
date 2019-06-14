@@ -3554,6 +3554,7 @@ body
 						line-height: 13px
 			& tr:first-child th:first-child
 				padding-left: 20px
+
 		tbody
 			tr
 				background-color: #ffffff
@@ -3599,6 +3600,8 @@ body
 					display: flex
 					justify-content: space-between
 					padding-right: 10px
+					& a:not(:last-child)
+						padding-right: 20px
 				&:not(:first-of-type)
 					td
 						border-top-width: 2px
@@ -3616,6 +3619,34 @@ body
 				background-color: rgba(0, 68, 187, 0.07)
 			&[data-parent]
 				display: none
+		&-toggler
+			width: 15px
+			height: 15px
+			background-image: url(../images/icon/expand.svg)
+			background-repeat: no-repeat
+			background-size: 15px 15px
+			background-position: center center
+			display: block
+			margin-right: 8px
+			vertical-align: middle
+			cursor: pointer
+			&.open
+				background-image: url(../images/icon/compress.svg)
+			&-wrapper
+				width: 100%
+				display: flex
+				height: 100%
+				align-items: center
+				position: relative
+				a
+					width: calc(100% - 24px)
+					align-self: top
+					line-height: 16px
+					overflow: hidden
+					white-space: nowrap
+					text-overflow: ellipsis
+
+			
 	&-list
 		list-style: none
 		margin: 0
@@ -3662,6 +3693,25 @@ body
 	thead tr:first-child th, tbody tr td
 		&:first-child
 			padding-left: 30px
+	tbody tr
+		&.level-2 td:first-child
+			padding-left: 55px
+		&.level-3 td:first-child
+			padding-left: 80px
+		&.level-4 td:first-child
+			padding-left: 105px
+		&.level-5 td:first-child
+			padding-left: 130px
+		&.level-6 td:first-child
+			padding-left: 155px
+		&.level-7 td:first-child
+			padding-left: 180px
+		&.level-8 td:first-child
+			padding-left: 205px
+		&.level-9 td:first-child
+			padding-left: 230px
+		&.level-10 td:first-child
+			padding-left: 255px
 
 .b-pagination
 	display: flex
@@ -4179,22 +4229,31 @@ body
 .w
 	&-75
 		min-width: 75px
+		max-width: 75px
 	&-100
 		min-width: 100px
+		max-width: 100px
 	&-150
 		min-width: 150px
+		max-width: 150px
 	&-200
 		min-width: 200px
+		max-width: 200px
 	&-250
 		min-width: 250px
+		max-width: 250px
 	&-300
 		min-width: 300px
+		max-width: 300px
 	&-350
 		min-width: 350px
+		max-width: 350px
 	&-400
 		min-width: 400px
+		max-width: 400px
 	&-500
 		min-width: 500px
+		max-width: 500px
 
 a.overflowed
 	position: relative
@@ -4218,6 +4277,9 @@ a.overflowed
 		padding: 5.5px 10px
 		background-color: #fff
 		box-shadow: 0 0 20px 0 rgba(162, 174, 183, 0.3)
+		tr:last-child &
+			top: unset
+			bottom: 0
 		&:after
 			display: none
 
