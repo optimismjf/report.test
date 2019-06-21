@@ -8526,7 +8526,9 @@ body.is-hidden {
     margin-left: 250px;
     background-color: #f6f8fa;
     padding: 14px 0 0 20px;
-    overflow-y: auto; }
+    overflow-y: auto;
+    height: -webkit-calc(100vh - 60px);
+    height: calc(100vh - 60px); }
     .b-reports__main-name {
       display: inline-block;
       margin-right: 12px;
@@ -9658,3 +9660,38 @@ a.overflowed {
   height: 1px;
   overflow: hidden;
   border: 1px solid #E1E4E6; }
+
+.b-reports__main-name.in-process {
+  margin-top: 76px;
+  display: block;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 0; }
+  .b-reports__main-name.in-process span {
+    color: #A2AEB7; }
+
+.in-process__icon {
+  display: block;
+  margin: 60px auto 0;
+  width: 383px;
+  max-width: 80%;
+  height: auto; }
+
+.b-reports__aside.in-process {
+  overflow: hidden; }
+  .b-reports__aside.in-process:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: url(../images/icon/bg.svg);
+    -webkit-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    opacity: 0.1;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%; }

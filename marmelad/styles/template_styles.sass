@@ -3267,12 +3267,14 @@ body
 					color: #2F353B
 			&.active
 				display: block
+		&.in-process 
 	&__main
 		width: calc(100% - 250px)
 		margin-left: 250px
 		background-color: #f6f8fa
 		padding: 14px 0 0 20px
 		overflow-y: auto
+		height: calc(100vh - 60px)
 		&-name
 			display: inline-block
 			margin-right: 12px
@@ -4294,3 +4296,35 @@ a.overflowed
 		height: 1px
 		overflow: hidden
 		border: 1px solid #E1E4E6
+
+.b-reports__main-name.in-process
+	margin-top: 76px
+	display: block
+	text-align: center
+	font-family: Roboto
+	font-weight: 500
+	font-size: 30px
+	line-height: 35px
+	margin-bottom: 0
+	& span
+		color: $color_lightgrey
+.in-process__icon
+	display: block
+	margin: 60px auto 0
+	width: 383px
+	max-width: 80%
+	height: auto
+
+.b-reports__aside.in-process
+	overflow: hidden
+	&:after
+		content: ''
+		position: absolute
+		display: block
+		background: url(../images/icon/bg.svg)
+		transform: rotate(-20deg)
+		opacity: 0.1
+		width: 200%
+		height: 200%
+		top: -50%
+		left: -50%
