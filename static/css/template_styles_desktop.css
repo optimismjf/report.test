@@ -1,4 +1,10 @@
 @font-face {
+  font-family: "Susan";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/SusanBold-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SusanBold-Regular.woff") format("woff"), url("../fonts/SusanBold-Regular.ttf") format("truetype"); }
+
+@font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;

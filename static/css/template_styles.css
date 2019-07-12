@@ -1,5 +1,11 @@
 @charset "UTF-8";
 @font-face {
+  font-family: "Susan";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/SusanBold-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SusanBold-Regular.woff") format("woff"), url("../fonts/SusanBold-Regular.ttf") format("truetype"); }
+
+@font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -8061,6 +8067,7 @@ body.is-hidden {
   height: 2px;
   background-color: rgba(255, 255, 255, 0.7);
   position: absolute;
+  left: 0;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   -o-transition-property: transform;
@@ -8078,32 +8085,36 @@ body.is-hidden {
   height: 60px;
   padding-top: 0;
   background-color: #E03632;
-  background-image: url(../../images/background/header-tablet.svg);
+  background-image: url(../../images/background/new_bg.svg);
   background-repeat: no-repeat;
-  -webkit-background-size: 300px;
-  background-size: 300px;
-  background-position: 51px 0; }
+  background-position: right top; }
   body.fullscreen #header.main-header {
     display: none; }
   #header.main-header #header-left {
-    width: 250px;
-    padding-left: 20px; }
+    width: 250px; }
   #header.main-header .logo {
     display: block;
-    margin-left: 20px;
+    margin-left: 14px;
     letter-spacing: 1px;
     float: none;
-    line-height: 20px;
+    line-height: 24px;
     font-size: 24px;
     height: auto;
     text-decoration: none;
-    width: auto; }
+    width: auto;
+    padding-left: 32px;
+    background-image: url(../../images/icon/sa-icon.svg);
+    background-repeat: no-repeat;
+    background-position: left center; }
     #header.main-header .logo img {
       display: none; }
     #header.main-header .logo__company-name {
       display: block;
       color: #FFFFFF;
-      font-weight: 500; }
+      font-weight: 700;
+      font-family: Susan, sans-serif;
+      font-size: 20px;
+      letter-spacing: 0px; }
   #header.main-header .hamburger {
     z-index: 20;
     position: relative;
@@ -8128,10 +8139,14 @@ body.is-hidden {
     border: 0;
     margin: 0;
     overflow: visible;
-    height: 24px; }
+    height: 59px;
+    padding: 17.5px 17px;
+    width: 59px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.4); }
     #header.main-header .hamburger-box {
       width: 25px;
-      height: inherit;
+      height: 24px;
       display: inline-block;
       position: relative; }
     #header.main-header .hamburger-inner {
@@ -8234,9 +8249,6 @@ body.is-hidden {
     -webkit-box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546);
     box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546);
     padding: 10px 0 0;
-    background-image: url(../../images/background/header-tablet.svg);
-    background-repeat: no-repeat;
-    background-position: 51px -60px;
     max-width: 250px; }
     @media (min-width: 768px) {
       #header.main-header #navigation {
@@ -8310,11 +8322,9 @@ body.is-hidden {
   border-bottom: 1px solid #E1E4E6; }
   #header.reports-header #header-left {
     background-color: #E03632;
-    background-image: url(../../images/background/header-tablet.svg);
+    background-image: url(../../images/background/new_bg.svg);
     background-repeat: no-repeat;
-    -webkit-background-size: 300px;
-    background-size: 300px;
-    background-position: 51px 0;
+    background-position: left top;
     border-bottom: 1px solid rgba(255, 0, 0, 0.4); }
   #header.reports-header .b-user {
     color: #697882;
