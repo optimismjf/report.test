@@ -797,7 +797,7 @@ function hideChilds(t) {
 	if($('.group-items').length) {
 		$('.group-items').each(function(i, t) {
 			$(t).find('.level-2').last().addClass('last-group');
-			$(t).find('.level-2').last().addClass('last-group');
+			$(t).find('.level-3').last().addClass('last-group');
 		});		
 	};
 
