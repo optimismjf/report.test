@@ -285,7 +285,7 @@ function stickyAside(t, mt) {
 
 						target.css('width', options.width);
 						if(options.dempfer) dempfer.css('height', options.height);
-					}, 100)
+					}, 100);
 				});
 				
 			});
@@ -727,7 +727,7 @@ function dataAction(e) {
 
 			hideChilds(target);
 			$('.b-reports__table tbody tr td a').hidenLinks('update');
-			$(window).trigger('resize');
+			
 			if($('.freeze-table').length) $('.freeze-table').freezeTable('update');
 			break;
 
@@ -798,6 +798,12 @@ function hideChilds(t) {
 		$('.group-items').each(function(i, t) {
 			$(t).find('.level-2').last().addClass('last-group');
 			$(t).find('.level-3').last().addClass('last-group');
+			var te = $(t).find('.level-3:not(.level-last):not(.last-group)');
+			te.each(function(index, l) {
+				let g = $(l).data('parent'),
+					gr = $(t).find('[data-parent="' + g + '"]').last().find('[data-target]').data('target');
+				$(gr).addClass('last-in-group')
+			});
 		});		
 	};
 

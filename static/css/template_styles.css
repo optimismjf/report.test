@@ -8869,6 +8869,8 @@ body.is-hidden {
       background-color: #ffffff; }
       .b-reports__table tbody tr.hover {
         background-color: #F2F4F6; }
+        .b-reports__table tbody tr.hover a {
+          background-color: #F2F4F6 !important; }
         .b-reports__table tbody tr.hover .overflowed:after {
           background-color: #F2F4F6; }
       .b-reports__table tbody tr td {
@@ -9130,6 +9132,15 @@ body.is-hidden {
 
 .group-items .level-3.last-group ~ .level-4 .b-reports__table-toggler-wrapper:after {
   width: 25px; }
+
+.group-items .level-4.last-in-group .b-reports__table-toggler-wrapper:after {
+  width: 52px;
+  -webkit-background-size: 52px auto;
+  background-size: 52px auto;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(4%, #C2CAD8), color-stop(4%, transparent), color-stop(96%, transparent), color-stop(96%, #C2CAD8));
+  background-image: -webkit-linear-gradient(left, #C2CAD8 4%, transparent 4%, transparent 96%, #C2CAD8 96%);
+  background-image: -o-linear-gradient(left, #C2CAD8 4%, transparent 4%, transparent 96%, #C2CAD8 96%);
+  background-image: linear-gradient(90deg, #C2CAD8 4%, transparent 4%, transparent 96%, #C2CAD8 96%); }
 
 .b-pagination {
   display: -webkit-box;
