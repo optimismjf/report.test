@@ -794,6 +794,13 @@ function hideChilds(t) {
 		.on('click', '[data-action]', dataAction)
 		.filters();
 
+	if($('.group-items').length) {
+		$('.group-items').each(function(i, t) {
+			$(t).find('.level-2').last().addClass('last-group');
+			$(t).find('.level-2').last().addClass('last-group');
+		});		
+	};
+
 	if($('.b-reports__filters').length) $('.b-reports__filters').stickyFilters({'dempfer' : true});
 	if($('.b-reports__aside').length) stickyAside('.b-reports__aside', 0);
 

@@ -8803,7 +8803,7 @@ body.is-hidden {
       padding: 0 10px;
       position: relative;
       height: 40px; }
-    th .b-reports__table-edit, td .b-reports__table-edit {
+    th .b-reports__table-edit, td .b-reports__table-edit, td .b-reports__table-level, th .b-reports__table-level {
       position: absolute;
       top: 0;
       left: 0;
@@ -8812,6 +8812,13 @@ body.is-hidden {
       border-right: 1px solid #E1E4E6;
       background-position: center center;
       background-repeat: no-repeat; }
+    td .b-reports__table-level:after {
+      content: attr(data-group);
+      display: table-cell;
+      width: 20px;
+      height: 39px;
+      text-align: center;
+      vertical-align: middle; }
     th .b-reports__table-edit {
       background-color: #F2F4F6; }
     .b-reports__table thead tr {
@@ -8932,7 +8939,7 @@ body.is-hidden {
         padding-right: 20px; }
     .b-reports__table-item-head:not(:first-of-type) td {
       border-top-width: 2px; }
-    .b-reports__table-item[data-parent] {
+    .b-reports__table-item[data-parent]:not(.show) {
       display: none; }
     .b-reports__table-toggler {
       width: 15px;
@@ -8945,7 +8952,8 @@ body.is-hidden {
       display: block;
       margin-right: 8px;
       vertical-align: middle;
-      cursor: pointer; }
+      cursor: pointer;
+      z-index: 2; }
       .b-reports__table-toggler.open {
         background-image: url(../images/icon/compress.svg); }
       .b-reports__table-toggler-wrapper {
@@ -9052,6 +9060,76 @@ body.is-hidden {
 
 .editable-items tbody tr.level-10 td:first-child {
   padding-left: 255px; }
+
+.group-items [class^="b-reports__table-item level"]:not(.level-last) a {
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+  padding: 3px 0; }
+
+.group-items .level-last .b-reports__table-toggler-wrapper:before {
+  content: '';
+  width: 10.5px;
+  height: 8px;
+  margin-bottom: 7px;
+  background-repeat: no-repeat;
+  display: block;
+  margin-left: 7.5px;
+  margin-right: 7px;
+  border-bottom: 2px solid #C2CAD8;
+  vertical-align: middle; }
+
+.group-items .level-2 .b-reports__table-toggler-wrapper:after, .group-items .level-3 .b-reports__table-toggler-wrapper:after, .group-items .level-4 .b-reports__table-toggler-wrapper:after {
+  content: '';
+  position: absolute;
+  right: -webkit-calc(100% - 7.5px);
+  right: calc(100% - 7.5px);
+  bottom: 19px;
+  height: 40px;
+  width: 25px;
+  display: block;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(92%, transparent), color-stop(8%, #C2CAD8));
+  background-image: -webkit-linear-gradient(left, transparent 92%, #C2CAD8 8%);
+  background-image: -o-linear-gradient(left, transparent 92%, #C2CAD8 8%);
+  background-image: linear-gradient(90deg, transparent 92%, #C2CAD8 8%);
+  -webkit-background-size: 25px auto;
+  background-size: 25px auto; }
+
+.group-items .level-3 .b-reports__table-toggler-wrapper:after {
+  width: 50px; }
+
+.group-items .level-4 .b-reports__table-toggler-wrapper:after {
+  width: 75px; }
+
+.group-items thead tr:first-child th:first-child, .group-items tbody tr td:first-child {
+  padding-left: 30px; }
+
+.group-items tbody tr.level-1 td:first-child .b-reports__table-level {
+  background-color: rgba(224, 54, 50, 0.07); }
+
+.group-items tbody tr.level-2 td:first-child {
+  padding-left: 30px; }
+  .group-items tbody tr.level-2 td:first-child .b-reports__table-level {
+    background-color: rgba(245, 166, 35, 0.07); }
+
+.group-items tbody tr.level-3 td:first-child {
+  padding-left: 55px; }
+  .group-items tbody tr.level-3 td:first-child .b-reports__table-level {
+    background-color: rgba(40, 167, 69, 0.07); }
+
+.group-items tbody tr.level-4 td:first-child {
+  padding-left: 80px; }
+  .group-items tbody tr.level-4 td:first-child .b-reports__table-level {
+    background-color: rgba(0, 68, 187, 0.07); }
+
+.group-items .level-2.last-group ~ .level-3 .b-reports__table-toggler-wrapper:after {
+  width: 25px; }
+
+.group-items .level-2.last-group ~ .level-4 .b-reports__table-toggler-wrapper:after {
+  width: 50px; }
+
+.group-items .level-3.last-group ~ .level-4 .b-reports__table-toggler-wrapper:after {
+  width: 25px; }
 
 .b-pagination {
   display: -webkit-box;
@@ -9607,6 +9685,10 @@ body.is-hidden {
 .w-200 {
   min-width: 200px;
   max-width: 200px; }
+
+.w-220 {
+  min-width: 220px;
+  max-width: 220px; }
 
 .w-250 {
   min-width: 250px;
