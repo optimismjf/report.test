@@ -263,36 +263,36 @@
 
 <!-- /header-->
 
-	<div class="b-reports" id="content">
-		<aside class="b-reports__aside">
-			<div class="b-reports__aside-switcher" data-action="switcher" data-target=".b-reports__aside-item">
-				<div class="b-reports__aside-switcher-item active">Отчеты</div>
-				<div class="b-reports__aside-switcher-item">Ошибки</div>
+	<div class="b-inreports" id="content">
+		<aside class="b-inreports__aside">
+			<div class="b-inreports__aside-switcher" data-action="switcher" data-target=".b-inreports__aside-item">
+				<div class="b-inreports__aside-switcher-item active">Отчеты</div>
+				<div class="b-inreports__aside-switcher-item">Ошибки</div>
 			</div>
-			<ul class="b-reports__aside-item active">
+			<ul class="b-inreports__aside-item active">
 				<li><a href="#$">Сводный отчет</a></li>
 			</ul>
-			<ul class="b-reports__aside-item">
+			<ul class="b-inreports__aside-item">
 				<li><a href="#$">Отчет</a></li>
 			</ul>
 		</aside>
-		<main class="b-reports__main">
-			<h1 class="b-reports__main-name">Коллектор анкоров</h1>
-			<div class="b-inform" data-action="slide-target" data-target=".b-reports__main-desc"></div>
-			<div class="b-reports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!</div>
-			<div class="b-reports__workarea">
-				<div class="b-reports__filters">
-					<div class="b-reports__filters-item">
-						<form class="b-reports__search">
-							<input name="search" type="text" class="b-reports__search-input" placeholder="Поиск по таблице">
-							<div class="b-reports__search-clear" data-action="clear-target" data-target=".b-reports__search-input"></div>
+		<main class="b-inreports__main">
+			<h1 class="b-inreports__main-name">Коллектор анкоров</h1>
+			<div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc"></div>
+			<div class="b-inreports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!</div>
+			<div class="b-inreports__workarea">
+				<div class="b-inreports__filters">
+					<div class="b-inreports__filters-item">
+						<form class="b-inreports__search">
+							<input name="search" type="text" class="b-inreports__search-input" placeholder="Поиск по таблице">
+							<div class="b-inreports__search-clear" data-action="clear-target" data-target=".b-inreports__search-input"></div>
 						</form>
-						<div class="b-reports__addfilter">Фильтр</div>
-						<div class="b-reports__export">Выгрузить
-							<div class="b-reports__export-helper-wrapper">
-								<div class="b-reports__export-helper">
-									<div class="b-reports__export-helper-container">
-										<ul class="b-reports__export-helper-list">
+						<div class="b-inreports__addfilter">Фильтр</div>
+						<div class="b-inreports__export">Выгрузить
+							<div class="b-inreports__export-helper-wrapper">
+								<div class="b-inreports__export-helper">
+									<div class="b-inreports__export-helper-container">
+										<ul class="b-inreports__export-helper-list">
 											<li><a download href="1.csv">CSV таблица</a></li>
 											<li><a download href="1.pdf">PDF файл</a></li>
 										</ul>
@@ -301,7 +301,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="b-reports__filters-item">
+					<div class="b-inreports__filters-item">
 						<div class="b-pagination">
 							<div class="b-pagination__limits">
 								<span class="b-pagination__limits-wrapper">
@@ -333,30 +333,30 @@
 							</div>
 						</div>
 					</div>
-					<div class="b-reports__filters-row">
-						<div class="b-reports__filters-part-l">Фильтрация по:</div>
-						<div class="b-reports__filters-part-r"></div>
+					<div class="b-inreports__filters-row">
+						<div class="b-inreports__filters-part-l">Фильтрация по:</div>
+						<div class="b-inreports__filters-part-r"></div>
 					</div>
 				</div>
 
 				<div class="freeze-table">
-					<table class="b-reports__table table" id="kollektor">
+					<table class="b-inreports__table table" id="kollektor">
 						<thead>
 							<tr>
 								<th class="w-400" width="33%" data-action="sort-column" data-sortable="url">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>URL</span>
 										<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
 									</div>
 								</th>
 								<th class="w-400" width="33%" data-action="sort-column" data-sortable="link">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Ссылка</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
 								<th class="w-400" width="33%" data-action="sort-column" data-sortable="anchors">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Анкоры и количество</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
@@ -364,370 +364,370 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="33%">
 									<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
 								<td class="w-400" width="33%">
-									<ul class="b-reports-list">
+									<ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
+											<span class="b-inreports-list__key">Всего ссылок</span>
+											<span class="b-inreports-list__value">1 230</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
+											<span class="b-inreports-list__key">Nofollow</span>
+											<span class="b-inreports-list__value">207</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
+											<span class="b-inreports-list__key">Пустые анкоры</span>
+											<span class="b-inreports-list__value">8</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
+											<span class="b-inreports-list__key">Содержание Alt</span>
+											<span class="b-inreports-list__value">35</span>
 										</li>
 									</ul>
 								</td>
-								<td class="w-400" width="33%"><ul class="b-reports-list">
+								<td class="w-400" width="33%"><ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
+											<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+											<span class="b-inreports-list__value">92</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
-											<span class="b-reports-list__value">85</span>
+											<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+											<span class="b-inreports-list__value">85</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
+											<span class="b-inreports-list__key">Проводим онлайн</span>
+											<span class="b-inreports-list__value">0</span>
 										</li>
 										<li><a href="#$">Все анкоры</a></li>
 									</ul>
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="33%">
 									<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
 								<td class="w-400" width="33%">
-									<ul class="b-reports-list">
+									<ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
+											<span class="b-inreports-list__key">Всего ссылок</span>
+											<span class="b-inreports-list__value">1 230</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
+											<span class="b-inreports-list__key">Nofollow</span>
+											<span class="b-inreports-list__value">207</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
+											<span class="b-inreports-list__key">Пустые анкоры</span>
+											<span class="b-inreports-list__value">8</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
+											<span class="b-inreports-list__key">Содержание Alt</span>
+											<span class="b-inreports-list__value">35</span>
 										</li>
 									</ul>
 								</td>
-								<td class="w-400" width="33%"><ul class="b-reports-list">
+								<td class="w-400" width="33%"><ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
+											<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+											<span class="b-inreports-list__value">92</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
-											<span class="b-reports-list__value">85</span>
+											<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+											<span class="b-inreports-list__value">85</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
+											<span class="b-inreports-list__key">Проводим онлайн</span>
+											<span class="b-inreports-list__value">0</span>
 										</li>
 										<li><a href="#$">Все анкоры</a></li>
 									</ul>
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="33%">
 									<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
 								<td class="w-400" width="33%">
-									<ul class="b-reports-list">
+									<ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
+											<span class="b-inreports-list__key">Всего ссылок</span>
+											<span class="b-inreports-list__value">1 230</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
+											<span class="b-inreports-list__key">Nofollow</span>
+											<span class="b-inreports-list__value">207</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
+											<span class="b-inreports-list__key">Пустые анкоры</span>
+											<span class="b-inreports-list__value">8</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
+											<span class="b-inreports-list__key">Содержание Alt</span>
+											<span class="b-inreports-list__value">35</span>
 										</li>
 									</ul>
 								</td>
-								<td class="w-400" width="33%"><ul class="b-reports-list">
+								<td class="w-400" width="33%"><ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
+											<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+											<span class="b-inreports-list__value">92</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
-											<span class="b-reports-list__value">85</span>
+											<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+											<span class="b-inreports-list__value">85</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
+											<span class="b-inreports-list__key">Проводим онлайн</span>
+											<span class="b-inreports-list__value">0</span>
 										</li>
 										<li><a href="#$">Все анкоры</a></li>
 									</ul>
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="33%">
 									<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
 								<td class="w-400" width="33%">
-									<ul class="b-reports-list">
+									<ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
+											<span class="b-inreports-list__key">Всего ссылок</span>
+											<span class="b-inreports-list__value">1 230</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
+											<span class="b-inreports-list__key">Nofollow</span>
+											<span class="b-inreports-list__value">207</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
+											<span class="b-inreports-list__key">Пустые анкоры</span>
+											<span class="b-inreports-list__value">8</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
+											<span class="b-inreports-list__key">Содержание Alt</span>
+											<span class="b-inreports-list__value">35</span>
 										</li>
 									</ul>
 								</td>
-								<td class="w-400" width="33%"><ul class="b-reports-list">
+								<td class="w-400" width="33%"><ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
+											<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+											<span class="b-inreports-list__value">92</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
-											<span class="b-reports-list__value">85</span>
+											<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+											<span class="b-inreports-list__value">85</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
+											<span class="b-inreports-list__key">Проводим онлайн</span>
+											<span class="b-inreports-list__value">0</span>
 										</li>
 										<li><a href="#$">Все анкоры</a></li>
 									</ul>
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="33%">
 									<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
 								<td class="w-400" width="33%">
-									<ul class="b-reports-list">
+									<ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
+											<span class="b-inreports-list__key">Всего ссылок</span>
+											<span class="b-inreports-list__value">1 230</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
+											<span class="b-inreports-list__key">Nofollow</span>
+											<span class="b-inreports-list__value">207</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
+											<span class="b-inreports-list__key">Пустые анкоры</span>
+											<span class="b-inreports-list__value">8</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
+											<span class="b-inreports-list__key">Содержание Alt</span>
+											<span class="b-inreports-list__value">35</span>
 										</li>
 									</ul>
 								</td>
-								<td class="w-400" width="33%"><ul class="b-reports-list">
+								<td class="w-400" width="33%"><ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
+											<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+											<span class="b-inreports-list__value">92</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
-											<span class="b-reports-list__value">85</span>
+											<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+											<span class="b-inreports-list__value">85</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
+											<span class="b-inreports-list__key">Проводим онлайн</span>
+											<span class="b-inreports-list__value">0</span>
 										</li>
 										<li><a href="#$">Все анкоры</a></li>
 									</ul>
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="33%">
 									<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
 								<td class="w-400" width="33%">
-									<ul class="b-reports-list">
+									<ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
+											<span class="b-inreports-list__key">Всего ссылок</span>
+											<span class="b-inreports-list__value">1 230</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
+											<span class="b-inreports-list__key">Nofollow</span>
+											<span class="b-inreports-list__value">207</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
+											<span class="b-inreports-list__key">Пустые анкоры</span>
+											<span class="b-inreports-list__value">8</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
+											<span class="b-inreports-list__key">Содержание Alt</span>
+											<span class="b-inreports-list__value">35</span>
 										</li>
 									</ul>
 								</td>
-								<td class="w-400" width="33%"><ul class="b-reports-list">
+								<td class="w-400" width="33%"><ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
+											<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+											<span class="b-inreports-list__value">92</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
-											<span class="b-reports-list__value">85</span>
+											<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+											<span class="b-inreports-list__value">85</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
+											<span class="b-inreports-list__key">Проводим онлайн</span>
+											<span class="b-inreports-list__value">0</span>
 										</li>
 										<li><a href="#$">Все анкоры</a></li>
 									</ul>
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="33%">
 									<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
 								<td class="w-400" width="33%">
-									<ul class="b-reports-list">
+									<ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
+											<span class="b-inreports-list__key">Всего ссылок</span>
+											<span class="b-inreports-list__value">1 230</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
+											<span class="b-inreports-list__key">Nofollow</span>
+											<span class="b-inreports-list__value">207</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
+											<span class="b-inreports-list__key">Пустые анкоры</span>
+											<span class="b-inreports-list__value">8</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
+											<span class="b-inreports-list__key">Содержание Alt</span>
+											<span class="b-inreports-list__value">35</span>
 										</li>
 									</ul>
 								</td>
-								<td class="w-400" width="33%"><ul class="b-reports-list">
+								<td class="w-400" width="33%"><ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
+											<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+											<span class="b-inreports-list__value">92</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
-											<span class="b-reports-list__value">85</span>
+											<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+											<span class="b-inreports-list__value">85</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
+											<span class="b-inreports-list__key">Проводим онлайн</span>
+											<span class="b-inreports-list__value">0</span>
 										</li>
 										<li><a href="#$">Все анкоры</a></li>
 									</ul>
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="33%">
 									<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
 								<td class="w-400" width="33%">
-									<ul class="b-reports-list">
+									<ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
+											<span class="b-inreports-list__key">Всего ссылок</span>
+											<span class="b-inreports-list__value">1 230</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
+											<span class="b-inreports-list__key">Nofollow</span>
+											<span class="b-inreports-list__value">207</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
+											<span class="b-inreports-list__key">Пустые анкоры</span>
+											<span class="b-inreports-list__value">8</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
+											<span class="b-inreports-list__key">Содержание Alt</span>
+											<span class="b-inreports-list__value">35</span>
 										</li>
 									</ul>
 								</td>
-								<td class="w-400" width="33%"><ul class="b-reports-list">
+								<td class="w-400" width="33%"><ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
+											<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+											<span class="b-inreports-list__value">92</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
-											<span class="b-reports-list__value">85</span>
+											<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+											<span class="b-inreports-list__value">85</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
+											<span class="b-inreports-list__key">Проводим онлайн</span>
+											<span class="b-inreports-list__value">0</span>
 										</li>
 										<li><a href="#$">Все анкоры</a></li>
 									</ul>
 								</td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="33%">
 									<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
 								</td>
 								<td class="w-400" width="33%">
-									<ul class="b-reports-list">
+									<ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Всего ссылок</span>
-											<span class="b-reports-list__value">1 230</span>
+											<span class="b-inreports-list__key">Всего ссылок</span>
+											<span class="b-inreports-list__value">1 230</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Nofollow</span>
-											<span class="b-reports-list__value">207</span>
+											<span class="b-inreports-list__key">Nofollow</span>
+											<span class="b-inreports-list__value">207</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Пустые анкоры</span>
-											<span class="b-reports-list__value">8</span>
+											<span class="b-inreports-list__key">Пустые анкоры</span>
+											<span class="b-inreports-list__value">8</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Содержание Alt</span>
-											<span class="b-reports-list__value">35</span>
+											<span class="b-inreports-list__key">Содержание Alt</span>
+											<span class="b-inreports-list__value">35</span>
 										</li>
 									</ul>
 								</td>
-								<td class="w-400" width="33%"><ul class="b-reports-list">
+								<td class="w-400" width="33%"><ul class="b-inreports-list">
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн аудит</span>
-											<span class="b-reports-list__value">92</span>
+											<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+											<span class="b-inreports-list__value">92</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
-											<span class="b-reports-list__value">85</span>
+											<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+											<span class="b-inreports-list__value">85</span>
 										</li>
 										<li>
-											<span class="b-reports-list__key">Проводим онлайн</span>
-											<span class="b-reports-list__value">0</span>
+											<span class="b-inreports-list__key">Проводим онлайн</span>
+											<span class="b-inreports-list__value">0</span>
 										</li>
 										<li><a href="#$">Все анкоры</a></li>
 									</ul>

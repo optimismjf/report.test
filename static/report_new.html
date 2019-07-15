@@ -263,36 +263,36 @@
 
 <!-- /header-->
 
-	<div class="b-reports" id="content">
-		<aside class="b-reports__aside">
-			<div class="b-reports__aside-switcher" data-action="switcher" data-target=".b-reports__aside-item">
-				<div class="b-reports__aside-switcher-item active">Отчеты</div>
-				<div class="b-reports__aside-switcher-item">Ошибки</div>
+	<div class="b-inreports" id="content">
+		<aside class="b-inreports__aside">
+			<div class="b-inreports__aside-switcher" data-action="switcher" data-target=".b-inreports__aside-item">
+				<div class="b-inreports__aside-switcher-item active">Отчеты</div>
+				<div class="b-inreports__aside-switcher-item">Ошибки</div>
 			</div>
-			<ul class="b-reports__aside-item active">
+			<ul class="b-inreports__aside-item active">
 				<li><a href="#$">Сводный отчет</a></li>
 			</ul>
-			<ul class="b-reports__aside-item">
+			<ul class="b-inreports__aside-item">
 				<li><a href="#$">Отчет</a></li>
 			</ul>
 		</aside>
-		<main class="b-reports__main">
-			<h1 class="b-reports__main-name">Внешние без target="blank"</h1>
-			<div class="b-inform" data-action="slide-target" data-target=".b-reports__main-desc"></div>
-			<div class="b-reports__main-desc hidden">Большинство создают внешние ссылки через target="_blank" и не знают одного интересного нюанса — страница, на которую мы попадем таким образом, получит частичный контроль над ссылающейся на нее страницей через js свойство window.opener.</div>
-			<div class="b-reports__workarea">
-				<div class="b-reports__filters">
-					<div class="b-reports__filters-item">
-						<form class="b-reports__search">
-							<input name="search" type="text" class="b-reports__search-input" placeholder="Поиск по таблице">
-							<div class="b-reports__search-clear" data-action="clear-target" data-target=".b-reports__search-input"></div>
+		<main class="b-inreports__main">
+			<h1 class="b-inreports__main-name">Внешние без target="blank"</h1>
+			<div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc"></div>
+			<div class="b-inreports__main-desc hidden">Большинство создают внешние ссылки через target="_blank" и не знают одного интересного нюанса — страница, на которую мы попадем таким образом, получит частичный контроль над ссылающейся на нее страницей через js свойство window.opener.</div>
+			<div class="b-inreports__workarea">
+				<div class="b-inreports__filters">
+					<div class="b-inreports__filters-item">
+						<form class="b-inreports__search">
+							<input name="search" type="text" class="b-inreports__search-input" placeholder="Поиск по таблице">
+							<div class="b-inreports__search-clear" data-action="clear-target" data-target=".b-inreports__search-input"></div>
 						</form>
-						<div class="b-reports__addfilter">Фильтр</div>
-						<div class="b-reports__export">Выгрузить
-							<div class="b-reports__export-helper-wrapper">
-								<div class="b-reports__export-helper">
-									<div class="b-reports__export-helper-container">
-										<ul class="b-reports__export-helper-list">
+						<div class="b-inreports__addfilter">Фильтр</div>
+						<div class="b-inreports__export">Выгрузить
+							<div class="b-inreports__export-helper-wrapper">
+								<div class="b-inreports__export-helper">
+									<div class="b-inreports__export-helper-container">
+										<ul class="b-inreports__export-helper-list">
 											<li><a download href="1.csv">CSV таблица</a></li>
 											<li><a download href="1.pdf">PDF файл</a></li>
 										</ul>
@@ -301,7 +301,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="b-reports__filters-item">
+					<div class="b-inreports__filters-item">
 						<div class="b-pagination">
 							<div class="b-pagination__limits">
 								<span class="b-pagination__limits-wrapper">
@@ -333,49 +333,49 @@
 							</div>
 						</div>
 					</div>
-					<div class="b-reports__filters-row">
-						<div class="b-reports__filters-part-l">Фильтрация по:</div>
-						<div class="b-reports__filters-part-r"></div>
+					<div class="b-inreports__filters-row">
+						<div class="b-inreports__filters-part-l">Фильтрация по:</div>
+						<div class="b-inreports__filters-part-r"></div>
 					</div>
 				</div>
 
 				<div class="freeze-table">
-					<table class="b-reports__table table editable-items" id="svodnaya">
+					<table class="b-inreports__table table editable-items" id="svodnaya">
 						<thead>
 							<tr>
 								<th class="w-400" width="400" data-action="sort-column" data-sortable="url">
-									<div class="b-reports__table-edit"></div>
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-edit"></div>
+									<div class="b-inreports__table-headname">
 										<span>URL</span>
 										<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
 									</div>
 								</th>
 								<th class="w-400" width="400" data-action="sort-column" data-sortable="link">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Ссылка</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
 								<th class="w-100" width="100" data-action="sort-column" data-sortable="type">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Тип <br>анкора</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
 								<th class="w-300" width="300" data-action="sort-column" data-sortable="anchor">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Анкор</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
 								<th class="w-200" width="200" data-action="sort-column" data-sortable="backlinks">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Обратные ссылки</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
 								<th class="w-400" data-action="sort-column" data-sortable="linkclone">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Ссылка</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
@@ -383,9 +383,9 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www." title="https://www.">https://www.</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -394,9 +394,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png
 									</a>
 								</td>
@@ -406,9 +406,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -417,9 +417,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -428,9 +428,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -439,9 +439,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -450,9 +450,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -461,9 +461,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -472,9 +472,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -483,9 +483,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -494,9 +494,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -505,9 +505,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -516,9 +516,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -527,9 +527,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -538,9 +538,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -549,9 +549,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -560,9 +560,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -571,9 +571,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -582,9 +582,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -593,9 +593,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -604,9 +604,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -615,9 +615,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -626,9 +626,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
@@ -637,9 +637,9 @@
 								<td class="w-200" width="200">105</td>
 								<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
 							</tr>
-							<tr class="b-reports__table-item">
+							<tr class="b-inreports__table-item">
 								<td class="w-400" width="400">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
 								</td>
 								<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>

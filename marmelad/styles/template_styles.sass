@@ -2891,12 +2891,7 @@ body
 		padding: 0
 		display: inline-block
 		cursor: pointer
-		-webkit-transition-property: opacity, -webkit-filter
-		transition-property: opacity, -webkit-filter
-		transition-property: opacity, filter
-		transition-property: opacity, filter, -webkit-filter
-		transition-duration: 1s
-		transition-timing-function: linear
+		transition: opacity, filter, -webkit-filter 1s linear
 		font: inherit;
 		color: inherit
 		text-transform: none
@@ -2908,7 +2903,7 @@ body
 		padding: 17.5px 17px
 		width: 59px
 		text-align: center
-		border-right: 1px solid rgba(255,255,255,0.4)
+		border-right: 1px solid #ec8684
 		&-box
 			width: 25px
 			height: 24px
@@ -2926,6 +2921,7 @@ body
 				content: ""
 				@extend %hamburger-lines
 		&.is-active
+			background-color: #C51311
 			.hamburger-inner
 				transform: translate3d(0, 6px, 0) rotate(45deg)
 				&::after
@@ -3007,12 +3003,12 @@ body
 	#navigation
 		display: none
 		position: fixed
-		top: 59px
+		top: 60px
 		left: 0
 		width: 100%
 		height: 100%
 		z-index: 15
-		background-color: #E03632
+		background-color: #C51311
 		box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
 		padding: 10px 0 0
 		max-width: 250px
@@ -3046,9 +3042,9 @@ body
 					letter-spacing: 0.4px
 					transition: background-color .2s
 					&:hover
-						background: rgba(198, 48, 44, 0.6)
+						background: rgba(255, 255, 255, 0.2)
 					&.active
-						background: rgba(198, 48, 44, 0.6)
+						background: rgba(255, 255, 255, 0.2)
 						position: relative
 						&:before
 							content: ''
@@ -3080,6 +3076,37 @@ body
 	#navigation-profile
 		display: none
 
+#header.main-header
+	.header__menu
+		margin-right: 18px
+		text-align: center
+		display: block
+	.header__menu-list
+		height: 61px
+		display: flex
+		align-items: center
+		li
+			margin-right: 40px
+		.visible-desktop
+			display: block
+			&.active
+				position: relative
+				&:before
+					content: "\f0d8"
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+					bottom: -4px
+					display: inline-block
+					font: normal normal normal 22px/1 FontAwesome
+					color: #fff
+					text-rendering: auto
+					-webkit-font-smoothing: antialiased
+					-moz-osx-font-smoothing: grayscale
+			a
+				line-height: 18px
+
+
 #header.reports-header
 	background-color: #fff
 	background-image: unset
@@ -3090,7 +3117,6 @@ body
 		background-image: url(../../images/background/new_bg.svg)
 		background-repeat: no-repeat
 		background-position: left top
-		border-bottom: 1px solid rgba(255, 0, 0, 0.4)
 
 	.b-user
 		color: $color_grey
@@ -3231,7 +3257,7 @@ body
 		&-settings:before
 			background-image: url(../images/icon/settings.svg)
 
-.b-reports
+.b-inreports
 	display: flex
 	&__aside
 		position: absolute
@@ -3490,7 +3516,7 @@ body
 						display: block
 						color: #C2CAD8		
 		&:hover
-			.b-reports__export-helper
+			.b-inreports__export-helper
 				border: 1px solid #E1E4E6
 				border-radius: 5px
 				&-wrapper
@@ -3558,7 +3584,7 @@ body
 						cursor: pointer
 					&[colspan] 
 						height: 22px
-						& .b-reports__table-headname
+						& .b-inreports__table-headname
 							justify-content: center
 				&:not(:first-child)
 					th:not([colspan])
@@ -3587,7 +3613,7 @@ body
 						line-break: auto
 						hyphens: auto
 						color: #0044BB
-					.b-reports__table-edit
+					.b-inreports__table-edit
 						background-image: url(../images/icon/dots-vertical.svg)
 						cursor: pointer
 						&:hover, &.actions-showed
@@ -3702,7 +3728,7 @@ body
 				height: 18px
 				font-size: 12px
 				line-height: 13px
-		&[colspan] .b-reports__table-headname
+		&[colspan] .b-inreports__table-headname
 			justify-content: center
 
 .editable-items
@@ -3730,14 +3756,14 @@ body
 			padding-left: 255px
 
 .group-items
-	[class^="b-reports__table-item level"]:not(.level-last)
+	[class^="b-inreports__table-item level"]:not(.level-last)
 		a
 			background-color: #fff
 			position: relative
 			z-index: 2
 			padding: 3px 0
 	.level-last
-		.b-reports__table-toggler-wrapper
+		.b-inreports__table-toggler-wrapper
 			&:before
 				content: ''
 				width: 10.5px
@@ -3750,7 +3776,7 @@ body
 				border-bottom: 2px solid #C2CAD8
 				vertical-align: middle
 	.level-2, .level-3, .level-4
-		.b-reports__table-toggler-wrapper
+		.b-inreports__table-toggler-wrapper
 			&:after
 				content: ''
 				position: absolute
@@ -3762,11 +3788,11 @@ body
 				background-image: linear-gradient(90deg, transparent 92%, #C2CAD8 8%)
 				background-size: 25px auto
 	.level-3
-		.b-reports__table-toggler-wrapper
+		.b-inreports__table-toggler-wrapper
 			&:after
 				width: 50px
 	.level-4
-		.b-reports__table-toggler-wrapper
+		.b-inreports__table-toggler-wrapper
 			&:after
 				width: 75px
 	thead tr:first-child th, tbody tr td
@@ -3774,36 +3800,36 @@ body
 			padding-left: 30px
 	tbody tr
 		&.level-1 td:first-child
-			.b-reports__table-level
+			.b-inreports__table-level
 				background-color: rgba(224, 54, 50, 0.07)
 		&.level-2 td:first-child
 			padding-left: 30px
-			.b-reports__table-level
+			.b-inreports__table-level
 				background-color: rgba(245, 166, 35, 0.07)
 		&.level-3 td:first-child
 			padding-left: 55px
-			.b-reports__table-level
+			.b-inreports__table-level
 				background-color: rgba(40, 167, 69, 0.07)
 		&.level-4 td:first-child
 			padding-left: 80px
-			.b-reports__table-level
+			.b-inreports__table-level
 				background-color: rgba(0, 68, 187, 0.07)
 	.level-2.last-group
 		~ .level-3
-			.b-reports__table-toggler-wrapper
+			.b-inreports__table-toggler-wrapper
 				&:after
 					width: 25px
 		~ .level-4
-			.b-reports__table-toggler-wrapper
+			.b-inreports__table-toggler-wrapper
 				&:after
 					width: 50px
 	.level-3.last-group
 		~ .level-4
-			.b-reports__table-toggler-wrapper
+			.b-inreports__table-toggler-wrapper
 				&:after
 					width: 25px
 	.level-4.last-in-group
-		.b-reports__table-toggler-wrapper
+		.b-inreports__table-toggler-wrapper
 			&:after
 				width: 52px
 				background-size: 52px auto
@@ -4395,7 +4421,7 @@ a.overflowed
 		overflow: hidden
 		border: 1px solid #E1E4E6
 
-.b-reports__main-name.in-process
+.b-inreports__main-name.in-process
 	margin-top: 76px
 	display: block
 	text-align: center
@@ -4413,7 +4439,7 @@ a.overflowed
 	max-width: 80%
 	height: auto
 
-.b-reports__aside.in-process
+.b-inreports__aside.in-process
 	overflow: hidden
 	&:after
 		content: ''

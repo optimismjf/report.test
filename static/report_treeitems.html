@@ -263,36 +263,36 @@
 
 <!-- /header-->
 
-	<div class="b-reports" id="content">
-		<aside class="b-reports__aside">
-			<div class="b-reports__aside-switcher" data-action="switcher" data-target=".b-reports__aside-item">
-				<div class="b-reports__aside-switcher-item active">Отчеты</div>
-				<div class="b-reports__aside-switcher-item">Ошибки</div>
+	<div class="b-inreports" id="content">
+		<aside class="b-inreports__aside">
+			<div class="b-inreports__aside-switcher" data-action="switcher" data-target=".b-inreports__aside-item">
+				<div class="b-inreports__aside-switcher-item active">Отчеты</div>
+				<div class="b-inreports__aside-switcher-item">Ошибки</div>
 			</div>
-			<ul class="b-reports__aside-item active">
+			<ul class="b-inreports__aside-item active">
 				<li><a href="#$">Сводный отчет</a></li>
 			</ul>
-			<ul class="b-reports__aside-item">
+			<ul class="b-inreports__aside-item">
 				<li><a href="#$">Отчет</a></li>
 			</ul>
 		</aside>
-		<main class="b-reports__main">
-			<h1 class="b-reports__main-name">Без target="blank"</h1>
-			<div class="b-inform" data-action="slide-target" data-target=".b-reports__main-desc"></div>
-			<div class="b-reports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!</div>
-			<div class="b-reports__workarea">
-				<div class="b-reports__filters">
-					<div class="b-reports__filters-item">
-						<form class="b-reports__search">
-							<input name="search" type="text" class="b-reports__search-input" placeholder="Поиск по таблице">
-							<div class="b-reports__search-clear" data-action="clear-target" data-target=".b-reports__search-input"></div>
+		<main class="b-inreports__main">
+			<h1 class="b-inreports__main-name">Без target="blank"</h1>
+			<div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc"></div>
+			<div class="b-inreports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!</div>
+			<div class="b-inreports__workarea">
+				<div class="b-inreports__filters">
+					<div class="b-inreports__filters-item">
+						<form class="b-inreports__search">
+							<input name="search" type="text" class="b-inreports__search-input" placeholder="Поиск по таблице">
+							<div class="b-inreports__search-clear" data-action="clear-target" data-target=".b-inreports__search-input"></div>
 						</form>
-						<div class="b-reports__addfilter">Фильтр</div>
-						<div class="b-reports__export">Выгрузить
-							<div class="b-reports__export-helper-wrapper">
-								<div class="b-reports__export-helper">
-									<div class="b-reports__export-helper-container">
-										<ul class="b-reports__export-helper-list">
+						<div class="b-inreports__addfilter">Фильтр</div>
+						<div class="b-inreports__export">Выгрузить
+							<div class="b-inreports__export-helper-wrapper">
+								<div class="b-inreports__export-helper">
+									<div class="b-inreports__export-helper-container">
+										<ul class="b-inreports__export-helper-list">
 											<li><a download href="1.csv">CSV таблица</a></li>
 											<li><a download href="1.pdf">PDF файл</a></li>
 										</ul>
@@ -301,7 +301,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="b-reports__filters-item">
+					<div class="b-inreports__filters-item">
 						<div class="b-pagination">
 							<div class="b-pagination__limits">
 								<span class="b-pagination__limits-wrapper">
@@ -333,49 +333,49 @@
 							</div>
 						</div>
 					</div>
-					<div class="b-reports__filters-row">
-						<div class="b-reports__filters-part-l">Фильтрация по:</div>
-						<div class="b-reports__filters-part-r"></div>
+					<div class="b-inreports__filters-row">
+						<div class="b-inreports__filters-part-l">Фильтрация по:</div>
+						<div class="b-inreports__filters-part-r"></div>
 					</div>
 				</div>
 
 				<div class="freeze-table">
-					<table class="b-reports__table table editable-items" id="treelinks">
+					<table class="b-inreports__table table editable-items" id="treelinks">
 						<thead>
 							<tr>
 								<th class="w-500" rowspan="2" data-action="sort-column" data-sortable="url">
-									<div class="b-reports__table-edit"></div>
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-edit"></div>
+									<div class="b-inreports__table-headname">
 										<span>URL</span>
 										<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
 									</div>
 								</th>
 								<th class="w-150" width="150" rowspan="2" data-action="sort-column" data-sortable="uniq">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Уникальность</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
 								<th class="w-100" width="100" rowspan="2" data-action="sort-column" data-sortable="anchor">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Анкор</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
 								<th class="w-100" width="100" rowspan="2" data-action="sort-column" data-sortable="errors">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Наличие<br/>ошибок</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
 								<th class="w-150" width="150" colspan="2">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Ссылки</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
 								</th>
 								<th class="w-150" width="150" colspan="2">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Ссылки</span>
 										<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
 									</div>
@@ -383,33 +383,33 @@
 							</tr>
 							<tr>
 								<th class="w-75" width="75" data-action="sort-column" data-sortable="links-in">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Внеш.</span>										
 									</div>
 								</th>
 								<th class="w-75" width="75" data-action="sort-column" data-sortable="links-out">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Внутр.</span>										
 									</div>
 								</th>
 								<th class="w-75" width="75" data-action="sort-column" data-sortable="clonelinks-in">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Внеш.</span>										
 									</div>
 								</th>
 								<th class="w-75" width="75" data-action="sort-column" data-sortable="clonelinks-out">
-									<div class="b-reports__table-headname">
+									<div class="b-inreports__table-headname">
 										<span>Внутр.</span>										
 									</div>
 								</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="b-reports__table-item level-1">
+							<tr class="b-inreports__table-item level-1">
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<div class="b-reports__table-toggler-wrapper">
-										<div class="b-reports__table-toggler" data-action="toggle-childs" data-target="[data-parent=first]"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-toggler-wrapper">
+										<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent=first]"></div>
 										<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 									</div>
 								</td>
@@ -421,9 +421,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="first"> 
+							<tr class="b-inreports__table-item level-2" data-parent="first"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -434,9 +434,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="first"> 
+							<tr class="b-inreports__table-item level-2" data-parent="first"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -447,9 +447,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="first"> 
+							<tr class="b-inreports__table-item level-2" data-parent="first"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -460,9 +460,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="first"> 
+							<tr class="b-inreports__table-item level-2" data-parent="first"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -473,9 +473,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="first">
+							<tr class="b-inreports__table-item level-2" data-parent="first">
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 red-bg">Дубликат</td>
@@ -486,11 +486,11 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="first">
+							<tr class="b-inreports__table-item level-2" data-parent="first">
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<div class="b-reports__table-toggler-wrapper">
-										<div class="b-reports__table-toggler" data-action="toggle-childs" data-target="[data-parent=second]"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-toggler-wrapper">
+										<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent=second]"></div>
 										<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 									</div>
 								</td>
@@ -502,9 +502,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-3" data-parent="second"> 
+							<tr class="b-inreports__table-item level-3" data-parent="second"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -515,9 +515,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-3" data-parent="second"> 
+							<tr class="b-inreports__table-item level-3" data-parent="second"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -528,9 +528,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-3" data-parent="second"> 
+							<tr class="b-inreports__table-item level-3" data-parent="second"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -541,9 +541,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-3" data-parent="second"> 
+							<tr class="b-inreports__table-item level-3" data-parent="second"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -554,11 +554,11 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-3" data-parent="second">
+							<tr class="b-inreports__table-item level-3" data-parent="second">
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<div class="b-reports__table-toggler-wrapper">
-										<div class="b-reports__table-toggler" data-action="toggle-childs" data-target="[data-parent=third]"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-toggler-wrapper">
+										<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent=third]"></div>
 										<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 									</div>
 								</td>
@@ -571,9 +571,9 @@
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
 
-							<tr class="b-reports__table-item level-4" data-parent="third"> 
+							<tr class="b-inreports__table-item level-4" data-parent="third"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -584,9 +584,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-4" data-parent="third"> 
+							<tr class="b-inreports__table-item level-4" data-parent="third"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -597,9 +597,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-4" data-parent="third"> 
+							<tr class="b-inreports__table-item level-4" data-parent="third"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -610,9 +610,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-4" data-parent="third"> 
+							<tr class="b-inreports__table-item level-4" data-parent="third"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -623,9 +623,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-4" data-parent="third">
+							<tr class="b-inreports__table-item level-4" data-parent="third">
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 red-bg">Дубликат</td>
@@ -637,11 +637,11 @@
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
 
-							<tr class="b-reports__table-item level-1">
+							<tr class="b-inreports__table-item level-1">
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<div class="b-reports__table-toggler-wrapper">
-										<div class="b-reports__table-toggler" data-action="toggle-childs" data-target="[data-parent=firstclone]"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-toggler-wrapper">
+										<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent=firstclone]"></div>
 										<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 									</div>
 								</td>
@@ -653,9 +653,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="firstclone"> 
+							<tr class="b-inreports__table-item level-2" data-parent="firstclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -666,9 +666,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="firstclone"> 
+							<tr class="b-inreports__table-item level-2" data-parent="firstclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -679,9 +679,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="firstclone"> 
+							<tr class="b-inreports__table-item level-2" data-parent="firstclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -692,9 +692,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="firstclone"> 
+							<tr class="b-inreports__table-item level-2" data-parent="firstclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -705,9 +705,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="firstclone">
+							<tr class="b-inreports__table-item level-2" data-parent="firstclone">
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 red-bg">Дубликат</td>
@@ -718,11 +718,11 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-2" data-parent="firstclone">
+							<tr class="b-inreports__table-item level-2" data-parent="firstclone">
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<div class="b-reports__table-toggler-wrapper">
-										<div class="b-reports__table-toggler" data-action="toggle-childs" data-target="[data-parent=secondclone]"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-toggler-wrapper">
+										<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent=secondclone]"></div>
 										<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 									</div>
 								</td>
@@ -734,9 +734,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-3" data-parent="secondclone"> 
+							<tr class="b-inreports__table-item level-3" data-parent="secondclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -747,9 +747,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-3" data-parent="secondclone"> 
+							<tr class="b-inreports__table-item level-3" data-parent="secondclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -760,9 +760,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-3" data-parent="secondclone"> 
+							<tr class="b-inreports__table-item level-3" data-parent="secondclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -773,9 +773,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-3" data-parent="secondclone"> 
+							<tr class="b-inreports__table-item level-3" data-parent="secondclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -786,11 +786,11 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-3" data-parent="secondclone">
+							<tr class="b-inreports__table-item level-3" data-parent="secondclone">
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
-									<div class="b-reports__table-toggler-wrapper">
-										<div class="b-reports__table-toggler" data-action="toggle-childs" data-target="[data-parent=thirdclone]"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-toggler-wrapper">
+										<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent=thirdclone]"></div>
 										<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 									</div>
 								</td>
@@ -803,9 +803,9 @@
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
 
-							<tr class="b-reports__table-item level-4" data-parent="thirdclone"> 
+							<tr class="b-inreports__table-item level-4" data-parent="thirdclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -816,9 +816,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-4" data-parent="thirdclone"> 
+							<tr class="b-inreports__table-item level-4" data-parent="thirdclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 yellow-bg">Похож</td>
@@ -829,9 +829,9 @@
 								<td width="75" class="w-75 text-center">635</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-4" data-parent="thirdclone"> 
+							<tr class="b-inreports__table-item level-4" data-parent="thirdclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -842,9 +842,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-4" data-parent="thirdclone"> 
+							<tr class="b-inreports__table-item level-4" data-parent="thirdclone"> 
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 green-bg">Уникален</td>
@@ -855,9 +855,9 @@
 								<td width="75" class="w-75 text-center">22</td>
 								<td width="75" class="w-75 text-center"></td>
 							</tr>
-							<tr class="b-reports__table-item level-4" data-parent="thirdclone">
+							<tr class="b-inreports__table-item level-4" data-parent="thirdclone">
 								<td class="w-500">
-									<div class="b-reports__table-edit" data-item-id="1"></div>
+									<div class="b-inreports__table-edit" data-item-id="1"></div>
 									<a href="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/" title="https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/">https://www.optimism.ru/blog/3-samyx-rasprostranennyx-zabluzhdeniya-o-texnologii-rtb/</a>
 								</td>
 								<td width="15" class="w-150 red-bg">Дубликат</td>
