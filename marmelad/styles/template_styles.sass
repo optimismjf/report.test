@@ -141,6 +141,8 @@ section
 .b-top-wrapper
 	+b-flex
 	+b-justify
+	&__item
+		border-bottom: 1px solid rgba(255,255,255,0.4)
 	&__sections
 		display: none
 
@@ -2844,8 +2846,6 @@ body
 	transition-duration: .15s
 	transition-timing-function: ease
 
-
-
 #header.main-header
 	max-height: 60px
 	height: 60px
@@ -2861,24 +2861,22 @@ body
 	#header-left
 		width: 250px
 
-	.logo
-		display: block
+	.logo	
+		display: flex
+		justify-content: space-between
 		margin-left: 14px
 		letter-spacing: 1px
 		float: none
-		line-height: 24px
-		font-size: 24px
-		height: auto
+		line-height: 59px
+		height: 100%
 		text-decoration: none
 		width: auto
-		padding-left: 32px
-		background-image: url(../../images/icon/sa-icon.svg)
-		background-repeat: no-repeat
-		background-position: left center
 		img
-			display: none
+			padding: 0
+			&.logo-sa
+				max-width: 155px
 		&__company-name
-			display: block
+			display: none
 			color: #FFFFFF
 			font-weight: 700
 			font-family: Susan, sans-serif
@@ -2889,7 +2887,7 @@ body
 		z-index: 20
 		position: relative
 		padding: 0
-		display: inline-block
+		display: none
 		cursor: pointer
 		transition: opacity, filter, -webkit-filter 1s linear
 		font: inherit;
@@ -2929,10 +2927,13 @@ body
 				&::before
 					transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0)
 					opacity: 0
-
+	&.is-auth
+		.hamburger
+			display: inline-block
 	.container
 		max-width: unset
 		padding-right: 0 !important
+		padding-left: 0 !important
 	.b-user
 		color: #ffffff
 		width: 310px
@@ -3073,10 +3074,10 @@ body
 			.sub-menu
 				li
 					margin-bottom: 8px
+
 	#navigation-profile
 		display: none
 
-#header.main-header
 	.header__menu
 		margin-right: 18px
 		text-align: center
@@ -3105,13 +3106,124 @@ body
 					-moz-osx-font-smoothing: grayscale
 			a
 				line-height: 18px
+		.dropdown-list
+			padding-right: 15px
+			position: relative
+			&:before
+				content: "\f0d7"
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				right: 0
+				display: inline-block
+				font: normal normal normal 14px/1 FontAwesome
+				text-rendering: auto
+				color: #fff
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+				pointer-events: none
+			&:hover
+				.dropdown-block
+					display: block
+			a
+				&:hover
+					text-decoration: none
+			.dropdown-block
+				position: absolute
+				left: -20px
+				top: 100%
+				background: #FFFFFF
+				border: 1px solid #E1E4E6
+				box-sizing: border-box
+				border-radius: 5px
+				padding: 21px 30px
+				width: 635px
+				z-index: 3
+				text-align: left
+				margin-left: -22px
+				margin-top: -9px
+				display: none
+				&:before
+					content: "\f0d8"
+					position: absolute
+					top: -14px
+					left: 87px
+					display: inline-block
+					font: normal normal normal 20px/1 FontAwesome
+					text-rendering: auto
+					color: #fff
+					-webkit-font-smoothing: antialiased
+					-moz-osx-font-smoothing: grayscale
+					pointer-events: none
+				.dropdown-group
+					& + .dropdown-group
+						border-top: 1px solid #E1E4E6
+						margin-top: 18px
+						padding-top: 16px
+					.dropdown-group__title
+						color: #AFBAC1
+						line-height: normal
+						font-weight: normal
+						font-size: 20px
+						padding-left: 5px
+						margin-top: 0
+						margin-bottom: 0
+				.dropdown-items
+					display: flex
+					flex-wrap: wrap
+				.dropdown-item
+					max-width: 50%
+					flex-basis: 50%
+					padding: 13px 13px 13px 40px
+					position: relative
+					transition: background-color .2s
+					&:hover
+						background-color: #F6F6F6
+					&.full-width
+						max-width: 100%
+						flex-basis: 100%
+					.dropdown-item__title
+						line-height: normal
+						font-size: 20px
+						color: #000000
+						display: block
+						margin-bottom: 3px
+					.dropdown-item__description
+						font-style: normal
+						font-weight: normal
+						line-height: normal
+						font-size: 14px
+						color: #697882
+						display: block
+					.dropdown-item__icon
+						left: 12px
+						top: 16px
+						position: absolute
+						height: 20px
+						width: 30px
+						background-size: auto 100%
+						background-repeat: no-repeat
+						display: inline-block
+	.b-top-wrapper
+		&__item
+			border-bottom: 1px solid rgba(255,255,255,0.4)
+			&:last-child
+				flex-grow: 1
+				justify-content: flex-end
 
+	.btn.btn-input
+		padding: 9px 19.5px 6px 37px
+		height: 35px
+		margin-right: 20px
 
 #header.reports-header
 	background-color: #fff
 	background-image: unset
-	border-bottom: 1px solid $color_easygrey
 
+	.b-top-wrapper
+		&__item:not(#header-left)
+			border-bottom: 1px solid $color_easygrey
+			
 	#header-left
 		background-color: #E03632
 		background-image: url(../../images/background/new_bg.svg)
@@ -3134,13 +3246,15 @@ body
 
 	.b-project-wrapper
 		flex-grow: 1
+	
+
 		
 
 .b-project
 	display: flex
 	align-items: center
 	padding: 0 20px
-	width: 100%
+	flex-grow: 1
 	&__item
 		display: flex
 		margin-right: 30px
