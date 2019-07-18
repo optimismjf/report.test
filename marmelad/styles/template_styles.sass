@@ -151,11 +151,6 @@ section
 	&__name
 		display: none
 
-		&-wrapper
-			&:hover
-				.b-user__helper-wrapper
-					display: block
-
 	&__helper-wrapper
 		+b-absolute
 		top: 0
@@ -2851,9 +2846,6 @@ body
 	height: 60px
 	padding-top: 0
 	background-color: #E03632
-	background-image: url(../../images/background/new_bg.svg)
-	background-repeat: no-repeat
-	background-position: right top
 
 	body.fullscreen &
 		display: none
@@ -2887,7 +2879,7 @@ body
 		z-index: 20
 		position: relative
 		padding: 0
-		display: none
+		display: inline-block
 		cursor: pointer
 		transition: opacity, filter, -webkit-filter 1s linear
 		font: inherit;
@@ -2936,7 +2928,6 @@ body
 		padding-left: 0 !important
 	.b-user
 		color: #ffffff
-		width: 310px
 		display: flex
 		justify-content: space-between
 		border-left: 1px solid transparent
@@ -2950,6 +2941,9 @@ body
 				border-bottom: 1px solid transparent
 		&__item
 			color: inherit
+			&:nth-child(2)
+				display: flex
+				min-width: unset
 			&:hover
 				text-decoration: none
 				.b-user__link span, .b-user__text
@@ -2966,6 +2960,16 @@ body
 			&-ico
 				img
 					display: block
+				&-inkognito
+					width: 32px
+					height: 32px		
+					background-image: url(../../img/profile/user.svg)
+					background-repeat: no-repeat
+					background-size: 32px 32px
+					background-position: center center
+					& + img
+						display: none
+
 			&::before
 				color: rgba(255,255,255,0.4)
 			&-wrapper
@@ -2978,12 +2982,15 @@ body
 		&__helper
 			@extend %helper
 			&:after
+				left: 84%
 				top: -15px
 			&:before
+				left: 84%
 				top: -16px
 			&-wrapper
 				left: unset
-				right: -15px
+				right: 5px
+				margin-top: 54px
 			&-container
 				@extend %helper-container				
 			&-list
@@ -3012,9 +3019,7 @@ body
 		background-color: #C51311
 		box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
 		padding: 10px 0 0
-		max-width: 250px
-		@media (min-width: 768px)
-			height: auto
+		background-image: unset
 		.header__menu-list
 			height: auto
 			display: block
@@ -3081,7 +3086,7 @@ body
 	.header__menu
 		margin-right: 18px
 		text-align: center
-		display: block
+		display: none
 	.header__menu-list
 		height: 61px
 		display: flex
@@ -3205,24 +3210,32 @@ body
 						background-repeat: no-repeat
 						display: inline-block
 	.b-top-wrapper
+		flex-wrap: wrap
 		&__item
+			display: flex
 			border-bottom: 1px solid rgba(255,255,255,0.4)
-			&:last-child
+			&:first-child
+				margin-top: 0
+			&:not(:first-child)
 				flex-grow: 1
 				justify-content: flex-end
+			&-project
+				width: 100%
+				height: 60px
+				background-color: #ffffff
+				order: 4
+				border-bottom: 1px solid $color_easygrey
 
 	.btn.btn-input
-		padding: 9px 19.5px 6px 37px
+		padding: 0
 		height: 35px
+		min-width: 35px
 		margin-right: 20px
+		margin-top: 13px
 
 #header.reports-header
-	background-color: #fff
-	background-image: unset
-
-	.b-top-wrapper
-		&__item:not(#header-left)
-			border-bottom: 1px solid $color_easygrey
+	height: 120px
+	max-height: 120px
 			
 	#header-left
 		background-color: #E03632
@@ -3230,24 +3243,8 @@ body
 		background-repeat: no-repeat
 		background-position: left top
 
-	.b-user
-		color: $color_grey
-		border-left: 1px solid $color_easygrey
-		&__item:hover
-			.b-user__link span, .b-user__text
-				border-bottom-color: rgba(105, 120, 130, 0.5)
-		&__name
-			&::before
-				color: #AFBAC1
-			&-wrapper
-				&:hover
-					.b-user__name:before
-						color: #2F353B
-
 	.b-project-wrapper
 		flex-grow: 1
-	
-
 		
 
 .b-project
@@ -3257,7 +3254,7 @@ body
 	flex-grow: 1
 	&__item
 		display: flex
-		margin-right: 30px
+		margin-right: 15px
 		&:last-child
 			margin-right: 0
 			flex-grow: 1
@@ -3335,7 +3332,6 @@ body
 				&:hover
 					cursor: pointer
 					background-color: #F6F8FA
-
 	&__limits
 		font-size: 14px
 		&-cur
@@ -3347,7 +3343,7 @@ body
 				margin: 0 5px
 
 	&__buttons
-		display: flex
+		display: none
 		color: #2E97DF
 		&-restart,
 		&-autostart,
@@ -3371,15 +3367,86 @@ body
 		&-settings:before
 			background-image: url(../images/icon/settings.svg)
 
+	&__mobbuttons
+		&-wrapper
+			cursor: pointer
+			position: relative
+			&:hover 
+				.b-project__mobbuttons-helper-wrapper
+					display: block
+					top: calc(100% - 3px)
+					left: -45px
+					padding-top: 15px
+				.b-project__mobbuttons-toggler-dot
+					background-color: $color_grey
+		&-helper
+			@extend %helper
+			&:after
+				top: -0px
+			&:before
+				top: -1px
+			&-wrapper
+				@extend %helper-wrapper
+			&-container
+				@extend %helper-container
+			&-list
+				@extend %helper-list
+				li
+					line-height: 35px
+					padding: 0 20px 0 0px
+					margin: 0 -20px 0 -10px
+					@extend %helper-item		
+					&:hover
+						cursor: pointer
+						background-color: #F6F8FA
+		&-toggler
+			display: flex
+			flex-flow: row nowrap
+			height: 100%
+			align-items: center
+			&-dot
+				width: 8px
+				height: 8px
+				min-width: 8px
+				border-radius: 50%
+				background-color: $color_easygrey
+				margin-left: 5px
+		
+		&-restart,
+		&-autostart,
+		&-settings
+			color: #2E97DF
+			font-size: 15px
+			line-height: 35px
+			width: 100%
+			text-align: center
+			cursor: pointer
+			display: flex
+			span
+				display: inline-block
+			&:before
+				content: ''
+				width: 30px
+				display: block
+				height: 34px
+				background-repeat: no-repeat
+				background-position: center center
+		&-restart:before
+			background-image: url(../images/icon/restart.svg)
+		&-autostart:before
+			background-image: url(../images/icon/autostart.svg)
+		&-settings:before
+			background-image: url(../images/icon/settings.svg)
+
 .b-inreports
 	display: flex
 	&__aside
 		position: absolute
-		top: 60px
+		top: 120px
 		left: 0
 		width: 250px
 		border-right: 1px solid $color_easygrey
-		height: calc(100vh - 60px)
+		height: calc(100vh - 120px)
 		&.sticky
 			height: 100vh
 		&-switcher

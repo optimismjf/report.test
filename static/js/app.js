@@ -1100,9 +1100,6 @@ $(function () {
   });
   /* ------------------------ user scripts ------------------------ */
 
-  $(document).on('click', '.b-user__name-ico', function () {
-    $('.hamburger').addClass('is-active');
-  });
   /* profile btn change text */
 
   $(document).on('click', '.b-personal-data__btn span', function () {
