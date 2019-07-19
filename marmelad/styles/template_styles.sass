@@ -3441,12 +3441,13 @@ body
 .b-inreports
 	display: flex
 	&__aside
+		left: -250px
+		width: 0
 		position: absolute
-		top: 120px
-		left: 0
-		width: 250px
+		top: 0
 		border-right: 1px solid $color_easygrey
-		height: calc(100vh - 120px)
+		height: 100vh
+		z-index: 3
 		&.sticky
 			height: 100vh
 		&-switcher
@@ -3466,6 +3467,26 @@ body
 				&.active
 					background-color: #fff
 					color: #2F353B
+		&-toggler
+			position: fixed
+			width: 40px
+			height: 40px
+			bottom: 0
+			left: 0
+			background-color: #2E97DF
+			font: normal normal normal 21px/1 FontAwesome
+			color: #fff
+			cursor: pointer
+			&:after
+				content: "\f105"
+				position: absolute
+				bottom: 0
+				left: 0
+				height: 100%
+				width: 100%
+				line-height: 40px
+				text-align: center
+
 		&-item
 			display: none
 			list-style: none
@@ -3480,8 +3501,8 @@ body
 				display: block
 		&.in-process 
 	&__main
-		width: calc(100% - 250px)
-		margin-left: 250px
+		width: 100%
+		margin-left: 0
 		background-color: #f6f8fa
 		padding: 14px 0 0 20px
 		overflow-y: auto
@@ -3524,7 +3545,11 @@ body
 				position: absolute
 				bottom: 0
 				left: 254px
-				padding: 5px
+				padding: 0 0
+				width: 36px
+				height: 40px
+				line-height: 40px
+				text-align: center
 				background-color: #2E97DF
 			&:hover
 				width: 250px !important
@@ -3536,9 +3561,40 @@ body
 				&:after
 					left: 254px
 					content: "\f104"
+					padding-right: 5px
+			&-toggler
+				display: none
 		&__main
 			width: 100%
 			margin-left: 0
+
+	.aside-toggle &
+		&__aside
+			left: 0px
+			position: fixed
+			width: 250px !important
+			z-index: 20
+			background-color: #fff
+			*:not(:last-child)
+				
+			&-toggler
+				position: fixed
+				left: 0px
+				&:after
+					content: "\f104"
+					padding-right: 0
+		&__main
+			width: 100%
+			margin-left: 0
+			&:before
+				content: ''
+				top: 0
+				left: 0
+				width: 100vw
+				height: 100vh
+				position: fixed
+				background-color: rgba(0,0,0,0.4)
+				z-index: 19
 	&__workarea
 		position: relative
 		overflow: hidden

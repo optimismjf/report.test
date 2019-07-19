@@ -713,7 +713,16 @@ function dataAction(e) {
 
 		case 'toggle-fullscreen':
 			/* Тоглим рабочую область на весь экран */
-			$('body').toggleClass('fullscreen');
+			$('body').toggleClass('fullscreen').removeClass('aside-toggle');
+
+			$(window).trigger('resize');
+			if($('.freeze-table').length) $('.freeze-table').freezeTable('update');
+			
+			break;
+
+		case 'toggle-aside':
+			/* Тоглим сайдбар */
+			$('body:not(.fullscreen)').toggleClass('aside-toggle');
 
 			$(window).trigger('resize');
 			if($('.freeze-table').length) $('.freeze-table').freezeTable('update');
