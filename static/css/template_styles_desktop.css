@@ -162,22 +162,17 @@
 
 .select2-dropdown {
   border: none;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 20px 0 rgba(162, 174, 183, 0.3);
   -o-box-shadow: 0 0 20px 0 rgba(162, 174, 183, 0.3);
   box-shadow: 0 0 20px 0 rgba(162, 174, 183, 0.3); }
 
 .select2-container--open .select2-dropdown--below {
-  -webkit-border-top-left-radius: 5px;
   border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
   border-top-right-radius: 5px; }
 
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
-  -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px; }
 
 .select2-container--default .select2-results > .select2-results__options {
@@ -214,7 +209,6 @@
     width: 20px;
     border: 1px solid #E1E4E6;
     background-color: transparent;
-    -webkit-border-radius: 3px;
     border-radius: 3px;
     background-color: #F6F8FA; }
   .b-main-checkbox input:checked + label:after {
@@ -255,7 +249,6 @@
     width: 20px;
     border: 1px solid #E1E4E6;
     background-color: transparent;
-    -webkit-border-radius: 10px;
     border-radius: 10px;
     background-color: #F6F8FA; }
   .b-main-radios input:checked + label:after {
@@ -265,14 +258,12 @@
     left: -21px;
     height: 10px;
     width: 10px;
-    -webkit-border-radius: 50%;
     border-radius: 50%;
     background-color: #e03632; }
 
 /* input */
 .b-main-input input {
   border: 1px solid #E1E4E6;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   color: #2F353B;
   background-color: #F6F8FA;
@@ -293,7 +284,6 @@
 .b-main-textarea textarea {
   outline: none;
   border: 1px solid #E1E4E6;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   background-color: #F6F8FA;
   width: 100%;
@@ -310,7 +300,6 @@
   cursor: default; }
 
 .b-main-button button, .b-main-button a {
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   background-color: #2F353B;
   color: #fff;
@@ -331,7 +320,6 @@
     text-decoration: none; }
 
 .b-main-button_white button, .b-main-button_white a {
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #E1E4E6;
   color: #2E97DF;
@@ -838,7 +826,6 @@
   border: 1px solid #E1E4E6;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 21px 30px;
   width: 635px;
@@ -915,7 +902,6 @@
       position: absolute;
       height: 20px;
       width: 30px;
-      -webkit-background-size: auto 100%;
       background-size: auto 100%;
       background-repeat: no-repeat;
       display: inline-block; }
@@ -928,7 +914,6 @@
   border: 1px solid #E1E4E6;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 21px 30px;
   width: 635px;
@@ -1005,7 +990,6 @@
       position: absolute;
       height: 20px;
       width: 30px;
-      -webkit-background-size: auto 100%;
       background-size: auto 100%;
       background-repeat: no-repeat;
       display: inline-block; }
@@ -1054,7 +1038,6 @@
           content: '';
           height: 8px;
           width: 8px;
-          -webkit-border-radius: 50%;
           border-radius: 50%;
           background-color: #E03632;
           left: -22px;

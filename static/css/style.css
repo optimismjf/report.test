@@ -216,7 +216,6 @@
   background-color: #fff;
   -webkit-box-shadow: 0 0 20px 0 rgba(162,174,183,0.3);
   box-shadow: 0 0 20px 0 rgba(162,174,183,0.3);
-  -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 .b-top-wrapper__helper:before {
@@ -515,7 +514,6 @@ input.error {
 .b-challenge-popup textarea {
   width: 100%;
   background-color: #f6f8fa;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #e1e4e6;
   font-size: 16px;
@@ -593,7 +591,6 @@ input.error {
   color: #fff;
   border: none;
   cursor: pointer;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   font-size: 15px;
   line-height: 25px;
@@ -835,7 +832,6 @@ input.error {
   background-color: #fff;
   -webkit-box-shadow: 0 0 20px 0 rgba(162,174,183,0.3);
   box-shadow: 0 0 20px 0 rgba(162,174,183,0.3);
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   white-space: nowrap;
   -webkit-transform: translateX(-50%);
@@ -873,7 +869,6 @@ input.error {
   right: 0;
   bottom: 0;
   background-color: #faf7dc;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1088,7 +1083,6 @@ input.error {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   z-index: 1;
   opacity: 0;
@@ -1133,7 +1127,6 @@ input.error {
   -ms-flex-pack: center;
   justify-content: center;
   border: 1px solid #e1e4e6;
-  -webkit-border-radius: 100px;
   border-radius: 100px;
   background-color: #fff;
   color: #a5aeb5;
@@ -1488,7 +1481,6 @@ input.error {
   border: 1px solid #e1e4e6;
   -webkit-box-shadow: 0px 0px 20px rgba(162,174,183,0.295);
   box-shadow: 0px 0px 20px rgba(162,174,183,0.295);
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   z-index: 12;
   padding: 11px 0;
@@ -1521,7 +1513,6 @@ input.error {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-border-radius: none;
   border-radius: none;
   padding: 0;
   margin: 0;
@@ -1683,7 +1674,6 @@ input.error {
   left: 0;
   right: 0;
   top: 100%;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 20px 0 rgba(162,174,183,0.3);
   box-shadow: 0 0 20px 0 rgba(162,174,183,0.3);
@@ -1735,7 +1725,6 @@ input.error {
 .b-challenge__group {
   padding: 30px 40px 40px 30px;
   max-width: 789px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   background-color: #faf7dc;
   display: -webkit-box;
@@ -1858,7 +1847,6 @@ input.error {
 .b-challenge__text-add-button {
   display: block;
   background-color: #fff;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #e1e4e6;
   color: #2e97df;
@@ -1957,7 +1945,6 @@ input.error {
   width: 790px;
   padding: 30px;
   background-color: #fff;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   -webkit-box-shadow: 0 0 8px rgba(0,0,0,0.3);
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
@@ -1995,7 +1982,6 @@ input.error {
   height: 30px;
   width: 2px;
   background-color: #333;
-  -webkit-border-radius: 100px;
   border-radius: 100px;
 }
 .b-challenge-popup__close:before {
@@ -2224,7 +2210,6 @@ input.error {
   width: 7px;
   height: 7px;
   margin: 4px;
-  -webkit-border-radius: 100px;
   border-radius: 100px;
   background-color: #2f353b;
 }
@@ -2419,7 +2404,6 @@ input.error {
 }
 .b-reports-table--task .b-reports-table__item {
   padding: 2px 4px 2px 10px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 .b-reports-table--task .b-reports-table__item:hover .b-reports-table__item-delete,
@@ -2490,7 +2474,6 @@ input.error {
   width: 15px;
   min-width: 15px;
   height: 15px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   margin-right: 10px;
 }
@@ -2508,7 +2491,6 @@ input.error {
   display: inline-block;
   padding: 5px 10px;
   margin-bottom: 5px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   color: #2f353b;
   text-decoration: none;
@@ -2611,7 +2593,6 @@ input.error {
   font-size: 13px;
   color: #2f353b;
   height: 30px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   background-color: #f6f8fa;
 }
@@ -2876,12 +2857,10 @@ input.error {
   width: 300px;
   max-width: 300px;
   text-align: left;
-  -webkit-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
 .b-statistics__table table td:last-child,
 .b-statistics__table table th:last-child {
-  -webkit-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
 .b-statistics__table table td.big,
@@ -2931,7 +2910,6 @@ input.error {
   -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 .b-statistics__table table .table-mark.js-hover {
@@ -3067,7 +3045,6 @@ input.error {
   -webkit-box-shadow: 0 0 10px 0 rgba(162,174,183,0.2);
   box-shadow: 0 0 10px 0 rgba(162,174,183,0.2);
   background-color: #fff;
-  -webkit-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
 .b-reports-tabs a.js-active:after {
@@ -3336,7 +3313,6 @@ input.error {
   right: 0;
   z-index: 2;
   line-height: 1.2;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 5px 8px;
   opacity: 0;
@@ -3358,7 +3334,6 @@ input.error {
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-transition: 0.3s linear all;
   -o-transition: 0.3s linear all;
