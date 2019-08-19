@@ -695,6 +695,16 @@ section
 	&__mobbuttons-wrapper
 		@media only screen and (min-width : 1410px)
 			display: none
+		&:hover 
+			.b-project__mobbuttons
+				&-helper-wrapper
+					@media only screen and (min-width : 1200px)
+						left: -45px
+						right: unset
+				&-helper
+					&:before, &:after
+						@media only screen and (min-width : 1200px)
+							left: 50%
 	&__buttons
 		@media only screen and (min-width : 1410px)
 			display: flex

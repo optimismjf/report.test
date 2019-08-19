@@ -1130,6 +1130,15 @@
   .b-project__mobbuttons-wrapper {
     display: none; } }
 
+@media only screen and (min-width: 1200px) {
+  .b-project__mobbuttons-wrapper:hover .b-project__mobbuttons-helper-wrapper {
+    left: -45px;
+    right: unset; } }
+
+@media only screen and (min-width: 1200px) {
+  .b-project__mobbuttons-wrapper:hover .b-project__mobbuttons-helper:before, .b-project__mobbuttons-wrapper:hover .b-project__mobbuttons-helper:after {
+    left: 50%; } }
+
 @media only screen and (min-width: 1410px) {
   .b-project__buttons {
     display: -webkit-box;

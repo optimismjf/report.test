@@ -3221,7 +3221,7 @@ body
 				justify-content: flex-end
 			&-project
 				width: 100%
-				height: 60px
+				height: 94px
 				background-color: #ffffff
 				order: 4
 				border-bottom: 1px solid $color_easygrey
@@ -3234,8 +3234,8 @@ body
 		margin-top: 13px
 
 #header.reports-header
-	height: 120px
-	max-height: 120px
+	height: 154px
+	max-height: 154px
 			
 	#header-left
 		background-color: #E03632
@@ -3250,23 +3250,45 @@ body
 .b-project
 	display: flex
 	align-items: center
-	padding: 0 20px
-	flex-grow: 1
+	padding: 10px 20px
+	flex-grow: 1	
+	@media all and (max-width : 767px)
+		justify-content: space-between
+		flex-wrap: wrap
 	&__item
 		display: flex
-		margin-right: 15px
 		&:last-child
 			margin-right: 0
-			flex-grow: 1
 			justify-content: flex-end
+
+		@media all and (max-width : 767px)
+			width: 50%
+
+		&:nth-child(1)
+			@media all and (max-width : 767px)
+				order: 1
+		&:nth-child(2)
+			@media all and (max-width : 767px)
+				order: 3
+		&:nth-child(3)
+			@media all and (max-width : 767px)
+				justify-content: flex-end
+				order: 4
+		&:nth-child(4)
+			@media all and (max-width : 767px)
+				order: 2
 	&__main
 		font-size: 18px
 		line-height: 21px
 		letter-spacing: -0.5px
+		@media all and (max-width : 767px)
+			display: none
 	i
 		margin: 0 8px
 		color: #C2CAD8
 		font-size: 21px
+		@media all and (max-width : 767px)
+			display: none
 	&__current
 		display: flex
 		align-items: center
@@ -3309,7 +3331,7 @@ body
 			&:hover .b-project__helper-wrapper
 				display: block
 				top: calc(100% - 3px)
-				left: -20px
+				left: 0px
 				padding-top: 15px
 
 	&__helper
@@ -3375,7 +3397,8 @@ body
 				.b-project__mobbuttons-helper-wrapper
 					display: block
 					top: calc(100% - 3px)
-					left: -45px
+					left: unset
+					right: 0
 					padding-top: 15px
 				.b-project__mobbuttons-toggler-dot
 					background-color: $color_grey
@@ -3383,8 +3406,10 @@ body
 			@extend %helper
 			&:after
 				top: -0px
+				left: calc(100% - 16px)
 			&:before
 				top: -1px
+				left: calc(100% - 16px)
 			&-wrapper
 				@extend %helper-wrapper
 			&-container
