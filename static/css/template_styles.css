@@ -6149,7 +6149,7 @@ section ul {
     height: 16px;
     background-color: #a2aeb7; }
   .b-faq__list-topic.activate:before {
-    background-color: #e03632; }
+    background-color: #E03632; }
   .b-faq__list-topic.activate:after {
     opacity: 0; }
 
@@ -6190,6 +6190,77 @@ section ul {
   min-height: 50px; }
   .b-projects__search input {
     min-height: 50px; }
+
+.b-projects-empty {
+  padding: 25px; }
+  .b-projects-empty__title {
+    font-size: 25px;
+    line-height: 29px;
+    margin-bottom: 40px; }
+  .b-projects-empty__actions {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%; }
+  .b-projects-empty__action {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 10px rgba(162, 174, 183, 0.2);
+    box-shadow: 0px 0px 10px rgba(162, 174, 183, 0.2);
+    border-radius: 5px;
+    padding: 35px 40px 40px;
+    margin-bottom: 20px; }
+    .b-projects-empty__action-text {
+      font-size: 15px;
+      line-height: 21px;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1; }
+      .b-projects-empty__action-text p {
+        margin-bottom: 1.5em; }
+    .b-projects-empty__action-icon img {
+      width: 110px;
+      height: auto;
+      margin: 40px auto;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+    .b-projects-empty__action-limit {
+      color: #E03632; }
+    .b-projects-empty__action-link {
+      width: 100%;
+      display: block;
+      line-height: 40px;
+      text-align: center;
+      color: #fff;
+      background-color: #2F353B;
+      border-radius: 3px;
+      margin: 0 auto;
+      max-width: 230px; }
+      .b-projects-empty__action-link:hover {
+        background-color: #E03632;
+        text-decoration: none; }
 
 .b-projects-table {
   margin-top: 20px; }

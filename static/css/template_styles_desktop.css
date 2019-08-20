@@ -521,6 +521,11 @@
     margin-right: 140px; } }
 
 @media only screen and (min-width: 1200px) {
+  .b-projects-empty__action {
+    width: -webkit-calc(100% / 3 - 40px);
+    width: calc(100% / 3 - 40px); } }
+
+@media only screen and (min-width: 1200px) {
   .b-projects-table__item:nth-child(1) {
     width: 28%; }
   .b-projects-table__item:nth-child(2) {

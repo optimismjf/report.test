@@ -1471,6 +1471,11 @@
     padding-left: 34px;
     padding-right: 34px; } }
 
+@media only screen and (min-width: 768px) {
+  .b-projects-empty__action {
+    width: -webkit-calc(100% / 2 - 20px);
+    width: calc(100% / 2 - 20px); } }
+
 @media only screen and (min-width: 1025px) {
   .b-projects {
     background-color: #f6f8fa;
