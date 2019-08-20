@@ -2223,3 +2223,27 @@
 @media only screen and (min-width: 768px) {
   .b-project__report-wrapper:hover .b-project__helper-wrapper {
     left: -20px; } }
+
+@media only screen and (min-width: 768px) {
+  .b-form {
+    padding: 30px 20px; } }
+
+@media only screen and (min-width: 768px) {
+  .b-form__row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; } }
+  @media only screen and (min-width: 768px) and (min-width: 768px) {
+    .b-form__row-right {
+      width: 70%;
+      padding-left: 15px; } }
+  @media only screen and (min-width: 768px) and (min-width: 768px) {
+    .b-form__row-left {
+      width: auto;
+      margin-bottom: 0; } }

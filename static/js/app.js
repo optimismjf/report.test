@@ -913,6 +913,58 @@ function hideChilds(t) {
 
 ;
 
+;(function() { // for sitemap generation form
+	$(document).on('click', function(e) {
+		let t = $(e.target);
+		if(!t.is('.b-form__select, .b-form__select-list')) {
+			$('.b-form__select').removeClass('opened');
+			$('.b-form__select-list').removeAttr('style');
+		} 
+	});
+	$('.b-form__select').on('click', function() {
+		let form = $(this).closest('form'),
+			wrapper = $(this).closest('.b-form__select-wrapper'),
+			list = wrapper.find('ul'),
+			alist = form.find('ul'),
+			aselect = form.find('.b-form__select');
+		if($(this).hasClass('opened')) {
+			aselect.removeClass('opened');
+			alist.removeAttr('style');
+		} else {
+			aselect.removeClass('opened');
+			alist.removeAttr('style');
+			$(this).addClass('opened');
+			list.show();
+		};
+	});
+
+	$('.b-form__select-item').on('click', function() {
+		let form = $(this).closest('form'),
+			text = $(this).text(),
+			val = $(this).data('value'),
+			list = $(this).closest('ul'),
+			select = list.prev(),
+			wrapper = select.parent(),
+			target = form.find(select.data('target'));
+
+		select.addClass('changed').text(text);
+		list.removeAttr('style');
+		target.val(val);
+	});
+
+
+	if ($('#datepicker').length) {
+		$( "#datepicker" ).datepicker({
+			inline: true,
+			showOn: "both",
+			buttonImageOnly: true,
+			buttonImage: "/images/icon/icon-calendar.svg",
+			buttonText: "Дата модификации"
+		});
+	}
+
+})();
+
 
 (function () {
   // Test via a getter in the options object to see if the passive property is accessed

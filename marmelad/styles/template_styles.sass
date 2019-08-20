@@ -3969,7 +3969,160 @@ body
 			padding-right: 10px
 		&__value
 			color: #0044BB
+	&__row
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-between
+	
+	&__form
+		min-height: auto
+		width: 100%
+		padding-right: 20px
+
+	&__text
+		padding-right: 20px
+		margin-top: 20px
+		ol li:before
+			color: inherit
 				
+.b-form
+	border: 1px solid $color_easygrey
+	background-color: #fff
+	padding: 20px 10px
+	&__row
+		display: flex
+		flex-flow: column nowrap
+		margin: 0 0 15px
+		justify-content: flex-end
+		&-right
+			width: 100%
+			padding-left: 0
+		&-left
+			font-size: 15px
+			width: 100%
+			margin-bottom: 5px
+
+	&__submit
+		appearance: unset
+		box-shadow: none
+		border: 0
+		outline: 0
+		background-color: #2E97DF
+		text-align: center
+		font-size: 15px
+		line-height: 24px
+		padding: 5px 36px
+		color: #FFFFFF
+		cursor: pointer
+		margin-top: 1em
+		&[disabled]
+			background-color: #C2CAD8
+	&__select
+		line-height: 34px
+		background: #FFFFFF
+		color: #AFBAC1
+		padding: 0 10px
+		border: 1px solid #C2CAD8
+		width: 100%
+		cursor: pointer
+		&.changed
+			color: #2F353B
+		&.opened:after
+			transform: scaleY(-1)
+		&:after
+			content: "\f0d7"
+			position: absolute
+			top: 10px
+			right: 10px
+			display: inline-block
+			font: normal normal normal 14px/1 FontAwesome
+			text-rendering: auto
+			color: #2F353B
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			pointer-events: none
+		&-wrapper
+			position: relative
+			font-size: 15px
+		&-list
+			display: none
+			position: absolute
+			top: calc(100% - 1px)
+			left: 0
+			width: 100%
+			list-style: none
+			padding: 0
+			margin: 0
+			border: 1px solid #C2CAD8
+			background-color: #fff
+			z-index: 1
+		&-item
+			padding: 0 10px
+			line-height: 34px
+			&:hover
+				background: rgba(198, 207, 217, 0.45)
+				cursor: pointer
+	#datepicker
+		-webkit-appearance: none
+		-moz-appearance: textfield
+		box-shadow: none
+		border: 0
+		outline: 0
+		padding: 0 10px
+		border: 1px solid #C2CAD8
+		line-height: 34px
+		max-width: 140px
+		&:focus
+			border-color: #2E97DF
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button
+			appearance: none
+			margin: 0
+	.datepicker
+		position: relative
+		display: inline-block
+		img
+			cursor: pointer
+			width: 36px
+			height: 36px
+			position: absolute
+			border-left: 1px solid #C2CAD8
+			right: 1px
+			top: 0
+	&__checkbox
+		margin-bottom: 5px
+		.custom-checkbox
+			&:checked,
+			&:not(:checked)
+				display: none
+				& + label
+					position: relative
+					padding-left: 24px
+					font-size: 15px
+					cursor: pointer
+					line-height: 20px
+					display: inline-block
+					color: #666
+					&:before
+						content: ''
+						position: absolute
+						left: 0
+						top: 2px
+						width: 16px
+						height: 16px
+						border: 1px solid #C2CAD8
+						background-color: #fff
+						background-repeat: no-repeat
+						background-position: center center
+					&:hover:before
+						border-color: #AFBAC1
+			&:checked + label
+				&:before
+					border-color: #AFBAC1
+					background-image: url(../images/icon/checked.svg)
+
+#ui-datepicker-div 
+	z-index: 3 !important
 
 #svodnaya
 	td, th
