@@ -8800,7 +8800,8 @@ body.is-hidden {
     top: 0;
     border-right: 1px solid #E1E4E6;
     height: 100vh;
-    z-index: 3; }
+    z-index: 3;
+    background-color: #fff; }
     .b-inreports__aside.sticky {
       height: 100vh; }
     .b-inreports__aside-switcher {
@@ -8858,7 +8859,8 @@ body.is-hidden {
       line-height: 25px; }
       .b-inreports__aside-menu-wrapper {
         height: 100%;
-        overflow-y: auto; }
+        overflow-y: auto;
+        overflow-x: hidden; }
       .b-inreports__aside-menu-link {
         display: block;
         padding-left: 36px;
@@ -8866,7 +8868,8 @@ body.is-hidden {
         color: #697882;
         background-repeat: no-repeat;
         background-size: 16px 16px;
-        background-position: 10px center; }
+        background-position: 10px center;
+        position: relative; }
         .b-inreports__aside-menu-link.icon-external {
           background-image: url(../images/icon/icon-external.svg); }
         .b-inreports__aside-menu-link.icon-workkey {
@@ -8877,9 +8880,50 @@ body.is-hidden {
           background-image: url(../images/icon/icon-export.svg); }
         .b-inreports__aside-menu-link.icon-summary {
           background-image: url(../images/icon/icon-summary.svg); }
+        .b-inreports__aside-menu-link.critical:before {
+          content: '';
+          position: absolute;
+          left: 10px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 16px;
+          height: 16px;
+          display: block;
+          background-color: #FC6620; }
+        .b-inreports__aside-menu-link.warning:before {
+          content: '';
+          position: absolute;
+          left: 10px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 16px;
+          height: 16px;
+          display: block;
+          background-color: #F5A623; }
+        .b-inreports__aside-menu-link.low:before {
+          content: '';
+          position: absolute;
+          left: 10px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 16px;
+          height: 16px;
+          display: block;
+          background-color: #C2CAD8; }
+        .b-inreports__aside-menu-link:not(span) {
+          color: #2F353B; }
+          .b-inreports__aside-menu-link:not(span):hover {
+            text-decoration: none;
+            background-color: rgba(225, 228, 230, 0.5); }
+    .b-inreports__aside-switcher ~ .b-inreports__aside-item {
+      height: -webkit-calc(100% - 38px);
+      height: calc(100% - 38px); }
     .b-inreports__aside-submenu {
       list-style: none;
-      margin: 0;
+      margin: 0 0 10px;
       padding: 0; }
       .b-inreports__aside-submenu-item {
         position: relative; }
@@ -8887,13 +8931,27 @@ body.is-hidden {
         display: block;
         padding-left: 36px;
         font-size: 13px;
-        color: #2F353B; }
+        color: #2F353B;
+        white-space: nowrap; }
         .b-inreports__aside-submenu-link:hover {
           color: inherit;
           text-decoration: none;
           background-color: rgba(225, 228, 230, 0.5); }
         .b-inreports__aside-submenu-link.active {
           background-color: #E1E4E6; }
+        .b-inreports__aside-submenu-link.locked:after {
+          content: '';
+          width: 14px;
+          height: 25px;
+          padding: 0 5.5px 0;
+          margin-left: 5px;
+          display: inline;
+          background-image: url(../images/icon/icon-lock.svg);
+          background-repeat: no-repeat;
+          background-size: 9px auto;
+          background-position: center center; }
+        .b-inreports__aside-submenu-link-count {
+          color: #A2AEB7; }
     .b-inreports__aside-signals {
       position: absolute;
       z-index: 1;
@@ -8950,13 +9008,12 @@ body.is-hidden {
       display: none;
       list-style: none;
       margin: 0;
-      padding: 20px 10px; }
-      .b-inreports__aside-item li a {
-        font-size: 15px;
-        line-height: 2em;
-        color: #2F353B; }
+      padding: 0;
+      height: 100%; }
       .b-inreports__aside-item.active {
         display: block; }
+    .b-inreports__aside.in-process .b-inreports__aside-menu-wrapper {
+      overflow: hidden; }
   .b-inreports__main {
     width: 100%;
     margin-left: 0;

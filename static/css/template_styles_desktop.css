@@ -1178,7 +1178,7 @@
     z-index: 3; } }
 
 @media only screen and (min-width: 1200px) {
-  .aside-toggle .b-inreports__aside *:not(:last-child) {
+  .aside-toggle .b-inreports__aside *:not(.b-inreports__aside-toggler) {
     display: none; } }
 
 @media only screen and (min-width: 1200px) {
