@@ -3548,6 +3548,94 @@ body
 				&.active
 					background-color: #fff
 					color: $color_black_main
+		&-back
+			display: block
+			line-height: 38px
+			background-color: rgba(241, 241, 241, 0.5)
+			border-bottom: 1px solid $color_easygrey
+			padding-left: 36px
+			text-transform: uppercase
+			font-size: 13px
+			color: $color_grey
+			background-image: url(../images/icon/icon-back.svg)
+			background-repeat: no-repeat
+			background-position: 10px center
+			background-size: 14px 14px
+			&:hover
+				text-decoration: none
+				color: inherit
+		&-menu			
+			list-style: none
+			margin: 0 0 0
+			padding: 15px 0 70px
+			line-height: 25px
+			&-wrapper
+				height: 100%
+				overflow-y: auto
+			&-link
+				display: block
+				padding-left: 36px
+				font-size: 15px
+				color: $color_grey
+				background-repeat: no-repeat
+				background-size: 16px 16px
+				background-position: 10px center
+				&.icon-external
+					background-image: url(../images/icon/icon-external.svg)
+				&.icon-workkey
+					background-image: url(../images/icon/icon-workkey.svg)
+				&.icon-text
+					background-image: url(../images/icon/icon-text.svg)
+				&.icon-export
+					background-image: url(../images/icon/icon-export.svg)
+				&.icon-summary
+					background-image: url(../images/icon/icon-summary.svg)
+
+		&-submenu
+			list-style: none
+			margin: 0
+			padding: 0
+			&-item
+				position: relative
+			&-link
+				display: block
+				padding-left: 36px
+				font-size: 13px
+				color: $color_black_main
+				&:hover
+					color: inherit
+					text-decoration: none
+					background-color: rgba($color_easygrey, 0.5)
+				&.active
+					background-color: $color_easygrey
+		&-signals
+			position: absolute
+			z-index: 1
+			list-style: none
+			display: flex
+			top: 0
+			right: 20px
+			height: 100%
+			margin: 0
+			align-items: center
+			padding: 0
+		&-signal
+			width: 12px
+			height: 12px
+			border-radius: 3px
+			margin-left: 4px
+			font-weight: 500
+			font-size: 11px
+			line-height: 13px
+			color: #fff
+			text-align: center
+			&.critical
+				background-color: rgba($color_red, 0.8)
+			&.warning
+				background-color: rgba($color_orange, 0.8)
+			&.common
+				background-color: rgba($color_grey, 0.8)
+
 		&-toggler
 			position: fixed
 			width: 40px
@@ -3653,10 +3741,9 @@ body
 		&__aside
 			left: 0px
 			position: fixed
-			width: 250px !important
+			width: 100% !important
 			z-index: 20
 			background-color: #fff
-			*:not(:last-child)
 				
 			&-toggler
 				position: fixed

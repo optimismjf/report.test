@@ -2210,24 +2210,20 @@
   height: 120px;
   max-height: 120px; }
 
-@media only screen and (min-width: 768px) {
-  .b-project {
-    padding: 0 20px; } }
+.aside-toggle .b-inreports__aside {
+  width: 250px !important; }
 
-@media only screen and (min-width: 768px) {
+.b-project {
+  padding: 0 20px; }
   .b-project__item {
-    margin-right: 15px; } }
-
-@media only screen and (min-width: 768px) {
-  .b-project__item:last-child {
+    margin-right: 15px; }
+  .b-project:last-child {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
-    flex-grow: 1; } }
-
-@media only screen and (min-width: 768px) {
+    flex-grow: 1; }
   .b-project__report-wrapper:hover .b-project__helper-wrapper {
-    left: -20px; } }
+    left: -20px; }
 
 @media only screen and (min-width: 768px) {
   .b-form {

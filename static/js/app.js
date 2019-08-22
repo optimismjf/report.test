@@ -765,10 +765,20 @@ function hideChilds(t) {
 		$(childTarget).hide().removeClass('show')
 		if($(childTarget).find('[data-action=toggle-childs]')) hideChilds(childTarget);
 	});
-}
-;
+};
 
 ;(function () {
+
+	$('.b-inreports__aside-menu-wrapper').niceScroll({
+      mousescrollstep: 10,
+      cursorcolor: '#A2AEB7',
+      railpadding: {
+        top: 13,
+        right: 2,
+        left: 0,
+        bottom: 13
+      }
+    });
 
 	addListenerMulti(document, 'mouseover mouseout', function(event){
 		var e = event || window.event;

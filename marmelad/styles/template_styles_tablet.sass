@@ -1666,62 +1666,53 @@
 #header
 	&.main-header
 		.b-user
-			@media only screen and (min-width : 768px)
-				width: 310px
-			&__item:nth-child(2)
-				@media only screen and (min-width : 768px)
-					min-width: 100px
+			width: 310px
+		&__item:nth-child(2)
+			min-width: 100px
 		.btn.btn-input
-			@media only screen and (min-width : 768px)
-				padding: 9px 19.5px 6px 37px
+			padding: 9px 19.5px 6px 37px
 		#navigation
-			@media only screen and (min-width : 768px)
-				height: auto
+			height: auto
 			@media only screen and (min-width : 575px)
 				max-width: 250px
+			@media only screen and (min-width : 768px)
 		.b-user
 			&__helper
 				&:before
-					@media only screen and (min-width : 768px)
-						left: 50%
+					left: 50%
 				&:after
-					@media only screen and (min-width : 768px)
-						left: 50%
+					left: 50%
 				&-wrapper
-					@media only screen and (min-width : 768px)
-						margin-top: 43px
-						right: -15px
+					margin-top: 43px
+					right: -15px
 		.b-top-wrapper__item-project
-			@media only screen and (min-width : 768px)
-				height: 60px
+			height: 60px
 	&.reports-header
 		height: 120px
 		max-height: 120px
-.b-project
-	@media only screen and (min-width : 768px)
-		padding: 0 20px
-	&__item
-		@media only screen and (min-width : 768px)
-			margin-right: 15px
-		&:last-child
-			@media only screen and (min-width : 768px)
-				flex-grow: 1
-	&__report-wrapper:hover .b-project__helper-wrapper
-		@media only screen and (min-width : 768px)
-			left: -20px
 
-.b-form
-	@media only screen and (min-width : 768px)
-		padding: 30px 20px
-	&__row
-		@media only screen and (min-width : 768px)
-			flex-flow: row nowrap
-			align-items: center
-			&-right
-				@media only screen and (min-width : 768px)
-					width: 70%
-					padding-left: 15px
-			&-left
-				@media only screen and (min-width : 768px)
-					width: auto
-					margin-bottom: 0
+
+.b-inreports
+	.aside-toggle &
+		&__aside
+			width: 250px !important
+.b-project
+	padding: 0 20px
+	&__item
+		margin-right: 15px
+	&:last-child
+		flex-grow: 1
+	&__report-wrapper:hover .b-project__helper-wrapper
+		left: -20px
+
+.b-form	
+	padding: 30px 20px
+&__row	
+	flex-flow: row nowrap
+	align-items: center
+	&-right	
+		width: 70%
+		padding-left: 15px
+	&-left
+		width: auto
+		margin-bottom: 0
