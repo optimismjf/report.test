@@ -18,6 +18,13 @@ section
 	ul
 		padding-left: 27px
 /*magnific settings*/
+.color_red
+	color: $color_red
+.color_orange
+	color: $color_orange
+.color_green
+	color: $color_green
+
 .b-hidden
 	display: none
 
@@ -63,7 +70,7 @@ section
 	& + label
 		font-size: 15px
 		color: #2E97DF
-		border: 1px solid #E1E4E6
+		border: 1px solid $color_easygrey
 		background-color: #FFF
 		+b-rounded(3px)
 		padding: 10px 19px
@@ -86,7 +93,7 @@ section
 	position: absolute
 	z-index: -1
 	& + label
-		border: 1px solid #E1E4E6
+		border: 1px solid $color_easygrey
 		border-radius: 3px
 		background-color: #F6F8FA
 		cursor: pointer
@@ -193,17 +200,17 @@ section
 			margin-top: 10px
 			&:last-child
 				a
-					color: #A2AEB7
+					color: $color_lightgrey
 					&:hover
 						border-bottom: none
 
 		a
 			font-size: 15px
 			line-height: 25px
-			color: #2F353B
+			color: $color_black_main
 			text-decoration: none
 			&:hover
-				border-bottom: 1px solid #2F353B
+				border-bottom: 1px solid $color_black_main
 	&__item
 		color: #fff
 		&:nth-child(1)
@@ -218,7 +225,7 @@ section
 .b-profile-tabs
 	+b-flex
 	clear: both
-	border-bottom: 1px solid #E1E4E6
+	border-bottom: 1px solid $color_easygrey
 	&__item
 		width: 50%
 		text-align: center
@@ -227,19 +234,19 @@ section
 				background-color: #ffffff
 		a
 			background-color: #F6F8FA
-			color: #2F353B
+			color: $color_black_main
 			font-size: 15px
 			line-height: 25px
 			text-decoration: none
 			+b-block
 			padding: 12px 0px
 .b-page-topic
-	border-bottom: 1px solid #E1E4E6
+	border-bottom: 1px solid $color_easygrey
 	background-color: #fff
 	box-shadow: 0 0 10px rgba(162, 174, 183, 0.2)
 	padding: 12px 0
 	&__text
-		color: #2F353B
+		color: $color_black_main
 		font-size: 30px
 		line-height: 35px
 		text-align: center
@@ -276,7 +283,7 @@ section
 	padding-left: 20px
 	padding-right: 20px
 	&__topic
-		color: #2F353B
+		color: $color_black_main
 		font-size: 18px
 		margin-top: 24px
 		margin-bottom: 30px
@@ -285,7 +292,7 @@ section
 		font-size: 15px
 		margin-top: 24px
 		margin-bottom: 10px
-		color: #2F353B
+		color: $color_black_main
 	&__input
 		&_inputfile
 			+b-relative
@@ -327,7 +334,7 @@ section
 	&__save-btn
 		margin-top: 30px
 	//  +b-rounded(3px)
-	//  background-color: #2F353B
+	//  background-color: $color_black_main
 	//  color: #fff
 	//  text-align: center
 	//  font-size: 15px
@@ -363,10 +370,10 @@ section
 	&__topic
 		font-size: 18px
 		line-height: 21px
-		color: #2F353B
+		color: $color_black_main
 	&__aftertopic
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		line-height: 25px
 		margin-top: 20px
 	&__delete-btn
@@ -389,17 +396,17 @@ section
 	//  padding-left: 10px
 	&__topic
 		font-size: 18px
-		color: #2F353B
+		color: $color_black_main
 		margin-top: 28px
 	&__line-topic
 		font-weight: 500
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		margin-top: 12px
 		&_start
 			font-size: 18px
 	&__limit, &__index
-		color: #2F353B
+		color: $color_black_main
 		font-size: 15px
 	&__index-md
 		display: none
@@ -409,7 +416,7 @@ section
 	&__limit-md, &__index-xs
 		font-weight: 500
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		margin-top: 12px
 		margin-bottom: 10px
 	&__index-xs
@@ -417,7 +424,7 @@ section
 		margin-bottom: 0px
 .b-user-robotx
 	&__topic
-		color: #2F353B
+		color: $color_black_main
 		font-size: 15px
 		margin-top: 15px
 		margin-bottom: 11px
@@ -427,7 +434,7 @@ section
 	&__radio
 		margin-top: 15px
 	&__notify
-		color: #A2AEB7
+		color: $color_lightgrey
 		font-weight: 500
 		font-size: 13px
 		line-height: 20px
@@ -446,7 +453,7 @@ section
 			left: 146px
 			font-size: 15px
 			margin-left: 3px
-			color: #2F353B
+			color: $color_black_main
 			text-overflow: ellipsis
 			white-space: nowrap
 			display: inline-block
@@ -469,7 +476,7 @@ section
 			+b-flex-align(center)
 	&__afterinput
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		margin-left: 11px
 .b-user-reports
 	&__notify
@@ -493,12 +500,12 @@ section
 	&.disabled
 		.b-settings-autostart__text
 			p
-				color: #A2AEB7
+				color: $color_lightgrey
 		.b-settings-autostart__period
 			span, strong
-				color: #A2AEB7
+				color: $color_lightgrey
 		.b-settings-autostart__select-topic, .b-settings-autostart__input-topic
-			color: #A2AEB7
+			color: $color_lightgrey
 	&__select-topic, &__input-topic
 		@extend .b-user-robotx__topic
 		margin-top: 18px
@@ -506,14 +513,14 @@ section
 		margin-top: 15px
 		span, strong
 			font-size: 15px
-			color: #2F353B
+			color: $color_black_main
 		strong
 			margin-left: 5px
 	&__text
 		p
 			font-size: 13px
-			// color: #A2AEB7
-			color: #2F353B
+			// color: $color_lightgrey
+			color: $color_black_main
 			line-height: 25px
 			&:first-child
 				margin-top: 20px
@@ -523,11 +530,11 @@ section
 	&__total-item-text
 		font-weight: 500
 		font-size: 18px
-		color: #2F353B
+		color: $color_black_main
 	&__total-item
 		font-weight: 500
 		font-size: 18px
-		color: #2F353B
+		color: $color_black_main
 		.fa
 			font-size: 15px
 	&__date
@@ -541,7 +548,7 @@ section
 		display: none
 		strong, span
 			font-size: 15px
-			color: #2F353B
+			color: $color_black_main
 			line-height: 25px
 			display: inline-block
 		strong
@@ -558,13 +565,13 @@ section
 	&__number
 		.b-numb
 			font-size: 16px
-			color: #2F353B
+			color: $color_black_main
 		.fa
 			font-weight: normal
 			font-size: 15px
 	&__checkbox-number
 		font-size: 16px
-		color: #2F353B
+		color: $color_black_main
 		.fa
 			font-size: 15px
 	&__btn-save
@@ -579,7 +586,7 @@ section
 	&__total-container
 		margin-top: 25px
 		padding-top: 20px
-		border-top: 1px solid #E1E4E6
+		border-top: 1px solid $color_easygrey
 	&__input
 		max-width: 117px
 		// input
@@ -599,15 +606,15 @@ section
 		margin: 15px -20px 0 -20px
 	&__status-wrapper
 		padding-left: 20px
-		border-bottom: 1px solid #E1E4E6
+		border-bottom: 1px solid $color_easygrey
 		padding-bottom: 20px
 	&__status-topic
 		font-weight: 500
 		font-size: 30px
-		color: #2F353B
+		color: $color_black_main
 		margin-top: 18px
 	&__status-aftertopic
-		color: #2F353B
+		color: $color_black_main
 		font-weight: 500
 		font-size: 15px
 		margin-top: 1px
@@ -621,14 +628,14 @@ section
 		border-bottom: none
 	&__money-count
 		font-size: 30px
-		color: #2F353B
+		color: $color_black_main
 		margin-top: 5px
 		.fa
 			font-size: 28px
 			font-weight: normal
 	&__money-status
 		font-size: 15px
-		color: #A2AEB7
+		color: $color_lightgrey
 		margin-top: 3px
 		.fa
 			font-size: 14px
@@ -644,7 +651,7 @@ section
 		+b-rounded(3px)
 		padding: 20px 18px 19px 20px
 		line-height: 25px
-		color: #2F353B
+		color: $color_black_main
 		margin-left: 20px
 		margin-right: 20px
 		&_up
@@ -656,7 +663,7 @@ section
 		&_subscribe
 			margin-top: 17px
 			input:disabled + label
-				color: #A2AEB7 !important
+				color: $color_lightgrey !important
 				pointer-events: none
 				cursor: default
 	&__buy-btns-wrapper
@@ -701,13 +708,13 @@ section
 			font-size: 20px
 
 	&__accbalance
-		color: #2f353b
+		color: $color_black_main
 
 	&__money-blocked
 		color: #b9c1c9
 
 	&__limit
-		color: #2f353b
+		color: $color_black_main
 		font-size: 15px
 		font-weight: 500
 		line-height: 1
@@ -728,7 +735,7 @@ section
 		margin-top: 20px
 	&__check-text
 		font-size: 13px
-		color: #A2AEB7
+		color: $color_lightgrey
 		line-height: 25px
 		margin-left: 29px
 		margin-top: 10px
@@ -739,10 +746,10 @@ section
 	&__total-text
 		font-weight: 500
 		font-size: 18px
-		color: #2F353B
+		color: $color_black_main
 	&__total-count, &__total-limit
 		font-size: 18px
-		color: #2F353B
+		color: $color_black_main
 		.fa
 			font-size: 17px
 			margin-left: 5px
@@ -763,7 +770,7 @@ section
 			border-bottom: 1px dashed #2E97DF
 	&__notify-text
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		line-height: 25px
 		.fa
 			font-size: 13px
@@ -778,9 +785,9 @@ section
 	+b-relative
 	input[type='text']
 		width: 100%
-		border: 1px solid #E1E4E6
+		border: 1px solid $color_easygrey
 		+b-rounded(3px)
-		color: #2f353b
+		color: $color_black_main
 		background-color: #F6F8FA
 		width: 100%
 		padding: 10px 0px
@@ -791,7 +798,7 @@ section
 			border: solid #909090 1px
 	input[type='submit']
 		border: none
-		background-color: #2F353B
+		background-color: $color_black_main
 		+b-rounded(3px)
 		color: #fff
 		text-transform: uppercase
@@ -814,7 +821,7 @@ section
 	&__topic
 		font-weight: 500
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		margin-top: 30px
 	&__select
 		margin-top: 10px
@@ -823,7 +830,7 @@ section
 	&__top-line
 		display: none
 	&__item-time, &__item-operation, &__item-rate
-		color: #2F353B
+		color: $color_black_main
 		font-size: 15px
 	&__item-operation
 		font-weight: 500
@@ -842,12 +849,12 @@ section
 
 		a, span
 			font-size: 15px
-			color: #2F353B
+			color: $color_black_main
 		a
 			color: #2E97DF
 			margin-right: 5px
 	&__item
-		border-top: 1px solid #E1E4E6
+		border-top: 1px solid $color_easygrey
 		padding-left: 20px
 		padding-right: 20px
 		padding-top: 24px
@@ -855,7 +862,7 @@ section
 		+b-flex
 		+b-flex-wrap
 		&:last-child
-			border-bottom: 1px solid #E1E4E6
+			border-bottom: 1px solid $color_easygrey
 	&__item-time, &__item-operation, &__item-rate, &__item-text
 		width: 100%
 	&__item-rate
@@ -876,7 +883,7 @@ section
 			+b-block
 			&:first-child
 				font-size: 15px
-				color: #2F353B
+				color: $color_black_main
 				min-width: 153px
 			&:nth-child(2)
 				font-weight: 500
@@ -886,7 +893,7 @@ section
 				min-width: 29px
 			&:nth-child(3), &:nth-child(4)
 				font-weight: 500
-				color: #2F353B
+				color: $color_black_main
 				margin-left: 10px
 			&:nth-child(4)
 				margin-left: 2px
@@ -905,7 +912,7 @@ section
 .b-rewrite
 	&__topic
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		margin-top: 30px
 		line-height: 22px
 	&__textarea
@@ -918,17 +925,17 @@ section
 			padding: 16px 30px
 	&__main-topic
 		font-size: 18px
-		color: #2F353B
+		color: $color_black_main
 		margin-top: 38px
 	&__text
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		line-height: 25px
 		margin-top: 22px
 	&__list
 		li
 			font-size: 15px
-			color: #2F353B
+			color: $color_black_main
 			padding-left: 26px
 			+b-relative
 			margin-top: 16px
@@ -942,7 +949,7 @@ section
 				height: 12px
 				width: 12px
 				+b-rounded(50%)
-				border: 1px solid #A2AEB7
+				border: 1px solid $color_lightgrey
 		&_number
 			ul
 				list-style: none
@@ -956,10 +963,10 @@ section
 					+b-absolute
 					top: 0
 					left: 0
-					color: #A2AEB7
+					color: $color_lightgrey
 				// &:after
 				//  content: counter(li)
-				//  color: #A2AEB7
+				//  color: $color_lightgrey
 				//  display: inline-block
 				//  width: 1em
 				//  position: absolute
@@ -976,11 +983,11 @@ section
 	&__select-topic
 		min-width: 200px
 		margin-bottom: 8px
-		color: #2F353B
+		color: $color_black_main
 		font-size: 15px
 		font-weight: 500
 	&__textarea-topic
-		color: #2F353B
+		color: $color_black_main
 		font-size: 15px
 		font-weight: 500
 	&__checks
@@ -997,7 +1004,7 @@ section
 	&__result-topic
 		font-weight: 500
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 	&__result-item-wrap
 		+b-flex
 		margin-top: 17px
@@ -1005,11 +1012,11 @@ section
 			font-weight: 500
 			margin-left: 10px
 			font-size: 15px
-			color: #2F353B
+			color: $color_black_main
 	&__result-item
 		font-weight: 500
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 .b-tools
 	background-color: #F6F8FA
 	margin-left: -20px
@@ -1020,7 +1027,7 @@ section
 	&__topic
 		font-weight: 500
 		font-size: 18px
-		color: #2F353B
+		color: $color_black_main
 	&__list
 		margin-top: 24px
 		li
@@ -1032,7 +1039,7 @@ section
 			color: #2E97DF
 			font-size: 15px
 	&__link
-		border-top: 1px solid #E1E4E6
+		border-top: 1px solid $color_easygrey
 		padding-top: 18px
 		margin-top: 23px
 		a
@@ -1065,7 +1072,7 @@ section
 		text-decoration: none
 		outline: none
 		&:not(:last-child)
-			border-bottom: 1px solid #E1E4E6
+			border-bottom: 1px solid $color_easygrey
 	&__about-text
 		clear: both
 	&__about-topic
@@ -1076,11 +1083,11 @@ section
 			text-decoration: underline
 	&__about-date
 		font-size: 13px
-		color: #A2AEB7
+		color: $color_lightgrey
 		margin-top: 5px
 	&__about-text
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		line-height: 25px
 		padding-top: 5px
 .b-faq-wrap
@@ -1091,7 +1098,7 @@ section
 	&__list-topic
 		font-weight: 500
 		font-size: 18px
-		color: #2F353B
+		color: $color_black_main
 		padding: 20px
 		padding-right: 41px
 		+b-relative
@@ -1103,7 +1110,7 @@ section
 			right: 18px
 			width: 16px
 			height: 2px
-			background-color: #a2aeb7
+			background-color: $color_lightgrey
 		&:after
 			content: ''
 			+b-absolute
@@ -1111,7 +1118,7 @@ section
 			right: 25px
 			width: 2px
 			height: 16px
-			background-color: #a2aeb7
+			background-color: $color_lightgrey
 		&.activate
 			&:before
 				background-color: $color_red
@@ -1122,12 +1129,12 @@ section
 		display: none
 		padding: 0px 20px 20px 20px
 		p
-			color: #2F353B
+			color: $color_black_main
 			font-size: 15px
 			line-height: 25px
 	&__list-item
 		// padding: 20px
-		border-top: 1px solid #E1E4E6
+		border-top: 1px solid $color_easygrey
 		&:first-child
 			border-top: none
 	&__link-wrap
@@ -1135,7 +1142,7 @@ section
 		padding-top: 20px
 	&__link-text
 		font-size: 16px
-		color: #2F353B
+		color: $color_black_main
 	&__link
 		display: inline-block
 		a
@@ -1194,7 +1201,7 @@ section
 				line-height: 40px
 				text-align: center
 				color: #fff
-				background-color: #2F353B
+				background-color: $color_black_main
 				border-radius: 3px
 				margin: 0 auto
 				max-width: 230px
@@ -1247,26 +1254,26 @@ section
 		margin-top: 7px
 	&__limit-text
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 	&__limit
 		font-size: 13px
-		color: #A2AEB7
+		color: $color_lightgrey
 		margin-left: 23px
 		span
 			&:last-child
 				margin-left: 4px
 			&:first-child
-				color: #2F353B
+				color: $color_black_main
 	&__date
 		margin-top: 10px
 		span
 			&:not(:first-child)
 				font-size: 13px
-				color: #A2AEB7
+				color: $color_lightgrey
 			&:last-child
 				margin-left: 5px
 			&:nth-child(2)
-				color: #2F353B
+				color: $color_black_main
 		.b-icon
 			+b-relative
 			padding-left: 16px
@@ -1315,13 +1322,13 @@ section
 		cursor: pointer
 		&.activate
 			.b-projects-table__option
-				background-color: #2F353B
+				background-color: $color_black_main
 	&__option
 		width: 8px
 		height: 8px
 		min-width: 8px
 		+b-rounded(50%)
-		background-color: #E1E4E6
+		background-color: $color_easygrey
 		margin-left: 5px
 	&__options-body
 		background-color: #fff
@@ -1347,13 +1354,13 @@ section
 		li
 			&.b-delete-btn
 				a
-					color: #A2AEB7
+					color: $color_lightgrey
 					&:hover
 						border-bottom: none
 
 		a
 			font-size: 15px
-			color: #2F353B
+			color: $color_black_main
 			text-decoration: none
 			outline: none
 			+b-block
@@ -1372,8 +1379,8 @@ section
 		color: #2E97DF
 		text-decoration: none
 		outline: none
-		border-top: 1px solid #E1E4E6
-		border-bottom: 1px solid #E1E4E6
+		border-top: 1px solid $color_easygrey
+		border-bottom: 1px solid $color_easygrey
 		+b-block
 		+b-relative
 		&:before
@@ -1383,7 +1390,7 @@ section
 			margin-top: -4px
 			right: 15px
 			border: 4px solid transparent
-			border-left: 4px solid #A2AEB7
+			border-left: 4px solid $color_lightgrey
 .b-projects-analist
 	margin-left: -20px
 	margin-right: -20px
@@ -1401,7 +1408,7 @@ section
 		+b-rounded(5px)
 	&__text
 		font-size: 18px
-		color: #2F353B
+		color: $color_black_main
 		line-height: 27px
 		max-width: 155px
 .b-page-nav
@@ -1418,7 +1425,7 @@ section
 	&__warning-img-wrap
 		width: 38px
 		height: 38px
-		border: 2px solid #E1E4E6
+		border: 2px solid $color_easygrey
 		+b-rounded(50%)
 		+b-flex
 		+b-flex-align(center)
@@ -1460,7 +1467,7 @@ section
 		+b-flex
 	&__site-name
 		font-size: 22px
-		color: #2F353B
+		color: $color_black_main
 		+b-relative
 		cursor: default
 		padding-left: 23px
@@ -1491,7 +1498,7 @@ section
 	&__options-wrap
 		&.active
 			.b-analysis__option
-				background-color: #2F353B
+				background-color: $color_black_main
 	&__options-body-wrapp
 		+b-absolute
 		top: 0
@@ -1510,7 +1517,7 @@ section
 		+b-flex
 		+b-flex-align(center)
 		+b-justify
-		border-bottom: 1px solid #E1E4E6
+		border-bottom: 1px solid $color_easygrey
 	&__time-date-wrap
 		+b-relative
 		cursor: pointer
@@ -1546,11 +1553,11 @@ section
 		span
 			&:first-child
 				font-size: 15px
-				color: #2F353B
+				color: $color_black_main
 				padding-left: 20px
 			&:last-child
 				font-size: 15px
-				color: #A2AEB7
+				color: $color_lightgrey
 				margin-left: 5px
 				padding-right: 25px
 	&__select-item
@@ -1564,11 +1571,11 @@ section
 		span
 			&:first-child
 				font-size: 15px
-				color: #2F353B
+				color: $color_black_main
 				// padding-left: 20px
 			&:last-child
 				font-size: 15px
-				color: #A2AEB7
+				color: $color_lightgrey
 				margin-left: 5px
 				// padding-right: 25px
 	&__select
@@ -1662,7 +1669,7 @@ section
 	padding-left: 0
 	// height: 100vh
 	+b-relative
-	// #E1E4E6
+	// $color_easygrey
 	// width: 0
 	// overflow: hidden
 	// display: none
@@ -1687,11 +1694,11 @@ section
 		&:not(.active)
 			border-right: 4px solid #2E97DF
 		&.border
-			border-right: 1px solid #E1E4E6
+			border-right: 1px solid $color_easygrey
 	&__container
 		padding-top: 18px
 		padding-left: 17px
-		border-right: 1px solid #E1E4E6
+		border-right: 1px solid $color_easygrey
 		min-width: 250px
 		width: 250px
 	&__list-item
@@ -1705,7 +1712,7 @@ section
 		padding-bottom: 2px
 		&:hover
 			text-decoration: none
-			background-color: #e1e4e6
+			background-color: $color_easygrey
 
 	&__topic
 		font-weight: 500
@@ -1726,7 +1733,7 @@ section
 			padding-top: 3px
 			padding-bottom: 3px
 			&:hover
-				background-color: #e1e4e6
+				background-color: $color_easygrey
 	.b-report1, .b-report2, .b-report3, .b-report4, .b-report5, .b-report6, .b-report7, .b-report8
 		+b-relative
 		// padding-left: 30px
@@ -1783,14 +1790,14 @@ section
 		margin-top: -91px
 	&__topic
 		font-size: 23px
-		color: #2F353B
+		color: $color_black_main
 		margin-top: 7px
 	&__text
 		max-width: 500px
 		margin: 0 auto
 		font-size: 15px
 		line-height: 21px
-		color: #2F353B
+		color: $color_black_main
 		margin-top: 13px
 		a
 			font-size: 15px
@@ -1849,13 +1856,13 @@ section
 			top: 20px
 	&__topic-date-text
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		padding-top: 6px
 		margin-left: 22px
 		cursor: default
 	&__topic-text
 		font-size: 23px
-		color: #2F353B
+		color: $color_black_main
 	&__topic-date
 		padding-top: 6px
 		cursor: default
@@ -1879,10 +1886,10 @@ section
 		span
 			&:first-child
 				font-size: 15px
-				color: #2F353B
+				color: $color_black_main
 			&:last-child
 				font-size: 15px
-				color: #A2AEB7
+				color: $color_lightgrey
 				margin-left: 5px
 				+b-relative
 				padding-right: 25px
@@ -1911,7 +1918,7 @@ section
 	min-height: 84px
 	&__table
 		background-color: #fff
-		border: 1px solid #E1E4E6
+		border: 1px solid $color_easygrey
 		&.fixed
 			position: fixed
 			top: 0
@@ -1952,7 +1959,7 @@ section
 		+b-block
 		&:hover
 			text-decoration: none
-			background-color: #e1e4e6
+			background-color: $color_easygrey
 		&:last-child
 			background-color: transparent
 		&.pl-10
@@ -2031,7 +2038,7 @@ section
 			min-height: 40px
 			width: 100%
 	&__item
-		border-top: 1px solid #E1E4E6
+		border-top: 1px solid $color_easygrey
 		+b-flex
 		+b-flex-align(center)
 		padding: 15px 0px
@@ -2065,7 +2072,7 @@ section
 		width: 39%
 		padding-right: 15px
 	&__date
-		color: #A2AEB7
+		color: $color_lightgrey
 		font-size: 13px
 		margin-left: 15px
 	&__status
@@ -2101,7 +2108,7 @@ section
 				text-rendering: auto
 				-webkit-font-smoothing: antialiased
 				-moz-osx-font-smoothing: grayscale
-				color: #A2AEB7
+				color: $color_lightgrey
 .b-prices-tariffs, .b-prices-clients
 	display: none
 .b-prices-clients
@@ -2116,7 +2123,7 @@ section
 	&__top-text
 		font-size: 16px
 		line-height: 27px
-		color: #2F353B
+		color: $color_black_main
 		padding-left: 20px
 		padding-right: 20px
 		padding-top: 31px
@@ -2134,7 +2141,7 @@ section
 		ext-align: center
 		line-height: 25px
 		font-size: 13px
-		color: #A2AEB7
+		color: $color_lightgrey
 		max-width: 200px
 		text-align: center
 		margin-top: 15px
@@ -2146,7 +2153,7 @@ section
 .price_discount
 	span
 		&:first-child
-			color: #2F353B
+			color: $color_black_main
 			font-size: 15px
 		&:last-child
 			color: $color_red
@@ -2174,12 +2181,12 @@ section
 		.not-check
 			&:before
 				margin-left: -5px !important
-		color: #2F353B
+		color: $color_black_main
 	&__table-elems
 		.owl-dots
 			display: none
 	&__tariff-slider
-		border-top: 1px solid #E1E4E6
+		border-top: 1px solid $color_easygrey
 		margin-top: 47px
 		.owl-dots
 			display: none
@@ -2251,10 +2258,10 @@ section
 	&__tariff-topic
 		text-align: center
 		font-size: 18px
-		color: #2F353B
+		color: $color_black_main
 		margin-top: 25px
 	&__tariff-aftertopic
-		color: #A2AEB7
+		color: $color_lightgrey
 		font-size: 13px
 		text-align: center
 		margin-top: 20px
@@ -2271,7 +2278,7 @@ section
 			font-size: 15px
 			margin-left: 3px
 	&__old-price
-		color: #A2AEB7
+		color: $color_lightgrey
 		font-size: 15px
 		text-align: center
 		text-decoration: line-through
@@ -2280,7 +2287,7 @@ section
 			font-size: 14px
 	&__month-token, &__token-cost, &__period, &__session, &__min-audit, &__max-audit, &__price-per-page, &__max-pages, &__claster, &__request, &__key-words, &__calc, &__api
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		font-weight: 500
 		.fa
 			font-size: 14px
@@ -2326,7 +2333,7 @@ section
 			margin-left: -12px
 			width: 12px
 			height: 12px
-			//border: 1px solid #2F353B
+			//border: 1px solid $color_black_main
 			+b-rounded(50%)
 	.check
 		+b-block
@@ -2349,7 +2356,7 @@ section
 	&__table-elem
 		border-top: 1px solid rgba(225, 228, 230, .5)
 		font-size: 15px
-		color: #2F353B
+		color: $color_black_main
 		padding-left: 20px
 		&.topic
 			font-weight: 500
@@ -2383,7 +2390,7 @@ section
 	padding: 40px 20px
 
 	&__topic
-		color: #2F353B
+		color: $color_black_main
 		font-size: 30px
 		text-align: center
 		margin-top: 80px
@@ -2392,7 +2399,7 @@ section
 			margin-top: 0
 
 	&__text
-		color: #2F353B
+		color: $color_black_main
 		font-size: 16px
 		line-height: 27px
 		margin-top: 18px
@@ -2423,7 +2430,7 @@ section
 			font-size: 16px
 			text-decoration: none
 			outline: none
-			color: #2F353B
+			color: $color_black_main
 			+b-flex
 			+b-flex-align(center)
 			+b-justify-center
@@ -2432,8 +2439,8 @@ section
 			+b-rounded(50%)
 
 			&:not(.ellipsis):not(.b-page-nav__prev):not(.b-page-nav__next):hover
-				color: #2F353B
-				background-color: #E1E4E6
+				color: $color_black_main
+				background-color: $color_easygrey
 
 .b-projects
 	padding-bottom: 30px
@@ -2568,7 +2575,7 @@ section
 		height: 100%
 		width: 100%
 		z-index: 30
-		background-color: #2f353b
+		background-color: $color_black_main
 		.user-information
 			width: 100%
 			padding: 20px 20px 20px
@@ -2604,13 +2611,13 @@ section
 						a
 							font-size: 15px
 							line-height: 25px
-							color: #a2aeb7
+							color: $color_lightgrey
 							display: block
 							font-size: 15px
 							line-height: 25
 							text-decoration: none
 				a.external
-					color: #a2aeb7
+					color: $color_lightgrey
 					font-size: 15px
 				a.external:after
 						content: "\f08e"
@@ -2740,7 +2747,7 @@ section
 	display: flex
 	justify-content: space-between
 	align-items: flex-start
-	color: #2F353B
+	color: $color_black_main
 	.main-content
 		flex-basis: 100%
 		max-width: 100%
@@ -2829,7 +2836,7 @@ body
 
 %helper
 	background-color: #fff
-	border: 1px solid #E1E4E6
+	border: 1px solid $color_easygrey
 	box-shadow: 0 0 20px 0 rgba(162, 174, 183, 0.3)
 	border-radius: 5px
 
@@ -2856,7 +2863,7 @@ body
 	top: -19px
 	display: inline-block
 	font: normal normal normal 28px/1 FontAwesome
-	color: #E1E4E6
+	color: $color_easygrey
 	text-rendering: auto
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
@@ -2980,7 +2987,7 @@ body
 		display: flex
 		justify-content: space-between
 		border-left: 1px solid transparent
-		padding-left: 20px
+		padding-left: 15px
 		cursor: pointer
 		padding-right: 20px
 		&__link
@@ -3187,7 +3194,7 @@ body
 				left: -20px
 				top: 100%
 				background: #FFFFFF
-				border: 1px solid #E1E4E6
+				border: 1px solid $color_easygrey
 				box-sizing: border-box
 				border-radius: 5px
 				padding: 21px 30px
@@ -3211,7 +3218,7 @@ body
 					pointer-events: none
 				.dropdown-group
 					& + .dropdown-group
-						border-top: 1px solid #E1E4E6
+						border-top: 1px solid $color_easygrey
 						margin-top: 18px
 						padding-top: 16px
 					.dropdown-group__title
@@ -3247,7 +3254,7 @@ body
 						font-weight: normal
 						line-height: normal
 						font-size: 14px
-						color: #697882
+						color: $color_grey
 						display: block
 					.dropdown-item__icon
 						left: 12px
@@ -3348,7 +3355,7 @@ body
 			margin-left: 5px
 			font-size: 18px
 			line-height: 21px
-			color: #2F353B
+			color: $color_black_main
 	&__report
 		position: relative
 		padding-right: 20px
@@ -3540,7 +3547,7 @@ body
 				color: $color_grey
 				&.active
 					background-color: #fff
-					color: #2F353B
+					color: $color_black_main
 		&-toggler
 			position: fixed
 			width: 40px
@@ -3570,7 +3577,7 @@ body
 				a
 					font-size: 15px
 					line-height: 2em
-					color: #2F353B
+					color: $color_black_main
 			&.active
 				display: block
 		&.in-process 
@@ -3593,7 +3600,7 @@ body
 			padding: 10px 15px 15px
 			font-size: 14px
 			line-height: 25px
-			color: #2F353B
+			color: $color_black_main
 			width: calc(100% - 20px)
 	.fullscreen &
 		&__aside
@@ -3704,7 +3711,7 @@ body
 				padding-top: 15px
 				line-height: 30px
 				font-size: 14px
-				color: #697882
+				color: $color_grey
 				white-space: nowrap
 			&-r
 				display: flex
@@ -3718,7 +3725,7 @@ body
 			margin-top: 15px
 			padding: 0 30px 0 15px
 			font-size: 14px
-			color: #2F353B
+			color: $color_black_main
 			position: relative
 			max-width: 100%
 			cursor: pointer
@@ -3768,7 +3775,7 @@ body
 			background-image: url(../images/icon/clear.svg)
 			background-repeat: no-repeat
 			background-position: center center
-	&__addfilter, &__export
+	&__addfilter, &__export, .b-pagespeed__section-export
 		border: 1px solid $color_easygrey
 		margin-left: 10px
 		line-height: 28px
@@ -3780,7 +3787,7 @@ body
 	&__addfilter
 		background-image: url(../images/icon/add.svg)
 		background-position: 7px center
-	&__export
+	&__export, .b-pagespeed__section-export
 		background-image: url(../images/icon/upload.svg)
 		background-position: 8px center
 		position: relative
@@ -3815,7 +3822,7 @@ body
 					a
 						display: block
 						text-decoration: none !important
-						color: #2F353B
+						color: $color_black_main
 						padding-left: 22px
 						background-repeat: no-repeat
 						background-position: left 10px
@@ -3828,7 +3835,7 @@ body
 						color: #C2CAD8		
 		&:hover
 			.b-inreports__export-helper
-				border: 1px solid #E1E4E6
+				border: 1px solid $color_easygrey
 				border-radius: 5px
 				&-wrapper
 					display: block
@@ -3842,7 +3849,7 @@ body
 		border-collapse: collapse
 		width: 100%
 		th, td
-			border: 1px solid #E1E4E6
+			border: 1px solid $color_easygrey
 			padding: 0 10px
 			position: relative
 			height: 40px
@@ -3852,7 +3859,7 @@ body
 			left: 0
 			height: 39px
 			width: 20px
-			border-right: 1px solid #E1E4E6
+			border-right: 1px solid $color_easygrey
 			background-position: center center
 			background-repeat: no-repeat
 		td &-level:after
@@ -4011,7 +4018,7 @@ body
 			align-items: center		
 			font-size: 13px
 			line-height: 26px
-			color: #2F353B
+			color: $color_black_main
 			&:not(:last-child)
 				border-bottom: 1px solid #F1F1F1
 		&__key
@@ -4075,7 +4082,7 @@ body
 		width: 100%
 		cursor: pointer
 		&.changed
-			color: #2F353B
+			color: $color_black_main
 		&.opened:after
 			transform: scaleY(-1)
 		&:after
@@ -4086,7 +4093,7 @@ body
 			display: inline-block
 			font: normal normal normal 14px/1 FontAwesome
 			text-rendering: auto
-			color: #2F353B
+			color: $color_black_main
 			-webkit-font-smoothing: antialiased
 			-moz-osx-font-smoothing: grayscale
 			pointer-events: none
@@ -4305,7 +4312,7 @@ body
 	display: flex
 	align-items: center
 	&__limits
-		color: #697882
+		color: $color_grey
 		font-size: 14px
 		&-wrapper
 			position: relative
@@ -4342,7 +4349,7 @@ body
 				a
 					display: block
 					text-decoration: none !important
-					color: #2F353B
+					color: $color_black_main
 				span
 					display: block
 					color: #C2CAD8
@@ -4444,7 +4451,7 @@ body
 
 .b-actions
 	&__helper
-		border: 1px solid #E1E4E6
+		border: 1px solid $color_easygrey
 		z-index: 4
 		@extend %helper
 		&:after
@@ -4460,7 +4467,7 @@ body
 			top: 10px
 			display: inline-block
 			font: normal normal normal 28px/1 FontAwesome
-			color: #E1E4E6
+			color: $color_easygrey
 			text-rendering: auto
 			-webkit-font-smoothing: antialiased
 			-moz-osx-font-smoothing: grayscale
@@ -4482,7 +4489,7 @@ body
 			@extend %helper-container
 			padding-bottom: 15px
 			& hr
-				background-color: #E1E4E6
+				background-color: $color_easygrey
 				border: none
 				height: 1px
 				margin-top: 12px
@@ -4502,7 +4509,7 @@ body
 					padding-left: 22px
 					padding-right: 22px
 					line-height: 34px
-					color: #2F353B
+					color: $color_black_main
 					text-decoration: none
 					background-repeat: no-repeat
 					background-position: left 2px
@@ -4527,7 +4534,7 @@ body
 		&__footer
 			display: block
 	&__helper
-		border: 1px solid #E1E4E6
+		border: 1px solid $color_easygrey
 		z-index: 4
 		@extend %helper
 		&:after
@@ -4543,7 +4550,7 @@ body
 			z-index: 1
 			display: inline-block
 			font: normal normal normal 28px/1 FontAwesome
-			color: #E1E4E6
+			color: $color_easygrey
 			text-rendering: auto
 			-webkit-font-smoothing: antialiased
 			-moz-osx-font-smoothing: grayscale
@@ -4558,7 +4565,7 @@ body
 			@extend %helper-container
 			padding: 10px 0 0
 			& hr
-				background-color: #E1E4E6
+				background-color: $color_easygrey
 				border: none
 				height: 1px
 				margin: 12px -20px 0
@@ -4575,7 +4582,7 @@ body
 			width: 100%
 			cursor: pointer
 			&.changed
-				color: #2F353B
+				color: $color_black_main
 			&.opened:after
 				transform: scaleY(-1)
 			&:after
@@ -4586,7 +4593,7 @@ body
 				display: inline-block
 				font: normal normal normal 14px/1 FontAwesome
 				text-rendering: auto
-				color: #2F353B
+				color: $color_black_main
 				-webkit-font-smoothing: antialiased
 				-moz-osx-font-smoothing: grayscale
 				pointer-events: none
@@ -4612,7 +4619,7 @@ body
 					cursor: pointer
 
 	&__body
-		border-top: 1px solid #E1E4E6
+		border-top: 1px solid $color_easygrey
 		&-row
 			padding: 5px 0
 			&.flex
@@ -4743,7 +4750,7 @@ body
 				&:focus
 					border-color: #2E97DF
 			p
-				color: #697882
+				color: $color_grey
 				font-size: 13px
 				margin: 0
 				line-height: 17px
@@ -4758,7 +4765,7 @@ body
 			border: 1px solid #C2CAD8
 			cursor: pointer
 			&.changed
-				color: #2F353B
+				color: $color_black_main
 			&.opened:after
 				transform: scaleY(-1)
 			&:after
@@ -4769,7 +4776,7 @@ body
 				display: inline-block
 				font: normal normal normal 14px/1 FontAwesome
 				text-rendering: auto
-				color: #2F353B
+				color: $color_black_main
 				-webkit-font-smoothing: antialiased
 				-moz-osx-font-smoothing: grayscale
 				pointer-events: none
@@ -4795,7 +4802,7 @@ body
 					cursor: pointer	
 	&__footer
 		padding: 10px 20px
-		border-top: 1px solid #E1E4E6
+		border-top: 1px solid $color_easygrey
 	&__submit
 		appearance: unset
 		box-shadow: none
@@ -4883,7 +4890,7 @@ a.overflowed
 		bottom: -1px
 		height: 1px
 		overflow: hidden
-		border: 1px solid #E1E4E6
+		border: 1px solid $color_easygrey
 
 .b-inreports__main-name.in-process
 	margin-top: 76px
@@ -4916,3 +4923,110 @@ a.overflowed
 		height: 200%
 		top: -50%
 		left: -50%
+
+.b-pagespeed
+	padding-right: 20px
+	&__switcher
+		display: flex
+		&-item
+			line-height: 40px
+			text-align: center
+			margin-bottom: -1px
+			padding: 0 15px
+			text-transform: uppercase
+			color: $color_grey
+			border: 1px solid transparent
+			cursor: pointer
+			&.active
+				background-color: #fff
+				color: $color_black_main
+				border-color: $color_easygrey
+				border-bottom-color: transparent
+	&__item
+		display: none
+		background-color: #ffffff
+		border: 1px solid $color_easygrey
+		padding: 25px 20px
+		&.active
+			display: block
+	&__index
+		display: flex
+		align-items: center
+		font-size: 20px
+		line-height: 23px
+		margin-bottom: 10px
+		&-current
+			margin-left: 5px
+		&-refresh
+			font-size: 0
+			margin-left: 5px
+			width: 23px
+			height: 23px
+			background-image: url(../images/icon/sync.svg)
+			background-position: center center
+			background-repeat: no-repeat
+			cursor: pointer
+	&__section
+		padding: 10px 200px 10px 20px
+		border: 1px solid $color_easygrey
+		margin-bottom: -1px
+		position: relative
+		&-wrapper
+			margin-bottom: 10px
+			.b-inreports__table
+				display: none
+				&.open
+					display: table
+		&-title
+			font-size: 14px
+			line-height: 16px
+			margin-bottom: 10px
+			&.icon-alert
+				padding-left: 22px
+				background-image: url(../images/icon/icon-alert.svg)
+				background-repeat: no-repeat
+				background-position: left center
+			&.icon-success
+				padding-left: 22px
+				background-image: url(../images/icon/success.svg)
+				background-size: 14px 14px
+				background-repeat: no-repeat
+				background-position: left center
+		&-description
+			color: $color_grey
+			font-size: 14px
+			line-height: 16px
+		&-export
+			position: absolute !important
+			top: 15px
+			right: 70px
+			color: $color_black_main
+			&:hover
+				text-decoration: none
+		&-toggler
+			position: absolute !important
+			top: 15px
+			right: 20px
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			border: 1px solid $color_easygrey
+			cursor: pointer
+			&:after
+				content: "\f0d7"
+				color: $color_grey
+				position: absolute
+				top: 0
+				right: 0
+				width: 28px
+				height: 28px
+				text-align: center
+				line-height: 28px
+				display: inline-block
+				font: normal normal normal 14px/28px FontAwesome;
+				text-rendering: auto
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+				pointer-events: none
+			&.active:after
+				transform: scaleY(-1)			

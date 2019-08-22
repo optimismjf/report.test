@@ -729,6 +729,13 @@ function dataAction(e) {
 			
 			break;
 
+		case 'toggle':
+			/* Тоглим цель */
+			$(this).toggleClass('active');
+			$(target).toggleClass('open');
+			
+			break;
+
 		case 'toggle-childs':
 			/* Тоглим строки в таблице */
 			$(this).toggleClass('open');
