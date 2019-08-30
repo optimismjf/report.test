@@ -479,15 +479,58 @@
 					<div class="b-summary__section-head">
 						<div class="b-summary__section-title">Оптимизация сайта</div>
 						<div class="b-inform" data-action="show-hover" data-content="Я подсказко"></div>
-						<div class="b-summary__section-toggler" data-action="toggle" data-target="#optimizaciya"></div>
+						<div class="b-summary__section-toggler active" data-action="toggle" data-target="#optimizaciya"></div>
 					</div>
-					<div class="b-summary__section-content" id="optimizaciya">
-						<svg width="100%" height="100%" viewBox="0 0 42 42" class="donut" style="width: 350px; height: auto">
-							<circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="transparent" stroke-width="2"></circle>
-							<circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#BBE5FA" stroke-width="2" stroke-dasharray="62	38" stroke-dashoffset="56"></circle>
-							<circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#229AD6" stroke-width="2" stroke-dasharray="51.46	48.54" stroke-dashoffset="56"></circle> 
-						  <!-- а вот тут надо будет считать на беке. 62 (это, скажем так, "ширина" нашей диаграммы) = 100%. Показатель 83 / 100, значит нам нужно поверх накинуть еще одну диаграмму с шириной 83% от предудущей = 83*62/100 = 51,46. Вторым значением ставим остаток не закрашенный, то есть 100% - 51,46 = 48,54-->
-						</svg>
+					<div class="b-summary__section-content open" id="optimizaciya">
+						<div class="b-summary__critlevel">
+							<div class="b-summary__critlevel-item">
+								<div class="b-summary__critlevel-item-title">
+									<i class="b-summary__critlevel-icon high-level"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#icon-alert"></svg></i>
+									Высокая критичность
+								</div>
+								<div class="b-summary__critlevel-item-count">
+									8 замечаний
+									<sup class="b-summary__critlevel-item-count-diff color_green">▼ 2</sup>
+								</div>
+								<div class="b-summary__critlevel-item-graf high-level" style="width: calc(8 / 18 * 100%)"></div>
+							</div>
+							<div class="b-summary__critlevel-item">
+								<div class="b-summary__critlevel-item-title">
+									<i class="b-summary__critlevel-icon middle-level"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#icon-alert"></svg></i>
+									Средняя критичность
+								</div>
+								<div class="b-summary__critlevel-item-count">
+									6 замечаний
+									<sup class="b-summary__critlevel-item-count-diff color_red">▲ 3</sup>
+								</div>
+								<div class="b-summary__critlevel-item-graf middle-level" style="width: calc(6 / 20 * 100%)"></div>
+							</div>
+							<div class="b-summary__critlevel-item">
+								<div class="b-summary__critlevel-item-title">
+									<i class="b-summary__critlevel-icon low-level"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#icon-alert"></svg></i>
+									Низкая критичность
+								</div>
+								<div class="b-summary__critlevel-item-count">
+									6 замечаний
+									<sup class="b-summary__critlevel-item-count-diff color_green">▼ 5</sup>
+								</div>
+								<div class="b-summary__critlevel-item-graf low-level" style="width: calc(6 / 15 * 100%)"></div>
+							</div>
+						</div>
+						<div class="b-summary__optirank">
+							<svg viewBox="0 0 42 42" class="b-summary__optirank-donut">
+								<circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="transparent" stroke-width="2"></circle>
+								<circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#BBE5FA" stroke-width="1.5" stroke-dasharray="62 38" stroke-dashoffset="56"></circle>
+								<circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#229AD6" stroke-width="1.5" stroke-dasharray="51.46 48.54" stroke-dashoffset="56"></circle> 
+							  <!-- а вот тут надо будет считать на беке свойства stroke-dasharray. 62 у первого donut-segment не меняем (это, скажем так, "ширина" нашей диаграммы) = 100%. Показатель Оптиранка 83 / 100, значит нам нужно поверх накинуть еще одну диаграмму с шириной 83% от предыдущей - второй donut-segment = 83*62/100 = 51,46. Вторым значением ставим остаток не закрашенный, то есть 100% - 51,46 = 48,54-->
+							</svg>
+							<div class="b-summary__optirank-icon"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#optirank-icon"></svg></div>
+							<div class="b-summary__optirank-rank"><span class="b-summary__optirank-rank-current">83</span>/100 <sup class="b-summary__optirank-rank-diff color_green">▼ 5</sup></div>
+							<div class="b-summary__optirank-title">ОптиРанк</div>
+							<div class="b-summary__optirank-desc">
+								Внутренний показатель, разработанный нашей командой. Он показывает соотношение количества ошибок и их критичности к общему числу возможных ошибок сайта.
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

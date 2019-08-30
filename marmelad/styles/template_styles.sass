@@ -5257,7 +5257,7 @@ a.overflowed
 			border-top: 1px solid $color_easygrey
 			display: none
 			&.open
-				display: block
+				display: flex
 		&-toggler
 			position: absolute !important
 			top: 15px
@@ -5285,6 +5285,100 @@ a.overflowed
 				pointer-events: none
 			&.active:after
 				transform: scaleY(-1)
+	&__critlevel
+		flex: 1
+		&-item
+			padding: 20px 20px 0
+			margin-bottom: 20px
+			&-title
+				font-weight: 500
+				font-size: 13px
+				line-height: 12px
+				display: flex
+				align-items: center
+				margin-bottom: 1em
+			&-count
+				font-size: 32px
+				line-height: 37px
+				padding-bottom: 10px
+				border-bottom: 4px solid $color_easygrey
+				&-diff
+					font-size: 12px
+					line-height: 1
+					vertical-align: super	
+					top: -1em
+			&-graf
+				display: block
+				height: 4px
+				margin-top: -4px
+				&.high-level
+					background-color: $color_red
+				&.middle-level
+					background-color: $color_orange
+				&.low-level
+					background-color: $color_grey
+
+		&-icon
+			svg
+				width: 14px
+				height: 14px
+				margin-right: 4px
+			&.high-level
+				fill: $color_red
+			&.middle-level
+				fill: $color_orange
+			&.low-level
+				fill: $color_grey
+	&__optirank
+		width: 625px
+		padding: 60px 112.5px 0
+		position: relative
+		text-align: center
+		&-donut
+			position: absolute
+			top: -30px
+			left: 0
+			right: 0
+			margin: auto
+			width: 420px
+			height: 420px
+		&-rank
+			font-size: 32px
+			font-weight: 300
+			text-align: center
+			display: inline-block
+			position: relative
+			padding-bottom: 20px
+			border-bottom: 1px solid $color_easygrey			
+			&-current
+				font-size: 50px
+			&-diff
+				position: absolute
+				font-size: 12px
+				top: 1em
+				right: -20px
+				display: inline-block
+		&-title
+			margin-top: 14px
+			font-size: 24px
+			line-height: 28px
+		&-desc
+			margin-top: 14px
+			text-align: left
+			font-size: 14px
+			line-height: 1.5
+		&-icon
+			width: 50px
+			height: 50px
+			background-color: #229AD6
+			border-radius: 50%
+			margin: 0 auto 35px
+			svg				
+				width: 50px
+				height: 50px
+				position: relative
+				z-index: 2
+
 
 
 .icon-external
