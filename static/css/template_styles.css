@@ -10668,6 +10668,7 @@ a.overflowed {
     background-position: left center;
     margin: 30px 0; }
   .b-summary__section {
+    max-width: 1130px;
     border: 1px solid #E1E4E6;
     background-color: #fff; }
     .b-summary__section-head {
