@@ -525,7 +525,7 @@
 							  <!-- а вот тут надо будет считать на беке свойства stroke-dasharray. 62 у первого donut-segment не меняем (это, скажем так, "ширина" нашей диаграммы) = 100%. Показатель Оптиранка 83 / 100, значит нам нужно поверх накинуть еще одну диаграмму с шириной 83% от предыдущей - второй donut-segment = 83*62/100 = 51,46. Вторым значением ставим остаток не закрашенный, то есть 100% - 51,46 = 48,54-->
 							</svg>
 							<div class="b-summary__optirank-icon"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#optirank-icon"></svg></div>
-							<div class="b-summary__optirank-rank"><span class="b-summary__optirank-rank-current">83</span>/100 <sup class="b-summary__optirank-rank-diff color_green">▼ 5</sup></div>
+							<div class="b-summary__optirank-rank"><span class="b-summary__optirank-rank-current">83</span>/100 <sup class="b-summary__optirank-rank-diff color_red">▼ 5</sup></div>
 							<div class="b-summary__optirank-title">ОптиРанк</div>
 							<div class="b-summary__optirank-desc">
 								Внутренний показатель, разработанный нашей командой. Он показывает соотношение количества ошибок и их критичности к общему числу возможных ошибок сайта.
@@ -533,8 +533,84 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="b-summary__section">
+					<div class="b-summary__section-head">
+						<div class="b-summary__section-title">Информация о домене</div>
+						<div class="b-inform" data-action="show-hover" data-content="Я подсказко"></div>
+						<div class="b-summary__section-toggler" data-action="toggle" data-target="#domaininfo"></div>
+					</div>
+					<div class="b-summary__section-content" id="domaininfo">
+						<div class="b-summary__domaininfo">
+							<div class="b-summary__domaininfo-host">skoda-vostokmotors.ru</div>
+							<div class="b-summary__domaininfo-ip"><i class="b-summary__domaininfo-country"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#icon-flag-rus"></svg></i>91.201.52.136</div>
+							<ul class="b-summary__domaininfo-list">
+								<li class="b-summary__domaininfo-item">
+									<div class="b-summary__domaininfo-item-title">Возраст</div>
+									<div class="b-summary__domaininfo-item-value">5 лет</div>
+									<div class="b-summary__domaininfo-item-desc">12.03.2014</div>
+								</li>
+								<li class="b-summary__domaininfo-item">
+									<div class="b-summary__domaininfo-item-title">Окончание через</div>
+									<div class="b-summary__domaininfo-item-value">11 месяцев</div>
+									<div class="b-summary__domaininfo-item-desc">12.03.2014</div>
+								</li>
+								<li class="b-summary__domaininfo-item">
+									<div class="b-summary__domaininfo-item-title">Вебархив</div>
+									<div class="b-summary__domaininfo-item-value">29 записей</div>
+									<div class="b-summary__domaininfo-item-desc">от <a href="" rel="nofollow" target="_blank">22.05.2016</a></div>
+								</li>
+								<li class="b-summary__domaininfo-item">
+									<div class="b-summary__domaininfo-item-title">На ip-адресе</div>
+									<div class="b-summary__domaininfo-item-value">7 сайтов</div>
+									<div class="b-summary__domaininfo-item-desc">▲ 3</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="b-summary__section">
+					<div class="b-summary__section-head">
+						<div class="b-summary__section-title">Безопасность</div>
+						<div class="b-inform" data-action="show-hover" data-content="Я подсказко"></div>
+						<div class="b-summary__section-toggler" data-action="toggle" data-target="#security"></div>
+					</div>
+					<div class="b-summary__section-content" id="security">
+						<div class="b-summary__security">
+							<ul class="b-summary__security-list">
+								<li class="b-summary__security-item">
+									<div class="b-summary__security-item-title">Вирусы по <span class="color_red">Я</span>ндекс</div>
+									<div class="b-summary__security-item-value">Нет</div>
+								</li>
+								<li class="b-summary__security-item warning">
+									<div class="b-summary__security-item-title">Вирусы по <span class="color_blue">G</span>oogle</div>
+									<div class="b-summary__security-item-value">Да</div>
+									<div class="b-summary__security-item-desc color_red">Обнаружены</div>
+								</li>
+								<li class="b-summary__security-item">
+									<div class="b-summary__security-item-title">Фишинговые сайты по&nbsp;<span class="color_blue">G</span>oogle</div>
+									<div class="b-summary__security-item-value">Нет</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="b-summary__section">
+					<div class="b-summary__section-head">
+						<div class="b-summary__section-title">Репутация и доверие</div>
+						<div class="b-inform" data-action="show-hover" data-content="Я подсказко"></div>
+						<div class="b-summary__section-toggler" data-action="toggle" data-target="#reputation"></div>
+					</div>
+					<div class="b-summary__section-content" id="reputation">
+						<div class="b-summary__reputation">
+							
+						</div>
+					</div>
+				</div>
+
 			</div>
-			
 		</main>
 
 

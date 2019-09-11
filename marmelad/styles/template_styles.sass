@@ -24,6 +24,17 @@ section
 	color: $color_orange
 .color_green
 	color: $color_green
+.color_blue
+	color: $color_blue
+
+.fill_red
+	fill: $color_red
+.fill_orange
+	fill: $color_orange
+.fill_green
+	fill: $color_green
+.fill_grey
+	fill: $color_grey
 
 .b-hidden
 	display: none
@@ -5243,6 +5254,7 @@ a.overflowed
 		max-width: 1130px
 		border: 1px solid $color_easygrey
 		background-color: #fff
+		margin-bottom: 20px
 		&-head
 			height: 60px
 			padding: 0 20px
@@ -5379,8 +5391,71 @@ a.overflowed
 				height: 50px
 				position: relative
 				z-index: 2
-
-
+	&__domaininfo
+		padding: 20px 0 0
+		&-host
+			font-weight: 300
+			font-size: 32px
+			line-height: 37px
+			padding: 0 20px
+		&-country
+			width: 17px
+			height: 17px
+			margin-right: 8px
+			display: block
+			svg				
+				width: inherit
+				height: inherit
+		&-ip
+			font-size: 13px
+			line-height: 17px
+			padding: 0 20px
+			color: $color_grey
+			display: flex
+			align-items: center
+		&-list 
+			margin: 30px 0 0
+			list-style: none
+			padding: 0
+			display: flex
+		&-item
+			padding: 20px 80px 20px 20px
+			&-title
+				font-weight: 500
+				font-size: 13px
+				line-height: 12px
+				height: 2em
+			&-value
+				font-weight: 300
+				font-size: 28px
+				line-height: 33px
+			&-desc
+				font-size: 12px
+				line-height: 14px
+				color: $color_grey
+	&__security
+		padding: 0
+		&-list
+			list-style: none
+			padding: 0
+			display: flex
+		&-item
+			width: 180px
+			padding: 20px
+			&-title
+				font-weight: 500
+				font-size: 13px
+				line-height: 12px
+				height: 2em
+			&-value
+				font-weight: 300
+				font-size: 28px
+				line-height: 33px
+			&-desc
+				font-size: 12px
+				line-height: 14px
+			&.warning
+				background-color: rgba($color_orange, 0.1)
 
 .icon-external
 	background-image: url(../images/icon/icon-external.svg)

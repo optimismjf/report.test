@@ -999,16 +999,26 @@ $(function() { // for aside
 			}
 		});
 		
-		$('.b-inreports__aside').on('mouseover', 
+		function asideSlide() {
+			$('.b-inreports__aside').on('mouseover.asideSlide', 
 			function (event) {
 				if (!$('body').hasClass('aside-toggle') && slidingAside) {
 					$('.b-inreports__aside').css('width', maxWidth + 10);
 					$('.b-inreports__aside-menu-wrapper').getNiceScroll().resize();
 				}
-		}).on('mouseout', function (event) {			
-				$('.b-inreports__aside').removeAttr('style');
-				$('.b-inreports__aside-menu-wrapper').getNiceScroll().resize();
-			});
+			}).on('mouseout.asideSlide', function (event) {			
+					$('.b-inreports__aside').css('width', '');
+					$('.b-inreports__aside-menu-wrapper').getNiceScroll().resize();
+				});
+		};
+
+		$(window).on('load resize', function () {
+			if($(window).width() < 1200) {
+				$('.b-inreports__aside').off('.asideSlide');
+			} else {
+				asideSlide();
+			}
+		})
 	}
 });
 
