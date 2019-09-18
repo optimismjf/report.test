@@ -13,11 +13,15 @@ ul
 	//padding: 0px
 	//margin: 0px
 	//list-style-type: none !important
+a
+	color: #0044BB
 
 section
 	ul
 		padding-left: 27px
 /*magnific settings*/
+.color_main
+	color: $color_black_main
 .color_red
 	color: $color_red
 .color_orange
@@ -26,6 +30,10 @@ section
 	color: $color_green
 .color_blue
 	color: $color_blue
+.color_lightblue
+	color: rgba(#0044BB, 0.7)
+.bg-warning
+	background-color: rgba($color_orange, 0.07)
 
 .fill_red
 	fill: $color_red
@@ -5035,6 +5043,9 @@ body
 	&-100
 		min-width: 100px
 		max-width: 100px
+	&-130
+		min-width: 130px
+		max-width: 130px
 	&-150
 		min-width: 150px
 		max-width: 150px
@@ -5056,6 +5067,9 @@ body
 	&-400
 		min-width: 400px
 		max-width: 400px
+	&-450
+		min-width: 450px
+		max-width: 450px
 	&-500
 		min-width: 500px
 		max-width: 500px
@@ -5271,6 +5285,27 @@ a.overflowed
 			display: none
 			&.open
 				display: flex
+		&-link
+			font-size: 15px
+			line-height: 28px
+			color: $color_black_main
+			&-wrapper
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 90px
+				margin: auto
+				height: 28px
+				i
+					width: 14px
+					height: 14px
+					position: relative
+					top: 2px
+					fill: #AFBAC1
+					margin-right: 6px
+					svg
+						width: 14px
+						height: 14px
 		&-toggler
 			position: absolute !important
 			top: 15px
@@ -5325,11 +5360,11 @@ a.overflowed
 				height: 4px
 				margin-top: -4px
 				&.high-level
-					background-color: $color_red
+					background-color: rgba($color_red, 0.8)
 				&.middle-level
-					background-color: $color_orange
+					background-color: rgba($color_orange, 0.8)
 				&.low-level
-					background-color: $color_grey
+					background-color: rgba($color_grey, 0.8)
 
 		&-icon
 			svg
@@ -5391,6 +5426,80 @@ a.overflowed
 				height: 50px
 				position: relative
 				z-index: 2
+	&__list 
+		list-style: none
+		padding: 0
+		display: inline-flex
+		&--btop
+			border-top: 1px solid $color_easygrey
+			padding-top: 0.5em
+			margin-top: 0.5em
+		&-item
+			padding: 20px
+			width: 180px
+			position: relative
+			&--biggerp
+				padding: 20px 80px 20px 20px
+				width: auto
+			&--icon
+				width: auto
+				clear: both				
+				padding: 30px 20px 20px 78px
+				margin-right: 15px
+			&--icon &-icon
+				position: absolute
+				width: 50px
+				height: 50px
+				top: 30px
+				left: 20px
+				fill: #C4C4C4
+				svg
+					display: block
+					width: 50px
+					height: 50px
+				&.active
+					fill: #22A221
+			&--icon &-title
+				font-size: 18px
+				line-height: 17px
+
+			&-title
+				font-weight: 500
+				font-size: 13px
+				line-height: 12px
+				height: 2em
+			&-value
+				font-weight: 300
+				font-size: 28px
+				line-height: 33px
+				&-diff
+					position: relative					
+					font-size: 12px
+					top: -2em
+					line-height: 93.75%
+				&--big
+					font-size: 32px
+					line-height: 37px
+				&--smaller
+					font-size: 0.75em
+				&--small
+					font-size: 15px
+					line-height: 18px
+				&.value-zero
+					color: #AFBAC1
+			&-desc
+				font-size: 12px
+				line-height: 14px
+				color: $color_grey
+			&-diff	
+				position: absolute
+				top: 20px
+				right: 0px
+				font-size: 12px
+				line-height: 93.75%
+			&.warning
+				background-color: rgba($color_orange, 0.1)
+
 	&__domaininfo
 		padding: 20px 0 0
 		&-host
@@ -5413,49 +5522,105 @@ a.overflowed
 			color: $color_grey
 			display: flex
 			align-items: center
-		&-list 
-			margin: 30px 0 0
-			list-style: none
-			padding: 0
-			display: flex
-		&-item
-			padding: 20px 80px 20px 20px
-			&-title
-				font-weight: 500
-				font-size: 13px
-				line-height: 12px
-				height: 2em
-			&-value
-				font-weight: 300
-				font-size: 28px
-				line-height: 33px
-			&-desc
-				font-size: 12px
-				line-height: 14px
-				color: $color_grey
+			margin-bottom: 30px
+		
 	&__security
 		padding: 0
+	&__reputation
+		width: 100%
+	&__robots
+		width: 100%
+	&__recs
+		&-title
+			font-weight: 500
+			font-size: 14px
+			line-height: 16px
+			margin-bottom: 10px
 		&-list
 			list-style: none
 			padding: 0
-			display: flex
+			margin: 0 0 20px
 		&-item
-			width: 180px
-			padding: 20px
-			&-title
-				font-weight: 500
+			border-bottom: 1px solid $color_easygrey
+			&-name
+				display: flex
+				align-items: center
+				height: 40px
+				font-size: 14px
+				line-height: 16px
+				cursor: pointer
+				position: relative
+				width: 100%
+				&:after
+					content: "\f0d7"
+					color: $color_grey
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					margin: auto
+					width: 32px
+					height: 28px
+					text-align: center
+					line-height: 28px
+					display: inline-block
+					font: normal normal normal 14px/28px FontAwesome;
+					text-rendering: auto
+					-webkit-font-smoothing: antialiased
+					-moz-osx-font-smoothing: grayscale
+					pointer-events: none
+				&.active:after
+					transform: scaleY(-1)
+				&:hover
+					background-color: $color_easygrey
+			&-icon
+				width: 12px
+				height: 12px
+				margin: 2px 8px
+				svg
+					width: 12px
+					height: 12px
+			&-content
+				display: none
+				padding: 0 20px 10px 28px
 				font-size: 13px
-				line-height: 12px
-				height: 2em
-			&-value
-				font-weight: 300
-				font-size: 28px
-				line-height: 33px
-			&-desc
-				font-size: 12px
-				line-height: 14px
-			&.warning
-				background-color: rgba($color_orange, 0.1)
+				line-height: 23px
+			&.open &-content
+				display: block
+	&__table
+		width: 100%
+		font-size: 14px
+		margin: 0 0 40px
+		border-collapse: collapse
+		thead
+			color: #697882
+			tr
+				th
+					font-weight: normal
+					text-align: left
+					vertical-align: bottom
+					border-bottom: 1px solid $color_easygrey
+					line-height: 16px
+					padding: 4px 10px
+		tbody
+			tr
+				td
+					line-height: 40px
+					padding: 0 10px
+					border-bottom: 1px solid $color_easygrey
+					i
+						width: 14px
+						height: 14px
+						position: relative
+						top: 2px
+						fill: #DADADA
+						margin-left: 12px
+						svg
+							width: 14px
+							height: 14px
+						&.active
+							fill: #28A745
+
 
 .icon-external
 	background-image: url(../images/icon/icon-external.svg)
@@ -5467,3 +5632,24 @@ a.overflowed
 	background-image: url(../images/icon/icon-export.svg)
 .icon-summary
 	background-image: url(../images/icon/icon-summary.svg)
+
+.b-raiting
+	display: flex
+	&__item
+		position: relative
+		margin-right: 4px
+		width: 12px
+		height: 12px
+		svg
+			width: 12px
+			height: 12px
+		&-in
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			margin: auto
+			overflow: hidden
+			fill: #F5A623
+		&-out
+			fill: #AFBAC1

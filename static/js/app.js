@@ -732,6 +732,7 @@ function dataAction(e) {
 		case 'toggle':
 			/* Тоглим цель */
 			$(this).toggleClass('active');
+			target = target == 'parent' ? $(this).parent() : target;
 			$(target).toggleClass('open');
 			
 			break;
