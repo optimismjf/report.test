@@ -3566,3 +3566,11 @@ function hideErrorMessage(element) {
 }
 
 ;
+
+document.addEventListener("DOMContentLoaded", function() {
+	let close = document.getElementsByClassName('close-profile');
+	let profileWrap = document.getElementById('navigation-profile');
+	close[0].addEventListener('click', function(event){
+		profileWrap.style.display = 'none';
+	});
+});

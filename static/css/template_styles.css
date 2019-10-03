@@ -8442,15 +8442,42 @@ body.is-hidden {
       padding: 20px 20px 20px;
       color: #fff;
       overflow: hidden; }
-      #header.main-header #navigation-profile .user-information .hamburger {
+      #header.main-header #navigation-profile .user-information .close-profile {
         border-right: 0;
         position: absolute;
         top: 20px;
-        right: 20px; }
-        #header.main-header #navigation-profile .user-information .hamburger.is-active {
+        right: 20px;
+        z-index: 20;
+        padding: 0;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-transition: opacity, -webkit-filter 1s linear;
+        transition: opacity, -webkit-filter 1s linear;
+        -o-transition: opacity, filter 1s linear;
+        transition: opacity, filter 1s linear;
+        transition: opacity, filter 1s linear, -webkit-filter 1s linear;
+        font: inherit;
+        color: inherit;
+        text-transform: none;
+        background-color: transparent;
+        margin: 0;
+        overflow: visible;
+        height: 59px;
+        padding: 17.5px 17px;
+        width: 59px;
+        text-align: center; }
+        #header.main-header #navigation-profile .user-information .close-profile .hamburger-inner {
+          -webkit-transform: translate3d(0, 6px, 0) rotate(45deg);
+          transform: translate3d(0, 6px, 0) rotate(45deg);
+          background-color: #ffffff; }
+          #header.main-header #navigation-profile .user-information .close-profile .hamburger-inner:before {
+            opacity: 0; }
+          #header.main-header #navigation-profile .user-information .close-profile .hamburger-inner:after {
+            -webkit-transform: translate3d(0, -12px, 0) rotate(-90deg);
+            transform: translate3d(0, -12px, 0) rotate(-90deg);
+            background-color: #ffffff; }
+        #header.main-header #navigation-profile .user-information .close-profile.is-active {
           background-color: unset; }
-        #header.main-header #navigation-profile .user-information .hamburger-inner, #header.main-header #navigation-profile .user-information .hamburger-inner:before, #header.main-header #navigation-profile .user-information .hamburger-inner:after {
-          background-color: #fff; }
       #header.main-header #navigation-profile .user-information .user-card {
         display: block;
         float: left;

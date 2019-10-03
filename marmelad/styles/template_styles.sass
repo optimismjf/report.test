@@ -3268,15 +3268,36 @@ body
 			padding: 20px 20px 20px
 			color: #fff
 			overflow: hidden
-			.hamburger
+			.close-profile
 				border-right: 0
 				position: absolute
 				top: 20px
 				right: 20px
+				z-index: 20
+				padding: 0
+				display: inline-block
+				cursor: pointer
+				transition: opacity, filter 1s linear
+				font: inherit
+				color: inherit
+				text-transform: none
+				background-color: transparent
+				margin: 0
+				overflow: visible
+				height: 59px
+				padding: 17.5px 17px
+				width: 59px
+				text-align: center
+				.hamburger-inner
+					transform: translate3d(0, 6px, 0) rotate(45deg)
+					background-color: #ffffff
+					&:before
+						opacity: 0
+					&:after
+						transform: translate3d(0, -12px, 0) rotate(-90deg)
+						background-color: #ffffff
 				&.is-active
 					background-color: unset
-				&-inner, &-inner:before, &-inner:after
-					background-color: #fff
 			.user-card
 				display: block
 				float: left
