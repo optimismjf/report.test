@@ -4117,7 +4117,7 @@ button.mfp-close {
 }
 
 .block-analysis {
-    background: url(../images/background/small-bg.svg) 50% 50% no-repeat;
+    background: url(../images/background/small-bg.png) 50% 50% no-repeat;
     padding: 70px 0 99px;
     background-size: cover
 }
@@ -4446,53 +4446,6 @@ a:hover {
     font-weight: 400
 }
 
-.blocks__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin: 0 -20px
-}
-
-.blocks__list-item {
-    border-radius: 5px;
-    background-color: #fff;
-    -webkit-box-shadow: 0 0 10px 0 rgba(162, 174, 183, .2);
-    box-shadow: 0 0 10px 0 rgba(162, 174, 183, .2);
-    padding: 30px;
-    width: 33.333%;
-    width: calc(33.333% - 40px);
-    margin: 0 20px 40px;
-    text-align: center
-}
-
-.blocks__list-item h3 {
-    color: #2f353b;
-    font-size: 18px;
-    line-height: 21px;
-    margin: 0 0 10px;
-    font-weight: 400
-}
-
-.blocks__list-item p {
-    color: #a2aeb7;
-    font-size: 15px;
-    line-height: 25px;
-    margin: 0
-}
-
-.blocks__list .icon {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 40px
-}
-
-.blocks__list .icon.icon-verify {
-    background: url(../images/icon/verify.svg) 50% 50% no-repeat
-}
-
 .informer {
     margin: 27px 0 0 0;
     text-align: center;
@@ -4510,7 +4463,6 @@ a:hover {
     line-height: 25px;
     text-align: center;
     border-radius: 50%;
-    margin-right: 10px
 }
 
 .blocks__article-item {
@@ -4927,10 +4879,6 @@ a:hover {
     .container {
         max-width: 100%;
         padding: 0 15px
-    }
-    .blocks__list-item {
-        width: calc(50% - 40px);
-        margin: 0 20px 40px
     }
     #header.front-page {
         background-position: 20% 50%;

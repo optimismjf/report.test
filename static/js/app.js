@@ -3569,8 +3569,10 @@ function hideErrorMessage(element) {
 
 document.addEventListener("DOMContentLoaded", function() {
 	let close = document.getElementsByClassName('close-profile');
-	let profileWrap = document.getElementById('navigation-profile');
-	close[0].addEventListener('click', function(event){
-		profileWrap.style.display = 'none';
-	});
+	if(close.length > 0){
+		let profileWrap = document.getElementById('navigation-profile');
+		close[0].addEventListener('click', function(event){
+			profileWrap.style.display = 'none';
+		});
+	}
 });

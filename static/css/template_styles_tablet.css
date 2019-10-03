@@ -2232,3 +2232,16 @@
     .b-form__row-left {
       width: auto;
       margin-bottom: 0; }
+
+@media only screen and (min-width: 768px) {
+  .advantages .blocks__list {
+    max-width: 700px; }
+    .advantages .blocks__list-item {
+      width: 340px;
+      height: 310px;
+      margin-right: 20px;
+      margin-bottom: 20px; }
+      .advantages .blocks__list-item:nth-child(2n) {
+        margin-right: 0px; }
+      .advantages .blocks__list-item:nth-child(3n) {
+        margin-right: 20px; } }
