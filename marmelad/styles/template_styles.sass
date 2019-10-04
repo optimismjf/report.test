@@ -3062,15 +3062,13 @@ body
 					color: #FFFFFF
 					text-decoration: none
 				a
-					padding: 6px 20px
+					padding: 7px 15px 10px 20px
 					text-decoration: none
 					color: #fff
 					font-size: 15px
-					line-height: 25px
+					line-height: 20px
 					letter-spacing: 0.4px
 					transition: background-color .2s
-					&:hover
-						background: rgba(255, 255, 255, 0.2)
 					&.active
 						background: rgba(255, 255, 255, 0.2)
 						position: relative
@@ -3082,6 +3080,10 @@ body
 							top: 0
 							left: 0
 							position: absolute
+			.sub-menu li
+				margin-bottom: 0px
+				a:not(.active):hover
+					background: rgba(255, 255, 255, 0.2)
 			.sub-menu-title
 				line-height: 25px
 				font-size: 18px
@@ -3098,9 +3100,7 @@ body
 				background-position: 0 50%
 				position: relative
 				top: 5px
-			.sub-menu
-				li
-					margin-bottom: 8px
+
 
 	.header__menu
 		margin-right: 18px
@@ -3352,7 +3352,6 @@ body
 					color: #fff
 					font-size: 18px
 					line-height: 27px
-
 				.sign-out 
 					color: #a2aeb7
 					font-size: 15px
@@ -3392,7 +3391,7 @@ body
 						line-height: 1
 						color: #a2aeb7
 						display: block
-						font: 15px/25px BlissPro-Light
+						font: 15px/25px 'Roboto', sans-serif
 						text-decoration: none
 
 		.header__menu-list
