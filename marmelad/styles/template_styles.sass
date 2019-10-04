@@ -2528,8 +2528,7 @@ section
 		margin-top: 6px
 		letter-spacing: 0.6px
 		text-decoration: none
-		img
-			display: none
+
 		.logo__company-name
 			display: block
 			line-height: 25px
@@ -2863,6 +2862,29 @@ body
 	transition-duration: .15s
 	transition-timing-function: ease
 
+
+#header
+	&.index-page
+		.hamburger
+			z-index: 20
+			position: relative
+			padding: 0
+			display: inline-block
+			cursor: pointer
+			transition: opacity, filter, -webkit-filter 1s linear
+			font: inherit
+			color: inherit
+			text-transform: none
+			background-color: transparent
+			border: 0
+			margin: 0
+			overflow: visible
+			height: 59px
+			padding: 17.5px 17px
+			width: 59px
+			text-align: center
+			border-right: 1px solid #ec8684
+			
 #header.main-header
 	max-height: 60px
 	height: 60px
