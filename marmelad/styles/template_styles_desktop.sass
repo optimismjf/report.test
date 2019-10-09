@@ -265,24 +265,6 @@ section
 		&__container
 			margin-left: 340px
 			max-width: 806px
-#header.index-page
-	.container
-		padding: 0 20px
-		margin: 0 auto
-		max-width: 1319px
-	.logo
-		margin: 0
-		img
-			display: inline-block
-	.header__menu-list
-		li
-			margin-bottom: 0
-			margin-right: 38px
-			padding: 23px 0 23px
-			a
-				padding: 0
-				&:hover
-					text-decoration: underline
 #header.front-page.b-profile-page.regular-page
 	.container
 		padding: 0 20px
@@ -300,12 +282,64 @@ section
 				&:hover
 					text-decoration: underline
 
+@media only screen and (min-width : 1200px)
+	#header.front-page.index-page
+		padding-top: 43px
+		.container
+			padding: 0 20px
+			margin: 0 auto
+			max-width: 1319px
+			position: relative
+			.hamburger
+				display: none
+			.logo
+				width: auto
+				height: auto
+			#navigation
+				display: flex !important
+				position: absolute
+				top: 0
+				right: 115px
+				left: unset
+				max-width: unset
+				width: auto
+				height: 61px
+				padding-top: 0px
+				background: unset
+				box-shadow: unset
+				border-top: unset
+				.header__menu-list
+					height: 100%
+					display: flex
+					align-items: center
+					.visible-desktop
+						display: block
+					.visible-mobile
+						display: none
+					li
+						margin-bottom: 0
+						margin-right: 40px
+						padding: 23px 0 23px
+						&.dropdown-list
+							padding-right: 15px
+							position: relative
+						a
+							font-size: 15px
+							padding: 0
+							&:hover
+								text-decoration: underline
+						.dropdown-block
+							.dropdown-group
+								.dropdown-items
+									a
+										display: flex
+										flex-wrap: wrap
+										padding: 13px 13px 13px 40px
+
+
 #header.front-page.b-profile-page
 	.logo
 		float: left
-		img
-			max-width: 182px
-			margin-top: 8px
 	.btn.btn-input
 		padding: 9px 19.5px 6px 37px
 		height: 35px
@@ -363,11 +397,6 @@ section
 					text-decoration: none
 
 #header.index-page
-	.logo
-		float: left
-		img
-			max-width: 182px
-			margin-top: 8px
 	.btn.btn-input
 		padding: 9px 19.5px 6px 37px
 		height: 35px
@@ -377,12 +406,7 @@ section
 	.header__menu
 		margin-right: 18px
 		text-align: center
-	.header__menu-list
-		height: 61px
-		display: flex
-		align-items: center
 		li
-			margin-right: 40px
 		.visible-desktop
 			display: block
 			&.active

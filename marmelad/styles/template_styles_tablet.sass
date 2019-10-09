@@ -224,11 +224,8 @@
 						width: 8px
 						border-radius: 100px
 						background-color: #E03632
-#header.index-page
+#header.front-page
 	.hamburger
-		float: left
-		margin-left: 0
-		padding: 9px 4px
 		.hamburger-inner,
 		.hamburger-inner::after,
 		.hamburger-inner::before
@@ -240,12 +237,18 @@
 			&:after
 				top: 12px
 
+
 	.logo
-		float: left
-		margin-left: 11px
-		margin-top: 6px
-		letter-spacing: 0.6px
+		display: inline-flex
+		justify-content: center
+		margin-left: 0px
+		margin-top: 0px
+		letter-spacing: 1px
+		float: none
+		line-height: 59px
 		text-decoration: none
+		width: 160px
+		height: 59px
 		.logo__company-name
 			display: block
 			line-height: 25px
@@ -262,9 +265,6 @@
 
 	@media only screen and (min-width : 1025px)
 		.logo
-			img
-				max-width: 140px
-				padding-top: 0px
 			.logo__company-name
 				display: none
 		& > .container
@@ -1653,6 +1653,17 @@
 		height: 50%
 		margin-right: 0
 
+@media only screen and (min-width : 768px)
+	#header.front-page.index-page
+		.container
+			#navigation
+				max-width: 250px
+				height: auto
+				.header__menu-list
+					.visible-desktop
+						display: none
+					.visible-mobile
+						display: block
 
 .main-wrapper .banners-list .banner
 	width: calc(50% - 30px)

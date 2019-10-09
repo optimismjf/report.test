@@ -2501,39 +2501,107 @@ section
 		opacity: .6
 		padding: 0 20px
 		margin-bottom: 9px
-	.logo
-		position: relative
-		z-index: 16
 
 
-#header.front-page
-	.hamburger
-		float: left
-		margin-left: 0
-		padding: 9px 4px
-		.hamburger-inner,
-		.hamburger-inner::after,
-		.hamburger-inner::before
-			width: 21px
-		.hamburger-inner
-			top: 5px
-			&:before
-				top: 6px
-			&:after
-				top: 12px
+#header.front-page.index-page
+	padding-top: 0px
+	.container
+		padding: 0
+		margin: 0 auto
+		.hamburger
+			z-index: 20
+			position: relative
+			padding: 20px
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			cursor: pointer
+			transition: opacity, filter, -webkit-filter 1s linear
+			font: inherit
+			color: inherit
+			text-transform: none
+			background-color: transparent
+			border: 0
+			margin: 0
+			margin-right: 10px
+			overflow: visible
+			height: 59px
+			width: 59px
+			text-align: center
+			border-right: 1px solid #ec8684
+			float: left
+			opacity: 0.7
+			.hamburger-box
+				width: 25px
+				height: 24px
+				display: inline-block
+				position: relative
+				.hamburger-inner,
+				.hamburger-inner::after,
+				.hamburger-inner::before
+					width: 21px
+					height: 2px
+					background-color: #fff
+					position: absolute
+					transition-property: transform
+					transition-property: transform
+					transition-duration: .15s
+					transition-timing-function: ease
+				.hamburger-inner
+					top: 5px
+					&:before
+						content: ""
+						display: block
+						top: 6px
+					&:after
+						top: 12px
+						content: ""
+						display: block
+			&.is-active
+				background-color: #C51311
+				.hamburger-inner
+					transform: translate3d(0, 6px, 0) rotate(45deg)
+					&::after
+						transform: translate3d(0, -12px, 0) rotate(-90deg)
+					&::before
+						transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0)
+						opacity: 0
+		.logo
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			height: 59px
+			width: 159px
+			position: relative
+			z-index: 16
+			.logo__company-name
+				display: block
+				line-height: 25px
+				font-size: 24px
+				color: #FFFFFF
+		.btn.btn-input
+			margin-top: 12px
+			height: 33px
+			padding-top: 9px
+			margin-right: 11px
+			padding-left: 37px
+		#navigation
+			display: none
+			position: fixed
+			top: 59px
+			left: 0
+			width: 100%
+			z-index: 15
+			height: 100%
+			border-top: 1px solid rgba(255, 255, 255, 0.4)
+			background-color: #E03632
+			-webkit-box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
+			box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
+			padding: 10px 0 0
+			background-image: url('../../images/background/header-tablet.svg')
+			background-repeat: no-repeat
+			background-position: 51px -60px
 
-	.logo
-		float: left
-		margin-left: 11px
-		margin-top: 6px
-		letter-spacing: 0.6px
-		text-decoration: none
-
-		.logo__company-name
-			display: block
-			line-height: 25px
-			font-size: 24px
-			color: #FFFFFF
 #header.front-page.b-profile-page.regular-page
 	.sub-menu-link
 		line-height: 25px
@@ -2863,28 +2931,7 @@ body
 	transition-timing-function: ease
 
 
-#header
-	&.index-page
-		.hamburger
-			z-index: 20
-			position: relative
-			padding: 0
-			display: inline-block
-			cursor: pointer
-			transition: opacity, filter, -webkit-filter 1s linear
-			font: inherit
-			color: inherit
-			text-transform: none
-			background-color: transparent
-			border: 0
-			margin: 0
-			overflow: visible
-			height: 59px
-			padding: 17.5px 17px
-			width: 59px
-			text-align: center
-			border-right: 1px solid #ec8684
-			
+
 #header.main-header
 	max-height: 60px
 	height: 60px

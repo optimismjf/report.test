@@ -3933,18 +3933,6 @@ screen and (max-height:300px) {
     background-size: cover
 }
 
-.logo {
-    display: block;
-    float: left;
-    height: 69.94px;
-    line-height: 69.94px;
-    width: 197px;
-}
-
-.logo img {
-    padding-top: 9px
-}
-
 .header__menu {
     float: right
 }
@@ -4651,6 +4639,59 @@ a:hover {
     }
 }
 
+@media all and (max-width: 1200px){
+        #navigation .header__menu-list>li {
+        clear: none;
+        text-align: left;
+        margin-right: 0;
+        float: none;
+        border-bottom: 0
+    }
+    #navigation .header__menu-list>li>.menu-title,
+    #navigation .header__menu-list>li>a {
+        font-size: 18px;
+        line-height: 27px;
+        color: #fff;
+        padding-bottom: 8px;
+        display: block
+    }
+    #navigation .header__menu-list>li>.menu-title.external,
+    #navigation .header__menu-list>li>a.external {
+        color: #a2aeb7;
+        font-size: 15px
+    }
+    #navigation .header__menu-list>li>.menu-title.external:after,
+    #navigation .header__menu-list>li>a.external:after {
+        content: "\f08e";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin-left: 15px
+    }
+    #navigation .header__menu-list>li ul {
+        list-style: none;
+        margin: 0;
+        padding: 0
+    }
+    #navigation .header__menu-list>li ul li {
+        text-align: left;
+        border-top: 1px solid #44494e;
+        clear: both;
+        width: 100%;
+        padding: 8px 0;
+        margin: 0
+    }
+    #navigation .header__menu-list>li ul li a {
+        font-size: 15px;
+        line-height: 25px;
+        color: #a2aeb7;
+        display: block
+    }
+}
+
 @media all and (max-width:1024px) {
     .hamburger {
         z-index: 20;
@@ -4675,9 +4716,6 @@ a:hover {
         overflow: visible;
         float: right;
         margin-left: 10px
-    }
-    .hamburger:hover {
-        opacity: .7
     }
     .hamburger-box {
         width: 25px;
@@ -4799,76 +4837,6 @@ a:hover {
     .visible-desktop {
         display: none
     }
-    #navigation {
-        display: none;
-        position: fixed;
-        top: 59px;
-        left: 0;
-        width: 100%;
-        z-index: 15;
-        height: 100%;
-        background-color: #E03632;
-        -webkit-box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546);
-        box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546);
-        padding: 10px 0 0;
-        background-image: url('../../images/background/header-tablet.svg');
-        background-repeat: no-repeat;
-        background-position: 51px -60px;
-        @media (min-width: 768px) {
-            max-width: 250px;
-            height: auto;
-        }
-    }
-    #navigation .header__menu-list>li {
-        clear: none;
-        text-align: left;
-        margin-right: 0;
-        float: none;
-        border-bottom: 0
-    }
-    #navigation .header__menu-list>li>.menu-title,
-    #navigation .header__menu-list>li>a {
-        font-size: 18px;
-        line-height: 27px;
-        color: #fff;
-        padding-bottom: 8px;
-        display: block
-    }
-    #navigation .header__menu-list>li>.menu-title.external,
-    #navigation .header__menu-list>li>a.external {
-        color: #a2aeb7;
-        font-size: 15px
-    }
-    #navigation .header__menu-list>li>.menu-title.external:after,
-    #navigation .header__menu-list>li>a.external:after {
-        content: "\f08e";
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        margin-left: 15px
-    }
-    #navigation .header__menu-list>li ul {
-        list-style: none;
-        margin: 0;
-        padding: 0
-    }
-    #navigation .header__menu-list>li ul li {
-        text-align: left;
-        border-top: 1px solid #44494e;
-        clear: both;
-        width: 100%;
-        padding: 8px 0;
-        margin: 0
-    }
-    #navigation .header__menu-list>li ul li a {
-        font-size: 15px;
-        line-height: 25px;
-        color: #a2aeb7;
-        display: block
-    }
     .external {
         color: #a2aeb7;
         font-size: 15px
@@ -4960,9 +4928,6 @@ a:hover {
     .owl-dots {
         margin-top: 40px
     }
-    .logo {
-        width: 140px
-    }
     .btn.btn-input {
         margin-top: 0
     }
@@ -4975,9 +4940,6 @@ a:hover {
 }
 
 @media all and (max-width:767px) {
-    .logo {
-        width: 140px
-    }
     .btn.btn-input {
         margin-top: 0
     }
@@ -4990,9 +4952,6 @@ a:hover {
     .container {
         max-width: 100%;
         padding: 0 15px
-    }
-    .logo {
-        width: 140px
     }
     .btn.btn-input {
         text-indent: 100%;
@@ -5009,7 +4968,7 @@ a:hover {
         margin-top: 4px;
     }
     .btn.btn-input:before {
-        left: -2px;
+        left: 5px;
         top: 7px;
         font-size: 20px
     }
