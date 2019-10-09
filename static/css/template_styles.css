@@ -4815,6 +4815,9 @@ section ul {
 .text-center {
   text-align: center; }
 
+.mt-0 {
+  margin-top: 0px; }
+
 /* overlay at start */
 .mfp-fade.mfp-bg {
   opacity: 0;
@@ -11251,3 +11254,26 @@ a.overflowed {
       font-size: 15px;
       line-height: 25px;
       margin: 0; }
+
+.informer .visible-mobile {
+  display: block; }
+
+.informer .informer_in {
+  padding: 15px 20px 17px;
+  margin: 0 auto;
+  border-top: 1px solid #E1E4E6;
+  border-bottom: 1px solid #E1E4E6;
+  font-size: 15px;
+  color: #2E97DF;
+  text-align: left;
+  background-image: url(../images/icon/faq-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: -webkit-calc(100% - 20px) center;
+  background-position: calc(100% - 20px) center;
+  background-size: 7px; }
+  .informer .informer_in:hover, .informer .informer_in:focus {
+    text-decoration: none;
+    background-color: transparent; }
+
+.ol-tablet-list {
+  padding-left: 25px; }

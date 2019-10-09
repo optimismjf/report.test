@@ -1247,4 +1247,8 @@
       .advantages .blocks__list-item:nth-child(2n) {
         margin-right: 40px; }
       .advantages .blocks__list-item:nth-child(3n) {
-        margin-right: 0px; } }
+        margin-right: 0px; }
+  section .blocks__article-item .image img {
+    margin: 30px auto 14px; }
+  .ol-tablet-list {
+    padding-left: 40px; } }
