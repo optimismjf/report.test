@@ -1656,14 +1656,25 @@
 @media only screen and (min-width : 768px)
 	#header.front-page.index-page
 		.container
-			#navigation
-				max-width: 250px
-				height: auto
-				.header__menu-list
-					.visible-desktop
-						display: none
-					.visible-mobile
-						display: block
+			.front-page__header
+				#navigation
+					max-width: 250px
+					height: auto
+					.header__menu-list
+						.visible-desktop
+							display: none
+						.visible-mobile
+							display: block
+				.btn.btn-input
+					width: 100px
+					height: 34px
+					padding: 10px 15px
+					&:before
+						margin-right: 10px
+						margin-top: -2px
+
+
+
 .main-wrapper .banners-list .banner
 	width: calc(50% - 30px)
 	&:nth-child(odd)

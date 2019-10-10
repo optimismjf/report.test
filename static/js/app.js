@@ -3575,4 +3575,44 @@ document.addEventListener("DOMContentLoaded", function() {
 			profileWrap.style.display = 'none';
 		});
 	}
+
+	// let actions_slider = document.getElementsByClassName('b-projects-empty__actions');
+	// if( actions_slider.length > 0 ){
+	// 	if( document.body.clientWidth < 768 ){
+	// 		actions_slider[0].classList.add('owl-carousel');
+	// 		jQuery(".b-projects-empty__actions").owlCarousel({
+	// 				loop: !0,
+	// 				margin: 0,
+	// 				nav: !1,
+	// 				items: 1,
+	// 				dots: !0,
+	// 				autoplay: !0,
+	// 				autoplayTimeout: 7e3,
+	// 				autoplayHoverPause: !0
+	// 			});
+	// 	} else {
+	// 		jQuery('.b-projects-empty__actions').owlCarousel("destroy");
+	// 	}
+	// }
+
 });
+
+
+            // if( document.body.clientWidth < 768 ){
+            //     n('.b-projects-empty__actions').addClass("owl-carousel");
+            //     n(".b-projects-empty__actions").owlCarousel({
+            //         loop: !0,
+            //         margin: 0,
+            //         nav: !1,
+            //         items: 1,
+            //         dots: !0,
+            //         autoplay: !0,
+            //         autoplayTimeout: 7e3,
+            //         autoplayHoverPause: !0
+            //     });
+            // } else {
+            //     if( n('.b-projects-empty__actions').hasClass("owl-carousel") ){
+            //         n('.b-projects-empty__actions').removeClass('owl-carousel');
+            //         n('.b-projects-empty__actions').trigger("destroy.owl.carousel");
+            //     }
+            // }

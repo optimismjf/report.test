@@ -2165,13 +2165,20 @@
   margin-right: 0; }
 
 @media only screen and (min-width: 768px) {
-  #header.front-page.index-page .container #navigation {
+  #header.front-page.index-page .container .front-page__header #navigation {
     max-width: 250px;
     height: auto; }
-    #header.front-page.index-page .container #navigation .header__menu-list .visible-desktop {
+    #header.front-page.index-page .container .front-page__header #navigation .header__menu-list .visible-desktop {
       display: none; }
-    #header.front-page.index-page .container #navigation .header__menu-list .visible-mobile {
-      display: block; } }
+    #header.front-page.index-page .container .front-page__header #navigation .header__menu-list .visible-mobile {
+      display: block; }
+  #header.front-page.index-page .container .front-page__header .btn.btn-input {
+    width: 100px;
+    height: 34px;
+    padding: 10px 15px; }
+    #header.front-page.index-page .container .front-page__header .btn.btn-input:before {
+      margin-right: 10px;
+      margin-top: -2px; } }
 
 .main-wrapper .banners-list .banner {
   width: -webkit-calc(50% - 30px);
