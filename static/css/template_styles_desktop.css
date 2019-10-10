@@ -746,12 +746,14 @@
         #header.front-page.index-page .container .front-page__header .logo {
           width: 182px;
           padding-left: 44px;
-          background-size: 36px;
+          background-size: 42px;
           background-position: 0px center; }
-          #header.front-page.index-page .container .front-page__header .logo span:first-child {
-            font-size: 25px; }
-          #header.front-page.index-page .container .front-page__header .logo span:last-child {
-            font-size: 14px; } }
+          #header.front-page.index-page .container .front-page__header .logo span {
+            line-height: 17px; }
+            #header.front-page.index-page .container .front-page__header .logo span:first-child {
+              font-size: 25px; }
+            #header.front-page.index-page .container .front-page__header .logo span:last-child {
+              font-size: 13px; } }
 
 #header.front-page.b-profile-page .logo {
   float: left; }

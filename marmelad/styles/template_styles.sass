@@ -1182,7 +1182,7 @@ section
 		input
 			min-height: 50px
 	&-empty
-		padding: 20px 25px 25px
+		padding: 20px 0px 25px
 		&__title
 			font-size: 20px
 			line-height: 23px
@@ -1193,6 +1193,7 @@ section
 			justify-content: space-between
 			flex-wrap: wrap
 			width: 100%
+			padding-top: 25px
 		&__action
 			width: 100%
 			display: flex
@@ -1201,12 +1202,12 @@ section
 			background-color: #FFFFFF
 			box-shadow: 0px 0px 10px rgba(162, 174, 183, 0.2)
 			border-radius: 5px
-			padding: 35px 40px 60px
+			padding: 35px 20px 40px
 			&-text
 				font-size: 15px
 				line-height: 21px
 				flex-grow: 1
-				margin-bottom: 50px
+				margin-bottom: 40px
 				p
 					margin: 0px
 					margin-bottom: 20px
@@ -1214,7 +1215,7 @@ section
 						margin-bottom: 0px
 			&-icon
 				img
-					width: 110px
+					width: 110px !important
 					height: auto
 					margin: 0px auto
 					box-shadow: none
@@ -1228,14 +1229,16 @@ section
 				color: #fff
 				background-color: $color_black_main
 				border-radius: 3px
-				margin: 0 auto 40px
-				max-width: 230px
+				margin: 0 auto 20px
+				max-width: unset
 				&:hover
 					background-color: $color_red
 					text-decoration: none
 		.owl-dots
 			position: absolute
-			top: 0
+			top: 25px
+			margin-top: 0px
+
 
 
 .b-projects-table
@@ -2644,6 +2647,8 @@ section
 					background-image: url('../../images/icon/lock.svg')
 					background-position: center 
 					background-repeat: no-repeat
+				&:hover:before
+					background-image: url('../../images/icon/lock-hover.svg')
 
 			#navigation
 				display: none

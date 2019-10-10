@@ -4335,7 +4335,7 @@ a:hover {
     margin-right: 12px;
     margin-top: 4px; }
   .btn.btn-input:before {
-    left: 5px;
+    left: -1px;
     top: 7px;
     font-size: 20px; }
   .hamburger {
@@ -6071,7 +6071,7 @@ section ul {
     min-height: 50px; }
 
 .b-projects-empty {
-  padding: 20px 25px 25px; }
+  padding: 20px 0px 25px; }
   .b-projects-empty__title {
     font-size: 20px;
     line-height: 23px;
@@ -6089,7 +6089,8 @@ section ul {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    width: 100%; }
+    width: 100%;
+    padding-top: 25px; }
   .b-projects-empty__action {
     width: 100%;
     display: -webkit-box;
@@ -6109,7 +6110,7 @@ section ul {
     -webkit-box-shadow: 0px 0px 10px rgba(162, 174, 183, 0.2);
     box-shadow: 0px 0px 10px rgba(162, 174, 183, 0.2);
     border-radius: 5px;
-    padding: 35px 40px 60px; }
+    padding: 35px 20px 40px; }
     .b-projects-empty__action-text {
       font-size: 15px;
       line-height: 21px;
@@ -6117,14 +6118,14 @@ section ul {
       -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
       flex-grow: 1;
-      margin-bottom: 50px; }
+      margin-bottom: 40px; }
       .b-projects-empty__action-text p {
         margin: 0px;
         margin-bottom: 20px; }
         .b-projects-empty__action-text p:last-of-type {
           margin-bottom: 0px; }
     .b-projects-empty__action-icon img {
-      width: 110px;
+      width: 110px !important;
       height: auto;
       margin: 0px auto;
       -webkit-box-shadow: none;
@@ -6139,14 +6140,15 @@ section ul {
       color: #fff;
       background-color: #2F353B;
       border-radius: 3px;
-      margin: 0 auto 40px;
-      max-width: 230px; }
+      margin: 0 auto 20px;
+      max-width: unset; }
       .b-projects-empty__action-link:hover {
         background-color: #E03632;
         text-decoration: none; }
   .b-projects-empty .owl-dots {
     position: absolute;
-    top: 0; }
+    top: 25px;
+    margin-top: 0px; }
 
 .b-projects-table {
   margin-top: 20px; }
@@ -7713,6 +7715,8 @@ section ul {
           background-image: url("../../images/icon/lock.svg");
           background-position: center;
           background-repeat: no-repeat; }
+        #header.front-page.index-page .container .front-page__header .btn.btn-input:hover:before {
+          background-image: url("../../images/icon/lock-hover.svg"); }
       #header.front-page.index-page .container .front-page__header #navigation {
         display: none;
         position: absolute;
