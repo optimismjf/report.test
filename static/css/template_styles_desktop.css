@@ -742,7 +742,16 @@
                 flex-wrap: wrap;
                 padding: 13px 13px 13px 40px; }
         #header.front-page.index-page .container .front-page__header .btn.btn-input {
-          margin: 0px; } }
+          margin: 0px; }
+        #header.front-page.index-page .container .front-page__header .logo {
+          width: 182px;
+          padding-left: 44px;
+          background-size: 36px;
+          background-position: 0px center; }
+          #header.front-page.index-page .container .front-page__header .logo span:first-child {
+            font-size: 25px; }
+          #header.front-page.index-page .container .front-page__header .logo span:last-child {
+            font-size: 14px; } }
 
 #header.front-page.b-profile-page .logo {
   float: left; }
