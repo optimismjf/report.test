@@ -7554,9 +7554,7 @@ section ul {
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      border-bottom: 1px solid transparent; }
-      #header.front-page.index-page .container .front-page__header.is-active {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
       #header.front-page.index-page .container .front-page__header .hamburger {
         z-index: 20;
         position: relative;
@@ -7665,7 +7663,7 @@ section ul {
         width: 169px;
         position: relative;
         z-index: 16;
-        padding-left: 38px;
+        padding-left: 36px;
         padding-top: 3px;
         background-image: url(../../images/saitreport-logo.svg);
         background-repeat: no-repeat;
@@ -7673,7 +7671,8 @@ section ul {
         background-position: 0px 15px;
         text-align: left;
         line-height: 15px;
-        letter-spacing: 0px; }
+        letter-spacing: 0px;
+        text-decoration: none; }
         #header.front-page.index-page .container .front-page__header .logo span {
           display: inline-block;
           font-family: 'Susan';
@@ -7983,6 +7982,9 @@ section ul {
 body.is-hidden {
   height: 100%;
   overflow: hidden; }
+
+body.menu-open {
+  overflow-y: hidden; }
 
 .sub-menu {
   padding: 0; }

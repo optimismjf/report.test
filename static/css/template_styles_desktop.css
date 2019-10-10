@@ -677,7 +677,8 @@
         -webkit-box-pack: justify;
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-        justify-content: space-between; }
+        justify-content: space-between;
+        border-bottom: 1px solid transparent; }
         #header.front-page.index-page .container .front-page__header .hamburger {
           display: none; }
         #header.front-page.index-page .container .front-page__header #navigation {
@@ -745,7 +746,7 @@
           margin: 0px; }
         #header.front-page.index-page .container .front-page__header .logo {
           width: 182px;
-          padding-left: 44px;
+          padding-left: 46px;
           background-size: 42px;
           background-position: 0px center; }
           #header.front-page.index-page .container .front-page__header .logo span {
