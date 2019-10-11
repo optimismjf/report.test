@@ -2263,7 +2263,9 @@
         width: 340px;
         height: 310px;
         margin-right: 20px;
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        -webkit-box-shadow: 0 0 10px 0 rgba(162, 174, 183, 0.2);
+        box-shadow: 0 0 10px 0 rgba(162, 174, 183, 0.2); }
         .advantages .blocks__list-item:nth-child(2n) {
           margin-right: 0px; }
         .advantages .blocks__list-item:nth-child(3n) {
@@ -2273,4 +2275,10 @@
   .informer .visible-desktop {
     display: block !important; }
   .informer .visible-mobile {
-    display: none; } }
+    display: none; }
+  .reviews {
+    padding: 70px 0 76px; }
+  .blocks__article-item .intro h3, .blocks__article-item:nth-child(2n+1) .intro h3 {
+    top: 70px; }
+  .blocks__article#slider-article .owl-dots {
+    margin-top: -65px; } }

@@ -1749,6 +1749,7 @@
 				height: 310px
 				margin-right: 20px
 				margin-bottom: 20px
+				box-shadow: 0 0 10px 0 rgba(162, 174, 183, .2)
 				&:nth-child(2n)
 					margin-right: 0px
 				&:nth-child(3n)
@@ -1764,3 +1765,15 @@
 			display:block !important
 		.visible-mobile
 			display: none
+	.reviews
+		padding: 70px 0 76px
+
+	.blocks
+		&__article
+			&-item, &-item:nth-child(2n+1)
+				.intro h3
+					top: 70px
+		&__article
+			&#slider-article
+				.owl-dots
+					margin-top: -65px
