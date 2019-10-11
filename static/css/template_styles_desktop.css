@@ -741,7 +741,8 @@
                 -webkit-flex-wrap: wrap;
                 -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
-                padding: 13px 13px 13px 40px; }
+                padding: 13px 13px 13px 40px;
+                letter-spacing: 0.1px; }
         #header.front-page.index-page .container .front-page__header .btn.btn-input {
           margin: 0px; }
         #header.front-page.index-page .container .front-page__header .logo {

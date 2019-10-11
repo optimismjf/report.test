@@ -7584,7 +7584,7 @@ section ul {
         height: 60px;
         width: 60px;
         text-align: center;
-        border-right: 1px solid #ec8684;
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
         float: left;
         opacity: 0.7; }
         #header.front-page.index-page .container .front-page__header .hamburger .hamburger-box {
@@ -7599,7 +7599,6 @@ section ul {
           #header.front-page.index-page .container .front-page__header .hamburger .hamburger-box .hamburger-inner::before {
             display: block;
             position: absolute;
-            left: -0.5px;
             width: 20px;
             height: 2px;
             background-color: #fff;
@@ -7618,8 +7617,7 @@ section ul {
             transition-timing-function: ease; }
           #header.front-page.index-page .container .front-page__header .hamburger .hamburger-box .hamburger-inner {
             position: absolute;
-            top: 5px;
-            left: -1px;
+            top: 3px;
             margin-top: 0px; }
             #header.front-page.index-page .container .front-page__header .hamburger .hamburger-box .hamburger-inner:before {
               content: "";
@@ -11311,51 +11309,53 @@ a.overflowed {
     .b-raiting__item-out {
       fill: #AFBAC1; }
 
-.advantages .blocks__list {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-  .advantages .blocks__list-item {
+.advantages {
+  margin-bottom: 0px; }
+  .advantages .blocks__list {
     width: 100%;
-    height: 100%;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    border-radius: 5px;
-    background-color: #ffffff;
-    -webkit-box-shadow: 0 0 10px 0 rgba(162, 174, 183, 0.2);
-    box-shadow: 0 0 10px 0 rgba(162, 174, 183, 0.2);
-    padding: 30px;
-    text-align: center; }
-    .advantages .blocks__list-item:nth-child(2n) {
-      margin-right: 0px; }
-    .advantages .blocks__list-item:nth-child(3n) {
-      margin-right: 0px; }
-    .advantages .blocks__list-item .icon {
-      display: inline-block;
-      width: 100px;
-      height: 100px;
-      margin-bottom: 40px; }
-      .advantages .blocks__list-item .icon-verify {
-        background: url(../images/icon/verify.svg) 50% 50% no-repeat; }
-    .advantages .blocks__list-item h3 {
-      color: #2f353b;
-      font-size: 18px;
-      line-height: 21px;
-      margin: 0 0 10px;
-      font-weight: 400; }
-    .advantages .blocks__list-item p {
-      color: #a2aeb7;
-      font-size: 15px;
-      line-height: 25px;
-      margin: 0; }
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .advantages .blocks__list-item {
+      width: 100%;
+      height: 100%;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      -webkit-box-shadow: 0 0 10px 0 rgba(162, 174, 183, 0.2);
+      box-shadow: 0 0 10px 0 rgba(162, 174, 183, 0.2);
+      padding: 30px;
+      text-align: center; }
+      .advantages .blocks__list-item:nth-child(2n) {
+        margin-right: 0px; }
+      .advantages .blocks__list-item:nth-child(3n) {
+        margin-right: 0px; }
+      .advantages .blocks__list-item .icon {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 40px; }
+        .advantages .blocks__list-item .icon-verify {
+          background: url(../images/icon/verify.svg) 50% 50% no-repeat; }
+      .advantages .blocks__list-item h3 {
+        color: #2f353b;
+        font-size: 18px;
+        line-height: 21px;
+        margin: 0 0 10px;
+        font-weight: 400; }
+      .advantages .blocks__list-item p {
+        color: #a2aeb7;
+        font-size: 15px;
+        line-height: 25px;
+        margin: 0; }
 
 .informer .visible-mobile {
   display: block; }
