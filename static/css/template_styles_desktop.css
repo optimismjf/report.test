@@ -678,7 +678,9 @@
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
         justify-content: space-between;
-        border-bottom: 1px solid transparent; }
+        border-bottom: 1px solid transparent;
+        margin-right: 0px;
+        margin-left: 0px; }
         #header.front-page.index-page .container .front-page__header .hamburger {
           display: none; }
         #header.front-page.index-page .container .front-page__header #navigation {
@@ -743,6 +745,8 @@
                 flex-wrap: wrap;
                 padding: 13px 13px 13px 40px;
                 letter-spacing: 0.1px; }
+                #header.front-page.index-page .container .front-page__header #navigation .header__menu-list li .dropdown-block .dropdown-group .dropdown-items a:hover {
+                  text-decoration: none; }
         #header.front-page.index-page .container .front-page__header .btn.btn-input {
           margin: 0px; }
         #header.front-page.index-page .container .front-page__header .logo {
@@ -755,7 +759,9 @@
             #header.front-page.index-page .container .front-page__header .logo span:first-child {
               font-size: 25px; }
             #header.front-page.index-page .container .front-page__header .logo span:last-child {
-              font-size: 13px; } }
+              font-size: 13px; }
+  .main-wrapper .banners-list .banner {
+    margin-bottom: 40px; } }
 
 #header.front-page.b-profile-page .logo {
   float: left; }

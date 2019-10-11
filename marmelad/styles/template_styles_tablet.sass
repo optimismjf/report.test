@@ -269,8 +269,6 @@
 				display: none
 		& > .container
 			max-width: none
-			padding-left: 30px
-			padding-right: 30px
 
 #header.front-page.b-profile-page
 	.hamburger
@@ -1676,14 +1674,22 @@
 						margin-right: 10px
 						margin-top: -2px
 
-
-
-.main-wrapper .banners-list .banner
-	width: calc(50% - 30px)
-	&:nth-child(odd)
-		margin-right: 60px
-	.banner-logo
-		height: 100px
+.main-wrapper
+	.banners-list
+		padding: 0
+		width: 100%
+		max-width: 720px
+		margin: 0 auto
+		.banner
+			width: 340px
+			height: 310px
+			box-shadow: 0 0 10px rgba(162, 174, 183, 0.2)
+			margin-bottom: 20px
+			&:hover
+				text-decoration: none
+				box-shadow: 0px 0px 20px rgba(162, 174, 183, 0.29546), 0px 0px 10px rgba(162, 174, 183, 0.29546)
+			.banner-logo
+				height: 100px
 
 #header
 	&.main-header
@@ -1777,3 +1783,6 @@
 			&#slider-article
 				.owl-dots
 					margin-top: -65px
+.site-analysis
+	&:before
+		content: ""

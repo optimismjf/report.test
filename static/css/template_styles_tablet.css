@@ -646,9 +646,7 @@
   #header.front-page .logo .logo__company-name {
     display: none; }
   #header.front-page > .container {
-    max-width: none;
-    padding-left: 30px;
-    padding-right: 30px; } }
+    max-width: none; } }
 
 #header.front-page.b-profile-page .hamburger {
   float: left;
@@ -2182,13 +2180,23 @@
       margin-right: 10px;
       margin-top: -2px; } }
 
-.main-wrapper .banners-list .banner {
-  width: -webkit-calc(50% - 30px);
-  width: calc(50% - 30px); }
-  .main-wrapper .banners-list .banner:nth-child(odd) {
-    margin-right: 60px; }
-  .main-wrapper .banners-list .banner .banner-logo {
-    height: 100px; }
+.main-wrapper .banners-list {
+  padding: 0;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto; }
+  .main-wrapper .banners-list .banner {
+    width: 340px;
+    height: 310px;
+    -webkit-box-shadow: 0 0 10px rgba(162, 174, 183, 0.2);
+    box-shadow: 0 0 10px rgba(162, 174, 183, 0.2);
+    margin-bottom: 20px; }
+    .main-wrapper .banners-list .banner:hover {
+      text-decoration: none;
+      -webkit-box-shadow: 0px 0px 20px rgba(162, 174, 183, 0.29546), 0px 0px 10px rgba(162, 174, 183, 0.29546);
+      box-shadow: 0px 0px 20px rgba(162, 174, 183, 0.29546), 0px 0px 10px rgba(162, 174, 183, 0.29546); }
+    .main-wrapper .banners-list .banner .banner-logo {
+      height: 100px; }
 
 #header.main-header .b-user {
   width: 310px; }
@@ -2282,3 +2290,6 @@
     top: 70px; }
   .blocks__article#slider-article .owl-dots {
     margin-top: -65px; } }
+
+.site-analysis:before {
+  content: ""; }

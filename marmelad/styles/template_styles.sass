@@ -2517,13 +2517,13 @@ section
 #header.front-page.index-page
 	padding-top: 0px
 	.container
-		padding: 0
 		margin: 0 auto
 		.front-page__header
 			display: flex
 			align-items: center
 			justify-content: space-between
 			border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+			margin: 0 -15px
 			.hamburger
 				z-index: 20
 				position: relative
@@ -2668,7 +2668,9 @@ section
 							color: #ffffff
 							opacity: 0.6
 						.sub-menu
+							list-style: none
 							li
+								list-style-type: none
 								margin: 0px
 								padding: 0px
 								a
@@ -2886,11 +2888,25 @@ section
 	.banners-list
 		display: flex
 		flex-wrap: wrap
-		padding: 0 25px
+		justify-content: space-around
+		padding: 0
+		width: 100%
+		margin: 0 auto
 		.banner
+			display: inline-block
 			width: 100%
+			height: auto
+			background: #FFFFFF
+			border-radius: 5px
+			padding: 50px 20px
+			margin-bottom: 60px
+			box-shadow: unset
+			text-decoration: none
+			transition: box-shadow .2s
 			.banner-logo
 				height: auto
+		.owl-dots
+			margin-top: -50px
 
 body
 	&.is-hidden
@@ -3056,6 +3072,15 @@ body
 			font-family: Susan, sans-serif
 			font-size: 20px
 			letter-spacing: 0px
+
+	.header__menu-list
+		list-style: none
+		li
+			list-style-type: none
+			.sub-menu
+				list-style: none
+				li
+					list-style-type: none
 
 	.hamburger
 		z-index: 20
@@ -6019,3 +6044,15 @@ a.overflowed
 
 .reviews 
 	padding: 40px 0 30px
+
+#footer
+	.row__menu
+		padding: 40px 0px 0px
+		.footer__menu
+			padding-bottom: 20px
+
+
+.site-analysis
+	&:before
+		content: unset
+
