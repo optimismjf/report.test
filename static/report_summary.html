@@ -579,7 +579,7 @@
 									<div class="b-summary__list-item-title">Вирусы по <span class="color_red">Я</span>ндекс</div>
 									<div class="b-summary__list-item-value">Нет</div>
 								</li>
-								<li class="b-summary__list-item warning">
+								<li class="b-summary__list-item bg-warning">
 									<div class="b-summary__list-item-title">Вирусы по <span class="color_blue">G</span>oogle</div>
 									<div class="b-summary__list-item-value">Да</div>
 									<div class="b-summary__list-item-desc"><span class="color_red">Обнаружены</span></div>
@@ -601,7 +601,7 @@
 					</div>
 					<div class="b-summary__section-content" id="reputation">
 						<div class="b-summary__reputation">
-							<div class="b-summary__reputation-subtitle"><span class="color_red">Я</span>ндекс показатели</div>
+							<div class="b-summary__list-subtitle"><span class="color_red">Я</span>ндекс показатели</div>
 
 							<ul class="b-summary__list b-summary__list--btop">
 								<li class="b-summary__list-item">
@@ -627,7 +627,7 @@
 								</li>
 							</ul>
 
-							<div class="b-summary__reputation-subtitle">Рейтинг WOT</div>
+							<div class="b-summary__list-subtitle">Рейтинг WOT</div>
 
 							<ul class="b-summary__list b-summary__list--btop">
 								<li class="b-summary__list-item">
@@ -808,6 +808,8 @@
 								</tbody>
 							</table>
 
+
+
 							<div class="b-summary__recs">
 								<div class="b-summary__recs-title">Рекомендации</div>
 								<ul class="b-summary__recs-list">
@@ -830,9 +832,9 @@
 						<div class="b-summary__section-title">Sitemap.xml</div>
 						<div class="b-inform" data-action="show-hover" data-content="Я подсказко"></div>
 						<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#sitemap"/></svg></i><a class="b-summary__section-link" href="#$">Генератор карты сайта</a></div>
-						<div class="b-summary__section-toggler active" data-action="toggle" data-target="#sitemap"></div>
+						<div class="b-summary__section-toggler" data-action="toggle" data-target="#sitemap"></div>
 					</div>
-					<div class="b-summary__section-content open" id="sitemap">
+					<div class="b-summary__section-content" id="sitemap">
 						<div class="b-summary__sitemap">							
 							<table class="b-summary__table">
 								<thead>
@@ -863,14 +865,14 @@
 										<td>да</td>
 										<td>—</td>
 										<td>8,50</td>
-										<td class="bg-warning">58 000</td>
+										<td class="bg-danger">58 000</td>
 									</tr>
 									<tr>
 										<td><a href="https://www.optimism.ru/blog/sitemap.xml"><span class="color_lightblue">https://www.optimism.ru/</span>blog/sitemap.xml</a></td>
 										<td>Изображения</td>
 										<td>200</td>
 										<td class="bg-warning">нет</td>
-										<td class="bg-warning"><a href="#">1</a></td>
+										<td class="bg-danger"><a href="#">1</a></td>
 										<td>1,10</td>
 										<td>1 299</td>
 									</tr>
@@ -885,6 +887,67 @@
 									</tr>
 								</tbody>
 							</table>
+
+							<div class="b-summary__sitemap-list">
+								<div class="b-summary__sitemap-list-item">
+									<div class="b-summary__list-subtitle">Пересечение страниц сайта с Sitemap</div>
+
+									<ul class="b-summary__list b-summary__list--btop">
+										<li class="b-summary__list-item b-summary__list-item--smaller">
+											<div class="b-summary__list-item-title b-bar__legend">Есть на сайте и в Sitemap</div>
+											<div class="b-summary__list-item-value b-summary__list-item-value--big">1 700</div>
+											<div class="b-summary__list-item-desc"><span class="color_grey">▲ 25</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smaller bg-warning">
+											<div class="b-summary__list-item-title b-bar__legend b-bar__legend--orange">Нет в Sitemap</div>
+											<div class="b-summary__list-item-value b-summary__list-item-value--big">105</div>
+											<div class="b-summary__list-item-desc"><span class="color_red">▲ 17</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smaller">
+											<div class="b-summary__list-item-title b-bar__legend b-bar__legend--red">Нет на сайте</div>
+											<div class="b-summary__list-item-value b-summary__list-item-value--big color_inactive">0</div>
+											<div class="b-summary__list-item-desc"><span class="color_green">▼ 3</span></div>
+										</li>
+									</ul>
+
+									<div class="b-bar">
+										<div class="b-bar__list">
+											<div class="b-bar__list-item" style="width: 25%"></div>
+											<div class="b-bar__list-item" style="width: 75%"></div>
+											<div class="b-bar__list-item" style="width: 0%"></div>
+										</div>
+									</div>
+								</div>
+								<div class="b-summary__sitemap-list-item">
+									<div class="b-summary__list-subtitle">Доступность страниц в Sitemap</div>
+
+									<ul class="b-summary__list b-summary__list--btop">
+										<li class="b-summary__list-item b-summary__list-item--smaller">
+											<div class="b-summary__list-item-title b-bar__legend">Доступны</div>
+											<div class="b-summary__list-item-value b-summary__list-item-value--big">1 700</div>
+											<div class="b-summary__list-item-desc"><span class="color_grey">▲ 25</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smaller">
+											<div class="b-summary__list-item-title b-bar__legend b-bar__legend--orange">Закрыты от индексации</div>
+											<div class="b-summary__list-item-value b-summary__list-item-value--big">105</div>
+											<div class="b-summary__list-item-desc"><span class="color_red">▲ 17</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smaller">
+											<div class="b-summary__list-item-title b-bar__legend b-bar__legend--red">Недоступны</div>
+											<div class="b-summary__list-item-value b-summary__list-item-value--big">15</div>
+											<div class="b-summary__list-item-desc"><span class="color_green">▼ 3</span></div>
+										</li>
+									</ul>
+
+									<div class="b-bar">
+										<div class="b-bar__list">
+											<div class="b-bar__list-item" style="width: 25%"></div>
+											<div class="b-bar__list-item" style="width: 70%"></div>
+											<div class="b-bar__list-item" style="width: 5%"></div>
+										</div>
+									</div>
+								</div>
+							</div>
 
 							<div class="b-summary__recs">
 								<div class="b-summary__recs-title">Рекомендации</div>
@@ -911,6 +974,182 @@
 					</div>
 				</div>
 
+			</div>
+
+			<div class="b-summary__block">
+				<div class="b-summary__block-title icon-workkey">
+					Техническая оптимизация
+				</div>
+
+				<div class="b-summary__section">
+					<div class="b-summary__section-head">
+						<div class="b-summary__section-title">Коды ответов сервера</div>
+						<div class="b-inform" data-action="show-hover" data-content="Я подсказко"></div>
+						<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
+						<div class="b-summary__section-toggler active" data-action="toggle" data-target="#responses"></div>
+					</div>
+					<div class="b-summary__section-content open" id="responses">
+						<div class="b-summary__responses">
+							<div class="b-summary__responses-list">
+								<div class="b-summary__responses-list-item">
+									<ul class="b-summary__list b-summary__list--column">
+										<li class="b-summary__list-item">
+											<div class="b-summary__list-item-title">2** OK</div>
+											<div class="b-summary__list-item-value b-summary__list-item-value--big">4 161</div>
+											<div class="b-summary__list-item-desc"><span class="color_grey">▲ 25</span></div>
+										</li>
+									</ul>
+								</div>
+								<div class="b-summary__responses-list-item">
+									<ul class="b-summary__list b-summary__list--column">
+										<li class="b-summary__list-item bg-warning">
+											<div class="b-summary__list-item-title">Редиректы → 2**</div>
+											<div class="b-summary__list-item-value b-summary__list-item-value--big">109</div>
+											<div class="b-summary__list-item-desc"><span class="color_red">▲ 25</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smallerp bg-warning">
+											<div class="b-summary__list-item-title">200 meta refresh</div>
+											<div class="b-summary__list-item-text">416<span class="b-summary__list-item-text-diff color_green">▼ 1</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smallerp bg-warning">
+											<div class="b-summary__list-item-title">301</div>
+											<div class="b-summary__list-item-text">102<span class="b-summary__list-item-text-diff color_red">▲ 18</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smallerp bg-warning">
+											<div class="b-summary__list-item-title">302</div>
+											<div class="b-summary__list-item-text">104<span class="b-summary__list-item-text-diff color_red">▲ 5</span></div>
+										</li>
+									</ul>
+								</div>
+								<div class="b-summary__responses-list-item">
+									<ul class="b-summary__list b-summary__list--column">
+										<li class="b-summary__list-item bg-danger">
+											<div class="b-summary__list-item-title">Битые URL</div>
+											<div class="b-summary__list-item-value b-summary__list-item-value--big">8</div>
+											<div class="b-summary__list-item-desc"><span class="color_red">▲ 2</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smallerp bg-danger">
+											<div class="b-summary__list-item-title">200 meta refresh → 404</div>
+											<div class="b-summary__list-item-text">253<span class="b-summary__list-item-text-diff color_red">▲ 9</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smallerp bg-danger">
+											<div class="b-summary__list-item-title">301 → 404</div>
+											<div class="b-summary__list-item-text">102<span class="b-summary__list-item-text-diff color_red">▲ 9</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smallerp bg-danger">
+											<div class="b-summary__list-item-title">301 → 502</div>
+											<div class="b-summary__list-item-text">111<span class="b-summary__list-item-text-diff color_red">▲ 11</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smallerp bg-danger">
+											<div class="b-summary__list-item-title">404</div>
+											<div class="b-summary__list-item-text">205<span class="b-summary__list-item-text-diff color_red">▲ 3</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smallerp bg-danger">
+											<div class="b-summary__list-item-title">502</div>
+											<div class="b-summary__list-item-text">123<span class="b-summary__list-item-text-diff color_red">▲ 2</span></div>
+										</li>
+										<li class="b-summary__list-item b-summary__list-item--smallerp bg-danger">
+											<div class="b-summary__list-item-title">Без ответа</div>
+											<div class="b-summary__list-item-text">107</div>
+										</li>
+									</ul>
+								</div>
+								<div class="b-summary__responses-list-item b-summary__responses-list-item--chart">
+									<div class="b-chart__title">Распределение URL по кодам ответа</div>
+									<div class="b-chart__wrapper">
+										<canvas class="b-chart" id="responsesChart" width="420" height="215"></canvas>
+									</div>
+									
+									<script type="text/javascript">
+										window.onload = function() {
+											var total = 100;
+									      	var ctx = document.getElementById('responsesChart');
+											var myChart = new Chart(ctx, {
+											    type: 'horizontalBar',
+											    data: {
+											        labels: ['200', '301', '303', '4**', '5**', 'N/A'],
+											        datasets: [{
+											            label: 'Количество URL',
+											            data: [48, 22, 18, 0, 0, 0],
+											            backgroundColor: [
+											                '#57C282',
+											                '#F6CC13',
+											                '#F55353',
+											                'transparent',
+											                'transparent',
+											                'transparent'
+											            ],
+											        }]
+											    },
+											    options: {
+											        scales: {
+											            xAxes: [{
+											                ticks: {
+											                    beginAtZero: true,
+											                    max: total,
+											                    stepSize: total/10,
+											                    callback: function(value, index, values) {
+															        return ((value / total) * 100) + '%';
+															    },
+											                    fontColor: "#AFBAC1",
+											                    padding: 5,
+											                    fontFamily: '"Roboto", sans-serif'
+											                },
+											                gridLines: {	                	
+												    			color: '#F2F4F6',
+												    			drawTicks: false,
+												    			drawBorder: false,
+												    		},
+											            }],
+											            yAxes: [{
+											            	ticks: {
+											                    padding: 7,
+											                    fontColor: "#697882",
+											                    fontFamily: '"Roboto", sans-serif'
+											                },	                
+											                gridLines: {
+												    			display: false,
+												    			color: '#F2F4F6',
+												    			drawTicks: false,
+												    		},
+											            }],
+											            
+											        }, 
+											        legend: {
+											        	display: false
+											        }
+											    }
+											});
+										};
+									    </script>
+								</div>
+							</div>
+
+
+							<div class="b-summary__recs">
+								<div class="b-summary__recs-title">Рекомендации</div>
+								<ul class="b-summary__recs-list">
+									<li class="b-summary__recs-item">
+										<div class="b-summary__recs-item-name" data-action="toggle" data-target="parent">
+											<i class="b-summary__recs-item-icon fill_red"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#icon-alert"></svg></i>Найдены “битые” ссылки.
+										</div>
+										<div class="b-summary__recs-item-content">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dicta, eum impedit, in ea aperiam placeat nesciunt sapiente. Expedita cum voluptas reprehenderit error doloribus eum et nostrum architecto, ea repudiandae tempore dolore harum quisquam autem quae facere illum. Iure assumenda veritatis consectetur aut ab, eos odit molestias, veniam, doloremque dolorum eaque harum a, corrupti culpa eum velit consequuntur. Ipsa odio facere laborum pariatur non architecto laboriosam totam veritatis ratione dolores tempora delectus dolorem aliquam, error, nostrum commodi recusandae quis cumque id vero sunt. Perspiciatis doloremque nostrum, illo culpa distinctio. Eaque ea placeat odit, sapiente cum velit cumque enim ipsam voluptates officia nam. Dicta qui, ducimus, adipisci rem tempora dignissimos in officia. A aliquam labore, culpa adipisci rem ipsum odio porro.
+										</div>
+									</li>
+									<li class="b-summary__recs-item">
+										<div class="b-summary__recs-item-name" data-action="toggle" data-target="parent">
+											<i class="b-summary__recs-item-icon fill_orange"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#icon-alert"></svg></i>Найдены страницы с перенаправлением.
+										</div>
+										<div class="b-summary__recs-item-content">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dicta, eum impedit, in ea aperiam placeat nesciunt sapiente. Expedita cum voluptas reprehenderit error doloribus eum et nostrum architecto, ea repudiandae tempore dolore harum quisquam autem quae facere illum. Iure assumenda veritatis consectetur aut ab, eos odit molestias, veniam, doloremque dolorum eaque harum a, corrupti culpa eum velit consequuntur. Ipsa odio facere laborum pariatur non architecto laboriosam totam veritatis ratione dolores tempora delectus dolorem aliquam, error, nostrum commodi recusandae quis cumque id vero sunt. Perspiciatis doloremque nostrum, illo culpa distinctio. Eaque ea placeat odit, sapiente cum velit cumque enim ipsam voluptates officia nam. Dicta qui, ducimus, adipisci rem tempora dignissimos in officia. A aliquam labore, culpa adipisci rem ipsum odio porro.
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
 
@@ -1012,5 +1251,6 @@
     <script src="js/app.js"></script>
     <script src="js/calculator-popup.js"></script>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
     </body><!-- b:w-page -->
 </html>

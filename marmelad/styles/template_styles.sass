@@ -30,10 +30,16 @@ section
 	color: $color_green
 .color_blue
 	color: $color_blue
+.color_grey
+	color: $color_grey
+.color_inactive
+	color: $color_inactive
 .color_lightblue
 	color: rgba(#0044BB, 0.7)
 .bg-warning
 	background-color: rgba($color_orange, 0.07)
+.bg-danger
+	background-color: rgba($color_red, 0.07)
 
 .fill_red
 	fill: $color_red
@@ -5751,6 +5757,8 @@ a.overflowed
 		list-style: none
 		padding: 0
 		display: inline-flex
+		&--column
+			flex-flow: column wrap
 		&--btop
 			border-top: 1px solid $color_easygrey
 			padding-top: 0.5em
@@ -5759,9 +5767,14 @@ a.overflowed
 			padding: 20px
 			width: 180px
 			position: relative
+			border: 1px solid #ffffff
+			&--smaller
+				width: 160px
 			&--biggerp
 				padding: 20px 80px 20px 20px
 				width: auto
+			&--smallerp
+				padding: 10px 10px 10px 10px
 			&--icon
 				width: auto
 				clear: both				
@@ -5812,14 +5825,22 @@ a.overflowed
 				font-size: 12px
 				line-height: 14px
 				color: $color_grey
-			&-diff	
+			&-diff
 				position: absolute
 				top: 20px
 				right: 0px
 				font-size: 12px
 				line-height: 93.75%
-			&.warning
-				background-color: rgba($color_orange, 0.1)
+			&-text
+				font-weight: 300
+				font-size: 16px
+				line-height: 12px
+				&-diff
+					position: relative					
+					font-size: 10px
+					margin-left: 3px
+					top: -1em
+					line-height: 93.75%
 
 	&__domaininfo
 		padding: 20px 0 0
@@ -5941,7 +5962,26 @@ a.overflowed
 							height: 14px
 						&.active
 							fill: #28A745
+	&__sitemap
+		&-list
+			display: flex
+			margin-bottom: 40px
+			&-item
+				width: 50%
+				padding-right: 60px
+	&__responses
+		width: 100%
+		&-list
+			display: flex
+			&-item
+				&--chart
+					flex: 1 1 auto
+					padding: 1em 0 0.5em 60px
 
+.b-chart
+	&__title
+		font-size: 13px
+		font-weight: 500
 
 .icon-external
 	background-image: url(../images/icon/icon-external.svg)
@@ -5971,9 +6011,42 @@ a.overflowed
 			bottom: 0
 			margin: auto
 			overflow: hidden
-			fill: #F5A623
+			fill: $color_orange
 		&-out
 			fill: #AFBAC1
+
+.b-bar
+	margin-top: -5px
+	&__list
+		display: flex
+		margin-right: -2px
+		&-item			
+			position: relative
+			&:before
+				content: ''
+				display: block
+				width: calc(100% - 2px)
+				height: 12px
+				margin-right: 2px
+				background-color: #57C282
+			&:nth-child(2):before
+				background-color: #F6CC13
+			&:nth-child(3):before
+				background-color: #F55353
+	&__legend
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			left: -10px
+			top: 3px
+			height: 5px
+			width: 5px
+			background-color: #57C282
+		&--orange:before
+			background-color: #F6CC13
+		&--red:before
+			background-color: #F55353
 
 .advantages
 	margin-bottom: 0px
