@@ -224,11 +224,8 @@
 						width: 8px
 						border-radius: 100px
 						background-color: #E03632
-#header.index-page
+#header.front-page
 	.hamburger
-		float: left
-		margin-left: 0
-		padding: 9px 4px
 		.hamburger-inner,
 		.hamburger-inner::after,
 		.hamburger-inner::before
@@ -240,14 +237,18 @@
 			&:after
 				top: 12px
 
+
 	.logo
-		float: left
-		margin-left: 11px
-		margin-top: 6px
-		letter-spacing: 0.6px
+		display: inline-flex
+		justify-content: center
+		margin-left: 0px
+		margin-top: 0px
+		letter-spacing: 1px
+		float: none
+		line-height: 59px
 		text-decoration: none
-		img
-			display: none
+		width: 160px
+		height: 59px
 		.logo__company-name
 			display: block
 			line-height: 25px
@@ -264,15 +265,10 @@
 
 	@media only screen and (min-width : 1025px)
 		.logo
-			img
-				max-width: 140px
-				padding-top: 0px
 			.logo__company-name
 				display: none
 		& > .container
 			max-width: none
-			padding-left: 30px
-			padding-right: 30px
 
 #header.front-page.b-profile-page
 	.hamburger
@@ -1655,13 +1651,45 @@
 		height: 50%
 		margin-right: 0
 
+@media only screen and (min-width : 768px)
+	body
+		&.menu-open
+			overflow-y: auto
+	#header.front-page.index-page
+		.container
+			.front-page__header
+				#navigation
+					max-width: 250px
+					height: auto
+					.header__menu-list
+						.visible-desktop
+							display: none
+						.visible-mobile
+							display: block
+				.btn.btn-input
+					width: 100px
+					height: 34px
+					padding: 10px 15px
+					&:before
+						margin-right: 10px
+						margin-top: -2px
 
-.main-wrapper .banners-list .banner
-	width: calc(50% - 30px)
-	&:nth-child(odd)
-		margin-right: 60px
-	.banner-logo
-		height: 100px
+.main-wrapper
+	.banners-list
+		padding: 0
+		width: 100%
+		max-width: 720px
+		margin: 0 auto
+		.banner
+			width: 340px
+			height: 310px
+			box-shadow: 0 0 10px rgba(162, 174, 183, 0.2)
+			margin-bottom: 20px
+			&:hover
+				text-decoration: none
+				box-shadow: 0px 0px 20px rgba(162, 174, 183, 0.29546), 0px 0px 10px rgba(162, 174, 183, 0.29546)
+			.banner-logo
+				height: 100px
 
 #header
 	&.main-header
@@ -1716,3 +1744,45 @@
 		&-left
 			width: auto
 			margin-bottom: 0
+
+@media only screen and (min-width: 768px)
+	.advantages
+		margin-bottom: 44px
+		.blocks__list
+			max-width: 700px
+			&-item
+				width: 340px
+				height: 310px
+				margin-right: 20px
+				margin-bottom: 20px
+				box-shadow: 0 0 10px 0 rgba(162, 174, 183, .2)
+				&:nth-child(2n)
+					margin-right: 0px
+				&:nth-child(3n)
+					margin-right: inherit
+
+	section
+		.blocks__article-item
+			.image
+				img
+					margin: 0 auto 14px
+	.informer
+		.visible-desktop
+			display:block !important
+		.visible-mobile
+			display: none
+	.reviews
+		padding: 70px 0 76px
+
+	.blocks
+		&__article
+			&-item, &-item:nth-child(2n+1)
+				.intro h3
+					top: 70px
+		&__article
+			&#slider-article
+				.owl-dots
+					margin-top: -65px
+.site-analysis
+	&:before
+		content: ""

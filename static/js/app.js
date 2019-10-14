@@ -3566,3 +3566,43 @@ function hideErrorMessage(element) {
 }
 
 ;
+
+// jQuery(document).ready(function() {
+// 	let windowWidth =  window.outerWidth;
+// 	bannersList(windowWidth);
+// });
+// jQuery(window).on('resize', function() {
+// 	let windowWidth =  window.outerWidth;
+// 	bannersList(windowWidth);
+// });
+
+
+// function bannersList(windowWidth){
+// 	if( windowWidth <= 767 ){
+// 	  jQuery(".banners-list").addClass("owl-carousel");
+// 	  jQuery(".banners-list").owlCarousel({
+// 	      loop: !0,
+// 	      margin: 0,
+// 	      nav: !1,
+// 	      items: 1,
+// 	      dots: !0,
+// 	      autoplay: !0,
+// 	      autoplayTimeout: 7e3,
+// 	      autoplayHoverPause: !0
+// 	  });
+// 	} else{
+// 	  jQuery(".banners-list").owlCarousel('destroy').removeClass("owl-carousel");
+// 	}
+// };
+
+document.addEventListener("DOMContentLoaded", function() {
+	let close = document.getElementsByClassName('close-profile');
+	if(close.length > 0){
+		let profileWrap = document.getElementById('navigation-profile');
+		close[0].addEventListener('click', function(event){
+			profileWrap.style.display = 'none';
+		});
+	}
+
+});
+

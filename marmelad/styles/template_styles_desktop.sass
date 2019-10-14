@@ -167,8 +167,8 @@ section
 		&__btn-new a
 			padding: 11px 22px
 		&__container
-			margin-left: 140px
-			margin-right: 140px
+			margin-left: auto
+			margin-right: auto
 	&-empty
 		&__action
 			@media only screen and (min-width : 1200px)
@@ -265,24 +265,6 @@ section
 		&__container
 			margin-left: 340px
 			max-width: 806px
-#header.index-page
-	.container
-		padding: 0 20px
-		margin: 0 auto
-		max-width: 1319px
-	.logo
-		margin: 0
-		img
-			display: inline-block
-	.header__menu-list
-		li
-			margin-bottom: 0
-			margin-right: 38px
-			padding: 23px 0 23px
-			a
-				padding: 0
-				&:hover
-					text-decoration: underline
 #header.front-page.b-profile-page.regular-page
 	.container
 		padding: 0 20px
@@ -300,12 +282,90 @@ section
 				&:hover
 					text-decoration: underline
 
+@media only screen and (min-width : 1200px)
+	#header.front-page.index-page
+		padding-top: 43px
+		.container
+			padding: 0 20px
+			margin: 0 auto
+			max-width: 1319px
+			position: relative
+			.front-page__header
+				display: flex
+				align-items: center
+				justify-content: space-between
+				border-bottom: 1px solid transparent
+				margin-right: 0px
+				margin-left: 0px
+				.hamburger
+					display: none
+				#navigation
+					display: flex !important
+					justify-content: flex-end
+					flex-grow: 1
+					position: relative
+					top: unset
+					right: unset
+					left: unset
+					max-width: unset
+					width: auto
+					height: 61px
+					padding-top: 0px
+					padding-bottom: 0px
+					background: unset
+					box-shadow: unset
+					border-top: unset
+					.header__menu-list
+						height: 100%
+						display: flex
+						align-items: center
+						.visible-desktop
+							display: block
+						.visible-mobile
+							display: none
+						li
+							margin-bottom: 0
+							margin-right: 40px
+							padding: 23px 0 23px
+							&.dropdown-list
+								padding-right: 15px
+								position: relative
+							a
+								font-size: 15px
+								padding: 0
+								&:hover
+									text-decoration: underline
+							.dropdown-block
+								.dropdown-group
+									.dropdown-items
+										a
+											display: flex
+											flex-wrap: wrap
+											padding: 13px 13px 13px 40px
+											letter-spacing: 0.1px
+											&:hover
+												text-decoration: none
+				.btn.btn-input
+					margin: 0px
+				.logo
+					width: 182px
+					padding-left: 46px
+					background-size: 42px
+					background-position: 0px center
+					span
+						line-height: 17px
+						&:first-child
+							font-size: 25px
+						&:last-child
+							font-size: 13px
+	.main-wrapper
+		.banners-list
+			.banner
+				margin-bottom: 40px
+
 #header.front-page.b-profile-page
 	.logo
 		float: left
-		img
-			max-width: 182px
-			margin-top: 8px
 	.btn.btn-input
 		padding: 9px 19.5px 6px 37px
 		height: 35px
@@ -363,11 +423,6 @@ section
 					text-decoration: none
 
 #header.index-page
-	.logo
-		float: left
-		img
-			max-width: 182px
-			margin-top: 8px
 	.btn.btn-input
 		padding: 9px 19.5px 6px 37px
 		height: 35px
@@ -377,12 +432,7 @@ section
 	.header__menu
 		margin-right: 18px
 		text-align: center
-	.header__menu-list
-		height: 61px
-		display: flex
-		align-items: center
 		li
-			margin-right: 40px
 		.visible-desktop
 			display: block
 			&.active
@@ -766,3 +816,22 @@ section
 		@media only screen and (min-width : 991px)
 			margin-top: 0
 			width: calc(100% - 585px)
+
+@media only screen and (min-width: 1200px)
+	.advantages
+		.blocks__list
+			max-width: 1100px
+			&-item
+				margin-right: 40px
+				margin-bottom: 40px
+				&:nth-child(2n)
+					margin-right: 40px
+				&:nth-child(3n)
+					margin-right: 0px
+	section
+		.blocks__article-item
+			.image
+				img
+					margin: 30px auto 14px
+	.ol-tablet-list
+		padding-left: 40px
