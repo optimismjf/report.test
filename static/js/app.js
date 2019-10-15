@@ -706,6 +706,19 @@ function dataAction(e) {
 				$i = target.index(),
 				$t = target.parent().data('target'),
 				$target = $($t + ':eq(' + $i + ')');
+
+			target.addClass('active').siblings().removeClass('active');
+			$target.addClass('active').siblings().removeClass('active');
+
+			break;
+
+		case 'switch':
+			/* Свитчер основной */
+			var target = $(e.target),
+				$i = target.index(),
+				$t = target.parent().data('target'),
+				$target = ($t == 'next-child') ? target.parent().next().children(':eq(' + $i + ')') : $($t + ':eq(' + $i + ')');
+			
 			target.addClass('active').siblings().removeClass('active');
 			$target.addClass('active').siblings().removeClass('active');
 

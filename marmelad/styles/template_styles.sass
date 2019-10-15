@@ -36,10 +36,11 @@ section
 	color: $color_inactive
 .color_lightblue
 	color: rgba(#0044BB, 0.7)
+
 .bg-warning
-	background-color: rgba($color_orange, 0.07)
+	background-color: #FEF6E9
 .bg-danger
-	background-color: rgba($color_red, 0.07)
+	background-color: #FCEBEB
 
 .fill_red
 	fill: $color_red
@@ -5370,6 +5371,9 @@ body
 	&-100
 		min-width: 100px
 		max-width: 100px
+	&-120
+		min-width: 120px
+		max-width: 120px
 	&-130
 		min-width: 130px
 		max-width: 130px
@@ -5607,11 +5611,13 @@ a.overflowed
 			line-height: 59px
 			margin-right: 12px
 		&-content
-			padding: 20px
-			border-top: 1px solid $color_easygrey
-			display: none
-			&.open
-				display: flex
+			width: 100%
+			&-wrapper
+				padding: 20px
+				border-top: 1px solid $color_easygrey
+				display: none
+				&.open
+					display: flex
 		&-link
 			font-size: 15px
 			line-height: 28px
@@ -5757,23 +5763,37 @@ a.overflowed
 		list-style: none
 		padding: 0
 		display: inline-flex
+		margin-top: 0
+		&:last-child
+			margin-bottom: 0
+		&-wrap
+			flex-wrap: wrap
 		&--column
 			flex-flow: column wrap
-		&--btop
-			border-top: 1px solid $color_easygrey
-			padding-top: 0.5em
-			margin-top: 0.5em
+		&--pt
+			padding-top: 35px		
+		&--mb0
+			margin-bottom: 0
+		&--mt
+			margin-top: 10px
 		&-item
 			padding: 20px
 			width: 180px
 			position: relative
 			border: 1px solid #ffffff
-			&--smaller
+			&--xxs
+				width: 120px
+			&--xs
+				width: 140px
+			&--s
 				width: 160px
-			&--biggerp
-				padding: 20px 80px 20px 20px
-				width: auto
-			&--smallerp
+			&--m
+				width: 240px
+			&--l
+				width: 260px
+			&--xl
+				width: 320px
+			&--pad
 				padding: 10px 10px 10px 10px
 			&--icon
 				width: auto
@@ -5796,7 +5816,8 @@ a.overflowed
 			&--icon &-title
 				font-size: 18px
 				line-height: 17px
-
+			&--mt
+				margin-top: 10px
 			&-title
 				font-weight: 500
 				font-size: 13px
@@ -5806,6 +5827,7 @@ a.overflowed
 				font-weight: 300
 				font-size: 28px
 				line-height: 33px
+				position: relative
 				&-diff
 					position: relative					
 					font-size: 12px
@@ -5819,8 +5841,30 @@ a.overflowed
 				&--small
 					font-size: 15px
 					line-height: 18px
-				&.value-zero
-					color: #AFBAC1
+				&--medium
+					font-size: 18px
+					line-height: 21px
+					padding-bottom: 16px
+				&--large
+					font-size: 24px
+					line-height: 28px
+				&-img
+					max-height: 37px
+					position: absolute
+					right: 0
+					top: 0
+			&-graph
+				position: absolute
+				height: 100%
+				left: 0
+				top: 0
+				background-color: #0C7BB3
+				&-wrapper
+					width: 100%
+					height: 4px
+					background-color: #BBE5FA
+					position: relative
+					margin: 2px 0 11px
 			&-desc
 				font-size: 12px
 				line-height: 14px
@@ -5843,12 +5887,11 @@ a.overflowed
 					line-height: 93.75%
 
 	&__domaininfo
-		padding: 20px 0 0
 		&-host
 			font-weight: 300
 			font-size: 32px
 			line-height: 37px
-			padding: 0 20px
+			padding: 20px 20px 0
 		&-country
 			width: 17px
 			height: 17px
@@ -5864,14 +5907,8 @@ a.overflowed
 			color: $color_grey
 			display: flex
 			align-items: center
-			margin-bottom: 30px
+			margin-bottom: 40px
 		
-	&__security
-		padding: 0
-	&__reputation
-		width: 100%
-	&__robots
-		width: 100%
 	&__recs
 		&-title
 			font-weight: 500
@@ -5932,7 +5969,6 @@ a.overflowed
 	&__table
 		width: 100%
 		font-size: 14px
-		margin: 0 0 40px
 		border-collapse: collapse
 		thead
 			color: #697882
@@ -5962,26 +5998,185 @@ a.overflowed
 							height: 14px
 						&.active
 							fill: #28A745
-	&__sitemap
-		&-list
+
+	&__linkblock
+		display: inline-block
+		border: 1px solid #E1E4E6
+		font-size: 15px
+		line-height: 175.78%
+		padding: 0 35px
+		margin-top: 20px
+		&-wrapper
+    		text-align: center
+	
+	&__index
+		&-block
+			padding-left: 10px
+			&-title
+				font-size: 14px
+				line-height: 16px
+				font-weight: 500
+				margin-bottom: 10px
+			&-list
+				list-style: none
+				padding: 0
+				margin-top: 0
+				font-size: 13px
+				line-height: 15px
+				&-item
+					margin-bottom: 5px
+	&__tabs
+		&-item
+			text-transform: uppercase
+			font-size: 13px
+			line-height: 30px
+			display: inline-block
+			margin-bottom: -10px
+			margin-right: 20px
+			color: $color_grey
+			border-bottom: 3px solid transparent
+			cursor: pointer
+			&.active, &:hover, &:focus
+				color: $color_black_main
+			&.active
+				border-bottom-color: $color_red
+	&__pagespeed
+		&-block
+			margin-top: 1.5em
 			display: flex
-			margin-bottom: 40px
-			&-item
-				width: 50%
-				padding-right: 60px
-	&__responses
-		width: 100%
-		&-list
+		&-scr
+			width: 340px
+			text-align: center
+			img
+				max-width: 340px
+		&-val
+			width: 120px
+			height: 120px
+			line-height: 120px
+			font-weight: 500
+			font-size: 32px
+			&-wrapper
+				width: 170px
+				padding: 0 30px 0 20px
+				text-align: center
+				position: relative
+			&-svg
+				position: absolute
+				top: 0
+				left: 20px
+				width: 120px
+				height: 120px
+		&-info
+			width: calc(100% - 170px - 340px)
+			font-size: 15px
+
+		&-desc
+			line-height: 26px
+			margin-bottom: 15px
+
+		&-date
+			color: $color_grey
 			display: flex
+			align-items: center
+			&-pre
+				margin-right: 5px
+
+		&-refresh
+			font-size: 0
+			margin-left: 5px
+			width: 23px
+			height: 23px
+			background-image: url(/images/icon/sync.svg)
+			background-position: center center
+			background-repeat: no-repeat
+			cursor: pointer
+			display: inline-block
+
+		&-legend
+			display: flex
+			font-size: 12px
+			line-height: 14px
+			margin: 11px 0 34px
 			&-item
-				&--chart
-					flex: 1 1 auto
-					padding: 1em 0 0.5em 60px
+				padding: 0 20px 0 14px
+				position: relative
+				color: $color_grey !important
+				&:before
+					content: ''
+					height: 10px
+					width: 10px
+					position: absolute
+					left: 0
+					top: 2px
+					display: block
+					background-color: $color_grey
+
+		&-val-wrapper, &-legend-item
+			&--green
+				color: #57C282
+				stroke: #57C282
+				&:before
+					background-color: #57C282
+			&--orange
+				color:#F6CC13
+				stroke: #F6CC13
+				&:before
+					background-color: #F6CC13
+			&--red
+				color: #DE1B1B
+				stroke: #DE1B1B
+				&:before
+					background-color: #DE1B1B
 
 .b-chart
 	&__title
 		font-size: 13px
+		line-height: 19px
 		font-weight: 500
+		margin-bottom: 10px
+	&--switch:not(.active)
+		display: none
+	&__switcher
+		font-size: 12px
+		margin-bottom: 10px
+		line-height: 1em
+		&-item
+			margin-right: 20px
+			&.active
+				color: $color_grey
+				text-decoration: none !important
+
+.b-grid
+	display: flex
+	margin-bottom: 40px
+	&:last-child
+		margin-bottom: 20px
+	&--wrap
+		flex-wrap: wrap
+	& &:not(:last-of-type)
+		margin-bottom: 0
+	& &:last-child
+		margin-bottom: 0	
+	&__item
+		padding-right: 60px
+		&--w600
+			width: 600px
+		&--full
+			width: 100%
+		&--pt10
+			padding-top: 10px
+		&--pt20
+			padding-top: 20px
+		&--pt35
+			padding-top: 35px
+		&--p0
+			padding: 0
+	&__col2
+		width: 50%		
+	&__chart
+		flex: 1 1 auto
+	&--switch:not(.active)
+		display: none
 
 .icon-external
 	background-image: url(../images/icon/icon-external.svg)
@@ -5993,6 +6188,13 @@ a.overflowed
 	background-image: url(../images/icon/icon-export.svg)
 .icon-summary
 	background-image: url(../images/icon/icon-summary.svg)
+
+.b-bordertop
+	border-top: 1px solid $color_easygrey
+	padding-top: 0.5em
+	margin-top: 0.5em			
+	&--big
+		padding-top: 1.5em
 
 .b-raiting
 	display: flex
@@ -6020,19 +6222,15 @@ a.overflowed
 	&__list
 		display: flex
 		margin-right: -2px
-		&-item			
-			position: relative
-			&:before
-				content: ''
-				display: block
-				width: calc(100% - 2px)
-				height: 12px
-				margin-right: 2px
-				background-color: #57C282
-			&:nth-child(2):before
-				background-color: #F6CC13
-			&:nth-child(3):before
-				background-color: #F55353
+	&__item			
+		position: relative
+		&:before
+			content: ''
+			display: block
+			width: calc(100% - 2px)
+			height: 12px
+			margin-right: 2px
+			background-color: $color_grey
 	&__legend
 		position: relative
 		&:before
@@ -6042,11 +6240,26 @@ a.overflowed
 			top: 3px
 			height: 5px
 			width: 5px
+			background-color: $color_grey
+	&__legend, &__item
+		&--green:before
 			background-color: #57C282
 		&--orange:before
 			background-color: #F6CC13
+		&--darkred:before
+			background-color: #B80D0D
 		&--red:before
+			background-color: #DE1B1B
+		&--lightred:before
 			background-color: #F55353
+		&--darkblue:before
+			background-color: #0C7BB3
+		&--blue:before
+			background-color: #53BAED
+		&--lightblue:before
+			background-color: #BBE5FA
+		&--lightgrey:before
+			background-color: #C2CAD8
 
 .advantages
 	margin-bottom: 0px
