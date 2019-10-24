@@ -5764,6 +5764,7 @@ a.overflowed
 		padding: 0
 		display: inline-flex
 		margin-top: 0
+		margin-bottom: 20px
 		&:last-child
 			margin-bottom: 0
 		&-wrap
@@ -5777,75 +5778,77 @@ a.overflowed
 		&--mt
 			margin-top: 10px
 		&-item
-			padding: 20px
+			padding: 21px 19px 17px
 			width: 180px
+			height: 116px
 			position: relative
 			border: 1px solid #ffffff
-			&--xxs
-				width: 120px
-			&--xs
-				width: 140px
-			&--s
-				width: 160px
-			&--m
-				width: 240px
-			&--l
-				width: 260px
-			&--xl
-				width: 320px
-			&--pad
-				padding: 10px 10px 10px 10px
-			&--icon
-				width: auto
+			&.size
+				&-xxs
+					width: 120px
+				&-xs
+					width: 140px
+				&-s
+					width: 160px
+				&-m
+					width: 240px
+				&-l
+					width: 260px
+				&-xl
+					width: 320px
+			&.pad-s
+				padding: 11px 9px 7px
+				height: 58px
+			&.has-icon
 				clear: both				
-				padding: 30px 20px 20px 78px
+				padding: 31px 13px 27px 77px
 				margin-right: 15px
-			&--icon &-icon
-				position: absolute
-				width: 50px
-				height: 50px
-				top: 30px
-				left: 20px
-				fill: #C4C4C4
-				svg
-					display: block
+				.icon
+					position: absolute
 					width: 50px
 					height: 50px
-				&.active
-					fill: #22A221
-			&--icon &-title
+					top: 30px
+					left: 20px
+					fill: rgba(198, 207, 217, 0.45)
+					svg
+						display: block
+						width: 50px
+						height: 50px
+					&.active
+						fill: #22A221
+			&.has-icon &-title
 				font-size: 18px
 				line-height: 17px
-			&--mt
-				margin-top: 10px
+				height: 34px
+				margin-bottom: 9px
 			&-title
 				font-weight: 500
 				font-size: 13px
 				line-height: 12px
-				height: 2em
+				height: 24px
 			&-value
 				font-weight: 300
 				font-size: 28px
 				line-height: 33px
+				height: 39px
 				position: relative
 				&-diff
 					position: relative					
 					font-size: 12px
 					top: -2em
 					line-height: 93.75%
-				&--big
+				&.size-xl
 					font-size: 32px
 					line-height: 37px
-				&--smaller
+				&.size-xs
 					font-size: 0.75em
-				&--small
+				&.size-s
 					font-size: 15px
 					line-height: 18px
-				&--medium
+				&.size-m
 					font-size: 18px
 					line-height: 21px
-					padding-bottom: 16px
-				&--large
+				&.size-l
 					font-size: 24px
 					line-height: 28px
 				&-img
@@ -5853,6 +5856,9 @@ a.overflowed
 					position: absolute
 					right: 0
 					top: 0
+			&.no-title &-value
+				height: 32px
+
 			&-graph
 				position: absolute
 				height: 100%
@@ -5867,14 +5873,18 @@ a.overflowed
 					margin: 2px 0 11px
 			&-desc
 				font-size: 12px
-				line-height: 14px
+				line-height: 12px
+				margin-top: -2px
 				color: $color_grey
 			&-diff
 				position: absolute
 				top: 20px
-				right: 0px
+				left: 160px
+				width: 46px
+				text-align: right
 				font-size: 12px
 				line-height: 93.75%
+				height: 10px
 			&-text
 				font-weight: 300
 				font-size: 16px
@@ -6026,10 +6036,11 @@ a.overflowed
 				&-item
 					margin-bottom: 5px
 	&__tabs
+		font-size: 0
 		&-item
 			text-transform: uppercase
 			font-size: 13px
-			line-height: 30px
+			line-height: 29px
 			display: inline-block
 			margin-bottom: -10px
 			margin-right: 20px
@@ -6131,7 +6142,7 @@ a.overflowed
 .b-chart
 	&__title
 		font-size: 13px
-		line-height: 19px
+		line-height: 12px
 		font-weight: 500
 		margin-bottom: 10px
 	&--switch:not(.active)
