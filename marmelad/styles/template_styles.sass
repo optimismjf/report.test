@@ -1189,18 +1189,26 @@ section
 		input
 			min-height: 50px
 	&-empty
-		padding: 20px 0px 25px
+		padding: 30px 0px 25px
+		overflow-x: hidden
+		margin: 0 -20px
 		&__title
 			font-size: 20px
 			line-height: 23px
-			margin-bottom: 30px
+			margin-bottom: 10px
+			padding: 0 20px
+			font-weight: 500
 		&__actions
 			position: relative
 			display: flex
 			justify-content: space-between
 			flex-wrap: wrap
 			width: 100%
-			padding-top: 25px
+			&.owl-loaded
+			&.owl-loaded .owl-item
+				padding: 20px 0
+		&__actions.owl-loaded .owl-item &__action
+			padding-top: 61px
 		&__action
 			width: 100%
 			display: flex
@@ -1238,12 +1246,13 @@ section
 				border-radius: 3px
 				margin: 0 auto 20px
 				max-width: unset
+				font-size: 15px
 				&:hover
 					background-color: $color_red
 					text-decoration: none
 		.owl-dots
 			position: absolute
-			top: 25px
+			top: 40px
 			margin-top: 0px
 
 
@@ -6229,7 +6238,7 @@ a.overflowed
 			fill: #AFBAC1
 
 .b-bar
-	margin-top: -5px
+	margin-top: -15px
 	&__list
 		display: flex
 		margin-right: -2px

@@ -8,11 +8,6 @@
 // @media only screen and (min-width : 1280px)
 // @media only screen and (min-width : 1200px)
 
-section
-	ul
-		@media only screen and (min-width: 768px)
-			padding-left: 40px
-
 .mfp-content form button
 	@media screen and (min-width: 1200px)
 		padding: 8px 10px
@@ -162,6 +157,7 @@ section
 				margin-right: 0
 			&:last-child
 				margin-left: 40px
+
 .b-projects
 	@media only screen and (min-width : 1200px)
 		&__btn-new a
@@ -169,10 +165,21 @@ section
 		&__container
 			margin-left: auto
 			margin-right: auto
-	&-empty
-		&__action
-			@media only screen and (min-width : 1200px)
+		&-empty
+			padding: 20px 26px 25px
+			&__title
+				font-size: 25px
+				line-height: 29px
+				font-weight: 400
+			&__action			
 				width: calc(100% / 3 - 40px)
+				padding: 35px 40px 60px
+				&-link
+					margin-bottom: 40px
+				&-text
+					margin-bottom: 50px
+			&__actions			
+				padding-top: 25px
 
 .b-projects-table
 	@media only screen and (min-width : 1200px)

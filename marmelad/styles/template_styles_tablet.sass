@@ -9,6 +9,11 @@
 // @media only screen and (min-width : 992px)
 // @media only screen and (min-width : 768px)
 
+section
+	ul
+		@media only screen and (min-width: 768px)
+			padding-left: 40px
+
 @media screen and (min-width: 1025px)
 	.b-projects
 		.b-main-button a
@@ -996,9 +1001,16 @@
 			padding-left: 34px
 			padding-right: 34px
 	&-empty
+		padding: 0 0px 25px
+		margin: 0
+		overflow-x: unset
+		&__title
+			padding-left: 0
+			padding-right: 0
+			margin-bottom: 30px
+		&__actions
 		&__action
-			@media only screen and (min-width : 768px)
-				width: calc((100% - 40px) / 3)
+			width: calc((100% - 40px) / 3)
 
 	@media only screen and (min-width : 1025px)
 		background-color: #f6f8fa
