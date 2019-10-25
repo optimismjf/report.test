@@ -8,7 +8,9 @@ var gulp 		 = require('gulp'), // Подключаем Gulp
   	notify 		 = require("gulp-notify"),
   	plumber 	 = require('gulp-plumber'),
   	ftp 		 = require('vinyl-ftp'),
-  	gutil 		 = require('gulp-util')
+  	gutil 		 = require('gulp-util'),
+    njkRender = require('gulp-nunjucks-render'),
+    prettify = require('gulp-html-prettify'),
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 gulp.task('sass', function(){ // Создаем таск Sass
@@ -21,6 +23,15 @@ gulp.task('sass', function(){ // Создаем таск Sass
 		.pipe(gulp.dest('static/css')) // Выгружаем результата в папку app/css
 });
 
+gulp.task('nunjucks', function() {
+  return gulp.src('marmelad/views/*.njk')
+    .pipe(njkRender())
+    .pipe(prettify({
+      indent_size : 4 // размер отступа - 4 пробела
+    }))
+    .pipe(gulp.dest('static'));
+});
+
 gulp.task('browser-sync', function() {
   browserSync({
     proxy: "report.test",
@@ -29,6 +40,8 @@ gulp.task('browser-sync', function() {
   gulp.watch('marmelad/styles/*.sass', gulp.parallel('sass'));
   gulp.watch('marmelad/styles/*.scss', gulp.parallel('sass'));
   gulp.watch('marmelad/**/*.styl', gulp.parallel('stylus'));
+  gulp.watch('marmelad/views/*.njk', gulp.parallel('nunjucks'));
+  gulp.watch('marmelad/views/**/*.njk', gulp.parallel('nunjucks'));
   browserSync.watch('static/**/*.*').on('change', browserSync.reload);
 });
 
@@ -66,6 +79,6 @@ gulp.task('deploy', async function () {
     .pipe( conn.dest( '/public_html' ) );
 });
 
-gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus'));
+gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus', 'nunjucks'));
 
 gulp.task('default', gulp.parallel('watch'));

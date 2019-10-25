@@ -1,0 +1,279 @@
+{% set title = "Профиль пользователя" %}
+{% set header_logo = "sa" %}
+{% set auth = 1 %}
+{% set body_class = "settings01" %}
+
+{% extends "marmelad/views/layout/main.njk" %}
+
+{% block content %}
+<div class="b-page-topic">                
+	<h1 class="b-page-topic__text">Профиль пользователя</h1>
+</div>
+<section class="b-user-rate">
+	<div class="b-user-rate__container">
+		<div class="b-user-rate__item">
+			<div class="b-user-balance">
+				<div class="b-user-balance__container">
+					<div class="b-user-balance__item">
+						<div class="b-user-balance__status-wrapper">
+							<div class="b-user-balance__status-topic">Оптимальный</div>
+							<div class="b-user-balance__status-aftertopic">Тариф до 11.10.2017</div>
+							<div class="b-user-balance__checkbox b-main-checkbox">
+								<input type="checkbox" name="auto" id="b-check18">
+								<label for="b-check18">Автопродение</label>
+							</div>
+							<div class="b-user-balance__accbalance-wrapper">
+								<div class="b-user-balance__accbalance">
+									<div class="b-user-balance__title">Лимиты</div>
+									<div class="b-user-balance__price">6780,<span>02</span></div>
+								</div>
+								<div class="b-user-balance__money-blocked">
+									<div class="b-user-balance__title">Заблокировано</div>
+									<div class="b-user-balance__price">182,<span>30</span></div>
+								</div>
+							</div>
+							<div class="b-user-balance__limit">Обновятся через 10 дней.</div>
+							<div class="b-balance-tabs">
+								<div class="b-balance-tabs__content">
+									<div id="subscription" class="b-balance-tabs__item b-balance-tabs__item--subscription">
+										<div class="b-user-balance__select-wrapper">
+											<div class="b-user-balance__select b-main-select4 b-user-balance__select_tarif">
+												<select>
+													<option default="" value="Старт" data-default="Тариф:" data-count="500" data-name="b-offer0"></option>
+													<option value="Стандарт" data-default="Тариф:" data-count="1500" data-name="b-offer1"></option>
+													<option value="Оптимальный" data-default="Тариф:" data-count="5000" data-name="b-offer2"></option>
+													<option value="Премиум" data-default="Тариф:" data-count="10000" data-name="b-offer3"></option>
+												</select>
+											</div>
+											<div class="b-user-balance__select-text">Сравнить тарифы</div>
+										</div>
+										<div class="b-user-balance__select b-main-select3 b-user-balance__select_price">
+											<select>
+												<option default="" data-offer="" data-name="b-offer0" value="1" data-months="1">Подписка на 1 месяц</option>
+												<option data-offer="-5%" data-name="b-offer1" value="3" data-months="3">Подписка на 3 месяца</option>
+												<option data-offer="-10%" data-name="b-offer2" value="6" data-months="6">Подписка на 6 месяцев</option>
+												<option data-offer="-15%" data-name="b-offer3" value="12" data-months="12">Подписка на 12 месяцев</option>
+											</select>
+										</div>
+										<div class="b-user-balance__total-wrapper">
+											<div class="b-user-balance__total-text">К оплате</div>
+											<div class="b-user-balance__total-count"><span class="b-numb">500</span><span><i class="fa fa-rub" aria-hidden="true"></i></span></div>
+										</div>
+										<div class="b-user-balance__select b-user-balance__select_payment b-main-select2">
+											<select>
+												<option default="" value="yandex" data-name="yandex">Яндекс.Деньги</option>
+												<option value="visa" data-name="visa">PayPall</option>
+												<option value="master" data-name="master">MasterCard</option>
+												<option value="nomoney" data-name="nomoney">Безналичный рассчет</option>
+											</select>
+										</div>
+										<div class="b-user-balance__form-docs-link"><a href="./profile.html#b-reqv">Добавить реквизиты</a></div>
+										<div class="b-user-balance__cansel-wrapper">
+											<div class="b-user-balance__cansel-btn b-main-button b-main-button_white"><a href="#">Отмена</a></div>
+											<div class="b-user-balance__money-push b-user-balance__money-push_pay b-main-button"><a href="#">Перейти к оплате</a></div>
+											<div class="b-user-balance__money-push b-user-balance__money-push_docs b-main-button"><a href="#">Сформировать док-ты</a></div>
+										</div>
+										<div class="b-user-balance__notify b-user-balance__notify_up">
+											<div class="b-user-balance__notify-text"> С текущей подписки будет перенесён остаток <b>2500</b> лимитов. </div>
+										</div>
+									</div>
+									<!-- <= item -->
+									<div id="buy" class="b-balance-tabs__item b-balance-tabs__item--buy">
+										<div class="b-user-balance__input b-main-input b-user-balance__input_summ">
+											<input type="text" placeholder="Введите число лимитов"> </div>
+										<div class="b-user-balance__total-wrapper">
+											<div class="b-user-balance__total-text">К оплате</div>
+											<div class="b-user-balance__total-limit"> <span class="b-numb">0</span> <span><i class="fa fa-rub" aria-hidden="true"></i></span> </div>
+										</div>
+										<div class="b-user-balance__select b-user-balance__select_payment b-main-select2">
+											<select>
+												<option default="" value="yandex" data-name="yandex">Яндекс.Деньги</option>
+												<option value="visa" data-name="visa">PayPall</option>
+												<option value="master" data-name="master">MasterCard</option>
+												<option value="nomoney" data-name="nomoney">Безналичный рассчет</option>
+											</select>
+										</div>
+										<div class="b-user-balance__form-docs-link"><a href="./profile.html#b-reqv">Добавить реквизиты</a></div>
+										<div class="b-user-balance__cansel-wrapper">
+											<div class="b-user-balance__cansel-btn b-main-button b-main-button_white"><a href="#">Отмена</a></div>
+											<div class="b-user-balance__money-push b-user-balance__money-push_pay b-main-button"><a href="#">Перейти к оплате</a></div>
+											<div class="b-user-balance__money-push b-user-balance__money-push_docs b-main-button"><a href="#">Сформировать док-ты</a></div>
+										</div>
+									</div>
+									<!-- <= item -->
+								</div>
+								<!-- <= content -->
+								<div class="b-balance-tabs__buttons b-main-button "> <a href="#subscription" class="b-balance-tabs__button b-balance-tabs__button--subscription">Приобрести подписку</a>
+									<!-- <= button --><a href="#buy" class="b-balance-tabs__button b-balance-tabs__button--buy">Купить лимиты</a>
+									<!-- <= button -->
+									<div class="b-user-balance__input-topic"><span>Ввести промокод</span></div>
+									<div class="b-user-balance__money-input">
+										<form class="b-promo-input">
+											<input type="text">
+											<input type="submit" value="Ok">
+											<div class="b-promo-input__warning"></div>
+										</form>
+									</div>
+								</div>
+								<!-- <= buttons -->
+							</div>
+							<!-- /b-user-balance -->
+						</div>
+					</div>
+					<div class="b-user-balance__item">
+						<div class="b-info-wrapper">
+							<div class="b-info">
+								<div class="b-info__title">Аудитор</div>
+								<!-- <= title -->
+								<div class="b-info__item">
+									<div class="b-info__item-part b-info__item-part--text">Аудитов</div>
+									<!-- <= item-part -->
+									<div class="b-info__item-part b-info__item-part--number">120</div>
+									<!-- <= item-part -->
+								</div>
+								<!-- <= item -->
+								<div class="b-info__item">
+									<div class="b-info__item-part b-info__item-part--text">Страниц в аудитах</div>
+									<!-- <= item-part -->
+									<div class="b-info__item-part b-info__item-part--number">12 743</div>
+									<!-- <= item-part -->
+								</div>
+								<!-- <= item -->
+								<div class="b-info__item">
+									<div class="b-info__item-part b-info__item-part--text">Проверок индексации</div>
+									<!-- <= item-part -->
+									<div class="b-info__item-part b-info__item-part--number">274 434</div>
+									<!-- <= item-part -->
+								</div>
+								<!-- <= item -->
+							</div>
+							<!-- /b-info -->
+							<div class="b-info">
+								<div class="b-info__title">Текстрактор</div>
+								<!-- <= title -->
+								<div class="b-info__item">
+									<div class="b-info__item-part b-info__item-part--text">АвтоТЗ, кластеров</div>
+									<!-- <= item-part -->
+									<div class="b-info__item-part b-info__item-part--number">456</div>
+									<!-- <= item-part -->
+								</div>
+								<!-- <= item -->
+								<div class="b-info__item">
+									<div class="b-info__item-part b-info__item-part--text">АвтоТЗ, запросов</div>
+									<!-- <= item-part -->
+									<div class="b-info__item-part b-info__item-part--number">23556</div>
+									<!-- <= item-part -->
+								</div>
+								<!-- <= item -->
+								<div class="b-info__item">
+									<div class="b-info__item-part b-info__item-part--text">Поиск тематических слов</div>
+									<!-- <= item-part -->
+									<div class="b-info__item-part b-info__item-part--number">5356</div>
+									<!-- <= item-part -->
+								</div>
+								<!-- <= item -->
+							</div>
+							<!-- /b-info -->
+						</div>
+						<!-- /b-info-wrapper -->
+					</div>
+				</div>
+			</div>
+			<div class="b-user-fileters">
+				<div class="b-user-fileters__topic">История</div>
+				<div class="b-user-fileters__container">
+					<div class="b-user-fileters__item">
+						<div class="b-user-fileters__select b-main-select">
+							<select>
+								<option default="">Тип операции</option>
+								<option>Крутая операция</option>
+							</select>
+						</div>
+					</div>
+					<div class="b-user-fileters__item">
+						<div class="b-user-fileters__select b-user-fileters__select_month b-main-select">
+							<select>
+								<option default="" data-list="item0">За последний месяц</option>
+								<option data-list="item1">За Квартал</option>
+								<option data-list="item2">За Полгода</option>
+								<option data-list="item3">За Год</option>
+								<option data-list="item4">За Всё время</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="b-user-table" id="b-table">
+				<div class="b-user-table__top-line">
+					<div class="b-user-table__time">Дата</div>
+					<div class="b-user-table__operation">Тип операции</div>
+					<div class="b-user-table__money">Сумма</div>
+					<div class="b-user-table__rate">Тариф</div>
+					<div class="b-user-table__text">Описание</div>
+				</div>
+				<div class="b-user-table__content">
+					<div class="b-user-table__item">
+						<div class="b-user-table__item-time"><span class="b-date">22.09.01</span><span class="b-time">18:00</span></div>
+						<div class="b-user-table__item-operation">Списание лимитов</div>
+						<div class="b-user-table__item-money minus">
+							<div class="b-user-table__span-wrapper"><span>- 11 200</span><span><i class="fa fa-rub" aria-hidden="true"></i></span></div>
+						</div>
+						<div class="b-user-table__item-rate">
+							<div class="b-user-table__item-rate-wrapper">Оптимальный</div>
+						</div>
+						<div class="b-user-table__item-text"><span>Анализ optimism.ru</span></div>
+					</div>
+					<div class="b-user-table__item">
+						<div class="b-user-table__item-time"><span class="b-date">22.09.01</span><span class="b-time">18:00</span></div>
+						<div class="b-user-table__item-operation">Списание лимитов</div>
+						<div class="b-user-table__item-money minus">
+							<div class="b-user-table__span-wrapper"><span>- 11 200</span><span><i class="fa fa-rub" aria-hidden="true"></i></span></div>
+						</div>
+						<div class="b-user-table__item-rate">
+							<div class="b-user-table__item-rate-wrapper">Оптимальный</div>
+						</div>
+						<div class="b-user-table__item-text"><span>Анализ optimism.ru</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="b-page-nav b-page-nav--settings">
+				<div class="b-page-nav__container">
+					<div class="b-page-nav__list-wrapper">
+						<a href="#" class="b-page-nav__prev"></a>
+						<ul class="b-page-nav__list">
+							<li><a href="#">1</a></li>
+							<li><a class="ellipsis" href="#">...</a></li>
+							<li><a href="#">4</a></li>
+							<li class="active"><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a class="ellipsis" href="#">...</a></li>
+							<li><a href="#">12</a></li>
+						</ul>
+						<a href="#" class="b-page-nav__next"></a>
+					</div>
+					<div class="b-page-nav__amount">
+						<div class="b-page-nav__amount-title">Элементов:</div>
+						<ul>
+							<li><a href="#">50</a></li>
+							<li class="active"><a href="#">250</a></li>
+							<li><a href="#">500</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="b-user-rate__item">
+			<div class="b-card-list">
+				<h2>Основное меню</h2>
+				<nav>
+					<div><span class="active">Настройки профиля</span></div>
+					<div><a href="">Баланс и статистика</a></div>
+					<div><a href="">Партнерская программа</a></div>
+					<hr>
+					<div><a href="#">На главную страницу</a></div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

@@ -25,5 +25,10 @@
     "scss": "^0.2.4",
     "vinyl-ftp": "^0.6.1",
     "yarn": "^1.15.2"
+  },
+  "dependencies": {
+    "gulp-html-prettify": "0.0.1",
+    "gulp-nunjucks-render": "^2.2.3",
+    "nunjucks": "^3.2.0"
   }
 }
