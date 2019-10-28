@@ -1,0 +1,429 @@
+{% set title = 'Коллектор анкоров' %}
+{% set header_class = "reports-header" %}
+{% set header_logo = "sa" %}
+{% set auth = 1 %}
+{% set layout = "report" %}
+
+{% extends "marmelad/views/layout/main.njk" %}
+
+{% block content %}
+
+<div class="b-inreports" id="content">
+	{% include "marmelad/views/parts/aside_ext.njk" %}
+	<main class="b-inreports__main">
+		<h1 class="b-inreports__main-name">{{ title }}</h1>
+		<div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc"></div>
+		<div class="b-inreports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!</div>
+		<div class="b-inreports__workarea">
+			{% include "marmelad/views/parts/table_filters.njk" %}
+
+			<div class="freeze-table">
+				<table class="b-inreports__table table" id="kollektor">
+					<thead>
+						<tr>
+							<th class="w-400" width="33%" data-action="sort-column" data-sortable="url">
+								<div class="b-inreports__table-headname">
+									<span>URL</span>
+									<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+								</div>
+							</th>
+							<th class="w-400" width="33%" data-action="sort-column" data-sortable="link">
+								<div class="b-inreports__table-headname">
+									<span>Ссылка</span>
+									<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+								</div>
+							</th>
+							<th class="w-400" width="33%" data-action="sort-column" data-sortable="anchors">
+								<div class="b-inreports__table-headname">
+									<span>Анкоры и количество</span>
+									<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+								</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="33%">
+								<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
+							</td>
+							<td class="w-400" width="33%">
+								<ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Всего ссылок</span>
+										<span class="b-inreports-list__value">1 230</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Nofollow</span>
+										<span class="b-inreports-list__value">207</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Пустые анкоры</span>
+										<span class="b-inreports-list__value">8</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Содержание Alt</span>
+										<span class="b-inreports-list__value">35</span>
+									</li>
+								</ul>
+							</td>
+							<td class="w-400" width="33%"><ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+										<span class="b-inreports-list__value">92</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+										<span class="b-inreports-list__value">85</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн</span>
+										<span class="b-inreports-list__value">0</span>
+									</li>
+									<li><a href="#$">Все анкоры</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="33%">
+								<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
+							</td>
+							<td class="w-400" width="33%">
+								<ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Всего ссылок</span>
+										<span class="b-inreports-list__value">1 230</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Nofollow</span>
+										<span class="b-inreports-list__value">207</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Пустые анкоры</span>
+										<span class="b-inreports-list__value">8</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Содержание Alt</span>
+										<span class="b-inreports-list__value">35</span>
+									</li>
+								</ul>
+							</td>
+							<td class="w-400" width="33%"><ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+										<span class="b-inreports-list__value">92</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+										<span class="b-inreports-list__value">85</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн</span>
+										<span class="b-inreports-list__value">0</span>
+									</li>
+									<li><a href="#$">Все анкоры</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="33%">
+								<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
+							</td>
+							<td class="w-400" width="33%">
+								<ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Всего ссылок</span>
+										<span class="b-inreports-list__value">1 230</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Nofollow</span>
+										<span class="b-inreports-list__value">207</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Пустые анкоры</span>
+										<span class="b-inreports-list__value">8</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Содержание Alt</span>
+										<span class="b-inreports-list__value">35</span>
+									</li>
+								</ul>
+							</td>
+							<td class="w-400" width="33%"><ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+										<span class="b-inreports-list__value">92</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+										<span class="b-inreports-list__value">85</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн</span>
+										<span class="b-inreports-list__value">0</span>
+									</li>
+									<li><a href="#$">Все анкоры</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="33%">
+								<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
+							</td>
+							<td class="w-400" width="33%">
+								<ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Всего ссылок</span>
+										<span class="b-inreports-list__value">1 230</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Nofollow</span>
+										<span class="b-inreports-list__value">207</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Пустые анкоры</span>
+										<span class="b-inreports-list__value">8</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Содержание Alt</span>
+										<span class="b-inreports-list__value">35</span>
+									</li>
+								</ul>
+							</td>
+							<td class="w-400" width="33%"><ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+										<span class="b-inreports-list__value">92</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+										<span class="b-inreports-list__value">85</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн</span>
+										<span class="b-inreports-list__value">0</span>
+									</li>
+									<li><a href="#$">Все анкоры</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="33%">
+								<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
+							</td>
+							<td class="w-400" width="33%">
+								<ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Всего ссылок</span>
+										<span class="b-inreports-list__value">1 230</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Nofollow</span>
+										<span class="b-inreports-list__value">207</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Пустые анкоры</span>
+										<span class="b-inreports-list__value">8</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Содержание Alt</span>
+										<span class="b-inreports-list__value">35</span>
+									</li>
+								</ul>
+							</td>
+							<td class="w-400" width="33%"><ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+										<span class="b-inreports-list__value">92</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+										<span class="b-inreports-list__value">85</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн</span>
+										<span class="b-inreports-list__value">0</span>
+									</li>
+									<li><a href="#$">Все анкоры</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="33%">
+								<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
+							</td>
+							<td class="w-400" width="33%">
+								<ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Всего ссылок</span>
+										<span class="b-inreports-list__value">1 230</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Nofollow</span>
+										<span class="b-inreports-list__value">207</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Пустые анкоры</span>
+										<span class="b-inreports-list__value">8</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Содержание Alt</span>
+										<span class="b-inreports-list__value">35</span>
+									</li>
+								</ul>
+							</td>
+							<td class="w-400" width="33%"><ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+										<span class="b-inreports-list__value">92</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+										<span class="b-inreports-list__value">85</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн</span>
+										<span class="b-inreports-list__value">0</span>
+									</li>
+									<li><a href="#$">Все анкоры</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="33%">
+								<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
+							</td>
+							<td class="w-400" width="33%">
+								<ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Всего ссылок</span>
+										<span class="b-inreports-list__value">1 230</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Nofollow</span>
+										<span class="b-inreports-list__value">207</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Пустые анкоры</span>
+										<span class="b-inreports-list__value">8</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Содержание Alt</span>
+										<span class="b-inreports-list__value">35</span>
+									</li>
+								</ul>
+							</td>
+							<td class="w-400" width="33%"><ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+										<span class="b-inreports-list__value">92</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+										<span class="b-inreports-list__value">85</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн</span>
+										<span class="b-inreports-list__value">0</span>
+									</li>
+									<li><a href="#$">Все анкоры</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="33%">
+								<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
+							</td>
+							<td class="w-400" width="33%">
+								<ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Всего ссылок</span>
+										<span class="b-inreports-list__value">1 230</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Nofollow</span>
+										<span class="b-inreports-list__value">207</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Пустые анкоры</span>
+										<span class="b-inreports-list__value">8</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Содержание Alt</span>
+										<span class="b-inreports-list__value">35</span>
+									</li>
+								</ul>
+							</td>
+							<td class="w-400" width="33%"><ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+										<span class="b-inreports-list__value">92</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+										<span class="b-inreports-list__value">85</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн</span>
+										<span class="b-inreports-list__value">0</span>
+									</li>
+									<li><a href="#$">Все анкоры</a></li>
+								</ul>
+							</td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="33%">
+								<a href="http://top100.rambler.ru/navi/2923700/" title="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a>
+							</td>
+							<td class="w-400" width="33%">
+								<ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Всего ссылок</span>
+										<span class="b-inreports-list__value">1 230</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Nofollow</span>
+										<span class="b-inreports-list__value">207</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Пустые анкоры</span>
+										<span class="b-inreports-list__value">8</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Содержание Alt</span>
+										<span class="b-inreports-list__value">35</span>
+									</li>
+								</ul>
+							</td>
+							<td class="w-400" width="33%"><ul class="b-inreports-list">
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн аудит</span>
+										<span class="b-inreports-list__value">92</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi praesentium ipsum quas tempora, molestiae quod aperiam debitis, vero necessitatibus dolorem!</span>
+										<span class="b-inreports-list__value">85</span>
+									</li>
+									<li>
+										<span class="b-inreports-list__key">Проводим онлайн</span>
+										<span class="b-inreports-list__value">0</span>
+									</li>
+									<li><a href="#$">Все анкоры</a></li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+</div>
+
+{% include "marmelad/views/parts/table_popups.njk" %}
+
+{% endblock %}
+
+{% block extjs %}
+
+<script src="js/freezytable.js"></script>
+
+{% endblock %}

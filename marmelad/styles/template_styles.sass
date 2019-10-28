@@ -3780,8 +3780,8 @@ body
 		&-settings
 			font-size: 11px
 			line-height: 13px
-			width: 70px
-			padding: 14.5px 0
+			width: 76px
+			padding: 13px 3px
 			text-align: center
 			cursor: pointer
 			&:hover
@@ -3792,15 +3792,16 @@ body
 				content: ''
 				width: 100%
 				display: block
-				height: 18px
+				height: 16px
+				margin-bottom: 4px
 				background-repeat: no-repeat
-				background-position: center top
+				background-position: center center
 		&-restart:before
-			background-image: url(../images/icon/restart.svg)
+			background-image: url(../images/icon/restart_n.svg)
 		&-autostart:before
-			background-image: url(../images/icon/autostart.svg)
+			background-image: url(../images/icon/autostart_n.svg)
 		&-settings:before
-			background-image: url(../images/icon/settings.svg)
+			background-image: url(../images/icon/settings_n.svg)
 
 	&__mobbuttons
 		&-wrapper
@@ -3849,6 +3850,8 @@ body
 				border-radius: 50%
 				background-color: $color_easygrey
 				margin-left: 5px
+				&:first-child
+					margin-left: 0
 		
 		&-restart,
 		&-autostart,
@@ -4066,10 +4069,13 @@ body
 			margin: 0
 			padding: 0
 			height: 100%
+			overflow-y: hidden
 			&.active
 				display: block
 		&.in-process &-menu-wrapper
 			overflow: hidden
+		&.in-process &-signals
+			display: none
 	&__main
 		width: 100%
 		margin-left: 0
@@ -4077,10 +4083,12 @@ body
 		padding: 14px 0 0 20px
 		overflow-y: auto
 		min-height: calc(100vh - 60px)
+		color: $color_black_main
 		&-name
 			display: inline-block
-			margin-right: 12px
-			margin-bottom: 18px
+			line-height: 29px
+			font-size: 25px
+			margin: 0 11px 11px 0
 		&-desc
 			display: none
 			background: #FFFFFF
@@ -4089,7 +4097,6 @@ body
 			padding: 10px 15px 15px
 			font-size: 14px
 			line-height: 25px
-			color: $color_black_main
 			width: calc(100% - 20px)
 		&-top
 			&-export
@@ -5482,10 +5489,10 @@ a.overflowed
 		background: url(../images/icon/bg.svg)
 		transform: rotate(-20deg)
 		opacity: 0.1
-		width: 200%
+		width: 400%
 		height: 200%
 		top: -50%
-		left: -50%
+		left: -100%
 
 .b-pagespeed
 	padding-right: 20px

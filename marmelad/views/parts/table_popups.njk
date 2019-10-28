@@ -1,0 +1,163 @@
+<div id="table-actions" class="b-actions__helper-wrapper" style="display: none">
+	<div class="b-actions__helper">
+		<div class="b-actions__helper-container">
+			<ul class="b-actions__helper-list">
+				<li><a class="b-actions_icon" id="item-copy" href="#$">Копировать</a></li>
+				<li><a class="b-actions_icon" id="item-open" target="_blank" href="#$">Открыть во вкладке</a></li>
+				<li><a class="b-actions_icon" id="item-reinit" href="#$">Переснять</a></li>
+				<li><a class="b-actions_icon" id="item-remove" href="#$">Удалить</a></li>
+			</ul>
+			<hr>
+			<ul class="b-actions__helper-list">
+				<li><a id="item-export" href="#$">Экспортировать</a></li>
+				<li><a href="#$">Обратные ссылки</a></li>
+				<li><a href="#$">Google PageSpeed Insights</a></li>
+				<li><a href="#$">Google Mobile-Friendly Test</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="table-filters" class="b-filters__helper-wrapper" data-filter-action="add-filter">
+	<div class="b-filters__helper">
+		<form class="b-filters__helper-container">
+			<div class="b-filters__header">
+				<div class="b-filters__header-select-wrapper">
+					<div class="b-filters__header-select">Выберите колонку</div>
+					<ul class="b-filters__header-select-list">
+						<li class="b-filters__header-select-item" data-filter-group="testradio">Nofollow</li>
+						<li class="b-filters__header-select-item" data-filter-group="testtext">URL</li>
+						<li class="b-filters__header-select-item" data-filter-group="testcheckbox">REL</li>
+						<li class="b-filters__header-select-item" data-filter-group="testcount">Количество ссылок</li>
+						<li class="b-filters__header-select-item" data-filter-group="testa">Кол-во анкоров</li>
+					</ul>
+				</div>
+			</div>
+			<div class="b-filters__body" hidden>
+				<div class="b-filters__body-group" data-filter-group="testradio" data-filter-type="radio">
+					<div class="b-filters__body-row">
+						<input type="radio" class="custom-radio" name="radio-value" id="radio-value-yes" value="да">
+						<label for="radio-value-yes">Да</label>
+					</div>
+					<div class="b-filters__body-row">
+						<input type="radio" class="custom-radio" name="radio-value" id="radio-value-no" value="нет">
+						<label for="radio-value-no">Нет</label>
+					</div>
+				</div>
+				<div class="b-filters__body-group" data-filter-group="testtext" data-filter-type="text">
+					<div class="b-filters__body-row">
+						<textarea class="custom-textarea" name="urls" id="urls-value" placeholder='https://saitreport.ru https://saitreport.ru/projects/* @/projects/sait/'></textarea>
+					</div>
+					<div class="b-filters__body-row">
+						<p>Операторы нестрого соответствия:</p>
+						<p>
+							<span>*</span> любое количество символов;<br>
+							<span>@</span> в начале — вхождение строки;<br>
+							<span>~</span> в начале — режим регулярного выражения;<br>
+							<span>!</span> в начале — отрицание условия.
+						</p>
+					</div>
+				</div>
+				<div class="b-filters__body-group" data-filter-group="testcheckbox" data-filter-type="checkbox">
+					<div class="b-filters__body-row">
+						<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-1" value="checkbox">
+						<label for="checkbox-value-1">checkbox</label>
+					</div>
+					<div class="b-filters__body-row">
+						<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-2" value="last1">
+						<label for="checkbox-value-2">last1</label>
+					</div>
+					<div class="b-filters__body-row">
+						<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-3" value="last2">
+						<label for="checkbox-value-3">last2</label>
+					</div>
+					<div class="b-filters__body-row">
+						<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-4" value="last3">
+						<label for="checkbox-value-4">last3</label>
+					</div>
+					<div class="b-filters__body-row">
+						<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-5" value="last4">
+						<label for="checkbox-value-5">last4</label>
+					</div>
+					<div class="b-filters__body-row">
+						<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-6" value="last5">
+						<label for="checkbox-value-6">last5</label>
+					</div>
+					<div class="b-filters__body-row">
+						<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-7" value="last6">
+						<label for="checkbox-value-7">last6</label>
+					</div>
+					<div class="b-filters__body-row">
+						<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-8" value="last7">
+						<label for="checkbox-value-8">last7</label>
+					</div>
+					<div class="b-filters__body-row">
+						<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-9" value="last8">
+						<label for="checkbox-value-9">last8</label>
+					</div>
+					<div class="b-filters__body-row">
+						<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-10" value="last9">
+						<label for="checkbox-value-10">last9</label>
+					</div>
+					<div class="b-filters__body-row">
+						<input type="checkbox" class="custom-checkbox" name="checkbox-value" id="checkbox-value-11" value="last10">
+						<label for="checkbox-value-11">last10</label>
+					</div>
+				</div>
+				<div class="b-filters__body-group" data-filter-group="testcount" data-filter-type="count">
+					<div class="b-filters__body-row flex">
+						<div class="b-filters__body-row-item">
+							<div class="b-filters__body-select-wrapper">
+								<div class="b-filters__body-select changed">Больше</div>
+								<ul class="b-filters__body-select-list">
+									<li class="b-filters__body-select-item" data-filter-type="count-over">Больше</li>
+									<li class="b-filters__body-select-item" data-filter-type="count-less">Меньше</li>
+									<li class="b-filters__body-select-item" data-filter-type="count-range">От — до</li>
+								</ul>
+							</div>
+						</div>
+						<div class="b-filters__body-row-item">
+							<div class="b-filters__body-row-group active" data-filter-type="count-over">
+								<input type="number" min="0" name="countlinks-from" value>
+							</div>
+							<div class="b-filters__body-row-group" data-filter-type="count-less">
+								<input type="number"min="0"  name="countlinks-to" value>
+							</div>
+							<div class="b-filters__body-row-group" data-filter-type="count-range">
+								<input type="number" min="0" name="countlinks-min" value> <span>—</span> <input type="number" min="0" name="countlinks-max" value>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="b-filters__body-group" data-filter-group="testa" data-filter-type="count">
+					<div class="b-filters__body-row flex">
+						<div class="b-filters__body-row-item">
+							<div class="b-filters__body-select-wrapper">
+								<div class="b-filters__body-select changed">></div>
+								<ul class="b-filters__body-select-list">
+									<li class="b-filters__body-select-item" data-filter-type="count-over">></li>
+									<li class="b-filters__body-select-item" data-filter-type="count-less"><</li>
+									<li class="b-filters__body-select-item" data-filter-type="count-range">Range</li>
+								</ul>
+							</div>
+						</div>
+						<div class="b-filters__body-row-item">
+							<div class="b-filters__body-row-group active" data-filter-type="count-over">
+								<input type="number" min="0" name="countimg-from" value>
+							</div>
+							<div class="b-filters__body-row-group" data-filter-type="count-less">
+								<input type="number"min="0"  name="countimg-to" value>
+							</div>
+							<div class="b-filters__body-row-group" data-filter-type="count-range">
+								<input type="number" min="0" name="countimg-min" value> <span>—</span> <input type="number" min="0" name="countlinks-max" value>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="b-filters__footer" hidden>
+				<input class="b-filters__submit" type="submit" value="Применить" disabled>
+			</div>
+		</form>
+	</div>
+</div>

@@ -86,7 +86,7 @@
 			</nav>
 			{% if auth == 1 %}
 
-				{% if inner_report == 1 %}
+				{% if layout == "report" %}
 				<div class="b-top-wrapper__item b-top-wrapper__item-project">
 					<div class="b-project">
 						<div class="b-project__item">
@@ -311,6 +311,21 @@
 				</li>
 			</ul>
 		</nav>
+		{% endif %}
+
+		{% if layout == "main" %}
+		<div class="header_content both">
+			<h1>Автоматический анализ сайта</h1>
+			<p>328 800 сайтов уже проверено в нашей системе</p>
+			<form class="site-analysis" action="#" method="get" accept-charset="utf-8">
+				<div class="form-item form-item--input">
+					<input class="input__url" type="text" name="url" value="" placeholder="Адрес вашего сайта">
+				</div>
+				<div class="form-item form-item--button">
+					<button class="input__send" type="submit">Запустить</button>
+				</div>
+			</form>
+		</div>
 		{% endif %}
 	</div>
 </header>

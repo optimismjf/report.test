@@ -3,14 +3,14 @@ var gulp 		 = require('gulp'), // Подключаем Gulp
 	browserSync  = require('browser-sync'), // Подключаем Browser Sync
 	concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
 	rename       = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
-  	nib 		 = require('nib'),
-  	stylus 		 = require('gulp-stylus'),
-  	notify 		 = require("gulp-notify"),
-  	plumber 	 = require('gulp-plumber'),
-  	ftp 		 = require('vinyl-ftp'),
-  	gutil 		 = require('gulp-util'),
-    njkRender = require('gulp-nunjucks-render'),
-    prettify = require('gulp-html-prettify'),
+	nib 		 = require('nib'),
+	stylus 		 = require('gulp-stylus'),
+	notify 		 = require("gulp-notify"),
+	plumber 	 = require('gulp-plumber'),
+	ftp 		 = require('vinyl-ftp'),
+	gutil 		 = require('gulp-util'),
+  njkRender = require('gulp-nunjucks-render'),
+  prettify = require('gulp-html-prettify'),
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 gulp.task('sass', function(){ // Создаем таск Sass

@@ -1,19 +1,11 @@
 {% set title = "Цены" %}
 {% set header_logo = "sr" %}
-{% set body_class = "prices" %}
+{% set layout = "prices" %}
+{% set top_h1 = 1 %}
 
 {% extends "marmelad/views/layout/main.njk" %}
 
-{% block content %}
-<div class="b-page-topic">
-    <h1 class="b-page-topic__text">
-        Цены
-    </h1>
-</div>
-        
-
-        
-
+{% block content %}  
   <section class="b-prices">
     <div class="b-prices__container">
       <div class="b-prices__top-text">Вы получите полный отчет о состоянии сайта и всех его параметрах. Очень полезный аудит, серьезно прорабатывается такой аспект, как внутренняя перелинковка сайта, многие оптимизаторы получат долгожданный ответ на вопрос. Внутренняя оптимизация сайта подразумевает затраты сил и времени.</div>
@@ -502,4 +494,4 @@
   </section>
 {% endblock %}
 
-{% block extjs %}<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>{% endblock %}
+{% block extjs %}{% endblock %}
