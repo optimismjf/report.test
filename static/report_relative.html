@@ -335,8 +335,18 @@
         </aside>
         <main class="b-inreports__main">
             <h1 class="b-inreports__main-name">Отчёт по релевантности ключей на сайте</h1>
-            <div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc"></div>
-            <div class="b-inreports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!</div>
+
+            <div class="b-inform__wrapper">
+                <div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc">
+                    <div class="icon">
+                        <svg>
+                            <use xlink:href="/images/icon/svg-sprite.svg#info"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="b-inreports__main-desc hidden">Я подсказко</div>
+
             <div class="b-inreports__workarea">
                 <div class="b-inreports__filters">
                     <div class="b-inreports__filters-item">
@@ -418,25 +428,41 @@
                     <th class="w-400" rowspan="2" data-action="sort-column" data-sortable="url">
                         <div class="b-inreports__table-headname">
                             <span>Ключи для URL</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+
+
                         </div>
                     </th>
                     <th class="w-500" width="500" colspan="6">
                         <div class="b-inreports__table-headname">
                             <span>Вхождений</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+
+
                         </div>
                     </th>
                     <th class="w-150" width="150" rowspan="2" data-action="sort-column" data-sortable="rel">
                         <div class="b-inreports__table-headname">
                             <span>Релевантность</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+
+
                         </div>
                     </th>
                     <th class="w-100" width="100" rowspan="2" data-action="sort-column" data-sortable="wordstat">
                         <div class="b-inreports__table-headname">
                             <span>Wordstat</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+
+
                         </div>
                     </th>
                 </tr>
@@ -1030,6 +1056,7 @@
         <div class="b-filters__helper">
             <form class="b-filters__helper-container">
                 <div class="b-filters__header">
+                    <div class="b-filters__header-text">Фильтрация по колонке</div>
                     <div class="b-filters__header-select-wrapper">
                         <div class="b-filters__header-select">Выберите колонку</div>
                         <ul class="b-filters__header-select-list">

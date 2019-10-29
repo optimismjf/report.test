@@ -6,14 +6,15 @@
 
 {% extends "marmelad/views/layout/main.njk" %}
 
+{% from "marmelad/views/macro/macros.njk" import informSlide, informHover %}
+
 {% block content %}
 
 <div class="b-inreports" id="content">
 	{% include "marmelad/views/parts/aside_ext.njk" %}
 	<main class="b-inreports__main">
 		<h1 class="b-inreports__main-name">{{ title }}</h1>
-		<div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc"></div>
-		<div class="b-inreports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!</div>
+		{{ informSlide('b-inreports__main-desc') }}
 		<div class="b-inreports__workarea">
 			{% include "marmelad/views/parts/table_filters.njk" %}
 
@@ -24,25 +25,25 @@
 							<th class="w-400" rowspan="2" data-action="sort-column" data-sortable="url">
 								<div class="b-inreports__table-headname">
 									<span>Ключи для URL</span>
-									<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+									{{ informHover('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus.', 'span') }}
 								</div>
 							</th>
 							<th class="w-500" width="500" colspan="6">
 								<div class="b-inreports__table-headname">
 									<span>Вхождений</span>
-									<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+									{{ informHover('Я подсказко', 'span') }}
 								</div>
 							</th>
 							<th class="w-150" width="150" rowspan="2" data-action="sort-column" data-sortable="rel">
 								<div class="b-inreports__table-headname">
 									<span>Релевантность</span>
-									<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+									{{ informHover('Я подсказко', 'span') }}
 								</div>
 							</th>
 							<th class="w-100" width="100" rowspan="2" data-action="sort-column" data-sortable="wordstat">
 								<div class="b-inreports__table-headname">
 									<span>Wordstat</span>
-									<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+									{{ informHover('Я подсказко', 'span') }}
 								</div>
 							</th>
 						</tr>

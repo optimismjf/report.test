@@ -40,7 +40,6 @@ gulp.task('browser-sync', function() {
   gulp.watch('marmelad/styles/*.sass', gulp.parallel('sass'));
   gulp.watch('marmelad/styles/*.scss', gulp.parallel('sass'));
   gulp.watch('marmelad/**/*.styl', gulp.parallel('stylus'));
-  gulp.watch('marmelad/views/*.njk', gulp.parallel('nunjucks'));
   gulp.watch('marmelad/views/**/*.njk', gulp.parallel('nunjucks'));
   browserSync.watch('static/**/*.*').on('change', browserSync.reload);
 });
@@ -80,5 +79,6 @@ gulp.task('deploy', async function () {
 });
 
 gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus', 'nunjucks'));
+// gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus'));
 
 gulp.task('default', gulp.parallel('watch'));

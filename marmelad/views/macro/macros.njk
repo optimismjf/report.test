@@ -1,0 +1,14 @@
+{# Макрос для тугл-подсказок - обычно используются возле h1 во внутренних отчетах #}
+{% macro informSlide(class='b-inreports__main-desc', content='Я подсказко') %}
+	<div class="b-inform__wrapper">
+		<div class="b-inform" data-action="slide-target" data-target=".{{ class }}"><div class="icon"><svg><use xlink:href="/images/icon/svg-sprite.svg#info"></use></svg></div></div>
+	</div>
+	<div class="{{ class }} hidden">{{ content }}</div>
+{% endmacro %}
+
+{# Макрос для hover-подсказок #}
+{% macro informHover(content='Я подсказко', type='div', icon="N") %}
+	{% if icon == "Y" %}<div class="b-inform__wrapper"><div class="icon"><svg><use xlink:href="/images/icon/svg-sprite.svg#info"></use></svg></div>{% endif %}
+	<{{ type }} class="b-inform" data-action="show-hover" data-content="{{ content }}"></{{ type }}>
+	{% if icon == "Y" %}</div>{% endif %}
+{% endmacro %}

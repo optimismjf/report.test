@@ -19,6 +19,16 @@ a
 section
 	ul
 		padding-left: 27px
+
+.icon
+	height: inherit
+	width: inherit
+	position: relative
+	display: block
+	svg
+		height: inherit
+		width: inherit
+	
 /*magnific settings*/
 .color_main
 	color: $color_black_main
@@ -3031,7 +3041,7 @@ body
 	border-radius: 5px
 
 %helper-list
-	padding: 12px 20px 20px 20px
+	padding: 5px 20px
 	margin: 0
 	list-style: none
 
@@ -3693,7 +3703,7 @@ body
 			display: none
 	i
 		margin: 0 8px
-		color: #C2CAD8
+		color: $color_grey
 		font-size: 21px
 		@media all and (max-width : 767px)
 			display: none
@@ -4088,7 +4098,7 @@ body
 			display: inline-block
 			line-height: 29px
 			font-size: 25px
-			margin: 0 11px 11px 0
+			margin: 0 5px 16px 0
 		&-desc
 			display: none
 			background: #FFFFFF
@@ -4239,7 +4249,7 @@ body
 		position: relative
 		overflow: hidden
 	&__filters
-		padding: 15px 20px 20px
+		padding: 15px 20px
 		border: 1px solid $color_easygrey
 		border-right: 0
 		border-bottom: 0
@@ -4319,9 +4329,11 @@ body
 			border: 1px solid $color_easygrey
 			font-size: 14px
 			&::placeholder			
-				color: #AFBAC1
+				color: $color_inactive			
+			&:hover
+				border-color: $color_inactive
 			&:focus
-				border-color: #2E97DF
+				border-color: $color_blue
 		&-clear
 			display: none
 			position: absolute
@@ -4337,21 +4349,23 @@ body
 	&__addfilter, &__export, .b-pagespeed__section-export, .b-inreports__main-top-export
 		border: 1px solid $color_easygrey
 		margin-left: 10px
-		line-height: 28px
-		padding-left: 28px
-		padding-right: 8px
+		line-height: 17px
+		padding: 6px 7px 5px 25px
 		font-size: 14px
 		background-repeat: no-repeat
 		cursor: pointer
+		&:hover
+			border-color: $color_inactive
+		&:active
+			background-color: #F1F1F1
 	&__addfilter
 		background-image: url(../images/icon/add.svg)
-		background-position: 7px center
+		background-position: 3px center
 	&__export, .b-pagespeed__section-export, .b-inreports__main-top-export
 		background-image: url(../images/icon/upload.svg)
-		background-position: 8px center
+		background-position: 7px center
 		position: relative
-		&:hover
-			text-decoration: none
+		padding-left: 29px
 		&-helper
 			@extend %helper
 			&:after
@@ -4395,6 +4409,7 @@ body
 						display: block
 						color: #C2CAD8		
 		&:hover
+			text-decoration: none
 			.b-inreports__export-helper
 				border: 1px solid $color_easygrey
 				border-radius: 5px
@@ -4523,6 +4538,7 @@ body
 				margin-left: 5px
 				width: 14px
 				height: 14px
+				bottom: 0
 				background-image: url(../images/icon/info_alt.svg)
 				&:hover
 					background-image: url(../images/icon/info_alt-h.svg)
@@ -4582,6 +4598,8 @@ body
 			color: $color_black_main
 			&:not(:last-child)
 				border-bottom: 1px solid #F1F1F1
+				.hover &
+					border-bottom: 1px solid #E1E4E6
 		&__key
 			padding-right: 10px
 		&__value
@@ -4635,13 +4653,17 @@ body
 		&[disabled]
 			background-color: #C2CAD8
 	&__select
-		line-height: 34px
+		line-height: 32px
 		background: #FFFFFF
 		color: #AFBAC1
 		padding: 0 10px
 		border: 1px solid #C2CAD8
 		width: 100%
 		cursor: pointer
+		&:hover
+			border-color: $color_inactive
+		&:active
+			background-color: #F1F1F1
 		&.changed
 			color: $color_black_main
 		&.opened:after
@@ -4687,10 +4709,14 @@ body
 		outline: 0
 		padding: 0 10px
 		border: 1px solid #C2CAD8
-		line-height: 34px
+		line-height: 32px
 		max-width: 140px
+		&:hover
+			border-color: $color_inactive
+			img
+				border-color: $color_inactive
 		&:focus
-			border-color: #2E97DF
+			border-color: $color_blue
 		&::-webkit-outer-spin-button,
 		&::-webkit-inner-spin-button
 			appearance: none
@@ -4700,8 +4726,8 @@ body
 		display: inline-block
 		img
 			cursor: pointer
-			width: 36px
-			height: 36px
+			width: 34px
+			height: 34px
 			position: absolute
 			border-left: 1px solid #C2CAD8
 			right: 1px
@@ -4717,14 +4743,14 @@ body
 					padding-left: 24px
 					font-size: 15px
 					cursor: pointer
-					line-height: 20px
+					line-height: 19px
 					display: inline-block
-					color: #666
+					color: $color_black_main
 					&:before
 						content: ''
 						position: absolute
 						left: 0
-						top: 2px
+						top: 0px
 						width: 16px
 						height: 16px
 						border: 1px solid #C2CAD8
@@ -4945,6 +4971,10 @@ body
 			color: $color_easygrey
 		a
 			color: $color_grey
+			&:hover
+				border-color: $color_inactive
+			&:active
+				background-color: #F1F1F1
 	&__next
 		&:after
 			content: "\f105"
@@ -4966,7 +4996,11 @@ body
 			border: 1px solid $color_easygrey
 			position: relative
 			cursor: pointer
-			color: $color_grey
+			color: $color_grey			
+			&:hover
+				border-color: $color_inactive
+			&:active
+				background-color: #F1F1F1
 			&:after
 				content: ''
 				position: absolute
@@ -4987,16 +5021,25 @@ body
 				height: 20px
 				background-size: 20px 20px
 .b-inform
-	width: 20px
 	height: 20px
+	width: 20px
 	display: inline-block
-	background-image: url(../images/icon/info.svg)
 	background-repeat: no-repeat
 	background-position: center center
 	cursor: pointer
 	position: relative
 	white-space: normal !important
-	&_content
+	&__wrapper
+		width: 20px
+		height: 20px
+		bottom: -2px
+		display: inline-block
+		position: relative
+		.icon
+			position: absolute
+			top: 0
+			left: 0
+	&__content
 		position: fixed
 		z-index: 2
 		display: block
@@ -5009,6 +5052,18 @@ body
 		&.left-side
 			left: unset
 			right: 100%
+	&__wrapper, &
+		.icon
+			fill: #C2CAD8
+			color: #C2CAD8
+	&__wrapper, &
+		&:hover .icon		
+			fill: #AFBAC1
+			color: #AFBAC1
+	&__wrapper, &
+		&:active .icon		
+			fill: #697882
+			color: #697882		
 
 .b-actions
 	&__helper
@@ -5048,32 +5103,34 @@ body
 						top: calc(100% - 34px)							
 		&-container
 			@extend %helper-container
-			padding-bottom: 15px
+			padding-bottom: 6px
 			& hr
 				background-color: $color_easygrey
 				border: none
 				height: 1px
-				margin-top: 12px
-				margin-bottom: 0
+				margin-top: 7px
+				margin-bottom: -3px
 		&-list
 			@extend %helper-list
 			padding-bottom: 0
+			padding-top: 5px
 			li
 				&:hover
-					background-color: rgb(246, 248, 250)
+					background-color: #E5E9EE
 					margin: 0 -20px
 					cursor: pointer
 					padding: 0 20px
 				@extend %helper-item
-				line-height: 34px
 				a
-					padding-left: 22px
-					padding-right: 22px
-					line-height: 34px
+					display: block
+					padding: 5px 22px
+					line-height: 25px
+					font-size: 15px
 					color: $color_black_main
 					text-decoration: none
 					background-repeat: no-repeat
-					background-position: left 2px
+					background-position: left 9px
+					background-size: 16px 16px
 					&#item-copy
 						background-image: url(../images/icon/action-copy.svg)						
 					&#item-open
@@ -5124,24 +5181,32 @@ body
 			width: 350px
 		&-container
 			@extend %helper-container
-			padding: 10px 0 0
+			padding: 9px 0 4px
 			& hr
 				background-color: $color_easygrey
 				border: none
 				height: 1px
 				margin: 12px -20px 0
 	&__header
-		padding: 0 20px 10px
+		padding: 0 19px 15px
 		position: relative
 		z-index: 1
+		&-text
+			font-size: 15px
+			line-height: 21px
+			margin-bottom: 5px
 		&-select
-			line-height: 34px
+			line-height: 32px
 			background: #FFFFFF
 			color: #AFBAC1
 			padding: 0 10px
 			border: 1px solid #C2CAD8
 			width: 100%
 			cursor: pointer
+			&:hover
+				border-color: $color_inactive
+			&:active
+				background-color: #F1F1F1
 			&.changed
 				color: $color_black_main
 			&.opened:after
@@ -5201,8 +5266,10 @@ body
 					outline: 0
 					padding: 0 10px
 					border: 1px solid #C2CAD8
-					line-height: 34px
+					line-height: 32px
 					max-width: 72px
+					&:hover
+						border-color: $color_inactive
 					&:focus
 						border-color: #2E97DF
 					&::-webkit-outer-spin-button,
@@ -5216,7 +5283,7 @@ body
 		&-group
 			display: none
 			max-height: 300px
-			padding: 10px 20px
+			padding: 10px 19px
 			overflow-y: auto
 			&.active
 				display: block
@@ -5229,14 +5296,18 @@ body
 						padding-left: 24px
 						font-size: 15px
 						cursor: pointer
-						line-height: 20px
+						line-height: 18px
 						display: inline-block
-						color: #666
+						color: $color_black_main
+						&:hover:before
+							border-color: $color_inactive
+						&:active:before
+							background-color: #F1F1F1
 						&:before
 							content: ''
 							position: absolute
 							left: 0
-							top: 2px
+							top: 0px
 							width: 16px
 							height: 16px
 							border: 1px solid #C2CAD8
@@ -5249,7 +5320,7 @@ body
 							height: 8px
 							background: #2E97DF
 							position: absolute
-							top: 6px
+							top: 4px
 							left: 4px
 							border-radius: 100%
 							-webkit-transition: all 0.2s ease
@@ -5278,14 +5349,14 @@ body
 						padding-left: 24px
 						font-size: 15px
 						cursor: pointer
-						line-height: 20px
+						line-height: 18px
 						display: inline-block
-						color: #666
+						color: $color_black_main
 						&:before
 							content: ''
 							position: absolute
 							left: 0
-							top: 2px
+							top: 0px
 							width: 16px
 							height: 16px
 							border: 1px solid #C2CAD8
@@ -5293,7 +5364,9 @@ body
 							background-repeat: no-repeat
 							background-position: center center
 						&:hover:before
-							border-color: #AFBAC1
+							border-color: $color_inactive
+						&:active:before
+							background-color: #F1F1F1
 				&:checked + label
 					&:before
 						border-color: #AFBAC1
@@ -5308,8 +5381,10 @@ body
 				border: 1px solid #C2CAD8
 				&::placeholder
 					line-height: 21px
+				&:hover
+					border-color: $color_inactive
 				&:focus
-					border-color: #2E97DF
+					border-color: $color_blue
 			p
 				color: $color_grey
 				font-size: 13px
@@ -5318,13 +5393,17 @@ body
 				span
 					color: #2E97DF
 		&-select
-			line-height: 34px
+			line-height: 32px
 			background: #FFFFFF
 			color: #AFBAC1
 			padding: 0 10px
 			width: 100px
 			border: 1px solid #C2CAD8
 			cursor: pointer
+			&:hover
+				border-color: $color_inactive
+			&:active
+				background-color: #F1F1F1
 			&.changed
 				color: $color_black_main
 			&.opened:after
@@ -5362,7 +5441,7 @@ body
 					background: rgba(198, 207, 217, 0.45)
 					cursor: pointer	
 	&__footer
-		padding: 10px 20px
+		padding: 15px 19px 10px
 		border-top: 1px solid $color_easygrey
 	&__submit
 		appearance: unset
@@ -5379,8 +5458,6 @@ body
 		cursor: pointer
 		&[disabled]
 			background-color: #C2CAD8
-
-
 .w
 	&-75
 		min-width: 75px
@@ -5502,7 +5579,8 @@ a.overflowed
 			line-height: 40px
 			text-align: center
 			margin-bottom: -1px
-			padding: 0 15px
+			padding: 0 29px
+			font-size: 14px
 			text-transform: uppercase
 			color: $color_grey
 			border: 1px solid transparent
@@ -5582,6 +5660,10 @@ a.overflowed
 			border-radius: 50%
 			border: 1px solid $color_easygrey
 			cursor: pointer
+			&:hover
+				border-color: $color_inactive
+			&:active
+				background-color: #F1F1F1
 			&:after
 				content: "\f0d7"
 				color: $color_grey
@@ -5623,6 +5705,7 @@ a.overflowed
 			position: relative
 			display: flex
 			align-items: center
+
 		&-title
 			font-size: 20px
 			line-height: 59px
@@ -5665,6 +5748,10 @@ a.overflowed
 			border-radius: 50%
 			border: 1px solid $color_easygrey
 			cursor: pointer
+			&:hover
+				border-color: $color_inactive
+			&:active
+				background-color: #F1F1F1
 			&:after
 				content: "\f0d7"
 				color: $color_grey

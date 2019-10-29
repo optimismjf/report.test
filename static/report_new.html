@@ -334,8 +334,18 @@
         </aside>
         <main class="b-inreports__main">
             <h1 class="b-inreports__main-name">Внешние без target=&quot;blank&quot;</h1>
-            <div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc"></div>
-            <div class="b-inreports__main-desc hidden">Большинство создают внешние ссылки через target="_blank" и не знают одного интересного нюанса — страница, на которую мы попадем таким образом, получит частичный контроль над ссылающейся на нее страницей через js свойство window.opener.</div>
+
+            <div class="b-inform__wrapper">
+                <div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc">
+                    <div class="icon">
+                        <svg>
+                            <use xlink:href="/images/icon/svg-sprite.svg#info"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="b-inreports__main-desc hidden">Большинство создают внешние ссылки через target=&quot;_blank&quot; и не знают одного интересного нюанса — страница, на которую мы попадем таким образом, получит частичный контроль над ссылающейся на нее страницей через js свойство window.opener.</div>
+
             <div class="b-inreports__workarea">
                 <div class="b-inreports__filters">
                     <div class="b-inreports__filters-item">
@@ -418,37 +428,61 @@
                         <div class="b-inreports__table-edit"></div>
                         <div class="b-inreports__table-headname">
                             <span>URL</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+
+
                         </div>
                     </th>
                     <th class="w-400" width="400" data-action="sort-column" data-sortable="link">
                         <div class="b-inreports__table-headname">
                             <span>Ссылка</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+
+
                         </div>
                     </th>
                     <th class="w-100" width="100" data-action="sort-column" data-sortable="type">
                         <div class="b-inreports__table-headname">
                             <span>Тип <br>анкора</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+
+
                         </div>
                     </th>
                     <th class="w-300" width="300" data-action="sort-column" data-sortable="anchor">
                         <div class="b-inreports__table-headname">
                             <span>Анкор</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+
+
                         </div>
                     </th>
                     <th class="w-200" width="200" data-action="sort-column" data-sortable="backlinks">
                         <div class="b-inreports__table-headname">
                             <span>Обратные ссылки</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+
+
                         </div>
                     </th>
                     <th class="w-400" data-action="sort-column" data-sortable="linkclone">
                         <div class="b-inreports__table-headname">
                             <span>Ссылка</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+
+
                         </div>
                     </th>
                 </tr>
@@ -808,6 +842,7 @@
         <div class="b-filters__helper">
             <form class="b-filters__helper-container">
                 <div class="b-filters__header">
+                    <div class="b-filters__header-text">Фильтрация по колонке</div>
                     <div class="b-filters__header-select-wrapper">
                         <div class="b-filters__header-select">Выберите колонку</div>
                         <ul class="b-filters__header-select-list">

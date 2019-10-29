@@ -102,7 +102,7 @@ function showInform(event, show) {
 			};
 			$this.target.classList.add('inform-showed');
 			insertdiv = document.createElement('div');
-		    insertdiv.className = 'b-inform_content';
+		    insertdiv.className = 'b-inform__content';
 		    insertdiv.textContent = content;
 			insertdiv.style.top = top;
 			insertdiv.style.left = left;			
@@ -428,7 +428,7 @@ function stickyAside(t, mt) {
 					$that = $(that);
 				if($that.hasClass('b-inreports__addfilter') && !$that.hasClass('filters-show')) {
 					showFilters(e, 'show')
-				} else if(($that.hasClass('b-inreports__filters-badge') || $that.parent().hasClass('b-reports__filters-badge')) && !$that.hasClass('b-inreports__filters-badge-remove')) {
+				} else if(($that.hasClass('b-inreports__filters-badge') || $that.parent().hasClass('b-inreports__filters-badge')) && !$that.hasClass('b-inreports__filters-badge-remove')) {
 					showFilters(e, 'edit')
 				} else if(!$that.hasClass('b-filters__helper-wrapper') && !$that.closest('.b-filters__helper-wrapper').length) {
 					showFilters(e, 'hide')
@@ -608,7 +608,6 @@ function stickyAside(t, mt) {
 					checkResult,
 					checkNumber,
 					type = $(this)[0].type;
-
 				if(type == 'number') {
 					if($(this).siblings('[type=number]').length) {
 						if($(this).siblings('[type=number]').val() == '' || $(this).val() == '') { 
@@ -624,7 +623,6 @@ function stickyAside(t, mt) {
 				}
 
 				checkResult = (filtersForm.serialize() === options.getstring);
-
 				check = (checkNumber == false && checkResult == false) ? false : true;
 
 				$('.b-filters__submit').attr('disabled', check);

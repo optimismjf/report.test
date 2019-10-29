@@ -335,8 +335,18 @@
         </aside>
         <main class="b-inreports__main">
             <h1 class="b-inreports__main-name">Коллектор анкоров</h1>
-            <div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc"></div>
-            <div class="b-inreports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!</div>
+
+            <div class="b-inform__wrapper">
+                <div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc">
+                    <div class="icon">
+                        <svg>
+                            <use xlink:href="/images/icon/svg-sprite.svg#info"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="b-inreports__main-desc hidden">Я подсказко</div>
+
             <div class="b-inreports__workarea">
                 <div class="b-inreports__filters">
                     <div class="b-inreports__filters-item">
@@ -418,19 +428,31 @@
                     <th class="w-400" width="33%" data-action="sort-column" data-sortable="url">
                         <div class="b-inreports__table-headname">
                             <span>URL</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+
+
                         </div>
                     </th>
                     <th class="w-400" width="33%" data-action="sort-column" data-sortable="link">
                         <div class="b-inreports__table-headname">
                             <span>Ссылка</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+
+
                         </div>
                     </th>
                     <th class="w-400" width="33%" data-action="sort-column" data-sortable="anchors">
                         <div class="b-inreports__table-headname">
                             <span>Анкоры и количество</span>
+
+
                             <span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+
+
                         </div>
                     </th>
                 </tr>
@@ -862,6 +884,7 @@
         <div class="b-filters__helper">
             <form class="b-filters__helper-container">
                 <div class="b-filters__header">
+                    <div class="b-filters__header-text">Фильтрация по колонке</div>
                     <div class="b-filters__header-select-wrapper">
                         <div class="b-filters__header-select">Выберите колонку</div>
                         <ul class="b-filters__header-select-list">

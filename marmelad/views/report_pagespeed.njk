@@ -6,13 +6,14 @@
 
 {% extends "marmelad/views/layout/main.njk" %}
 
+{% from "marmelad/views/macro/macros.njk" import informSlide, informHover %}
+
 {% block content %}
 <div class="b-inreports" id="content">
 	{% include "marmelad/views/parts/aside_ext.njk" %}
 	<main class="b-inreports__main">
-		<h1 class="b-inreports__main-name">{{ title }}</h1>
-		<div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc"></div>
-		<div class="b-inreports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque dolore officiis. Dolorem eum, minus quod, est ipsa eveniet soluta omnis deserunt labore consequatur commodi vitae quis? Inventore, enim, temporibus.</div>
+		<h1 class="b-inreports__main-name">{{ title }}</h1>		
+		{{ informSlide('b-inreports__main-desc') }}
 		<div class="b-inreports__workarea">
 			<div class="b-pagespeed">
 				<div class="b-pagespeed__switcher" data-action="switcher" data-target=".b-pagespeed__item">
@@ -41,25 +42,25 @@
 									<th class="w-600" width="600" data-action="sort-column" data-sortable="js-css-source">
 										<div class="b-inreports__table-headname">
 											<span>Реусурс</span>
-											<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+											{{ informHover('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus.', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="js-css-size">
 										<div class="b-inreports__table-headname">
 											<span>Текущий размер</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="js-css-size-after">
 										<div class="b-inreports__table-headname">
 											<span>Размер после сжатия</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="js-css-economy">
 										<div class="b-inreports__table-headname">
 											<span>Экономия, %</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 								</tr>
@@ -135,25 +136,25 @@
 									<th class="w-600" width="600" data-action="sort-column" data-sortable="css-source">
 										<div class="b-inreports__table-headname">
 											<span>Реусурс</span>
-											<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+											{{ informHover('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus.', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="css-size">
 										<div class="b-inreports__table-headname">
 											<span>Текущий размер</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="css-size-after">
 										<div class="b-inreports__table-headname">
 											<span>Размер после сжатия</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="css-economy">
 										<div class="b-inreports__table-headname">
 											<span>Экономия, %</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 								</tr>
@@ -221,25 +222,25 @@
 									<th class="w-600" width="600" data-action="sort-column" data-sortable="cache-source">
 										<div class="b-inreports__table-headname">
 											<span>Реусурс</span>
-											<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+											{{ informHover('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus.', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="cache-size">
 										<div class="b-inreports__table-headname">
 											<span>Текущий размер</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="cache-size-after">
 										<div class="b-inreports__table-headname">
 											<span>Размер после сжатия</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="cache-economy">
 										<div class="b-inreports__table-headname">
 											<span>Экономия, %</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 								</tr>
@@ -334,25 +335,25 @@
 									<th class="w-600" width="600" data-action="sort-column" data-sortable="mob__js-css-source">
 										<div class="b-inreports__table-headname">
 											<span>Реусурс</span>
-											<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+											{{ informHover('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus.', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="mob__js-css-size">
 										<div class="b-inreports__table-headname">
 											<span>Текущий размер</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="mob__js-css-size-after">
 										<div class="b-inreports__table-headname">
 											<span>Размер после сжатия</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="mob__js-css-economy">
 										<div class="b-inreports__table-headname">
 											<span>Экономия, %</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 								</tr>
@@ -428,25 +429,25 @@
 									<th class="w-600" width="600" data-action="sort-column" data-sortable="mob__css-source">
 										<div class="b-inreports__table-headname">
 											<span>Реусурс</span>
-											<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+											{{ informHover('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus.', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="mob__css-size">
 										<div class="b-inreports__table-headname">
 											<span>Текущий размер</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="mob__css-size-after">
 										<div class="b-inreports__table-headname">
 											<span>Размер после сжатия</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="mob__css-economy">
 										<div class="b-inreports__table-headname">
 											<span>Экономия, %</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 								</tr>
@@ -514,25 +515,25 @@
 									<th class="w-600" width="600" data-action="sort-column" data-sortable="mob__cache-source">
 										<div class="b-inreports__table-headname">
 											<span>Реусурс</span>
-											<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+											{{ informHover('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus.', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="mob__cache-size">
 										<div class="b-inreports__table-headname">
 											<span>Текущий размер</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="mob__cache-size-after">
 										<div class="b-inreports__table-headname">
 											<span>Размер после сжатия</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 									<th class="w-150" width="150" data-action="sort-column" data-sortable="mob__cache-economy">
 										<div class="b-inreports__table-headname">
 											<span>Экономия, %</span>
-											<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+											{{ informHover('Я подсказко', 'span') }}
 										</div>
 									</th>
 								</tr>

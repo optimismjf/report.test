@@ -6,6 +6,8 @@
 
 {% extends "marmelad/views/layout/main.njk" %}
 
+{% from "marmelad/views/macro/macros.njk" import informSlide, informHover %}
+
 {% block content %}
 <div class="b-inreports" id="content">
 
@@ -13,8 +15,7 @@
 
 	<main class="b-inreports__main">
 		<h1 class="b-inreports__main-name">{{ title }}</h1>
-		<div class="b-inform" data-action="slide-target" data-target=".b-inreports__main-desc"></div>
-		<div class="b-inreports__main-desc hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!</div>
+		{{ informSlide('b-inreports__main-desc', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem soluta quam sunt vitae molestias, cum necessitatibus aliquid reiciendis adipisci deserunt eius sequi perferendis odio ipsum!') }}
 		<div class="b-inreports__workarea">
 			{% include "marmelad/views/parts/table_filters.njk" %}
 
@@ -26,37 +27,37 @@
 								<div class="b-inreports__table-edit"></div>
 								<div class="b-inreports__table-headname">
 									<span>URL</span>
-									<span class="b-inform" data-action="show-hover" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus."></span>
+									{{ informHover('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus.', 'span') }}
 								</div>
 							</th>
 							<th class="w-150" width="150" rowspan="2" data-action="sort-column" data-sortable="uniq">
 								<div class="b-inreports__table-headname">
 									<span>Уникальность</span>
-									<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+									{{ informHover('Я подсказко', 'span') }}
 								</div>
 							</th>
 							<th class="w-100" width="100" rowspan="2" data-action="sort-column" data-sortable="anchor">
 								<div class="b-inreports__table-headname">
 									<span>Анкор</span>
-									<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+									{{ informHover('Я подсказко', 'span') }}
 								</div>
 							</th>
 							<th class="w-100" width="100" rowspan="2" data-action="sort-column" data-sortable="errors">
 								<div class="b-inreports__table-headname">
 									<span>Наличие<br/>ошибок</span>
-									<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+									{{ informHover('Я подсказко', 'span') }}
 								</div>
 							</th>
 							<th class="w-150" width="150" colspan="2">
 								<div class="b-inreports__table-headname">
 									<span>Ссылки</span>
-									<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+									{{ informHover('Я подсказко', 'span') }}
 								</div>
 							</th>
 							<th class="w-150" width="150" colspan="2">
 								<div class="b-inreports__table-headname">
 									<span>Ссылки</span>
-									<span class="b-inform" data-action="show-hover" data-content="Я подсказко"></span>
+									{{ informHover('Я подсказко', 'span') }}
 								</div>
 							</th>
 						</tr>
