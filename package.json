@@ -30,5 +30,13 @@
     "gulp-html-prettify": "0.0.1",
     "gulp-nunjucks-render": "^2.2.3",
     "nunjucks": "^3.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justfeelin/report.test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justfeelin/report.test/issues"
+  },
+  "homepage": "https://github.com/justfeelin/report.test#readme"
 }

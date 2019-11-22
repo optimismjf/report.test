@@ -74,8 +74,8 @@ gulp.task('deploy', async function () {
     password: 'sedrw12'
   });
   gulp.src(globs, {buffer: false})
-    .pipe( conn.newer( '/public_html' ) ) // only upload newer files
-    .pipe( conn.dest( '/public_html' ) );
+    .pipe( conn.newer( '/new' ) ) // only upload newer files
+    .pipe( conn.dest( '/new' ) );
 });
 
 gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus', 'nunjucks'));
