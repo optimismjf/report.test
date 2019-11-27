@@ -20,6 +20,15 @@ section
 	ul
 		padding-left: 27px
 
+.global
+	&__fix-container
+		width: 100%
+		max-width: 1200px
+		height: auto
+		min-height: 1px
+		margin-left: auto
+		margin-right: auto
+
 .icon
 	height: inherit
 	width: inherit
@@ -187,7 +196,7 @@ section
 	+b-flex
 	+b-justify
 	&__item
-		border-bottom: 1px solid rgba(255,255,255,0.4)
+		border-bottom: 1px solid #f39f9c
 	&__sections
 		display: none
 
@@ -2548,7 +2557,7 @@ section
 			display: flex
 			align-items: center
 			justify-content: space-between
-			border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+			border-bottom: 1px solid #f39f9c
 			margin: 0 -15px
 			.hamburger
 				z-index: 20
@@ -2570,7 +2579,7 @@ section
 				height: 60px
 				width: 60px
 				text-align: center
-				border-right: 1px solid rgba(255, 255, 255, 0.4)
+				border-right: 1px solid #f39f9c
 				float: left
 				opacity: 0.7
 				.hamburger-box
@@ -3438,7 +3447,7 @@ body
 		flex-wrap: wrap
 		&__item
 			display: flex
-			border-bottom: 1px solid rgba(255,255,255,0.4)
+			border-bottom: 1px solid #f39f9c
 			&:first-child
 				margin-top: 0
 			&:not(:first-child)

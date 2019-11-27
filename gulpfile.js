@@ -12,15 +12,20 @@ var gulp 		 = require('gulp'), // Подключаем Gulp
   njkRender = require('gulp-nunjucks-render'),
   prettify = require('gulp-html-prettify'),
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+  sourcemaps = require('gulp-sourcemaps');
+
 
 gulp.task('sass', function(){ // Создаем таск Sass
 	return gulp.src('marmelad/styles/*.sass') // Берем источник
+    .pipe(sourcemaps.init())
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
 		.pipe(autoprefixer({
 	      browsers: ['last 15 versions'],
 	      cascade: false
 	    })) // Создаем префиксы
+    .pipe(sourcemaps.write())
 		.pipe(gulp.dest('static/css')) // Выгружаем результата в папку app/css
+    .pipe(browserSync.stream());
 });
 
 gulp.task('nunjucks', function() {
@@ -46,6 +51,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('stylus', function() {
   return gulp.src('marmelad/styles/style.styl')
+    .pipe(sourcemaps.init())
     .pipe(plumber({
       errorHandler: notify.onError()
     }))
@@ -57,6 +63,7 @@ gulp.task('stylus', function() {
       browsers: ['last 15 versions'],
       cascade: false
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('static/css'))
     .pipe(notify('Stylus SUCCESS'));
 });
@@ -74,11 +81,11 @@ gulp.task('deploy', async function () {
     password: 'sedrw12'
   });
   gulp.src(globs, {buffer: false})
-    .pipe( conn.newer( '/new' ) ) // only upload newer files
-    .pipe( conn.dest( '/new' ) );
+    .pipe( conn.newer( '/public_html/new' ) ) // only upload newer files
+    .pipe( conn.dest( '/public_html/new' ) );
 });
 
-gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus', 'nunjucks'));
+gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus'));
 // gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus'));
 
 gulp.task('default', gulp.parallel('watch'));

@@ -6,7 +6,17 @@
 
 
 // @media all and (min-width: 1200px)
-// @media all and (min-width: 1200px)
+@media all and (min-width: 1200px)
+	.global
+		&__fix-container
+			width: 100%
+			max-width: 1200px
+			height: auto
+			min-height: 1px
+			padding-left: 20px
+			padding-right: 20px
+			margin-left: auto
+			margin-right: auto
 
 .mfp-content form button
 	@media all and (min-width: 1200px)
@@ -30,8 +40,11 @@
 .b-personal-data
 	@media all and (min-width: 1200px)
 		&__container
-			margin-left: 140px
-			margin-right: 140px
+			width: 100%
+			max-width: 1200px
+			padding: 0 20px
+			margin-left: auto
+			margin-right: auto
 		&__item:first-child
 			margin-right: 0
 			padding: 45px 40px 65px 40px
@@ -50,10 +63,12 @@
 			margin-top: 0px
 		&__data
 			margin-top: 0px
-.b-user-settings
-	@media all and (min-width: 1200px)
-		padding-left: 140px
-		padding-right: 140px
+@media all and (min-width: 1200px)
+	.b-user-settings__container
+		width: 100%
+		max-width: 1160px
+		margin-left: auto
+		margin-right: auto
 .b-user-reports
 	@media all and (min-width: 1200px)
 		&__item:first-child
@@ -73,8 +88,12 @@
 .b-user-rate
 	@media all and (min-width: 1200px)
 		&__container
-			margin-left: 140px
-			margin-right: 140px
+			width: 100%
+			max-width: 1200px
+			padding-right: 20px
+			padding-left: 20px
+			margin-right: auto
+			margin-left: auto
 		&__item
 			&:last-child
 				margin-left: 40px
@@ -122,8 +141,12 @@
 .b-copywriter
 	@media all and (min-width: 1200px)
 		&__container
-			padding-left: 140px
-			padding-right: 140px
+			width: 100%
+			max-width: 1200px
+			padding-left: 20px
+			padding-right: 20px
+			margin-left: auto
+			margin-right: auto
 		&__item
 			&:first-child
 				margin-right: 0
@@ -239,8 +262,12 @@
 .b-audit
 	@media all and (min-width: 1200px)
 		&__container
-			padding-left: 140px
-			padding-right: 140px
+			width: 100%
+			max-width: 1200px
+			padding-left: 20px
+			padding-right: 20px
+			margin-right: auto
+			margin-left: auto
 		&__item
 			width: auto
 .b-audit-info
@@ -257,20 +284,22 @@
 			padding-left: 0px
 			padding-right: 0px
 			max-width: 806px
-			margin-left: 340px
 			+b-relative
 .b-prices-tariffs
 	@media all and (min-width: 1200px)
-		margin-left: 140px
+		margin-left: auto
+		margin-right: auto
 .b-prices-clients
 	@media all and (min-width: 1200px)
-		margin-left: 400px
+		img
+			margin-left: auto
+			margin-right: auto
 .b-prices-howto
 	@media all and (min-width: 1200px)
 		padding-left: 0px
 		padding-right: 0px
 		&__container
-			margin-left: 340px
+			margin-left: 220px
 			max-width: 806px
 #header.front-page.b-profile-page.regular-page
 	.container
@@ -644,8 +673,10 @@
 		display: none !important
 .main-container
 	@media all and (min-width: 1200px)
-		margin-left: 140px
-		margin-right: 140px
+		margin-left: auto
+		margin-right: auto
+		max-width: 1200px
+		padding: 0 20px
 .main-wrapper
 	.main-content
 		flex-basis: calc(100% - 300px)
