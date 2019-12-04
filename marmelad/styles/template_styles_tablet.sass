@@ -1663,6 +1663,15 @@ section
 		height: 50%
 		margin-right: 0
 
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 768px)
 	body
 		&.menu-open
@@ -1710,12 +1719,18 @@ section
 		&__item:nth-child(2)
 			min-width: 100px
 		.btn.btn-input
-			padding: 9px 19.5px 6px 37px
+			display: inline-block
+			width: 100px
+			height: 34px
+			padding: 8px 21px 8px 38px
+			&:before
+				top: 9px
+				left: 15px
+
 		#navigation
+			max-width: 250px
 			height: auto
-			position: absolute
-			@media all and (min-width: 768px)
-				max-width: 250px
+
 		@media all and (min-width: 768px)	
 			.b-user
 				&__helper
@@ -1799,3 +1814,18 @@ section
 .site-analysis
 	&:before
 		content: ""
+
+
+@media all and (min-width: 768px)
+	#header.main-header
+		#navigation
+			position: absolute
+	#header.front-page.index-page
+		padding-top: 0px
+		.container
+			margin: 0 auto
+			.front-page__header
+				#navigation.header__menu
+					position: absolute
+					max-width: 250px
+					height: auto

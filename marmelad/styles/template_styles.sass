@@ -29,6 +29,9 @@ section
 		margin-left: auto
 		margin-right: auto
 
+.d-flex
+	display: flex
+
 .icon
 	height: inherit
 	width: inherit
@@ -2512,42 +2515,42 @@ section
 	padding-bottom: 30px
 
 
-#header.index-page
-	.sub-menu-link
-		line-height: 25px
-		font-size: 15px
-		letter-spacing: -0.1px
-		color: #FFFFFF
-		text-decoration: none
-	.header__menu-list li
-		padding: 6px 0 0
-		margin-bottom: 19px
-		a
-			padding: 0 20px
-			text-decoration: none
-			color: #fff
-			letter-spacing: 0.4px
-		ul li
-			border: none
-			float: none
-			margin-bottom: 8px
+// #header.index-page
+// 	.sub-menu-link
+// 		line-height: 24px
+// 		font-size: 15px
+// 		letter-spacing: -0.1px
+// 		color: #FFFFFF
+// 		text-decoration: none
+// 	.header__menu-list li
+// 		padding: 6px 0 0
+// 		margin-bottom: 19px
+// 		a
+// 			padding: 0 20px
+// 			text-decoration: none
+// 			color: #fff
+// 			letter-spacing: 0.4px
+// 		ul li
+// 			border: none
+// 			float: none
+// 			margin-bottom: 8px
 
-	.sub-menu-link__icon
-		display: inline-block
-		height: 20px
-		width: 20px
-		background-repeat: no-repeat
-		background-position: 0 50%
-		position: relative
-		top: 5px
-	.sub-menu-title
-		line-height: 25px
-		font-size: 18px
-		letter-spacing: -0.5px
-		color: #FFFFFF
-		opacity: .6
-		padding: 0 20px
-		margin-bottom: 9px
+// 	.sub-menu-link__icon
+// 		display: inline-block
+// 		height: 20px
+// 		width: 20px
+// 		background-repeat: no-repeat
+// 		background-position: 0 50%
+// 		position: relative
+// 		top: 5px
+// 	.sub-menu-title
+// 		line-height: 25px
+// 		font-size: 18px
+// 		letter-spacing: -0.5px
+// 		color: #FFFFFF
+// 		opacity: .6
+// 		padding: 0 20px
+// 		margin-bottom: 9px
 
 #header.front-page.index-page
 	padding-top: 0px
@@ -2559,103 +2562,276 @@ section
 			justify-content: space-between
 			border-bottom: 1px solid #f39f9c
 			margin: 0 -15px
-			.hamburger
-				z-index: 20
-				position: relative
-				padding: 20px
-				display: inline-flex
-				align-items: center
-				justify-content: center
-				cursor: pointer
-				transition: opacity, filter, -webkit-filter 1s linear
-				font: inherit
-				color: inherit
-				text-transform: none
-				background-color: transparent
-				border: 0
-				margin: 0
-				margin-right: 10px
-				overflow: visible
-				height: 60px
-				width: 60px
-				text-align: center
-				border-right: 1px solid #f39f9c
-				float: left
-				opacity: 0.7
-				.hamburger-box
-					width: 100%
-					height: 100%
-					display: inline-block
+			&_item
+				display: flex
+				.hamburger
 					position: relative
-					margin: 0
-					padding: 0
-					.hamburger-inner,
-					.hamburger-inner::after,
-					.hamburger-inner::before
-						display: block
+					display: inline-flex
+					width: 61px
+					height: 59px
+					padding: 20px
+					margin: 0px
+					margin-right: 8px
+					border-right: 1px solid #ec8684
+					background-color: transparent
+					font: inherit
+					color: inherit
+					text-align: center
+					text-transform: none
+					transition: opacity, filter, -webkit-filter 1s linear
+					overflow: visible
+					cursor: pointer
+					z-index: 20
+					&-box
+						position: relative
+						display: flex
+						width: 100%
+						height: 100%
+					&-inner, &-inner:before, &-inner:after
 						position: absolute
+						left: 0px
 						width: 20px
 						height: 2px
-						background-color: #fff
-						position: absolute
-						transition-property: transform
+						margin: 0px
+						background-color: #ffffff
 						transition-property: transform
 						transition-duration: .15s
 						transition-timing-function: ease
-					.hamburger-inner
-						position: absolute
+					&-inner
 						top: 3px
-						margin-top: 0px
 						&:before
-							content: ""
-							display: block
+							content: ''
 							top: 6px
 						&:after
+							content: ''
 							top: 12px
-							content: ""
-							display: block
-				&.is-active
-					background-color: #C51311
-					.hamburger-inner
-						transform: translate3d(0, 6px, 0) rotate(45deg)
-						&::after
-							transform: translate3d(0, -12px, 0) rotate(-90deg)
-						&::before
-							transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0)
-							opacity: 0
-			.logo
-				display: flex
-				flex-direction: column
-				align-items: flex-start
-				justify-content: center
-				height: 60px
-				width: 169px
-				position: relative
-				z-index: 16
-				padding-left: 36px
-				padding-top: 3px
-				background-image: url(../../images/saitreport-logo.svg)
-				background-repeat: no-repeat
-				background-size: 32px
-				background-position: 0px 15px
-				text-align: left
-				line-height: 15px
-				letter-spacing: 0px
-				text-decoration: none
-				span
-					display: inline-block
-					font-family: 'Susan'
-					color: #ffffff
-					&:first-child
-						font-size: 20px
-					&:last-child
+					&.is-active
+						background-color: #C51311
+						.hamburger-inner, .hamburger-inner:before, .hamburger-inner:after
+							width: 24px
+						.hamburger-inner
+							left: -2px
+							transform: translate3d(0, 6px, 0) rotate(45deg)
+							&:before
+								opacity: 0
+							&:after
+								transform: translate3d(0, -12px, 0) rotate(-90deg)
+				.logo
+					position: relative
+					display: flex
+					flex-direction: column
+					align-items: flex-start
+					justify-content: center
+					height: 59px
+					width: 169px
+					padding-left: 36px
+					padding-top: 0px
+					background-image: url(../images/main-logo.svg)
+					background-repeat: no-repeat
+					background-size: 32px 32px
+					background-position: 0px 13px
+					text-align: left
+					line-height: 15px
+					letter-spacing: 0px
+					text-decoration: none
+					z-index: 16
+					span
+						display: inline-block
+						font-family: 'Susan'
+						color: #ffffff
 						font-size: 12px
-						
-				.logo__company-name
+						&:first-child
+							font-size: 20px
+						&:last-child
+			#navigation.header__menu
+				display: none
+				position: fixed
+				top: 60px
+				left: 0
+				width: 100%
+				max-width: unset
+				height: 100%
+				z-index: 15
+				background-color: #C51311
+				box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
+				padding: 10px 0px
+				background-image: unset
+				.header__menu-list
+					width: 100%
+					height: auto
 					display: block
-					line-height: 25px
-					font-size: 24px
-					color: #FFFFFF
+					padding: 0px
+					margin: 0px
+					.visible-desktop
+						display: none
+					.visible-mobile
+						list-style-type: none
+						display: block
+						width: 100%
+						padding: 0px
+						padding-bottom: 10px
+						margin: 0px
+						border: none
+						.sub-menu
+							list-style: none
+							display: block
+							padding: 0px
+							margin: 0px
+							&-title
+								display: inline-flex
+								align-items: center
+								width: 100%
+								min-height: 1px
+								padding: 7px 0px 10px 20px
+								margin: 0px
+								font-weight: 500
+								font-size: 18px
+								line-height: 25px
+								letter-spacing: 0px
+								color: rgba(255, 255, 255, 0.6)
+							& > li
+								width: 100%
+								margin-bottom: 0px
+								display: inline-flex
+								align-items: center
+								& > a
+									display: inline-flex
+									align-items: center
+									width: 100%
+									min-height: 1px
+									padding: 8px 0px 9px 22px
+									margin: 0px
+									font-weight: 500
+									font-size: 15px
+									line-height: 25px
+									letter-spacing: normal
+									color: #ffffff
+									text-decoration: none
+									transition: background-color .2s
+									&.active
+										background: rgba(255, 255, 255, 0.2)
+										position: relative
+										&:before
+											content: ''
+											background-color: #fff
+											height: 100%
+											width: 4px
+											top: 0
+											left: 0
+											position: absolute
+									&:not(.active):hover
+										background: rgba(255, 255, 255, 0.2)
+									.sub-menu-link__icon
+										display: inline-block
+										height: 16px
+										width: 16px
+										background-repeat: no-repeat
+										background-position: 0 50%
+										background-size: 100%
+										position: relative
+										top: 0px
+										margin-right: 8px
+
+
+
+
+			// .hamburger
+			// 	z-index: 20
+			// 	position: relative
+			// 	padding: 20px
+			// 	display: inline-flex
+			// 	align-items: center
+			// 	justify-content: center
+			// 	cursor: pointer
+			// 	transition: opacity, filter, -webkit-filter 1s linear
+			// 	font: inherit
+			// 	color: inherit
+			// 	text-transform: none
+			// 	background-color: transparent
+			// 	border: 0
+			// 	margin: 0
+			// 	margin-right: 10px
+			// 	overflow: visible
+			// 	height: 60px
+			// 	width: 60px
+			// 	text-align: center
+			// 	border-right: 1px solid #f39f9c
+			// 	float: left
+			// 	opacity: 0.7
+			// 	.hamburger-box
+			// 		width: 100%
+			// 		height: 100%
+			// 		display: inline-block
+			// 		position: relative
+			// 		margin: 0
+			// 		padding: 0
+			// 		.hamburger-inner,
+			// 		.hamburger-inner::after,
+			// 		.hamburger-inner::before
+			// 			display: block
+			// 			position: absolute
+			// 			width: 20px
+			// 			height: 2px
+			// 			background-color: #fff
+			// 			position: absolute
+			// 			transition-property: transform
+			// 			transition-property: transform
+			// 			transition-duration: .15s
+			// 			transition-timing-function: ease
+			// 		.hamburger-inner
+			// 			position: absolute
+			// 			top: 3px
+			// 			margin-top: 0px
+			// 			&:before
+			// 				content: ""
+			// 				display: block
+			// 				top: 6px
+			// 			&:after
+			// 				top: 12px
+			// 				content: ""
+			// 				display: block
+			// 	&.is-active
+			// 		background-color: #C51311
+			// 		.hamburger-inner
+			// 			transform: translate3d(0, 6px, 0) rotate(45deg)
+			// 			&::after
+			// 				transform: translate3d(0, -12px, 0) rotate(-90deg)
+			// 			&::before
+			// 				transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0)
+			// 				opacity: 0
+			// .logo
+			// 	display: flex
+			// 	flex-direction: column
+			// 	align-items: flex-start
+			// 	justify-content: center
+			// 	height: 60px
+			// 	width: 169px
+			// 	position: relative
+			// 	z-index: 16
+			// 	padding-left: 36px
+			// 	padding-top: 3px
+			// 	background-image: url(../../images/saitreport-logo.svg)
+			// 	background-repeat: no-repeat
+			// 	background-size: 32px
+			// 	background-position: 0px 15px
+			// 	text-align: left
+			// 	line-height: 15px
+			// 	letter-spacing: 0px
+			// 	text-decoration: none
+			// 	span
+			// 		display: inline-block
+			// 		font-family: 'Susan'
+			// 		color: #ffffff
+			// 		&:first-child
+			// 			font-size: 20px
+			// 		&:last-child
+			// 			font-size: 12px
+						
+			// 	.logo__company-name
+			// 		display: block
+			// 		line-height: 25px
+			// 		font-size: 24px
+			// 		color: #FFFFFF
 			.btn.btn-input
 				width: 34px
 				height: 34px
@@ -2681,48 +2857,48 @@ section
 				&:hover:before
 					background-image: url('../../images/icon/lock-hover.svg')
 
-			#navigation
-				display: none
-				position: absolute
-				top: 61px
-				left: 0
-				width: 100%
-				z-index: 15
-				height: 100vh
-				background-color: #C51311
-				-webkit-box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
-				box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
-				padding: 17px 0 20px
-				.header__menu-list
-					li
-						.sub-menu-title
-							padding-left: 20px
-							margin-bottom: 10px
-							font-size: 18px
-							line-height: 25px
-							color: #ffffff
-							opacity: 0.6
-						.sub-menu
-							list-style: none
-							li
-								list-style-type: none
-								margin: 0px
-								padding: 0px
-								a
-									padding: 7px 15px 10px 22px
-									&.active
-										background: rgba(255, 255, 255, 0.2)
-										position: relative
-										&:before
-											content: ''
-											background-color: #fff
-											height: 100%
-											width: 4px
-											top: 0
-											left: 0
-											position: absolute
-									&:not(.active):hover
-										background: rgba(255, 255, 255, 0.2)
+			// #navigation
+			// 	display: none
+			// 	position: absolute
+			// 	top: 61px
+			// 	left: 0
+			// 	width: 100%
+			// 	z-index: 15
+			// 	height: 100vh
+			// 	background-color: #C51311
+			// 	-webkit-box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
+			// 	box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
+			// 	padding: 17px 0 20px
+			// 	.header__menu-list
+			// 		li
+			// 			.sub-menu-title
+			// 				padding-left: 20px
+			// 				margin-bottom: 10px
+			// 				font-size: 18px
+			// 				line-height: 25px
+			// 				color: #ffffff
+			// 				opacity: 0.6
+			// 			.sub-menu
+			// 				list-style: none
+			// 				li
+			// 					list-style-type: none
+			// 					margin: 0px
+			// 					padding: 0px
+			// 					a
+			// 						padding: 7px 15px 10px 22px
+			// 						&.active
+			// 							background: rgba(255, 255, 255, 0.2)
+			// 							position: relative
+			// 							&:before
+			// 								content: ''
+			// 								background-color: #fff
+			// 								height: 100%
+			// 								width: 4px
+			// 								top: 0
+			// 								left: 0
+			// 								position: absolute
+			// 						&:not(.active):hover
+			// 							background: rgba(255, 255, 255, 0.2)
 
 
 
@@ -3062,9 +3238,9 @@ body
 %hamburger-lines
 	width: 20px
 	height: 2px
-	background-color: rgba(255,255,255,0.7)
+	background-color: rgba(255,255,255,1)
 	position: absolute
-	left: 0
+	left: 0px
 	-webkit-transition-property: -webkit-transform
 	transition-property: -webkit-transform
 	transition-property: transform
@@ -3079,35 +3255,37 @@ body
 	height: 60px
 	padding-top: 0
 	background-color: $color_red
-
+	.logo
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+		height: 59px
+		width: 169px
+		position: relative
+		z-index: 16
+		padding-left: 36px
+		padding-top: 0px
+		background-image: url(../images/main-logo.svg)
+		background-repeat: no-repeat
+		background-size: 32px 32px
+		background-position: 0px 13px
+		text-align: left
+		line-height: 15px
+		letter-spacing: 0px
+		text-decoration: none
+		span
+			display: inline-block
+			font-family: 'Susan';
+			color: #ffffff
+			font-size: 12px
+			&:first-child
+				font-size: 20px
 	body.fullscreen &
 		display: none
-
 	#header-left
 		width: 250px
-
-	.logo	
-		display: flex
-		justify-content: space-between
-		margin-left: 14px
-		letter-spacing: 1px
-		float: none
-		line-height: 59px
-		height: 100%
-		text-decoration: none
-		width: auto
-		img
-			padding: 0
-			&.logo-sa
-				max-width: 155px
-		&__company-name
-			display: none
-			color: #FFFFFF
-			font-weight: 700
-			font-family: Susan, sans-serif
-			font-size: 20px
-			letter-spacing: 0px
-
 	.header__menu-list
 		list-style: none
 		li
@@ -3118,32 +3296,29 @@ body
 					list-style-type: none
 
 	.hamburger
-		z-index: 20
+		display: inline-flex
+		width: 61px
+		height: 59px
+		padding: 20px
+		margin-right: 8px
 		position: relative
-		padding: 0
-		display: inline-block
+		z-index: 20
 		cursor: pointer
 		transition: opacity, filter, -webkit-filter 1s linear
 		font: inherit;
 		color: inherit
+		text-align: center
 		text-transform: none
 		background-color: transparent
-		border: 0
-		margin: 0
 		overflow: visible
-		height: 59px
-		padding: 17.5px 17px
-		width: 59px
-		text-align: center
 		border-right: 1px solid #ec8684
 		&-box
-			width: 25px
-			height: 24px
 			display: inline-block
 			position: relative
 		&-inner
+			margin-top: 0px
 			@extend %hamburger-lines
-			top: 5px
+			top: 3px
 			&:before
 				top: 6px
 				content: ""
@@ -3152,18 +3327,52 @@ body
 				top: 12px
 				content: ""
 				@extend %hamburger-lines
+
 		&.is-active
 			background-color: #C51311
 			.hamburger-inner
+				width: 24px
+				top: 3px
+				left: -2px
 				transform: translate3d(0, 6px, 0) rotate(45deg)
 				&::after
+					width: 24px
 					transform: translate3d(0, -12px, 0) rotate(-90deg)
 				&::before
 					transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0)
 					opacity: 0
+
+
+
+
 	&.is-auth
+		#header-left
+			padding-left: 0px
+		.logo
+			position: relative
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: center
+			height: 59px
+			width: 169px
+			position: relative
+			z-index: 16
+			padding-left: 36px
+			padding-top: 3px
+			background-image: url(../../images/is-auth-logo.svg)
+			background-repeat: no-repeat
+			background-size: 32px 32px
+			background-position: center left
+			text-align: left
+			letter-spacing: 0px
+			text-decoration: none
+			span
+				font-size: 20px
+				line-height: 15px
+				color: #ffffff
 		.hamburger
-			display: inline-block
+			display: inline-flex
 	.container
 		max-width: unset
 		padding-right: 0 !important
@@ -3255,34 +3464,67 @@ body
 		z-index: 15
 		background-color: #C51311
 		box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
-		padding: 10px 0 0
+		padding: 10px 0px
 		background-image: unset
 		.header__menu-list
 			height: auto
 			display: block
-			li
+			padding: 0px
+			margin: 0px
+			& > li
 				clear: none
 				border: none
 				text-align: left
 				margin-right: 0
 				float: none
 				border-bottom: 0
-				margin-bottom: 13px
-				display: block
 				padding: 0
-				.sub-menu-link
+				margin: 0px
+				padding-bottom: 10px
+				display: block
+				.sub-menu-title
+					display: inline-flex
+					align-items: center
+					width: 100%
+					min-height: 1px
+					padding: 7px 0px 10px 20px
+					margin: 0px
+					font-weight: 500
+					font-size: 18px
 					line-height: 25px
+					letter-spacing: 0px
+					color: rgba(255,255,255,0.6)
+				.sub-menu li
+					width: 100%
+					margin-bottom: 0px
+					display: inline-flex
+					align-items: center
+				.sub-menu-link
+					display: inline-flex
+					align-items: center
+					width: 100%
+					min-height: 1px
+					padding: 8px 0px 9px 22px
+					margin: 0px
+					font-weight: 500
 					font-size: 15px
-					letter-spacing: 1.5px
-					color: #FFFFFF
+					line-height: 25px
+					letter-spacing: normal
+					color: #ffffff
 					text-decoration: none
 				a
-					padding: 7px 15px 10px 20px
-					text-decoration: none
-					color: #fff
+					display: inline-flex
+					align-items: center
+					width: 100%
+					min-height: 1px
+					padding: 8px 0px 9px 22px
+					margin: 0px
+					font-weight: 500
 					font-size: 15px
-					line-height: 20px
-					letter-spacing: 0.4px
+					line-height: 25px
+					letter-spacing: normal
+					color: #ffffff
+					text-decoration: none
 					transition: background-color .2s
 					&.active
 						background: rgba(255, 255, 255, 0.2)
@@ -3299,22 +3541,17 @@ body
 				margin-bottom: 0px
 				a:not(.active):hover
 					background: rgba(255, 255, 255, 0.2)
-			.sub-menu-title
-				line-height: 25px
-				font-size: 18px
-				letter-spacing: -0.5px
-				color: #FFFFFF
-				opacity: .6
-				padding: 0 20px
-				margin-bottom: 9px
-			.sub-menu-link__icon
-				display: inline-block
-				height: 20px
-				width: 20px
-				background-repeat: no-repeat
-				background-position: 0 50%
-				position: relative
-				top: 5px
+				.sub-menu-link__icon
+					display: inline-block
+					height: 16px
+					width: 16px
+					background-repeat: no-repeat
+					background-position: 0 50%
+					background-size: 100%
+					position: relative
+					top: 0px
+					margin-right: 8px
+
 
 
 	.header__menu
@@ -3336,7 +3573,7 @@ body
 					position: absolute
 					left: 50%
 					transform: translateX(-50%)
-					bottom: -4px
+					bottom: -7px
 					display: inline-block
 					font: normal normal normal 22px/1 FontAwesome
 					color: #fff
@@ -3351,10 +3588,13 @@ body
 			&:before
 				content: "\f0d7"
 				position: absolute
-				top: 50%
+				top: calc(50% + 2px)
+				right: 8px
+				width: auto
+				height: 100%
+				display: inline-flex
+				align-items: center
 				transform: translateY(-50%)
-				right: 0
-				display: inline-block
 				font: normal normal normal 14px/1 FontAwesome
 				text-rendering: auto
 				color: #fff
@@ -3462,10 +3702,28 @@ body
 
 	.btn.btn-input
 		padding: 0
-		height: 35px
-		min-width: 35px
+		height: 34px
+		min-width: 34px
 		margin-right: 20px
 		margin-top: 13px
+		display: inline-block
+		text-align: center
+		vertical-align: middle
+		&:before
+			content: ""
+			display: inline-block
+			width: 12px
+			height: 15px
+			position: absolute
+			top: 9px
+			left: 11px
+			right: unset
+			bottom: unset
+			background-image: url(../images/icon/lock.svg)
+			background-position: center
+			background-repeat: no-repeat
+		&:hover:before
+			background-image: url(../images/icon/lock-hover.svg)
 
 	#navigation-profile
 		display: none
@@ -5896,6 +6154,150 @@ a.overflowed
 			height: 116px
 			position: relative
 			border: 1px solid #ffffff
+
+			&:hover
+				background-color: rgba(241, 241, 241, 0.6)
+			&:hover &-button_download,
+			&:hover &-button_target-blank,
+			&:hover &-button_open-popup
+				display: block
+			&-button_download
+				display: none
+				position: absolute
+				bottom: 0px
+				right: 0px
+				width: 30px
+				height: 30px
+				background: rgba(225,228,230,0.6) url('../images/icon/downloadAlt.svg')
+				background-repeat: no-repeat
+				background-size: 16px
+				background-position: center
+				z-index: 1
+				&:hover
+					background: rgba(225,228,230,1) url('../images/icon/downloadAlt.svg')
+					background-repeat: no-repeat
+					background-size: 16px
+					background-position: center
+			&-button_target-blank
+				display: none
+				position: absolute
+				top: 3px
+				right: 4px
+				width: 16px
+				height: 16px
+				background-image: url('../images/icon/target-blank.svg')
+				background-repeat: no-repeat
+				background-size: 100%
+				background-position: center
+			&-button_open-popup
+				display: none
+				position: absolute
+				top: 3px
+				right: 4px
+				width: 16px
+				height: 16px
+				background-image: url('../images/icon/open-popup.svg')
+				background-repeat: no-repeat
+				background-size: 100%
+				background-position: center
+
+
+
+			&.bg-warning
+				&:hover
+					background-color: rgba(245,166,35,0.2)
+				&:hover .b-summary__list-item-button_download,
+				&:hover .b-summary__list-item-button_target-blank,
+				&:hover .b-summary__list-item-button_open-popup
+					display: block
+				.b-summary__list-item-button_download
+					display: none
+					position: absolute
+					bottom: 0px
+					right: 0px
+					width: 30px
+					height: 30px
+					background: rgba(245,166,35,0.2) url('../images/icon/downloadAlt.svg')
+					background-repeat: no-repeat
+					background-size: 16px
+					background-position: center
+					z-index: 1
+					&:hover
+						background: rgba(245,166,35,0.5) url('../images/icon/downloadAlt.svg')
+						background-repeat: no-repeat
+						background-size: 16px
+						background-position: center
+				.b-summary__list-item-button_target-blank
+					display: none
+					position: absolute
+					top: 3px
+					right: 4px
+					width: 16px
+					height: 16px
+					background-image: url('../images/icon/target-blank.svg')
+					background-repeat: no-repeat
+					background-size: 100%
+					background-position: center
+				.b-summary__list-item-button_open-popup
+					display: none
+					position: absolute
+					top: 3px
+					right: 4px
+					width: 16px
+					height: 16px
+					background-image: url('../images/icon/open-popup.svg')
+					background-repeat: no-repeat
+					background-size: 100%
+					background-position: center
+
+
+			&.bg-danger
+				&:hover
+					background-color: rgba(224,54,50,0.2)
+				&:hover .b-summary__list-item-button_download,
+				&:hover .b-summary__list-item-button_target-blank,
+				&:hover .b-summary__list-item-button_open-popup
+					display: block
+				.b-summary__list-item-button_download
+					display: none
+					position: absolute
+					bottom: 0px
+					right: 0px
+					width: 30px
+					height: 30px
+					background: rgba(224,54,50,0.2) url('../images/icon/downloadAlt.svg')
+					background-repeat: no-repeat
+					background-size: 16px
+					background-position: center
+					z-index: 1
+					&:hover
+						background: rgba(224,54,50,0.5) url('../images/icon/downloadAlt.svg')
+						background-repeat: no-repeat
+						background-size: 16px
+						background-position: center
+				.b-summary__list-item-button_target-blank
+					display: none
+					position: absolute
+					top: 3px
+					right: 4px
+					width: 16px
+					height: 16px
+					background-image: url('../images/icon/target-blank.svg')
+					background-repeat: no-repeat
+					background-size: 100%
+					background-position: center
+				.b-summary__list-item-button_open-popup
+					display: none
+					position: absolute
+					top: 3px
+					right: 4px
+					width: 16px
+					height: 16px
+					background-image: url('../images/icon/open-popup.svg')
+					background-repeat: no-repeat
+					background-size: 100%
+					background-position: center
+
 			&.size
 				&-xxs
 					width: 120px
@@ -6008,6 +6410,7 @@ a.overflowed
 					margin-left: 3px
 					top: -1em
 					line-height: 93.75%
+
 
 	&__domaininfo
 		&-host
@@ -6355,6 +6758,22 @@ a.overflowed
 			height: 12px
 			margin-right: 2px
 			background-color: $color_grey
+			cursor: pointer
+		&:hover:before
+			opacity: 0.7
+		&:hover::after
+			content: attr(data-title)
+			position: absolute
+			top: calc(100% + 20px)
+			left: 30%
+			padding: 5px 10px 7px 20px
+			background-color: #595D62
+			font-size: 13px
+			line-height: 14px
+			color: #ffffff
+			white-space: nowrap
+
+
 	&__legend
 		position: relative
 		&:before

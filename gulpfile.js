@@ -85,7 +85,7 @@ gulp.task('deploy', async function () {
     .pipe( conn.dest( '/public_html/new' ) );
 });
 
-gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus'));
+gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus', 'nunjucks'));
 // gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus'));
 
 gulp.task('default', gulp.parallel('watch'));

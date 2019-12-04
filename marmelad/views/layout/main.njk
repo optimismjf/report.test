@@ -12,6 +12,7 @@
 [string] top_classes - доп классы для верхней плашки
 [boolean] in_process - закрываем сайдбар, пока сканим сайт
 
+
 #}
 
 {% if not(title) %}
@@ -74,14 +75,31 @@
 
     <body class="app app--{{ layout }}{% if body_class %} {{ body_class }}{% endif %}{% if nomobile == 1 %} nomobile{% endif %}">
 	    {% include "../parts/header.njk" %}
+
       {% if top_h1 == 1 %}
-        <div class="b-page-topic{% if top_back == 1 %} b-btn-flex{% endif %}{% if top_classes %} {{ top_classes }}{% endif %}">                
-          {% if top_back == 1 %}<div class="b-page-topic__btn b-main-button b-main-button_white">
-              <a href="#">Назад</a>
-          </div>{% endif %}
+
+        <div class="b-page-topic{% if top_back == 1 %} b-btn-flex{% endif %}{% if top_classes %} {{ top_classes }}{% endif %}">
+
+          {% if top_back == 1 %}
+            <div class="global__fix-container d-flex">
+          {% endif %}
+
+            {% if top_back == 1 %}
+              <div class="b-page-topic__btn b-main-button b-main-button_white">
+                  <a href="#">Назад</a>
+              </div>
+            {% endif %}
+
           {% block top_h1_content %}<h1 class="b-page-topic__text">{{ title }}</h1>{% endblock %}
-        </div>  
+
+          {% if top_back == 1 %}
+            </div>
+          {% endif %}
+
+        </div>
+
       {% endif %}
+
       <!--[if lte IE 9]>
           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
       <![endif]-->
