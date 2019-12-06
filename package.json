@@ -25,7 +25,7 @@
     "nib": "^1.1.2",
     "scss": "^0.2.4",
     "vinyl-ftp": "^0.6.1",
-    "yarn": "^1.15.2"
+    "yarn": "^1.17.3"
   },
   "dependencies": {
     "gulp-html-prettify": "0.0.1",
