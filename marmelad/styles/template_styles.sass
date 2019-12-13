@@ -4357,7 +4357,7 @@ body
 		width: 100%
 		margin-left: 0
 		background-color: #f6f8fa
-		padding: 14px 0 0 20px
+		padding: 20px 0 0 20px
 		overflow-y: auto
 		min-height: calc(100vh - 60px)
 		color: $color_black_main
@@ -4380,7 +4380,7 @@ body
 				line-height: 28px
 				background-color: #fff
 				color: $color_black_main
-				background-image: url(../images/icon/icon-download-grey.svg) !important
+				background-image: url(../images/icon/icon-download-grey.svg)
 				text-decoration: none
 				&:hover
 					text-decoration: none
@@ -4413,14 +4413,9 @@ body
 				list-style: none
 				position: relative
 				color: $color_blue
-				svg
-					width: 14px
-					height: 14px
-					fill: $color_blue
+
 			&-link
 				display: inline-block
-				padding-left: 30px
-				padding-right: 15px
 				line-height: 40px
 				color: inherit
 				border-radius: 5px
@@ -4428,17 +4423,12 @@ body
 					text-decoration: none
 					opacity: 0.8
 			&-icon
-				position: absolute
-				left: 10px
-				top: 12px
-				width: 14px
-				height: 14px			
-			&-item.active
-				color: #fff
-				span
-					background-color: $color_blue
-				svg
-					fill: #fff
+					//position: absolute
+					//left: 10px
+					//top: 12px
+					//width: 14px
+					//height: 14px
+
 	.fullscreen &
 		&__aside
 			left: -250px
@@ -6885,3 +6875,178 @@ a.overflowed
 	&:before
 		content: unset
 
+//   БЭМ именования ниже   //
+
+.summary-popup
+	position: relative
+	margin: 0 auto
+	width: 550px
+	background: white
+	border: 1px solid #E1E4E6
+	border-radius: 5px
+
+	&__header-wrap
+		display: flex
+		align-items: center
+		border-color: #E1E4E6
+		border-style: solid
+		border-width: 0 0 1px 0
+		margin: 0
+
+	&__header
+		font-size: 20px
+		padding: 20px 0 19px 20px
+		margin: 0
+
+	&__button-close
+		display: flex
+		align-content: center
+		justify-content: center
+
+		width: 30px
+		height: 30px
+		background: white
+		padding: 0
+		margin-left: auto
+		margin-right: 20px
+		border: 1px solid #E1E4E6
+		border-radius: 50%
+
+		&:hover
+			cursor: pointer
+			border-color: #999999
+
+	&__close-icon
+		width: 16px
+		height: 16px
+
+	&__list
+		list-style: none
+		padding: 8px 0 40px 20px
+		margin: 0
+
+	&__item
+		padding: 12px 0 0 0
+		display: block
+
+	&__link
+		display: flex
+
+		&:hover
+			cursor: pointer
+
+	&__link-text
+		padding-left: 8px
+
+.b-summary__item-ip-family
+	&:hover
+		cursor: pointer
+
+
+.b-summary__section-link-wrapper._flex
+	display: flex
+	align-items: center
+
+	&:hover
+		background: #F1F1F1
+
+	&:active
+		background: #E1E4E6
+
+.b-summary__section-link
+	display: flex
+	align-items: center
+	padding-top: 7.5px
+	padding-bottom: 7.5px
+	padding-right: 8px
+
+	&:hover
+		text-decoration: none
+
+.b-summary__section-link-img-sitemap
+	width: 16px
+	height: 16px
+	margin-left: 8.5px
+	margin-right: 6.5px
+
+.b-summary__section-link-img-report
+	width: 18px
+	height: 18px
+	margin-left: 8px
+	margin-right: 4px
+
+.b-summary__title-wrap
+	display: flex
+	align-items: center
+
+	.b-inreports__main-row.b-compare
+		display: inline-flex
+		align-items: center
+		align-content: center
+
+		margin-top: 0
+		margin-left: auto
+
+	.b-inreports__main-item-date-time
+		margin-top: 1.5px
+
+	.b-inreports__main-top-export
+		height: 30px
+		margin-left: 30px
+
+//   БЭМ именования выше   //
+
+.b-inreports__main-top
+	padding: 0
+
+.b-inreports__main-row:last-child
+	padding: 0
+
+.b-inreports__main-menu-item
+	display: flex
+	align-items: center
+	font-size: 14px
+	color: #697882
+	text-transform: uppercase
+	margin-bottom: -1px
+
+.b-inreports__main-menu-link
+	display: flex
+	align-items: center
+	padding: 0 19px
+
+.b-inreports__main-menu-icon
+	width: 20px
+	height: 20px
+	//padding-left: 19px
+
+.b-inreports__main-menu-link-text
+	padding-left: 6px
+	//padding-right: 19px
+
+.b-inreports__main-menu-item.active
+	.b-inreports__main-menu-link
+		height: 41px
+		background: #F6F8FA
+		color: #2F353B
+		border-style: solid
+		border-color: #E1E4E6
+		border-width: 1px 1px 0 1px
+		border-radius: 0
+
+.b-inreports__main-top-export._no-background
+	display: flex
+	align-items: center
+	height: 30px
+	padding: 0
+	background-image: none
+
+.b-inreports__main-top-export-icon
+	width: 16px
+	height: 16px
+	margin-left: 7px
+	margin-right: 6px
+
+
+.b-inreports__main-top-export-text
+	padding-right: 7px

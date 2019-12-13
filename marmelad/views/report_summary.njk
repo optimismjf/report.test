@@ -17,72 +17,104 @@
 		<div class="b-inreports__main-top">
 			<div class="b-inreports__main-row">
 				<ul class="b-inreports__main-menu">
-					<li class="b-inreports__main-menu-item active">
-						<i class="b-inreports__main-menu-icon"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#icon-desc"></svg></i>
-						<span class="b-inreports__main-menu-link">Аудит сайта</span>
-					</li>
-					<li class="b-inreports__main-menu-item">
-						<i class="b-inreports__main-menu-icon"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#icon-alert"></svg></i>
-						<a href="" class="b-inreports__main-menu-link">Ошибки и рекомендации</a>
-					</li>
-					<li class="b-inreports__main-menu-item">
-						<i class="b-inreports__main-menu-icon"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#icon-history"></svg></i>
-						<a href="" class="b-inreports__main-menu-link">История показателей</a>
-					</li>
-					<li class="b-inreports__main-menu-item">
-						<i class="b-inreports__main-menu-icon"><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#icon-pdf"></svg></i>
-						<a href="" class="b-inreports__main-menu-link">Редактор PDF отчёта</a>
-					</li>
-				</ul>
-				<a download href="#$" class="b-inreports__main-top-export">Отчёт в PDF</a>
-			</div>
-			<div class="b-inreports__main-row b-compare">
-				<div class="b-inreports__main-item b-form__checkbox">
-					<input type="checkbox" class="custom-checkbox" name="include-redirects" id="compare-with" value="yes">
-					<label for="compare-with">сравнить с отчетом за:</label> 
-				</div>
-				<div class="b-inreports__main-item">
-					<div class="b-project__report-wrapper">
-						<div class="b-project__report">
-							<span class="b-project__report-date">28.11.16</span>
-							<span class="b-project__report-time">13:21</span>
-						</div>
-						<div class="b-project__helper-wrapper">
-							<div class="b-project__helper">
-								<div class="b-project__helper-container">
-									<ul class="b-project__helper-list">
-										<li>
-											<span class="b-project__report-date">28.11.16</span>
-											<span class="b-project__report-time">13:21</span>
-										</li>
-										<li>
-											<span class="b-project__report-date">28.11.16</span>
-											<span class="b-project__report-time">13:21</span>
-										</li>
-										<li>
-											<span class="b-project__report-date">28.11.16</span>
-											<span class="b-project__report-time">13:21</span>
-										</li>
-										<li>
-											<span class="b-project__report-date">28.11.16</span>
-											<span class="b-project__report-time">13:21</span>
-										</li>
-										<li>
-											<span class="b-project__report-date">28.11.16</span>
-											<span class="b-project__report-time">13:21</span>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
 
-					</div>
-				</div>
+					<li class="b-inreports__main-menu-item active">
+						<span class="b-inreports__main-menu-link">
+							<svg class="b-inreports__main-menu-icon">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-dashboard">
+							</svg>
+							<span class="b-inreports__main-menu-link-text"> Аудит сайта </span>
+						</span>
+					</li>
+
+					<li class="b-inreports__main-menu-item">
+						<a href="" class="b-inreports__main-menu-link">
+							<svg class="b-inreports__main-menu-icon">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-idea">
+							</svg>
+							<span class="b-inreports__main-menu-link-text"> Ошибки и рекомендации </span>
+						</a>
+					</li>
+
+					<li class="b-inreports__main-menu-item">
+						<a href="" class="b-inreports__main-menu-link">
+							<svg class="b-inreports__main-menu-icon">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-event-schedule">
+							</svg>
+							<span class="b-inreports__main-menu-link-text"> История показателей </span>
+						</a>
+					</li>
+
+					<li class="b-inreports__main-menu-item">
+						<a href="" class="b-inreports__main-menu-link">
+							<svg class="b-inreports__main-menu-icon">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-edit">
+							</svg>
+							<span class="b-inreports__main-menu-link-text"> Редактор PDF отчёта </span>
+						</a>
+					</li>
+
+				</ul>
 			</div>
 		</div>
 		<div class="b-summary__block">
-			<div class="b-summary__block-title icon-summary">
-				Общая диагностика сайта
+
+			<div class="b-summary__title-wrap">
+				<div class="b-summary__block-title icon-summary">
+					Общая диагностика сайта
+				</div>
+
+				<div class="b-inreports__main-row b-compare">
+					<div class="b-inreports__main-item b-form__checkbox">
+						<input type="checkbox" class="custom-checkbox" name="include-redirects" id="compare-with" value="yes">
+						<label for="compare-with">Сравнить с отчетом за:</label>
+					</div>
+					<div class="b-inreports__main-item b-inreports__main-item-date-time">
+						<div class="b-project__report-wrapper">
+							<div class="b-project__report">
+								<span class="b-project__report-date">28.11.16</span>
+								<span class="b-project__report-time">13:21</span>
+							</div>
+							<div class="b-project__helper-wrapper">
+								<div class="b-project__helper">
+									<div class="b-project__helper-container">
+										<ul class="b-project__helper-list">
+											<li>
+												<span class="b-project__report-date">28.11.16</span>
+												<span class="b-project__report-time">13:21</span>
+											</li>
+											<li>
+												<span class="b-project__report-date">28.11.16</span>
+												<span class="b-project__report-time">13:21</span>
+											</li>
+											<li>
+												<span class="b-project__report-date">28.11.16</span>
+												<span class="b-project__report-time">13:21</span>
+											</li>
+											<li>
+												<span class="b-project__report-date">28.11.16</span>
+												<span class="b-project__report-time">13:21</span>
+											</li>
+											<li>
+												<span class="b-project__report-date">28.11.16</span>
+												<span class="b-project__report-time">13:21</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<a download href="#$" class="b-inreports__main-top-export _no-background">
+					<svg class="b-inreports__main-top-export-icon">
+						<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-download">
+					</svg>
+					<span class="b-inreports__main-top-export-text"> Отчёт в PDF </span>
+				</a>
+
 			</div>
 
 			<div class="b-summary__section">
@@ -173,13 +205,87 @@
 								<div class="b-summary__list-item-desc">от <a href="" rel="nofollow" target="_blank">22.05.2016</a></div>
 								<div class="b-summary__list-item-button_open-popup"></div>
 							</li>
-							<li class="b-summary__list-item size-m">
+							<li class="b-summary__list-item size-m b-summary__item-ip-family open-popup-link" href="#summary-popup-ip">
 								<div class="b-summary__list-item-title">На ip-адресе</div>
 								<div class="b-summary__list-item-value">7 сайтов</div>
 								<div class="b-summary__list-item-desc">▲ 3</div>
 								<div class="b-summary__list-item-button_download"></div>
 							</li>
 						</ul>
+
+						{# БЭМ именования ниже #}
+
+						<div class="summary-popup mfp-hide" id="summary-popup-ip">
+
+							<div class="summary-popup__header-wrap">
+
+								<h2 class="summary-popup__header">7 cайтов на том же IP</h2>
+
+								<button class="summary-popup__button-close">
+									<svg class="summary-popup__close-icon">
+										<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-close"/>
+									</svg>
+								</button>
+
+							</div>
+
+							<ul class="summary-popup__list">
+
+								<li class="summary-popup__item">
+									<a class="summary-popup__link">
+										<img class="summary-popup__icon" src="images/icon/logo-atlantic-motors.png">
+										<span class="summary-popup__link-text">atlanticmotors.ru</span>
+									</a>
+								</li>
+
+								<li class="summary-popup__item">
+									<a class="summary-popup__link">
+										<img class="summary-popup__icon" src="images/icon/logo-pegast.png">
+										<span class="summary-popup__link-text">pegast24.ru</span>
+									</a>
+								</li>
+
+								<li class="summary-popup__item">
+									<a class="summary-popup__link">
+										<img class="summary-popup__icon" src="images/icon/logo-mebel.png">
+										<span class="summary-popup__link-text">mebelkmk.ru<span>
+									</a>
+								</li>
+
+								<li class="summary-popup__item">
+									<a class="summary-popup__link">
+										<img class="summary-popup__icon" src="images/icon/logo-skoda.png">
+										<span class="summary-popup__link-text">skoda-vostokmotors.ru</span>
+									</a>
+								</li>
+
+								<li class="summary-popup__item">
+									<a class="summary-popup__link">
+										<img class="summary-popup__icon" src="images/icon/logo-gost.png">
+										<span class="summary-popup__link-text">kpksssr.ru</span>
+									</a>
+								</li>
+
+								<li class="summary-popup__item">
+									<a class="summary-popup__link">
+										<img class="summary-popup__icon" src="images/icon/logo-zodchiy.png">
+										<span class="summary-popup__link-text">zodchiysk.ru</span>
+									</a>
+								</li>
+
+								<li class="summary-popup__item">
+									<a class="summary-popup__link">
+										<img class="summary-popup__icon" src="images/icon/logo-zarnica.png">
+										<span class="summary-popup__link-text">zarnica24.ru</span>
+									</a>
+								</li>
+
+							</ul>
+
+						</div>
+
+						{# БЭМ именования выше #}
+
 					</div>
 				</div>
 			</div>
@@ -463,12 +569,21 @@
 			</div>
 
 			<div class="b-summary__section">
+
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Sitemap.xml</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#sitemap"/></svg></i><a class="b-summary__section-link" href="#$">Генератор карты сайта</a></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-sitemap">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-sitemap"/>
+							</svg>
+						Генератор карты сайта
+						</a>
+					</div>
 					<div class="b-summary__section-toggler" data-action="toggle" data-target="#sitemap"></div>
 				</div>
+
 				<div class="b-summary__section-content-wrapper" id="sitemap">
 					<div class="b-summary__section-content b-summary__sitemap">
 
@@ -476,53 +591,53 @@
 							<div class="b-grid__item--full">
 								<table class="b-summary__table">
 									<thead>
-										<tr>
-											<th class="w-450">URL</th>
-											<th class="w-130">Тип карты</th>
-											<th class="w-100">Код ответа</th>
-											<th class="w-100">Есть в <br/>robots.txt</th>
-											<th class="w-100">Ошибки <br/>формата</th>
-											<th class="W-100">Размер, мб</th>
-											<th class="w-100">Строк</th>
-										</tr>
+									<tr>
+										<th class="w-450">URL</th>
+										<th class="w-130">Тип карты</th>
+										<th class="w-100">Код ответа</th>
+										<th class="w-100">Есть в <br/>robots.txt</th>
+										<th class="w-100">Ошибки <br/>формата</th>
+										<th class="W-100">Размер, мб</th>
+										<th class="w-100">Строк</th>
+									</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td><a href="https://www.optimism.ru/sitemap.xml"><span class="color_lightblue">https://www.optimism.ru/</span>sitemap.xml</a></td>
-											<td>Корневой</td>
-											<td>200</td>
-											<td>да</td>
-											<td>—</td>
-											<td>0,01</td>
-											<td>3</td>
-										</tr>
-										<tr>
-											<td><a href="https://www.optimism.ru/sitemap-tools.xml"><span class="color_lightblue">https://www.optimism.ru/</span>sitemap-tools.xml</a></td>
-											<td>URL</td>
-											<td>200</td>
-											<td>да</td>
-											<td>—</td>
-											<td>8,50</td>
-											<td class="bg-danger">58 000</td>
-										</tr>
-										<tr>
-											<td><a href="https://www.optimism.ru/blog/sitemap.xml"><span class="color_lightblue">https://www.optimism.ru/</span>blog/sitemap.xml</a></td>
-											<td>Изображения</td>
-											<td>200</td>
-											<td class="bg-warning">нет</td>
-											<td class="bg-danger"><a href="#">1</a></td>
-											<td>1,10</td>
-											<td>1 299</td>
-										</tr>
-										<tr>
-											<td><a href="http://optimism.ru/sitemap.xml"><span class="color_lightblue">http://optimism.ru/</span>sitemap.xml</a></td>
-											<td>Видео</td>
-											<td>200</td>
-											<td>да</td>
-											<td>—</td>
-											<td>0,701</td>
-											<td>568</td>
-										</tr>
+									<tr>
+										<td><a href="https://www.optimism.ru/sitemap.xml"><span class="color_lightblue">https://www.optimism.ru/</span>sitemap.xml</a></td>
+										<td>Корневой</td>
+										<td>200</td>
+										<td>да</td>
+										<td>—</td>
+										<td>0,01</td>
+										<td>3</td>
+									</tr>
+									<tr>
+										<td><a href="https://www.optimism.ru/sitemap-tools.xml"><span class="color_lightblue">https://www.optimism.ru/</span>sitemap-tools.xml</a></td>
+										<td>URL</td>
+										<td>200</td>
+										<td>да</td>
+										<td>—</td>
+										<td>8,50</td>
+										<td class="bg-danger">58 000</td>
+									</tr>
+									<tr>
+										<td><a href="https://www.optimism.ru/blog/sitemap.xml"><span class="color_lightblue">https://www.optimism.ru/</span>blog/sitemap.xml</a></td>
+										<td>Изображения</td>
+										<td>200</td>
+										<td class="bg-warning">нет</td>
+										<td class="bg-danger"><a href="#">1</a></td>
+										<td>1,10</td>
+										<td>1 299</td>
+									</tr>
+									<tr>
+										<td><a href="http://optimism.ru/sitemap.xml"><span class="color_lightblue">http://optimism.ru/</span>sitemap.xml</a></td>
+										<td>Видео</td>
+										<td>200</td>
+										<td>да</td>
+										<td>—</td>
+										<td>0,701</td>
+										<td>568</td>
+									</tr>
 									</tbody>
 								</table>
 							</div>
@@ -618,6 +733,7 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
 
 		</div>
@@ -631,7 +747,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Коды ответов сервера</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div>
 					<div class="b-summary__section-toggler" data-action="toggle" data-target="#responses"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="responses">
@@ -810,7 +933,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Время ответов сервера (TTFB)</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div>
 					<div class="b-summary__section-toggler" data-action="toggle" data-target="#responsetime"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="responsetime">
@@ -916,8 +1046,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Глубина сайта</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#depthsite"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#depthsite"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="depthsite">
 					<div class="b-summary__section-content b-summary__depthsite">
@@ -979,8 +1115,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Структура сайта</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#struktura"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#struktura"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="struktura">
 					<div class="b-summary__section-content b-summary__struktura">
@@ -1072,8 +1214,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Адресация и протокол</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#adresprotokol"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#adresprotokol"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="adresprotokol">
 					<div class="b-summary__section-content b-summary__adresprotokol">
@@ -1289,8 +1437,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Внутренние ссылки</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#inlinks"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#inlinks"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="inlinks">
 					<div class="b-summary__section-content b-summary__inlinks">
@@ -1437,8 +1591,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Внешние ссылки</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#extlinks"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#extlinks"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="extlinks">
 					<div class="b-summary__section-content b-summary__extlinks">
@@ -1613,8 +1773,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Канонизация страниц</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#canon"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#canon"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="canon">
 					<div class="b-summary__section-content b-summary__canon">
@@ -1734,8 +1900,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Индексация</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#index"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#index"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="index">
 					<div class="b-summary__section-content b-summary__index">
@@ -1845,8 +2017,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Ресурсы</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#resurses"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#resurses"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="resurses">
 					<div class="b-summary__section-content b-summary__resurses">
@@ -1899,8 +2077,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Изображения &lt;img&gt;</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#images"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#images"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="images">
 					<div class="b-summary__section-content b-summary__images">
@@ -2058,8 +2242,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Файлы</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#files"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#files"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="files">
 					<div class="b-summary__section-content b-summary__files">
@@ -2093,8 +2283,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Языковые версии</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#languages"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#languages"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="languages">
 					<div class="b-summary__section-content b-summary__languages">
@@ -2195,8 +2391,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Счётчики посещаемости</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
-					<div class="b-summary__section-toggler" data-action="toggle" data-target="#metricks"></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div><div class="b-summary__section-toggler" data-action="toggle" data-target="#metricks"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper" id="metricks">
 					<div class="b-summary__section-content b-summary__metricks">
@@ -2257,7 +2459,14 @@
 				<div class="b-summary__section-head">
 					<div class="b-summary__section-title">Производительность</div>
 					{{ informHover('Я подсказко', 'div', 'Y') }}
-					<div class="b-summary__section-link-wrapper"><i><svg><use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="/images/icon/svg-sprite.svg#post"/></svg></i><a class="b-summary__section-link" href="#$">Общий отчёт</a></div>
+					<div class="b-summary__section-link-wrapper _flex">
+						<a class="b-summary__section-link" href="#$">
+							<svg class="b-summary__section-link-img-report">
+								<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite.svg#icon-report"/>
+							</svg>
+							Общий отчёт
+						</a>
+					</div>
 					<div class="b-summary__section-toggler active" data-action="toggle" data-target="#pagespeed"></div>
 				</div>
 				<div class="b-summary__section-content-wrapper open" id="pagespeed">
@@ -2335,6 +2544,10 @@
 			</div>
 
 		</div>
+
+
+
+
 	</main>
 </div>
 {% endblock %}

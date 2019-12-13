@@ -81,8 +81,8 @@ gulp.task('deploy', async function () {
     password: 'sedrw12'
   });
   gulp.src(globs, {buffer: false})
-    .pipe( conn.newer( '/public_html/new' ) ) // only upload newer files
-    .pipe( conn.dest( '/public_html/new' ) );
+    .pipe( conn.newer( '/public_html/m.kolyadin/new' ) ) // only upload newer files
+    .pipe( conn.dest( '/public_html/m.kolyadin/new' ) );
 });
 
 gulp.task('watch', gulp.parallel('browser-sync', 'sass', 'stylus', 'nunjucks'));
