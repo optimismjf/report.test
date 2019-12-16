@@ -3625,7 +3625,7 @@ $('.b-summary__item-ip-family').magnificPopup({
 	showCloseBtn: false,
 });
 
-document.getElementsByClassName("summary-popup__button-close")[0].addEventListener("click", function(){
+$(document).on('click', '.summary-popup__button-close', function(){
 	$.magnificPopup.close();
 });
 
