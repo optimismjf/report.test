@@ -3617,3 +3617,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+/* БЭМ скрипты ниже */
+
+$('.b-summary__item-ip-family').magnificPopup({
+    type: 'inline',
+	midClick: true,
+	showCloseBtn: false,
+});
+
+$(document).on('click', '.summary-popup__button-close', function(){
+	$.magnificPopup.close();
+});
+
+/* БЭМ скрипты выше */
