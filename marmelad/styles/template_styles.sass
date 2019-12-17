@@ -4388,6 +4388,7 @@ body
 		&-row
 			display: flex
 			align-items: center
+			max-width: 1134px
 			&:first-child
 				justify-content: space-between
 			&:last-child
@@ -5947,20 +5948,23 @@ a.overflowed
 	padding-right: 20px
 	&__block
 		&-title
+			display: flex
+			align-items: center
 			font-size: 25px
 			color: $color_grey
-			padding-left: 32px
 			background-repeat: no-repeat
-			background-size: 20px 20px
+			background-size: 24px 24px
 			background-position: left center
-			margin: 30px 0
+			height: 40px
+			padding-left: 34px
+			margin: 20px 0
 	&__section
-		max-width: 1130px
+		max-width: 1134px
 		border: 1px solid $color_easygrey
 		background-color: #fff
 		margin-bottom: 20px
 		&-head
-			height: 60px
+			height: 58px
 			padding: 0 20px
 			position: relative
 			display: flex
@@ -5981,12 +5985,11 @@ a.overflowed
 		&-link
 			display: flex
 			align-items: center
-
 			font-size: 15px
 			line-height: 28px
 			color: $color_black_main
-
-			padding-top: 7.5px
+			height: 30px
+			padding-top: 10px
 			padding-bottom: 7.5px
 			padding-right: 8px
 
@@ -5996,11 +5999,10 @@ a.overflowed
 			&-wrapper
 				display: flex
 				align-items: center
-
 				position: absolute
 				top: 0
 				bottom: 0
-				right: 90px
+				right: 80px
 				margin: auto
 				height: 28px
 
@@ -6022,7 +6024,7 @@ a.overflowed
 		&-toggler
 			position: absolute !important
 			top: 15px
-			right: 20px
+			right: 18px
 			width: 30px
 			height: 30px
 			border-radius: 50%
@@ -6918,7 +6920,7 @@ a.overflowed
 
 	&__header
 		font-size: 20px
-		padding: 20px 0 19px 20px
+		padding: 17px 0 17px 19px
 		margin: 0
 
 	&__button-close
@@ -6945,21 +6947,33 @@ a.overflowed
 
 	&__list
 		list-style: none
-		padding: 8px 0 40px 20px
+		padding: 0px 0 0 18px
 		margin: 0
 
 	&__item
-		padding: 12px 0 0 0
 		display: block
+		padding: 10px 0 0 0
+
+		&:first-child
+			padding-top: 19px
+
+		&:last-child
+			padding-bottom: 38px
 
 	&__link
 		display: flex
+		width: 190px
 
 		&:hover
 			cursor: pointer
 
+	&__icon
+		width: 16px
+		height: 16px
+
 	&__link-text
 		padding-left: 8px
+		font-size: 15px
 
 
 .b-summary
@@ -6982,6 +6996,7 @@ a.overflowed
 	&__title-wrap
 		display: flex
 		align-items: center
+		max-width: 1134px
 
 	.b-inreports
 		&__main-top
@@ -7025,7 +7040,7 @@ a.overflowed
 
 		&__main-top-export
 			height: 30px
-			margin-left: 30px
+			margin-left: 24px
 
 			&._no-background
 				display: flex

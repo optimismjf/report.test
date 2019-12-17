@@ -51,7 +51,7 @@ gulp.task ('sprite', function () {
 
 gulp.task("webp", function () {
     return src("static/images/**/*.{png,jpg}")
-        .pipe(webp({quality: 90}))
+        .pipe(webp({quality: 100}))
         .pipe(dest("static/images/webp"));
 });
 
