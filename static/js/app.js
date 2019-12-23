@@ -769,6 +769,8 @@ function dataAction(e) {
 	}
 };
 
+
+
 function hideChilds(t) {
 	let childToggles = $(t).find('[data-action=toggle-childs]');
 	childToggles.each(function(e, child) {
@@ -983,6 +985,9 @@ function hideChilds(t) {
 
 })();
 
+
+/* Функция выдвижения сайдбара */
+
 $(function() { // for aside
 	if($('.b-inreports__aside-menu-wrapper').length && !$('.b-inreports__aside').hasClass('in-process')) {
 		$('.b-inreports__aside-menu-wrapper').niceScroll({
@@ -1030,7 +1035,15 @@ $(function() { // for aside
 			} else {
 				asideSlide();
 			}
+
+			// Отключаем верхний скрипт снятием CSS класса "aside-toggle".
+			// Это нужно для выдвижения меню на ховере для ширины экрана 1201-1425px
+			// ( Файл template_styles_desktop, Строка 872, media query )
+			if($('body').hasClass('aside-toggle') && $(window).width() > 1201 && $(window).width() < 1425) {
+					$('body').removeClass('aside-toggle');
+				}
 		})
+
 	}
 });
 

@@ -4156,15 +4156,18 @@ body
 
 .b-inreports
 	display: flex
+
 	&__aside
+		position: absolute
+		z-index: 3
+		top: 0
 		left: -250px
 		width: 0
-		position: absolute
-		top: 0
-		border-right: 1px solid $color_easygrey
 		height: 100vh
-		z-index: 3
+		letter-spacing: -0.3px
 		background-color: #fff
+		border-right: 1px solid $color_easygrey
+
 		&.sticky
 			height: 100vh
 		&-switcher
@@ -4189,9 +4192,10 @@ body
 			line-height: 38px
 			background-color: rgba(241, 241, 241, 0.5)
 			border-bottom: 1px solid $color_easygrey
-			padding-left: 36px
+			padding-left: 33px
 			text-transform: uppercase
 			font-size: 13px
+			letter-spacing: -0.1px
 			color: $color_grey
 			background-image: url(../images/icon/icon-back.svg)
 			background-repeat: no-repeat
@@ -4200,24 +4204,25 @@ body
 			&:hover
 				text-decoration: none
 				color: inherit
+
 		&-menu			
 			list-style: none
 			margin: 0 0 0
-			padding: 15px 0 70px
-			line-height: 25px
+			padding: 19px 0 70px 8px
 			&-wrapper
 				height: 100%
 				overflow-y: auto
 				overflow-x: hidden
+
+			&-item
+				padding-bottom: 9px
+
 			&-link
-				display: block
-				padding-left: 36px
-				font-size: 15px
-				color: $color_grey
-				background-repeat: no-repeat
-				background-size: 16px 16px
-				background-position: 10px center
+				display: flex
+				align-items: center
 				position: relative
+				font-size: 15px
+
 				&.critical:before
 					content: ''
 					position: absolute
@@ -4256,51 +4261,65 @@ body
 					&:hover
 						text-decoration: none
 						background-color: rgba($color_easygrey, 0.5)
+
+			&-icon
+				width: 16px
+				height: 16px
+
+			&-text
+				color: $color_grey
+				padding-left: 8px
+
 		&-switcher ~ &-item
 			height: calc(100% - 38px)
 		&-submenu
 			list-style: none
+			padding: 10px 0 0 0
 			margin: 0 0 10px
-			padding: 0
+
 			&-item
+				display: flex
+				align-items: center
 				position: relative
+				padding-top: 12px
+				padding-left: 24px
+				line-height: 1
+
+				&:first-child
+					padding-top: 0
+
 			&-link
-				display: block
-				padding-left: 36px
+				display: flex
+				align-items: center
 				font-size: 13px
 				color: $color_black_main
 				white-space: nowrap
+
 				&:hover
 					color: inherit
 					text-decoration: none
 					background-color: rgba($color_easygrey, 0.5)
+
 				&.active
 					background-color: $color_easygrey
-				&.locked:after
-					content: ''
-					width: 14px
-					height: 25px
-					padding: 0 5.5px 0
-					margin-left: 5px
-					display: inline
-					background-image: url(../images/icon/icon-lock.svg)
-					background-repeat: no-repeat
-					background-size: 9px auto
-					background-position: center center
+
 				&-count
 					color: $color_lightgrey
 
+			&-icon
+				width: 16px
+				height: 16px
+				margin-left: 5px
+
 		&-signals
-			position: absolute
 			z-index: 1
 			list-style: none
 			display: flex
-			top: 0
-			right: 20px
-			height: 100%
-			margin: 0
 			align-items: center
+
 			padding: 0
+			margin-left: auto
+			margin-right: 20px
 		&-signal
 			width: 12px
 			height: 12px
@@ -4316,7 +4335,7 @@ body
 			&.warning
 				background-color: rgba($color_orange, 0.8)
 			&.common
-				background-color: rgba($color_grey, 0.8)
+				background-color: rgba($color_grey2, 0.8)
 
 		&-toggler
 			position: fixed
@@ -4351,6 +4370,7 @@ body
 			overflow: hidden
 		&.in-process &-signals
 			display: none
+
 	&__main
 		width: 100%
 		margin-left: 0
@@ -4513,9 +4533,10 @@ body
 			width: 100%
 			margin-left: 0
 
+	// Класс-триггер, вешается и убирается скриптами. //
 	.aside-toggle &
 		&__aside
-			left: 0px
+			left: 0
 			position: fixed
 			width: 100% !important
 			z-index: 20
@@ -5986,6 +6007,7 @@ a.overflowed
 
 .b-summary
 	padding-right: 20px
+
 	&__block
 		&-title
 			display: flex
@@ -6022,7 +6044,7 @@ a.overflowed
 		&-content
 			width: 100%
 			&-wrapper
-				padding: 20px
+				padding: 20.5px 19px 15px 19px
 				border-top: 1px solid $color_easygrey
 				display: none
 				&.open
@@ -6034,9 +6056,9 @@ a.overflowed
 			line-height: 28px
 			color: $color_black_main
 			height: 30px
-			padding-top: 10px
+			padding-top: 7px
 			padding-bottom: 7.5px
-			padding-right: 8px
+			padding-right: 7px
 
 			&:hover
 				text-decoration: none
@@ -6066,11 +6088,12 @@ a.overflowed
 					svg
 						width: 14px
 						height: 14px
+
 		&-link-img-sitemap
 			width: 16px
 			height: 16px
-			margin-left: 8.5px
-			margin-right: 6.5px
+			margin-left: 8px
+			margin-right: 6px
 
 		&-link-img-report
 			width: 18px
@@ -6080,8 +6103,8 @@ a.overflowed
 
 		&-toggler
 			position: absolute !important
-			top: 15px
-			right: 18px
+			top: 14px
+			right: 19px
 			width: 30px
 			height: 30px
 			border-radius: 50%
@@ -6629,13 +6652,13 @@ a.overflowed
 	&__tabs
 		font-size: 0
 		&-item
-			text-transform: uppercase
-			font-size: 13px
-			line-height: 29px
 			display: inline-block
-			margin-bottom: -10px
-			margin-right: 20px
+			font-size: 13px
 			color: $color_grey
+			text-transform: uppercase
+			padding: 7px 1px 6px 0
+			margin-right: 19.5px
+			margin-bottom: -10px
 			border-bottom: 3px solid transparent
 			cursor: pointer
 			&.active, &:hover, &:focus
@@ -6647,10 +6670,10 @@ a.overflowed
 			margin-top: 1.5em
 			display: flex
 		&-scr
-			width: 340px
+			width: 500px
 			text-align: center
-			img
-				max-width: 340px
+			padding-top: 1px
+
 		&-val
 			width: 120px
 			height: 120px
@@ -6658,10 +6681,11 @@ a.overflowed
 			font-weight: 500
 			font-size: 32px
 			&-wrapper
-				width: 170px
-				padding: 0 30px 0 20px
-				text-align: center
 				position: relative
+				width: 170px
+				text-align: center
+				padding: 0 30px 0 20px
+				margin-top: 6px;
 			&-svg
 				position: absolute
 				top: 0
@@ -6671,36 +6695,45 @@ a.overflowed
 		&-info
 			width: calc(100% - 170px - 340px)
 			font-size: 15px
+			padding: 15px 0 0 20px;
 
+		&-numbers
+			display: flex
 		&-desc
 			line-height: 26px
+			padding-top: 3px
+			padding-left: 20px
 			margin-bottom: 15px
 
+		&-link
+			padding-left: 20px
+
 		&-date
-			color: $color_grey
 			display: flex
 			align-items: center
+			color: $color_grey
+			padding-top: 7px
+
 			&-pre
 				margin-right: 5px
 
 		&-refresh
-			font-size: 0
+			display: inline-block
 			margin-left: 5px
-			width: 23px
-			height: 23px
-			background-image: url(/images/icon/sync.svg)
-			background-position: center center
-			background-repeat: no-repeat
+			width: 16px
+			height: 16px
 			cursor: pointer
+
+		&-legend-wrapper
 			display: inline-block
 
 		&-legend
-			display: flex
+			display: inline-block
 			font-size: 12px
 			line-height: 14px
-			margin: 11px 0 34px
+			margin: 32px 0 34px
 			&-item
-				padding: 0 20px 0 14px
+				padding: 0 20px 8px 14px
 				position: relative
 				color: $color_grey !important
 				&:before
@@ -6715,11 +6748,13 @@ a.overflowed
 
 		&-val-wrapper, &-legend-item
 			&--green
+				display: inline-block
 				color: #57C282
 				stroke: #57C282
 				&:before
 					background-color: #57C282
 			&--orange
+				display: inline-block
 				color:#F6CC13
 				stroke: #F6CC13
 				&:before
@@ -6729,6 +6764,9 @@ a.overflowed
 				stroke: #DE1B1B
 				&:before
 					background-color: #DE1B1B
+
+		&-legend-item
+			display: block
 
 .summary-popup
 	position: relative
@@ -6804,7 +6842,6 @@ a.overflowed
 		font-size: 15px
 
 
-
 .b-chart
 	&__title
 		font-size: 13px
@@ -6855,6 +6892,7 @@ a.overflowed
 	&--switch:not(.active)
 		display: none
 
+
 .icon-external
 	background-image: url(../images/icon/icon-external.svg)
 .icon-workkey
@@ -6867,9 +6905,9 @@ a.overflowed
 	background-image: url(../images/icon/icon-summary.svg)
 
 .b-bordertop
+	padding-top: 0.37em
+	margin-top: 0.5em
 	border-top: 1px solid $color_easygrey
-	padding-top: 0.5em
-	margin-top: 0.5em			
 	&--big
 		padding-top: 1.5em
 

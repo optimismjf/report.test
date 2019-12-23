@@ -857,16 +857,59 @@
 			margin-right: 30px
 .b-inreports
 	&__aside
+
 		@media all and (min-width: 1200px)			
 			left: 0
 			width: 250px
 			top: 60px
 			height: calc(100vh - 60px)
-		&-toggler
+			&-toggler
+				&:after
+					@media all and (min-width: 1200px)
+						content: "\f104"
+						padding-right: 5px
+
+		@media all and (min-width: 1200px) and (max-width: 1439px)
+			left: -250px
+			position: fixed
+			border-right-color: #2E97DF
+			z-index: 3
+			background-color: #fff
+			height: calc(100vh - 60px)
+			&:before
+				content: ''
+				position: absolute
+				left: 250px
+				height: 100%
+				width: 21.5px
+				border-left: 4px solid #2E97DF
 			&:after
-				@media all and (min-width: 1200px)	
+				content: "\f105"
+				font: normal normal normal 21px/1 FontAwesome
+				color: #fff
+				position: absolute
+				bottom: 0
+				left: 254px
+				padding: 0 0
+				width: 36px
+				height: 40px
+				line-height: 40px
+				text-align: center
+				background-color: #2E97DF
+			&:hover
+				width: 246px !important
+				left: 0
+				z-index: 4
+				&:before
+					left: 246px
+				&:after
+					left: 250px
 					content: "\f104"
 					padding-right: 5px
+			&-toggler
+				display: none
+
+	// Класс-триггер, вешается и убирается скриптами. //
 	.aside-toggle &
 		&__aside
 			@media all and (min-width: 1200px)	
@@ -885,13 +928,14 @@
 					@media all and (min-width: 1200px)	
 						content: "\f105"
 						padding-right: 0
+
 		&__main
 			&:before
 				@media all and (min-width: 1200px)
 					display: none
 
 	&__main
-		@media all and (min-width: 1200px)
+		@media all and (min-width: 1440px)
 			width: calc(100% - 250px)
 			margin-left: 250px
 
