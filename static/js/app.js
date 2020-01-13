@@ -1427,9 +1427,13 @@ $(function () {
       $('.answer-block').remove();
     }
   });
+
+  // Кнопка "Ввести промокод", исчезает подчеркивание и открывается меню
   $(document).on('click', '.b-user-balance__input-topic', function () {
+    $('.b-user-balance__input-topic').toggleClass('active');
     $('.b-user-balance__money-input .b-promo-input').slideToggle();
   });
+
   $(document).on('click', '.b-user-balance__promo-code-text span', function () {
     $('.b-promo-input_promo').slideToggle();
   }); // delete this one later
@@ -1488,7 +1492,7 @@ $(function () {
   });
   /* ajax requests */
 
-  $('.b-user-fileters__select_month select').change(function () {
+  $('.b-user-filters__select_month select').change(function () {
     var target = $(this).children('option').filter(':selected');
     var currentListItem = $(target).data('list');
     $.ajax({
@@ -1856,14 +1860,17 @@ $(function () {
    * [^_]*.js - выборка всех файлов, которые не начинаются с подчеркивания
    */
 
-
+   // Логика перехода между меню Вход; Регистрация; Восстановление пароля;
   $('.b-authorization__event').on('click', function (event) {
     event.preventDefault();
     var activeForm = $(this).attr('href');
-    $('.b-authorization__content').slideUp();
-    $(activeForm).slideDown();
-  }); // подсказка выезжающая
 
+    $('.b-authorization__content').css( 'display', 'none');
+    $(activeForm).css( 'display', 'block');
+
+  }); 
+  
+  // подсказка выезжающая
   $('.b-authorization__find').on('click', function (event) {
     event.preventDefault();
     $('.b-authorization__list--hidden').slideToggle();
@@ -2571,6 +2578,21 @@ $(function () {
       });
     }
   }
+
+// Кнопки скрола таблицы тарифов ( горизонтальный скролл )
+  $('.b-prices-table__scroll-button-left').click(function(event) {
+    event.preventDefault();
+    $('.b-prices-tariffs__item-container').animate({
+      scrollLeft: "-=300px"
+    }, 'slow');
+  });
+
+  $('.b-prices-table__scroll-button-right').click(function(event) {
+    event.preventDefault();
+    $('.b-prices-tariffs__item-container').animate({
+      scrollLeft: "+=300px"
+    }, 'slow');
+  });
 
   function priceMdCurSwitcher() {
     var context = $(this).parents('.b-prices-tariffs__item-container');
@@ -3592,11 +3614,11 @@ function hideErrorMessage(element) {
 ;
 
 // jQuery(document).ready(function() {
-// 	let windowWidth =  window.outerWidth;
+// 	var windowWidth =  window.outerWidth;
 // 	bannersList(windowWidth);
 // });
 // jQuery(window).on('resize', function() {
-// 	let windowWidth =  window.outerWidth;
+// 	var windowWidth =  window.outerWidth;
 // 	bannersList(windowWidth);
 // });
 
@@ -3619,6 +3641,7 @@ function hideErrorMessage(element) {
 // 	}
 // };
 
+// Скрипт закрывает выпадающее меню личного кабинета ( пример на странице projects.html ) 
 document.addEventListener("DOMContentLoaded", function() {
 	let close = document.getElementsByClassName('close-profile');
 	if(close.length > 0){
@@ -3633,7 +3656,7 @@ document.addEventListener("DOMContentLoaded", function() {
 /* БЭМ скрипты ниже */
 
 $('.b-summary__item-ip-family').magnificPopup({
-    type: 'inline',
+  type: 'inline',
 	midClick: true,
 	showCloseBtn: false,
 });

@@ -8,7 +8,8 @@ html {
 
 
 body {
-    margin: 0
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
 article,
@@ -45,6 +46,16 @@ pre {
 a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects
+}
+
+// Сброс браузерных стилей для кнопки
+button {
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 abbr[title] {
@@ -427,13 +438,13 @@ template {
 }
 
 .mfp-bg {
+    position: fixed !important;
+    z-index: 1042;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    z-index: 1042;
+    height: 100% !important;
     overflow: hidden;
-    position: fixed;
     background: #0b0b0b;
     opacity: .8
 }
@@ -4296,8 +4307,8 @@ textarea {
 
 #registration,
 #restore-password,
-#sign-in,
-#password-sent {
+#password-sent,
+#sign-in {
     background-color: #fff;
     width: 400px;
     min-height: 100vh;

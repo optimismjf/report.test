@@ -22,7 +22,7 @@
     <meta name="MobileOptimized" content="320">
     <meta name="HandheldFriendly" content="True">
 
-    <title>Профиль пользователя</title>
+    <title>Баланс и статистика</title>
 
     <meta name="keywords" content="">
     <meta name="description" content="">
@@ -135,6 +135,7 @@
 
 
 
+
                 <div class="b-top-wrapper__item">
                     <div class="b-user">
                         <a href="#" class="b-user__item">
@@ -170,6 +171,7 @@
                         </div>
                     </div>
                 </div>
+
 
             </div>
 
@@ -225,7 +227,7 @@
 
 
 
-        <h1 class="b-page-topic__text">Профиль пользователя</h1>
+        <h1 class="b-page-topic__text">Баланс и статистика</h1>
 
 
 
@@ -241,16 +243,25 @@
     <section class="b-user-rate">
         <div class="b-user-rate__container">
             <div class="b-user-rate__item">
+
                 <div class="b-user-balance">
                     <div class="b-user-balance__container">
+
                         <div class="b-user-balance__item">
                             <div class="b-user-balance__status-wrapper">
+                                <div class="b-user-balance__status-aftertopic --color-grey">Тариф</div>
                                 <div class="b-user-balance__status-topic">Оптимальный</div>
-                                <div class="b-user-balance__status-aftertopic">Тариф до 11.10.2017</div>
-                                <div class="b-user-balance__checkbox b-main-checkbox">
-                                    <input type="checkbox" name="auto" id="b-check18">
-                                    <label for="b-check18">Автопродение</label>
-                                </div>
+                                <div class="b-user-balance__status-aftertopic">Действует до 15.12.2019</div>
+
+
+                                <label class="b-user-balance__status-switch">
+
+                                    <input class="b-user-balance__status-switch-input" type="checkbox">
+
+                                    <span class="b-user-balance__status-switch-slider"></span>
+
+                                </label>
+
                                 <div class="b-user-balance__accbalance-wrapper">
                                     <div class="b-user-balance__accbalance">
                                         <div class="b-user-balance__title">Лимиты</div>
@@ -263,8 +274,23 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="b-user-balance__limit">Обновятся через 10 дней.</div>
+                                <div class="b-user-balance__limit">Следующее начисление через 10 дней (15.11.2019)</div>
+
                                 <div class="b-balance-tabs">
+
+
+                                    <div class="b-user-balance__input-topic"><span>Ввести промокод</span>
+                                    </div>
+
+                                    <div class="b-user-balance__money-input">
+                                        <form class="b-promo-input">
+                                            <input type="text">
+                                            <input type="submit" value="Ok">
+                                            <div class="b-promo-input__warning"></div>
+                                        </form>
+                                    </div>
+
+
                                     <div class="b-balance-tabs__content">
                                         <div id="subscription" class="b-balance-tabs__item b-balance-tabs__item--subscription">
                                             <div class="b-user-balance__select-wrapper">
@@ -344,29 +370,24 @@
                                         </div>
                                         <!-- <= item -->
                                     </div>
-                                    <!-- <= content -->
-                                    <div class="b-balance-tabs__buttons b-main-button "> <a href="#subscription" class="b-balance-tabs__button b-balance-tabs__button--subscription">Приобрести подписку</a>
-                                        <!-- <= button --><a href="#buy" class="b-balance-tabs__button b-balance-tabs__button--buy">Купить лимиты</a>
-                                        <!-- <= button -->
-                                        <div class="b-user-balance__input-topic"><span>Ввести промокод</span>
-                                        </div>
-                                        <div class="b-user-balance__money-input">
-                                            <form class="b-promo-input">
-                                                <input type="text">
-                                                <input type="submit" value="Ok">
-                                                <div class="b-promo-input__warning"></div>
-                                            </form>
-                                        </div>
+
+
+                                    <div class="b-balance-tabs__buttons b-main-button ">
+
+                                        <a href="#subscription" class="b-balance-tabs__button b-balance-tabs__button--subscription">Приобрести подписку</a>
+                                        <a href="#buy" class="b-balance-tabs__button b-balance-tabs__button--buy">Купить лимиты</a>
+
                                     </div>
-                                    <!-- <= buttons -->
+
                                 </div>
                                 <!-- /b-user-balance -->
                             </div>
                         </div>
+
                         <div class="b-user-balance__item">
                             <div class="b-info-wrapper">
                                 <div class="b-info">
-                                    <div class="b-info__title">Аудитор</div>
+                                    <div class="b-info__title">СайтАудитор</div>
                                     <!-- <= title -->
                                     <div class="b-info__item">
                                         <div class="b-info__item-part b-info__item-part--text">Аудитов</div>
@@ -397,21 +418,21 @@
                                     <div class="b-info__item">
                                         <div class="b-info__item-part b-info__item-part--text">АвтоТЗ, кластеров</div>
                                         <!-- <= item-part -->
-                                        <div class="b-info__item-part b-info__item-part--number">456</div>
+                                        <div class="b-info__item-part b-info__item-part--number">120</div>
                                         <!-- <= item-part -->
                                     </div>
                                     <!-- <= item -->
                                     <div class="b-info__item">
                                         <div class="b-info__item-part b-info__item-part--text">АвтоТЗ, запросов</div>
                                         <!-- <= item-part -->
-                                        <div class="b-info__item-part b-info__item-part--number">23556</div>
+                                        <div class="b-info__item-part b-info__item-part--number">12 743</div>
                                         <!-- <= item-part -->
                                     </div>
                                     <!-- <= item -->
                                     <div class="b-info__item">
                                         <div class="b-info__item-part b-info__item-part--text">Поиск тематических слов</div>
                                         <!-- <= item-part -->
-                                        <div class="b-info__item-part b-info__item-part--number">5356</div>
+                                        <div class="b-info__item-part b-info__item-part--number">274 434</div>
                                         <!-- <= item-part -->
                                     </div>
                                     <!-- <= item -->
@@ -420,21 +441,23 @@
                             </div>
                             <!-- /b-info-wrapper -->
                         </div>
+
                     </div>
                 </div>
-                <div class="b-user-fileters">
-                    <div class="b-user-fileters__topic">История</div>
-                    <div class="b-user-fileters__container">
-                        <div class="b-user-fileters__item">
-                            <div class="b-user-fileters__select b-main-select">
+
+                <div class="b-user-filters">
+                    <div class="b-user-filters__topic">История</div>
+                    <div class="b-user-filters__container">
+                        <div class="b-user-filters__item">
+                            <div class="b-user-filters__select b-main-select">
                                 <select>
                                     <option default="">Тип операции</option>
                                     <option>Крутая операция</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="b-user-fileters__item">
-                            <div class="b-user-fileters__select b-user-fileters__select_month b-main-select">
+                        <div class="b-user-filters__item">
+                            <div class="b-user-filters__select b-main-select">
                                 <select>
                                     <option default="" data-list="item0">За последний месяц</option>
                                     <option data-list="item1">За Квартал</option>
@@ -444,8 +467,10 @@
                                 </select>
                             </div>
                         </div>
+                        <span class="b-user-filters__item-sum">Сумма всего: + 119 200 / - 119 200</span>
                     </div>
                 </div>
+
                 <div class="b-user-table" id="b-table">
                     <div class="b-user-table__top-line">
                         <div class="b-user-table__time">Дата</div>
@@ -458,10 +483,9 @@
                         <div class="b-user-table__item">
                             <div class="b-user-table__item-time"><span class="b-date">22.09.01</span><span class="b-time">18:00</span>
                             </div>
-                            <div class="b-user-table__item-operation">Списание лимитов</div>
-                            <div class="b-user-table__item-money minus">
-                                <div class="b-user-table__span-wrapper"><span>- 11 200</span><span><i class="fa fa-rub" aria-hidden="true"></i></span>
-                                </div>
+                            <div class="b-user-table__item-operation">Покупка лимитов</div>
+                            <div class="b-user-table__item-money plus">
+                                <div class="b-user-table__span-wrapper">+ 119 200</div>
                             </div>
                             <div class="b-user-table__item-rate">
                                 <div class="b-user-table__item-rate-wrapper">Оптимальный</div>
@@ -474,8 +498,7 @@
                             </div>
                             <div class="b-user-table__item-operation">Списание лимитов</div>
                             <div class="b-user-table__item-money minus">
-                                <div class="b-user-table__span-wrapper"><span>- 11 200</span><span><i class="fa fa-rub" aria-hidden="true"></i></span>
-                                </div>
+                                <div class="b-user-table__span-wrapper">- 119 200</div>
                             </div>
                             <div class="b-user-table__item-rate">
                                 <div class="b-user-table__item-rate-wrapper">Оптимальный</div>
@@ -485,6 +508,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="b-page-nav b-page-nav--settings">
                     <div class="b-page-nav__container">
                         <div class="b-page-nav__list-wrapper">
@@ -502,41 +526,30 @@
                                 </li>
                                 <li><a class="ellipsis" href="#">...</a>
                                 </li>
-                                <li><a href="#">12</a>
+                                <li><a href="#">100</a>
                                 </li>
                             </ul>
                             <a href="#" class="b-page-nav__next"></a>
                         </div>
-                        <div class="b-page-nav__amount">
-                            <div class="b-page-nav__amount-title">Элементов:</div>
-                            <ul>
-                                <li><a href="#">50</a>
-                                </li>
-                                <li class="active"><a href="#">250</a>
-                                </li>
-                                <li><a href="#">500</a>
-                                </li>
-                            </ul>
-                        </div>
+
                     </div>
                 </div>
+
             </div>
+
             <div class="b-user-rate__item">
                 <div class="b-card-list">
-                    <h2>Основное меню</h2>
                     <nav>
-                        <div><span class="active">Настройки профиля</span>
+                        <div><a class="b-card-list__item" href="">Настройки профиля</a>
                         </div>
-                        <div><a href="">Баланс и статистика</a>
+                        <div><span class="b-card-list__item-active">Баланс и статистика</span>
                         </div>
-                        <div><a href="">Партнерская программа</a>
-                        </div>
-                        <hr>
-                        <div><a href="#">На главную страницу</a>
+                        <div><a class="b-card-list__item" href="">Партнерская программа</a>
                         </div>
                     </nav>
                 </div>
             </div>
+
         </div>
     </section>
 

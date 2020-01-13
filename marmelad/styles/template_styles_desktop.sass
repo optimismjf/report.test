@@ -5,25 +5,21 @@
 
 
 
-// @media all and (min-width: 1200px)
 @media all and (min-width: 1200px)
 	.global
 		&__fix-container
 			width: 100%
-			max-width: 1200px
+  		    max-width: 1200px
 			height: auto
 			min-height: 1px
 			padding-left: 20px
 			padding-right: 20px
 			margin-left: auto
 			margin-right: auto
-
-
 	.b-page-topic
 		padding-left: 0px
 		&__text
 			display: block
-			width: 100%
 			max-width: 1200px
 			padding-left: 20px
 			padding-right: 20px
@@ -193,8 +189,8 @@
 				margin-left: 20px
 .b-faq-wrap
 	@media all and (min-width: 1200px)
-		padding-left: 140px
-		padding-right: 140px
+		padding-left: 0px
+		padding-right: 0px
 		&__item
 			&:first-chilr
 				margin-right: 0
@@ -280,7 +276,11 @@
 		margin-right: 140px
 		max-width: 1160px
 .b-audit
+
 	@media all and (min-width: 1200px)
+		height: calc(100% - 461px)
+		min-height: 408px
+
 		&__container
 			width: 100%
 			max-width: 1200px
@@ -305,10 +305,44 @@
 			padding-right: 0px
 			max-width: 806px
 			+b-relative
+
+.b-prices-table
+	@media all and (min-width: 1094px)
+		padding-top: 25px
+		margin-top: 0
+
+	&__wrapper
+		@media all and (min-width: 1094px)
+				position: relative
+				z-index: 1
+				right: 0
+				width: 100%
+				min-height: 80px
+				padding: 0 23px 0 23px
+				margin-top: 0
+				border-radius: 0
+				background-color: transparent
+
+	&__wrapper-border
+		@media all and (min-width: 1094px)
+			display: none
+	
+	&__scroll-button-left, &__scroll-button-right
+		@media all and (min-width: 1045px)
+			display: none
+
 .b-prices-tariffs
 	@media all and (min-width: 1200px)
 		margin-left: auto
 		margin-right: auto
+	@media all and (min-width: 1094px)
+		&__menu-list
+			margin-top: 202px
+
+.b-prices-off
+	@media all and (min-width: 1094px)
+		margin-top: 100px	
+				
 .b-prices-clients
 	@media all and (min-width: 1200px)
 		img
@@ -318,9 +352,11 @@
 	@media all and (min-width: 1200px)
 		padding-left: 0px
 		padding-right: 0px
+		margin-left: 50px
+		background-color: transparent
 		&__container
-			margin-left: 220px
-			max-width: 806px
+			width: 677px
+			margin: 0 auto
 #header.front-page.b-profile-page.regular-page
 	.container
 		padding: 0 20px
@@ -530,7 +566,8 @@
 				&:hover
 					text-decoration: none
 .main-wrapper
-	padding-top: 30px
+	@media all and (min-width: 1200px)
+		padding-top: 30px
 #header.index-page .dropdown-block
 	position: absolute
 	left: 0
@@ -699,19 +736,20 @@
 		padding: 0 20px
 .main-wrapper
 	.main-content
-		flex-basis: calc(100% - 300px)
-		max-width: calc(100% - 300px)
 		@media all and (min-width: 1200px)
-			padding: 30px 60px
+			flex-basis: calc(100% - 300px)
+			max-width: calc(100% - 300px)
+			padding: 30px 60px			
 	.main-menu
-		display: block
-		flex-basis: 260px
-		max-width: 260px
-		h2
-			font-size: 20px
-			margin-top: 22px
-			margin-bottom: 23px
-		nav
+		@media all and (min-width: 1200px)
+			display: block
+			flex-basis: 260px
+			max-width: 260px
+			h2
+				font-size: 20px
+				margin-top: 22px
+				margin-bottom: 23px
+			nav
 			div
 				margin-bottom: 19px
 				a

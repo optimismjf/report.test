@@ -314,9 +314,11 @@ $(function() {
       $('.answer-block').remove();
     }
   });
+
   $(document).on('click', '.b-user-balance__input-topic', function () {
     $('.b-user-balance__money-input .b-promo-input').slideToggle();
   });
+
   $(document).on('click', '.b-user-balance__promo-code-text span', function () {
     $('.b-promo-input_promo').slideToggle();
   });
@@ -374,7 +376,7 @@ $(function() {
   });
 
   /* ajax requests */
-  $('.b-user-fileters__select_month select').change(function () {
+  $('.b-user-filters__select_month select').change(function () {
     var target = $(this).children('option').filter(':selected');
     var currentListItem = $(target).data('list');
     $.ajax({

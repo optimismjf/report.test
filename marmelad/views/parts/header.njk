@@ -241,6 +241,7 @@
             </div>
 			{% endif %}
 
+			{# Покажет Инфо пользователя или пусто или кнопка Войти #}
 			{% if auth == 1 %}
 			<div class="b-top-wrapper__item">
 				<div class="b-user">
@@ -272,11 +273,13 @@
 					</div>
 				</div>
 			</div>
+			{% elif layout == "authorization" %}
 			{% else %}
 			<div class="b-top-wrapper__item">
                 <a class="btn btn-input js-popup" href="#sign-in">Войти</a>
             </div>
 			{% endif %}
+
 		</div>
 		{% if auth == 1 %}
 		<nav class="header__menu" id="navigation-profile">

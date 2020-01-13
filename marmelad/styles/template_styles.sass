@@ -16,9 +16,9 @@ ul
 a
 	color: #0044BB
 
-section
-	ul
-		padding-left: 27px
+// section
+// 	ul
+// 		padding-left: 27px
 
 .global
 	&__fix-container
@@ -639,9 +639,7 @@ section
 		border-top: 1px solid $color_easygrey
 	&__input
 		max-width: 117px
-		// input
-		//  padding: 10px 0px
-		//  padding-left: 10px
+
 	&__top-line
 		margin-top: 15px
 		&_yandex
@@ -665,9 +663,74 @@ section
 		margin-top: 18px
 	&__status-aftertopic
 		color: $color_black_main
-		font-weight: 500
+		font-weight: 400
 		font-size: 15px
-		margin-top: 1px
+		margin-top: 5px
+
+		&.--color-grey
+			color: $color_inactive
+
+	&__status-switch 
+		position: relative
+		display: inline-block
+		width: 40px
+		height: 20px
+		margin-top: 15px
+	
+	&__status-switch-input 
+		opacity: 0
+		width: 0
+		height: 0
+	
+	&__status-switch-slider 
+		position: absolute
+		cursor: pointer
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: #ccc
+		border-radius: 34px
+		-webkit-transition: .4s
+		transition: .4s
+
+	&__status-switch-slider:before 
+		position: absolute
+		content: ""
+		height: 12px
+		width: 12px
+		left: 4px
+		bottom: 4px
+		background-color: white
+		border-radius: 50%	
+		-webkit-transition: .4s
+		transition: .4s
+		
+	&__status-switch-input:checked + .b-user-balance__status-switch-slider 
+		background-color: #E03632
+								
+	&__status-switch-input:checked + .b-user-balance__status-switch-slider:before 
+		-webkit-transform: translateX(16px)
+		-ms-transform: translateX(16px)
+		transform: translateX(20px)
+	
+	&__status-switch-slider:after 
+		position: absolute
+		top: 0
+		left: 48px
+		height: 20px
+		width: 200px
+		color: $color_grey
+		font-size: 15px
+		font-weight: n
+		line-height: 20px
+		cursor: pointer
+
+		content: 'Автопродление выключено'
+
+	&__status-switch-input:checked + .b-user-balance__status-switch-slider:after 
+		content: 'Автопродление включено'
+	
 	&__status-btn
 		margin-top: 20px
 	&__money-topic
@@ -696,18 +759,21 @@ section
 		color: #2E97DF
 		margin-top: 22px
 		cursor: pointer
+
 	&__notify
 		background-color: #FAF7DC
 		+b-rounded(3px)
-		padding: 20px 18px 19px 20px
-		line-height: 25px
+		font-size: 15px
+		line-height: 23px
 		color: $color_black_main
+		padding: 16px 18px 14px 20px
 		margin-left: 20px
 		margin-right: 20px
 		&_up
 			margin-left: 0px
 			margin-right: 0px
 			margin-top: 18px
+			
 	&__checkbox
 		margin-top: 14px
 		&_subscribe
@@ -739,21 +805,20 @@ section
 
 	&__accbalance-wrapper
 		display: flex
-		padding-top: 21px
+		padding-top: 37px
 
 		& > *
-			width: 48%
-			padding-right: 2%
+			width: 27.5%
 			line-height: 1
 
 	&__title
 		font-size: 15px
-		font-weight: 500
+		font-weight: 400
 
 	&__price
-		font-weight: 500
 		font-size: 30px
-
+		font-weight: 400
+		padding-top: 9px
 		span
 			font-size: 20px
 
@@ -768,7 +833,7 @@ section
 		font-size: 15px
 		font-weight: 500
 		line-height: 1
-		padding-top: 6px
+		padding-top: 9px
 
 	&__select-text
 		text-align: right
@@ -865,7 +930,7 @@ section
 		color: $color_red
 		margin-top: 5px
 		display: none
-.b-user-fileters
+.b-user-filters
 	padding-left: 20px
 	padding-right: 20px
 	&__topic
@@ -873,8 +938,7 @@ section
 		font-size: 15px
 		color: $color_black_main
 		margin-top: 30px
-	&__select
-		margin-top: 10px
+
 .b-user-table
 	margin-top: 20px
 	&__top-line
@@ -883,7 +947,7 @@ section
 		color: $color_black_main
 		font-size: 15px
 	&__item-operation
-		font-weight: 500
+		font-weight: 400
 		margin-top: 5px
 	&__item-money
 		font-size: 15px
@@ -894,6 +958,9 @@ section
 			margin-left: 3px
 		&.minus
 			color: $color_red
+		&.plus
+			color: $color_green
+
 	&__item-text
 		margin-top: 5px
 
@@ -920,7 +987,7 @@ section
 	&__item-operation, &__item-money
 		width: 50%
 .b-user-rate
-	padding-bottom: 54px
+	padding-bottom: 60px
 	&__btn-more
 		margin-top: 20px
 		margin-left: 20px
@@ -1484,6 +1551,11 @@ section
 	display: none
 
 .b-audit
+
+	@media all and (max-width: 768px)
+		height: calc(100% - 496px)
+		min-height: 220px
+
 	&__item
 		&:last-child
 			display: none
@@ -1520,6 +1592,7 @@ section
 		margin-top: 27px
 	&__btn
 		margin-top: 40px
+
 .b-analysis
 	clear: both
 	background-color: #fff
@@ -1837,7 +1910,7 @@ section
 	display: none
 .b-analysis-container
 	background-color: #f6f8fa
-	clear: both
+	//clear: both
 	+b-relative
 .b-analysi-preload
 	+b-absolute
@@ -2974,10 +3047,10 @@ section
 		padding: 9px 0
 		margin-left: 0
 	.hamburger-box
+		display: inline-block
 		width: 25px
 		height: 24px
-		display: inline-block
-		position: relative
+
 		.hamburger-inner
 			top: 8px
 			width: 21px
@@ -3122,8 +3195,15 @@ body
 	&.is-hidden
 		height: 100%
 		overflow: hidden
-	&.menu-open
-		overflow-y: hidden
+
+@media all and (max-width: 768px)
+	body
+		&.menu-open  
+			position: fixed
+			width: 100%
+			overflow-y: hidden
+//Класс для ограничения скролла страницы при попапах
+			
 .sub-menu
 	padding: 0
 
@@ -3275,7 +3355,7 @@ body
 		text-decoration: none
 		span
 			display: inline-block
-			font-family: 'Susan';
+			font-family: 'Susan'
 			color: #ffffff
 			font-size: 12px
 			&:first-child
@@ -3292,7 +3372,6 @@ body
 				list-style: none
 				li
 					list-style-type: none
-
 	.hamburger
 		display: inline-flex
 		width: 61px
@@ -3303,7 +3382,7 @@ body
 		z-index: 20
 		cursor: pointer
 		transition: opacity, filter, -webkit-filter 1s linear
-		font: inherit;
+		font: inherit
 		color: inherit
 		text-align: center
 		text-transform: none
@@ -3339,10 +3418,6 @@ body
 				&::before
 					transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0)
 					opacity: 0
-
-
-
-
 	&.is-auth
 		#header-left
 			padding-left: 0px
@@ -3451,7 +3526,6 @@ body
 						&:hover
 							text-decoration: none
 							border-bottom: 0
-
 	#navigation
 		display: none
 		position: fixed
@@ -3549,8 +3623,6 @@ body
 					position: relative
 					top: 0px
 					margin-right: 8px
-
-
 
 	.header__menu
 		margin-right: 18px
@@ -3738,33 +3810,38 @@ body
 			width: 100%
 			height: 100%
 		.user-information
+			width: 100%
+			color: #fff
 			background-color: #26292d
 			box-shadow: 0 0 20px 0 rgba(162, 174, 183, .22)
-			width: 100%
-			margin: 0
 			padding: 20px 20px 20px
-			color: #fff
+			margin: 0
 			overflow: hidden
 			.close-profile
-				border-right: 0
-				position: absolute
-				top: 20px
-				right: 20px
-				z-index: 20
-				padding: 0
 				display: inline-block
-				cursor: pointer
-				transition: opacity, filter 1s linear
+				position: absolute
+				z-index: 20
+				top: 0
+				right: 0
+				width: 20px
+				height: 20px
 				font: inherit
 				color: inherit
 				text-transform: none
-				background-color: transparent
-				margin: 0
-				overflow: visible
-				height: 59px
-				padding: 17.5px 17px
-				width: 59px
 				text-align: center
+				background-color: transparent
+				cursor: pointer
+				padding: 30px 34px
+				margin: 0
+				border-right: 0
+				overflow: visible
+				transition: opacity, filter 1s linear
+
+				.hamburger-box
+					position: absolute
+					top: 20px
+					right: 46px
+
 				.hamburger-inner
 					transform: translate3d(0, 6px, 0) rotate(45deg)
 					background-color: #ffffff
@@ -3995,7 +4072,7 @@ body
 			height: 16px
 			background-repeat: no-repeat
 			display: inline-block
-			font: normal normal normal 14px/1 FontAwesome;
+			font: normal normal normal 14px/1 FontAwesome
 			text-rendering: auto
 			-webkit-font-smoothing: antialiased
 			-moz-osx-font-smoothing: grayscale
@@ -4208,7 +4285,7 @@ body
 		&-menu			
 			list-style: none
 			margin: 0 0 0
-			padding: 19px 0 70px 8px
+			padding: 19px 0 70px 0px
 			&-wrapper
 				height: 100%
 				overflow-y: auto
@@ -4222,6 +4299,7 @@ body
 				align-items: center
 				position: relative
 				font-size: 15px
+				padding-left: 8px
 
 				&.critical:before
 					content: ''
@@ -4260,7 +4338,6 @@ body
 					color: $color_black_main
 					&:hover
 						text-decoration: none
-						background-color: rgba($color_easygrey, 0.5)
 
 			&-icon
 				width: 16px
@@ -4274,16 +4351,22 @@ body
 			height: calc(100% - 38px)
 		&-submenu
 			list-style: none
-			padding: 10px 0 0 0
-			margin: 0 0 10px
+			padding: 4px 0 4px 0
 
 			&-item
 				display: flex
 				align-items: center
 				position: relative
-				padding-top: 12px
-				padding-left: 24px
-				line-height: 1
+				height: 25px
+				padding-left: 32px
+
+				&:hover
+					cursor: pointer
+					color: inherit
+					background-color: rgba($color_easygrey, 0.5)
+
+				&.active
+					background-color: $color_easygrey
 
 				&:first-child
 					padding-top: 0
@@ -4298,10 +4381,6 @@ body
 				&:hover
 					color: inherit
 					text-decoration: none
-					background-color: rgba($color_easygrey, 0.5)
-
-				&.active
-					background-color: $color_easygrey
 
 				&-count
 					color: $color_lightgrey
@@ -5284,7 +5363,7 @@ body
 				width: 11px
 				background-repeat: no-repeat
 				display: inline-block
-				font: normal normal normal 24px/1 FontAwesome;
+				font: normal normal normal 24px/1 FontAwesome
 				text-rendering: auto
 				-webkit-font-smoothing: antialiased
 				-moz-osx-font-smoothing: grayscale
@@ -5997,7 +6076,7 @@ a.overflowed
 				text-align: center
 				line-height: 28px
 				display: inline-block
-				font: normal normal normal 14px/28px FontAwesome;
+				font: normal normal normal 14px/28px FontAwesome
 				text-rendering: auto
 				-webkit-font-smoothing: antialiased
 				-moz-osx-font-smoothing: grayscale
@@ -6125,7 +6204,7 @@ a.overflowed
 				text-align: center
 				line-height: 28px
 				display: inline-block
-				font: normal normal normal 14px/28px FontAwesome;
+				font: normal normal normal 14px/28px FontAwesome
 				text-rendering: auto
 				-webkit-font-smoothing: antialiased
 				-moz-osx-font-smoothing: grayscale
@@ -6567,7 +6646,7 @@ a.overflowed
 					text-align: center
 					line-height: 28px
 					display: inline-block
-					font: normal normal normal 14px/28px FontAwesome;
+					font: normal normal normal 14px/28px FontAwesome
 					text-rendering: auto
 					-webkit-font-smoothing: antialiased
 					-moz-osx-font-smoothing: grayscale
@@ -6685,7 +6764,7 @@ a.overflowed
 				width: 170px
 				text-align: center
 				padding: 0 30px 0 20px
-				margin-top: 6px;
+				margin-top: 6px
 			&-svg
 				position: absolute
 				top: 0
@@ -6695,7 +6774,7 @@ a.overflowed
 		&-info
 			width: calc(100% - 170px - 340px)
 			font-size: 15px
-			padding: 15px 0 0 20px;
+			padding: 15px 0 0 20px
 
 		&-numbers
 			display: flex
@@ -7072,5 +7151,3 @@ a.overflowed
 .site-analysis
 	&:before
 		content: unset
-
-

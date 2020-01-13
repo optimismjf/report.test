@@ -12,7 +12,7 @@
 section
 	ul
 		@media only screen and (min-width: 768px)
-			padding-left: 40px
+			padding-left: 0px
 
 @media screen and (min-width: 1025px)
 	.b-projects
@@ -193,7 +193,7 @@ section
 .b-card-list
 	@media all and (min-width: 1200px)
 		+b-block
-		padding: 10px 34px
+		padding: 27px 34px 11px 34px
 		+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
 		background-color: #fff
 		h2
@@ -203,6 +203,23 @@ section
 		nav
 			div
 				margin-bottom: 19px
+
+		&__item
+			color: $color_blue
+
+		&__item-active
+			color: $color_black_main
+
+			&:before
+				content: ''
+				display: inline-block
+				padding: 4px
+				border-radius: 100px
+				margin-right: 13px
+				margin-bottom: 1px
+				margin-left: -21px
+				background-color: #E03632
+
 		hr
 			margin: 23px 0 17px
 			border: 0
@@ -561,7 +578,7 @@ section
 		&__notify
 			margin-left: 34px
 			margin-right: 34px
-			margin-top: 32px
+			margin-top: 21px
 		&__money-count-wrapper, &__btn-wrapper
 			+b-flex
 			+b-flex-align(baseline)
@@ -587,6 +604,7 @@ section
 		&__input-topic
 			margin-left: 30px
 		&__status-topic, &__money-topic, &__input-topic, &__money-btn
+			padding-top: 4px
 			margin-top: 0px
 
 		&__accbalance, &__money-blocked
@@ -631,16 +649,14 @@ section
 		background-color: #fff
 		padding-left: 40px
 		padding-right: 35px
-		padding-bottom: 40px
+		padding-bottom: 20px
 		+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
-		// &__item
-		//  &:first-child
-		//	  width: 50%
-		//  &:last-child
-		//	  width: 50%
+
 		&__notify
+			width: 110.5%
 			margin-left: 0px
 			margin-right: 0px
+			margin-bottom: -15px
 		&__container
 			padding-left: 0px
 			padding-right: 0px
@@ -649,9 +665,9 @@ section
 			&:before
 				content: ''
 				+b-absolute
-				top: -10px
-				bottom: -10px
-				right: -8%
+				top: -10.5px
+				bottom: 10px
+				right: -21.3%
 				width: 1px
 				background-color: #F0F1F2
 		&__money-count
@@ -671,84 +687,102 @@ section
 			+b-block
 			.b-user-balance__select-text
 				text-align: left
-.b-user-fileters
-	@media all and (min-width: 768px)
-		padding-left: 34px
-		padding-right: 34px
-		&__topic
-			display: none
-		&__container
-			+b-flex
-		&__item
-			min-width: 150px
-			&:last-child
-				margin-left: 20px
-		&__select
-			margin-top: 30px
-	@media all and (min-width: 1200px)
-		padding-left: 0px
-		padding-right: 0px
-		&__select
-			margin-top: 40px
-
-.b-user-table
+.b-user-filters
 	@media all and (min-width: 768px)
 		padding-left: 34px
 		padding-right: 34px
 		margin-top: 30px
+
+		&__topic
+			display: none
+		&__container
+			+b-flex
+			align-items: center
+			align-content: center
+
+		&__item
+			display: inline-block
+			min-width: 150px
+
+			&:nth-child(2)
+				margin-left: 20px
+				
+		&__item-sum
+			display: inline-block
+			font-size: 15px
+			margin-left: auto
+
+		&__select
+			height: 42px
+			width: 200px
+
+
+	@media all and (min-width: 1200px)
+		padding-left: 0px
+		padding-right: 0px
+		margin-top: 60px
+
+.b-user-table
+	@media all and (min-width: 768px)
+		padding-left: 40.5px
+		padding-right: 34px
+		margin-top: 30px
 		&__top-line
 			+b-flex
-			margin-bottom: 17px
+
+		&__content
+			margin-top: 15px
+
 		&__time, &__operation, &__money, &__rate, &__text
 			font-size: 13px
 			color: #A2AEB7
 		&__time
-			width: 17%
+			width: 16.75%
 		&__operation
 			width: 23%
 		&__money
-			width: 17%
+			width: 10.3%
+			text-align: right
 		&__rate
 			width: 16%
+			padding-left: 30px
 		&__text
 			width: 27%
+			padding-left: 35px
 
 		&__item-time, &__item-operation, &__item-money, &__item-rate, &__item-text
 			margin-top: 0px
 		&__item-time
-			width: 17%
+			width: 16.6%
 			.b-time
-				margin-left: 8px
+				margin-left: 4px
 		&__item-operation
 			width: 23%
 		&__item-money
-			width: 17%
-			text-align: left
+			width: 10.3%
+			text-align: right
 		&__item-rate
 			width: 16%
+			padding-left: 30px
+
 		&__item-text
 			width: 27%
+			padding-left: 34px
+
+			span
+				display: block
+
 		&__item
-			padding: 15px 0px
+			padding: 16px 0px
 			+b-flex-align(center)
-		&__span-wrapper
-			max-width: 70px
-			text-align: right
-			margin-left: -16px
-			text-align: center
-		&__item-rate-wrapper
-			margin-left: -6px
+
 	@media all and (min-width: 1200px)
 		background-color: #fff
 		+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
 		margin-top: 20px
-		padding-top: 31px
-		padding-bottom: 35px
-		&__item
-			&:last-child
-				border-bottom: none
-		&__top-line
-			margin-bottom: 15px
+		padding-top: 33.5px
+		padding-bottom: 38px
+
 .b-user-rate
 	@media all and (min-width: 768px)
 		&__btn-more
@@ -756,7 +790,7 @@ section
 			margin-right: 34px
 	@media all and (min-width: 1200px)
 		background-color: #f6f8fa
-		padding-top: 32px
+		padding-top: 31px
 		&__container
 			+b-flex
 			margin-left: 50px
@@ -949,6 +983,8 @@ section
 			+b-flex
 			padding-left: 0px
 			padding-right: 0px
+			width: 1160px
+			
 		&__item
 			&:first-child
 				background-color: #fff
@@ -1144,6 +1180,11 @@ section
 		padding-top: 40px
 		max-width: 560px
 .b-audit
+
+	@media all and (min-width: 768px)
+		height: calc(100% - 600px)
+		min-height: 212px
+
 	@media all and (min-width: 1200px)
 		background-color: #f6f8fa
 		&__item
@@ -1273,9 +1314,9 @@ section
 		&__container
 			+b-flex
 		&__menu-list
-			padding-left: 0
-			margin-top: 202px
 			min-width: 220px
+			padding-left: 0
+			margin-top: 232px
 			li
 				padding-left: 0
 				margin-bottom: 0
@@ -1310,9 +1351,10 @@ section
 .b-prices-table
 	@media all and (min-width: 768px)
 		background-color: #fff
+		margin-top: 135px
 		+b-rounded(5px)
 		+b-box-shadow(0 0 10px 0 rgba(162,174,183,0.2))
-		padding-top: 25px
+		//padding-top: 25px
 		padding-bottom: 43px
 		.select2-container .select2-selection--single
 			height: 40px
@@ -1321,9 +1363,54 @@ section
 		.select2-container--default .select2-selection--single .select2-selection__arrow
 			height: 40px
 		&__wrapper
-			padding-left: 23px
-			padding-right: 23px
+			position: absolute
+			z-index: 1
+			right: 34px
+			width: 480px
 			min-height: 80px
+			padding: 25px 23px 21px 23px
+			margin-top: -124px
+			border-radius: 5px
+			background-color: #fff
+
+			&-border
+				position: absolute
+				bottom: 0
+				width: 434px
+				margin: 0 auto
+				border-width: 0 0 1px 0
+				border-color: $color_easygrey
+				border-style: solid
+
+			// &.--desktop-version
+			// 	position: absolute
+			// 	z-index: 1
+			// 	right: 34px
+			// 	width: 480px
+			// 	background-color: #fff
+			// 	padding-top: 25px
+			// 	padding-bottom: 21px
+			// 	border-radius: 5px
+			// 	margin-top: -124px
+
+
+		&__scroll-button-left, &__scroll-button-right
+			position: absolute
+			z-index: 3
+			margin-top: 170px
+			width: 15px
+			height: 25px
+			background-image: url(./../img/prices/arrow2.png)
+			background-repeat: no-repeat
+			background-size: contain
+
+		&__scroll-button-left
+			margin-left: 225px
+			transform: rotate(180deg)
+
+		&__scroll-button-right	
+			right: 7px
+
 		&__tariff-aftertopic, &__tariff-aftertopic, &__tariff-aftertopic, &__tariff-aftertopic
 			max-width: 120px
 			margin: 0 auto
@@ -1568,7 +1655,9 @@ section
 .b-prices-off
 	@media all and (min-width: 768px)
 		background-color: #fff
-		margin-top: 100px
+		position: relative
+		z-index: 2
+		margin-top: 130px
 		+b-rounded(5px)
 		+b-box-shadow(0 0 10px 0 rgba(162,174,183,0.2))
 		border-top-left-radius: 0px
@@ -1591,7 +1680,6 @@ section
 				margin-left: -8px
 		.b-prices-table__tariff-off-price
 			min-height: 54px
-			// border-bottom: 1px solid #E1E4E6
 			+b-flex
 			+b-flex-align(center)
 			+b-justify-center
@@ -1599,23 +1687,14 @@ section
 			.not-check
 				&:before
 					margin-top: 2px
-			//  content: ''
-			//  +b-absolute
-			//  bottom: 0
-			//  left: 0
-			//  height: 1px
-			//  border-bottom: 1px solid #E1E4E6
-				// width: 90%
-				// width: -webkit-calc(100% - 36px)
-				// width: -moz-calc(100% - 36px)
-				// width: calc(100% - 36px)
-				// width: calc(100% - 36px)
 			span
 				font-size: 18px
 				color: #2F353B
 				margin-top: -12px
 			.fa
 				font-size: 16px
+		.icon
+			width: auto !important
 		.b-prices-table__tariff-tech-support,
 		.b-prices-table__tariff-api,
 		.b-prices-table__tariff-calc,
@@ -1667,15 +1746,11 @@ section
 
 
 
-
-
-
-
-
 @media all and (min-width: 768px)
 	body
-		&.menu-open
-			overflow-y: auto
+		&.menu-open  
+		//	overflow-y: hidden
+
 	#header.front-page.index-page
 		.container
 			.front-page__header

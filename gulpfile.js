@@ -69,7 +69,7 @@ gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: "./static",
-            index: "report_summary.html"
+            index: "prices.html"
         }
     });
 
@@ -113,7 +113,7 @@ gulp.task('deploy', async function () {
     password: 'sedrw12'
   });
   src(globs, {buffer: false})
-    .pipe( conn.newer( '/public_html/m.kolyadin' ) ) // only upload newer files
+    //.pipe( conn.newer( '/public_html/m.kolyadin' ) ) // only upload newer files
     .pipe( conn.dest( '/public_html/m.kolyadin' ) );
 });
 

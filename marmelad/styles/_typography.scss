@@ -1,3 +1,12 @@
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 h1{
   font-weight: 500;
   line-height: 25px;
@@ -35,6 +44,11 @@ p{
   font-size: 15px;
   margin: 7px 0;
 }
+
+a.--color-blue {
+  color: #2E97DF
+}
+
 section{
   ul{
     margin: 10px 0;

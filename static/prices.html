@@ -186,9 +186,11 @@
 
 
 
+
                 <div class="b-top-wrapper__item">
                     <a class="btn btn-input js-popup" href="#sign-in">Войти</a>
                 </div>
+
 
             </div>
 
@@ -228,7 +230,7 @@
                         <div class="b-prices-content__tariff-slider owl-carousel js-owl-sync1">
                             <div class="b-prices-content__tariff">
                                 <div class="b-prices-content__tariff-topic">Старт</div>
-                                <div class="b-prices-content__tariff-aftertopic">2-3 проекта</div>
+                                <div class="b-prices-content__tariff-aftertopic">Для небольших проектов</div>
                                 <div class="b-prices-content__select">
                                     <select>
                                         <option default="" data-name="price_discount" data-discount="" data-months="1">Подписка на 1 мес.</option>
@@ -250,7 +252,7 @@
                             </div>
                             <div class="b-prices-content__tariff">
                                 <div class="b-prices-content__tariff-topic">Стандарт</div>
-                                <div class="b-prices-content__tariff-aftertopic">До 5 проектов</div>
+                                <div class="b-prices-content__tariff-aftertopic">Для средних проектов</div>
                                 <div class="b-prices-content__select">
                                     <select>
                                         <option default="" data-name="price_discount" data-discount="" data-months="1">Подписка на 1 мес.</option>
@@ -272,7 +274,7 @@
                             </div>
                             <div class="b-prices-content__tariff">
                                 <div class="b-prices-content__tariff-topic">Оптимальный</div>
-                                <div class="b-prices-content__tariff-aftertopic">Небольшая команда</div>
+                                <div class="b-prices-content__tariff-aftertopic">Для крупных проектов</div>
                                 <div class="b-prices-content__select">
                                     <select>
                                         <option default="" data-name="price_discount" data-discount="" data-months="1">Подписка на 1 мес.</option>
@@ -294,7 +296,7 @@
                             </div>
                             <div class="b-prices-content__tariff">
                                 <div class="b-prices-content__tariff-topic">Премиум</div>
-                                <div class="b-prices-content__tariff-aftertopic">Агентств и крупный проект</div>
+                                <div class="b-prices-content__tariff-aftertopic">Для порталов</div>
                                 <div class="b-prices-content__select">
                                     <select>
                                         <option default="" data-name="price_discount" data-discount="" data-months="1">Подписка на 1 мес.</option>
@@ -316,7 +318,7 @@
                             </div>
                             <div class="b-prices-content__tariff b-prices-content__tariff_off">
                                 <div class="b-prices-content__tariff-topic">OFF</div>
-                                <div class="b-prices-content__tariff-aftertopic">Редкое использование</div>
+                                <div class="b-prices-content__tariff-aftertopic">Для редкого использования</div>
                                 <div class="b-prices-content__select">
                                     <select disabled="disabled">
                                         <option default="" data-name="price_discount" data-discount="" data-months="1">Подписка на 1 мес.</option>
@@ -556,8 +558,13 @@
                                     </ul>
                                     <div class="b-prices-tariffs__menu-warn">* Пробный тариф ограничен одним проектом в системе.</div>
                                 </div>
+
+                                <button class="b-prices-table__scroll-button-left"></button>
+                                <button class="b-prices-table__scroll-button-right"></button>
+
                                 <div class="b-prices-tariffs__item-container">
                                     <div class="b-prices-tariffs__item">
+
                                         <div class="b-prices-table">
                                             <div class="b-prices-table__wrapper">
                                                 <div class="b-prices-table__select">
@@ -578,7 +585,11 @@
                                                         <label for="b-check26">Рубли</label>
                                                     </div>
                                                 </div>
+
+                                                <div class="b-prices-table__wrapper-border"></div>
+
                                             </div>
+
                                             <div class="b-prices-table__container">
                                                 <div class="b-prices-table__tariff tariff-start">
                                                     <div class="b-prices-table__tariff-topic">Старт</div>
@@ -726,6 +737,7 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
                                     <div class="b-prices-tariffs__item">
                                         <div class="b-prices-off">
@@ -784,19 +796,21 @@
                                     новый конт</div>
                             </div>
                         </div>
-                        <div class="both block-analysis bottom">
-                            <div class="container">
-                                <h4 class="title">Готовы проверить свой сайт?</h4>
-                                <form class="site-analysis" action="#" method="get" accept-charset="utf-8">
-                                    <input class="input__url" type="text" name="url" value="" placeholder="Адрес вашего сайта">
-                                    <input class="input__send" type="submit" name="send" value="Запустить">
-                                </form>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="both block-analysis bottom">
+            <div class="container">
+                <h4 class="title">Готовы проверить свой сайт?</h4>
+                <form class="site-analysis" action="#" method="get" accept-charset="utf-8">
+                    <input class="input__url" type="text" name="url" value="" placeholder="Адрес вашего сайта">
+                    <input class="input__send" type="submit" name="send" value="Запустить">
+                </form>
+            </div>
+        </div>
+
     </section>
 
 

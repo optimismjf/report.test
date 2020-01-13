@@ -18,7 +18,6 @@
 	@media all and (max-width: 1199px) 
 		padding 0
 	
-	
 	button 
 		width: 100%;
 		padding: 13px 10px;
@@ -39,6 +38,8 @@
 		float none  !important
 		position relative
 		box-shadow 0 0 13px rgba(0,0,0,.2)
+		-webkit-animation: fadeIn 1s;
+		animation: fadeIn 1s;
 		
 		@media all and (max-width: 1199px) 
 			box-shadow none
@@ -46,6 +47,9 @@
 		@media all and (max-width: 767px) 
 			padding: 30px 16px !important
 		
+		&#sign-in
+			position: relative
+			top: 0
 		&#registration,
 		&#restore-password,
 		&#password-sent
@@ -53,7 +57,12 @@
 		
 		&#password-sent
 			text-align: left 
-	
+
+	&__content-signin
+		height 649px !important
+		padding-top 130px !important
+		padding-bottom: 130px !important
+
 	&__list 
 		padding 20px 0 26px 15px
 		margin 0

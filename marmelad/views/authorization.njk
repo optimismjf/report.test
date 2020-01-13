@@ -6,7 +6,8 @@
 
 {% block content %}
 <div class="b-authorization">
-	<div id="sign-in" class="b-authorization__content">
+
+	<div id="sign-in" class="b-authorization__content b-authorization__content-signin">
 		<form action="#" method="get" accept-charset="utf-8" novalidate="" class="b-authorization__item">
 			<h6 class="sign-in__title">Войти</h6>
 			<div class="form-item">
@@ -21,9 +22,10 @@
 			<div class="form-item">
 				<a class="btn btn-registration b-authorization__event" href="#registration">Регистрация</a>
 			</div>
-			<span>Забыли пароль? <a href="#restore-password" class="b-authorization__event">Восстановить</a></span>
+			<span>Забыли пароль? <a href="#restore-password" class="b-authorization__event  --color-blue">Восстановить</a></span>
 		</form>
 	</div>
+	
 	<div id="registration" class="b-authorization__content">
 		<form action="#" method="get" accept-charset="utf-8" novalidate="" class="b-authorization__item">
 			<h6 class="sign-in__title">Регистрация</h6>
@@ -51,6 +53,7 @@
 			
 		</form>
 	</div>
+
 	<div id="restore-password" class="b-authorization__content">
 		<form action="#" method="get" accept-charset="utf-8" novalidate="" class="b-authorization__item b-authorization__item--restore-password">
 			<h6 class="sign-in__title">Пароль отправлен</h6>
@@ -63,6 +66,7 @@
 			<a class="btn btn-registration b-authorization__event" href="#sign-in">Войти</a>
 		</form>
 	</div>
+
 	<div id="password-sent" class="b-authorization__content">
 		<h6 class="sign-in__title">Пароль отправлен</h6>
 		<ol class="b-authorization__list">
@@ -77,6 +81,7 @@
 			<li>Обратитесь в службу поддержки.</li>
 		</ol><!-- <= list -->
 	</div>
+	
 </div>
 <!-- /b-authorization -->
 {% endblock %}
