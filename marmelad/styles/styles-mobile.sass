@@ -1,24 +1,7 @@
-@import "bourbon/_bourbon.scss"
 @import "_fonts.sass"
-@import "_base.sass"
-@import "_style.scss"
-@import "_typography.scss"
-
-//h1, h2, h3, h4, h5, h6, p
-//	line-height: normal
-//	margin: 0
-body
-	margin: 0
-ul
-	//padding: 0px
-	//margin: 0px
-	//list-style-type: none !important
-a
-	color: #0044BB
-
-// section
-// 	ul
-// 		padding-left: 27px
+@import "_var.sass"
+@import "_import-legacy.scss"
+@import "_styles-basic.sass"
 
 .global
 	&__fix-container
@@ -110,6 +93,9 @@ a
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content
 	opacity: 0
 
+.js-blocking
+	opacity: .6
+	pointer-events: none
 .inputfile-2
 	width: 0.1px
 	height: 0.1px
@@ -133,7 +119,6 @@ a
 	&:focus + label,
 	& + label:hover
 		background-color: rgba(255,255,255,.9)
-
 
 .inputfile-1
 	width: 0.1px
@@ -291,10 +276,17 @@ a
 			+b-block
 			padding: 12px 0px
 .b-page-topic
+	position: relative
+	z-index: 3
 	border-bottom: 1px solid $color_easygrey
 	background-color: #fff
 	box-shadow: 0 0 10px rgba(162, 174, 183, 0.2)
 	padding: 12px 0
+	@media all and (max-width: 768px)
+		padding-top: 21px
+		padding-bottom: 24px
+
+
 	&__text
 		color: $color_black_main
 		font-size: 30px
@@ -302,6 +294,9 @@ a
 		text-align: center
 		margin: 0 auto
 		margin: 0
+		@media all and (max-width: 767px)
+			line-height: 25px
+
 	&_projects
 		border-bottom: none
 	&.b-btn-flex
@@ -309,12 +304,17 @@ a
 		.b-page-topic__text
 			margin-left: 15px
 			margin-right: 20px
+			&.--position-if-b-audit
+				@media all and (max-width: 768px)
+					margin: 0 auto
 		.b-page-topic__btn
 			margin-top: 2.5px
 			a
 				padding: 5px 20px 5px 32px !important
 				&:before
 					top: 4px
+			&.--position-if-b-audit
+				display: none
 	&__btn
 		margin-top: 30px
 		margin-left: 20px
@@ -356,6 +356,8 @@ a
 	&__line
 		&_inputfile
 			margin-top: 35px
+	&__passw
+		padding-top: 20px
 .b-prev-img
 	+b-absolute
 	top: 0
@@ -437,145 +439,7 @@ a
 		max-width: 400px
 .b-settings-topic
 	max-width: 286px
-.b-user-settings
-	padding-bottom: 55px
-	padding-left: 20px
-	padding-right: 20px
-	// input
-	//  padding: 10px 0px
-	//  padding-left: 10px
-	&__topic
-		font-size: 18px
-		color: $color_black_main
-		margin-top: 28px
-	&__line-topic
-		font-weight: 500
-		font-size: 15px
-		color: $color_black_main
-		margin-top: 12px
-		&_start
-			font-size: 18px
-	&__limit, &__index
-		color: $color_black_main
-		font-size: 15px
-	&__index-md
-		display: none
-	&__line
-		&:not(:first-child)
-			margin-top: 27px
-	&__limit-md, &__index-xs
-		font-weight: 500
-		font-size: 15px
-		color: $color_black_main
-		margin-top: 12px
-		margin-bottom: 10px
-	&__index-xs
-		margin-top: 20px
-		margin-bottom: 0px
-.b-user-robotx
-	&__topic
-		color: $color_black_main
-		font-size: 15px
-		margin-top: 15px
-		margin-bottom: 11px
-	&__container
-		+b-flex
-		+b-flex-direction(column)
-	&__radio
-		margin-top: 15px
-	&__notify
-		color: $color_lightgrey
-		font-weight: 500
-		font-size: 13px
-		line-height: 20px
-		margin-top: 6px
-	&__item
-		&:first-child
-			margin-top: 5px
-	&__inputfile-wrapper
-		display: none
-	&__inputfile
-		margin-top: 23px
-		+b-relative
-		.b-input-counts
-			+b-absolute
-			top: 10px
-			left: 146px
-			font-size: 15px
-			margin-left: 3px
-			color: $color_black_main
-			text-overflow: ellipsis
-			white-space: nowrap
-			display: inline-block
-			overflow: hidden
-			max-width: 121px
-	&__checkbox
-		margin-top: 20px
 
-.b-site-load
-	&__input-topic
-		@extend .b-user-robotx__topic
-	&__notify
-		@extend .b-user-robotx__notify
-		margin-top: 12px
-	&__checkbox
-		margin-top: 14px
-	&__input
-		&_net
-			+b-flex
-			+b-flex-align(center)
-	&__afterinput
-		font-size: 15px
-		color: $color_black_main
-		margin-left: 11px
-.b-user-reports
-	&__notify
-		@extend .b-user-robotx__notify
-		margin-top: 25px
-	&__btn
-		margin-top: 19px
-		cursor: pointer
-		span
-			color: #2E97DF
-			font-size: 15px
-			border-bottom: 1px dashed #2E97DF
-			line-height: 25px
-	&__checkbox
-		margin-top: 15px
-	&__textarea
-		margin-top: 7px
-		display: none
-
-.b-settings-autostart
-	&.disabled
-		.b-settings-autostart__text
-			p
-				color: $color_lightgrey
-		.b-settings-autostart__period
-			span, strong
-				color: $color_lightgrey
-		.b-settings-autostart__select-topic, .b-settings-autostart__input-topic
-			color: $color_lightgrey
-	&__select-topic, &__input-topic
-		@extend .b-user-robotx__topic
-		margin-top: 18px
-	&__period
-		margin-top: 15px
-		span, strong
-			font-size: 15px
-			color: $color_black_main
-		strong
-			margin-left: 5px
-	&__text
-		p
-			font-size: 13px
-			// color: $color_lightgrey
-			color: $color_black_main
-			line-height: 25px
-			&:first-child
-				margin-top: 20px
-			&:not(:first-child)
-				margin-top: 9px
 .b-user-counts
 	&__total-item-text
 		font-weight: 500
@@ -626,9 +490,16 @@ a
 			font-size: 15px
 	&__btn-save
 		margin-top: 20px
+		&.disabled
+			.b-user-counts__btn-save-link 
+				color: white
 	&__btn-start
 		font-weight: 500
 		margin-top: 10px
+		border: 1px solid transparent
+		&.disabled
+			.b-user-counts__btn-start-link 
+				color: white
 	&__top-line, &__total-container
 		+b-flex
 		+b-justify
@@ -639,11 +510,348 @@ a
 		border-top: 1px solid $color_easygrey
 	&__input
 		max-width: 117px
-
 	&__top-line
 		margin-top: 15px
 		&_yandex
 			margin-top: 11px
+.b-user-settings
+	padding-bottom: 55px
+	padding-left: 20px
+	padding-right: 20px
+	@media all and (max-width: 1199px)
+		padding-bottom: 29px
+	&__wrapper-buttons
+		display: none
+	&__tab
+		position: relative
+		z-index: 1
+	&__container-settings
+		display: none
+		@media all and (max-width: 1199px)
+			padding-top: 53px
+			margin-bottom: -54px
+	&__container-autostart
+		@media all and (max-width: 1199px)
+			padding-top: 173px
+			margin-bottom: -146px
+	&__container-start
+		@media all and (max-width: 1199px)
+			padding-top: 192px
+	&__topic
+		font-size: 18px
+		color: $color_black_main
+		margin-top: 28px
+	&__line-topic
+		font-weight: 500
+		font-size: 15px
+		color: $color_black_main
+		margin-top: 12px
+		@media all and (max-width: 1199px)
+			margin: 0
+			padding-top: 10px
+		&_start
+			font-size: 18px
+	&__line-topic-settings
+		display: none
+		@media all and (max-width: 1199px)
+			position: absolute
+			z-index: 2
+			left: 0
+			right: 0
+
+			display: flex
+			align-items: center
+			min-width: 320px
+			height: 85px
+			font-weight: 500
+			font-size: 18px
+			color: $color_black_main
+			line-height: 25px
+			
+			padding-left: 20px
+			padding-bottom: 10px
+			margin-top: 0
+
+			background: #f1f1f1
+			cursor: pointer
+			&.activate2
+				background: white
+				border-bottom: none
+				pointer-events: none
+				& .b-user-settings__line-topic-link
+					border: none
+	&__line-topic-autostart
+		margin-top: 85px
+		border-width: 1px 0 1px 0
+		border-style: solid
+		border-color: $color_easygrey			
+	&__line-topic-sources
+		padding-top: 49px
+	&__line-topic-link
+		color: black
+		height: 25px
+		border-width: 0 0 1px 0
+		border-style: dashed
+		border-color: #C3CBCF
+		&:hover
+			text-decoration: none
+	&__limit, &__index
+		color: $color_black_main
+		font-size: 15px
+	&__index-md
+		display: none
+	&__line
+		&:not(:first-child)
+			margin-top: 27px
+	&__line-load
+		@media all and (max-width: 767px)
+			margin-top: 23px !important
+	&__switch
+		margin-top: 0
+	&__switch-slider:after
+		content: 'Автозапуск выключен'
+	.b-switch__input:checked + .b-user-settings__switch-slider:after 
+		left: 49px
+		content: 'Автозапуск включён'
+	&__border-middle
+		@media all and (max-width: 1199px)
+			position: absolute
+			left: 0
+			right: 0
+			height: 1px
+			margin-top: 169px
+			border-bottom: 1px solid $color_easygrey
+	&__limit-md
+		font-weight: 500
+		font-size: 15px
+		color: $color_black_main
+		padding-top: 12px
+		margin-bottom: 10px
+		@media all and (max-width: 1199px)
+			padding-top: 36px
+			margin-bottom: 0
+	&__index-xs
+		font-weight: 500
+		font-size: 15px
+		color: $color_black_main
+		margin-top: 20px
+		margin-bottom: 0px
+		@media all and (max-width: 1200px)
+			margin-top: 24px
+	&__counts-top-line
+		@media all and (max-width: 1200px)
+			margin-top: 11px
+	&__counts-input
+		@media all and (max-width: 1200px)
+			padding: 10px 0px 10px 10px !important
+	&__counts-line-yandex
+		@media all and (max-width: 1200px)
+			margin-top: 14px
+	&__counts-total-container
+		@media all and (max-width: 1200px)
+			margin-top: 23px 
+			padding-top: 22px 
+	&__counts-date
+		@media all and (max-width: 1200px)
+			text-align: left 
+			margin-top: 19px !important
+	&__counts-date-text
+		@media all and (max-width: 1200px)
+			display: block
+
+	&__counts-date-numbers
+		@media all and (max-width: 1200px)
+			display: block
+			padding-top: 17px !important
+			margin-left: 2px !important
+	&__counts-btn-start
+		@media all and (max-width: 1200px)
+			margin-top: 22px
+	&__counts-btn-link
+		@media all and (max-width: 1200px)
+			padding: 13px 0px !important
+	&__counts-btn-save
+		@media all and (max-width: 1200px)
+			margin-top: 18px
+.b-user-robotx
+	&__topic
+		color: $color_black_main
+		font-size: 15px
+		margin-top: 15px
+		margin-bottom: 11px
+	&__topic-robot-name
+		@media all and (max-width: 1199px)
+			margin: 0
+			padding-top: 17px
+	&__container
+		+b-flex
+		+b-flex-direction(column)
+	&__select
+		@media all and (max-width: 1199px)
+			width: 160px
+			margin-top: 11px
+			& .select2-selection, & .select2-selection__arrow
+				height: 40px !important
+			& .select2-selection__rendered
+				line-height: 25px !important
+				padding-top: 8px !important
+	&__radio
+		margin-top: 15px
+	&__notify
+		color: $color_grey
+		font-weight: 400
+		font-size: 13px
+		line-height: 20px
+		margin-top: 6px
+	&__item
+		&:first-child
+			margin-top: 5px
+	&__inputfile-wrapper
+		display: none
+	&__inputfile
+		margin-top: 23px
+		+b-relative
+		.b-input-counts
+			+b-absolute
+			top: 10px
+			left: 146px
+			font-size: 15px
+			margin-left: 3px
+			color: $color_black_main
+			text-overflow: ellipsis
+			white-space: nowrap
+			display: inline-block
+			overflow: hidden
+			max-width: 121px
+	&__checkbox
+		flex-wrap: wrap
+		margin-top: 20px
+		@media all and (max-width: 1199px)
+			margin-top: 16px
+			&:nth-child(1)
+				margin-top: 21px
+	&__textarea
+		width: 100%
+	&__title
+		margin-top: 21px
+		font-size: 15px
+		color: #2F353B
+		padding-bottom: 8px
+		@media all and (max-width: 1199px)
+			padding-bottom: 0
+.b-user-robotx-robot-name .b-user-robotx__checkbox:nth-child(2)
+	margin-top: 18px
+.b-user-robotx-robot-name .b-user-robotx__checkbox:nth-child(3)
+	margin-top: 15px
+				
+.b-site-load
+	&__input-topic
+		@extend .b-user-robotx__topic
+		@media all and (max-width: 1199px)
+			line-height: 15px
+			margin-top: 22px
+	&__notify
+		@extend .b-user-robotx__notify
+		margin-top: 12px
+		@media all and (max-width: 767px)
+			margin-top: 20px
+			line-height: 25px
+	&__checkbox
+		margin-top: 14px
+	&__input
+		@media all and (max-width: 1199px)
+			display: inline-block
+			width: 117px !important
+			height: 40px 
+		&_net
+			+b-flex
+			+b-flex-align(center)
+	&__afterinput
+		display: inline-block
+		font-size: 15px
+		color: $color_black_main
+		margin-left: 11px
+
+.b-user-reports
+	&__notify
+		@extend .b-user-robotx__notify
+		line-height: 25px
+		margin-top: 13px
+	&__btn
+		margin-top: 19px
+		cursor: pointer
+		span
+			color: #2E97DF
+			font-size: 15px
+			border-bottom: 1px dashed #2E97DF
+			line-height: 25px
+	&__checkbox
+		margin-top: 15px
+		@media all and (max-width: 768px)
+			margin-top: 11px
+	&__checkbox-inner-links
+		@media all and (max-width: 768px)
+				margin-top: 19px
+		
+	&__textarea
+		margin-top: 7px
+		display: none
+
+.b-settings-autostart
+	&.disabled
+		.b-settings-autostart__period
+			span, strong
+				color: $color_lightgrey
+		.b-settings-autostart__select-topic, .b-settings-autostart__input-topic
+			color: $color_lightgrey
+		.select2-selection__rendered
+			color: $color_lightgrey
+		.b-settings-autostart__input-field
+			color: $color_lightgrey
+	&__selects
+		@media all and (max-width: 1200px)
+			padding-top: 18px
+	&__select
+		@media all and (max-width: 1200px)
+			width: 160px
+			&:nth-child(2)
+				margin-top: -4px
+				
+	&__select-topic, &__input-topic
+		@extend .b-user-robotx__topic
+		margin-top: 18px
+	&__period
+		margin-top: 15px
+		@media all and (max-width: 1200px)
+			margin-top: 23px
+		span, strong
+			font-size: 15px
+			color: $color_black_main
+		strong
+			margin-left: 5px
+	&__select--week
+		display: none
+	&__select--month
+		display: none
+	&__input--ndays
+		display: none
+	&__input-field
+		width: 160px !important
+		height: 40px
+		padding-left: 10px !important
+
+	&__text
+		p
+			font-size: 13px
+			color: $color_grey
+			line-height: 25px
+			&:first-child
+				margin-top: 20px
+				@media all and (max-width: 1200px)
+					margin-top: 23px
+			&:not(:first-child)
+				margin-top: 9px
+
 .b-user-balance
 	&__money-content
 		display: none
@@ -666,71 +874,14 @@ a
 		font-weight: 400
 		font-size: 15px
 		margin-top: 5px
-
 		&.--color-grey
 			color: $color_inactive
-
-	&__status-switch 
-		position: relative
-		display: inline-block
-		width: 40px
-		height: 20px
+	&__status-switch
 		margin-top: 15px
-	
-	&__status-switch-input 
-		opacity: 0
-		width: 0
-		height: 0
-	
-	&__status-switch-slider 
-		position: absolute
-		cursor: pointer
-		top: 0
-		left: 0
-		right: 0
-		bottom: 0
-		background-color: #ccc
-		border-radius: 34px
-		-webkit-transition: .4s
-		transition: .4s
-
-	&__status-switch-slider:before 
-		position: absolute
-		content: ""
-		height: 12px
-		width: 12px
-		left: 4px
-		bottom: 4px
-		background-color: white
-		border-radius: 50%	
-		-webkit-transition: .4s
-		transition: .4s
-		
-	&__status-switch-input:checked + .b-user-balance__status-switch-slider 
-		background-color: #E03632
-								
-	&__status-switch-input:checked + .b-user-balance__status-switch-slider:before 
-		-webkit-transform: translateX(16px)
-		-ms-transform: translateX(16px)
-		transform: translateX(20px)
-	
-	&__status-switch-slider:after 
-		position: absolute
-		top: 0
-		left: 48px
-		height: 20px
-		width: 200px
-		color: $color_grey
-		font-size: 15px
-		font-weight: n
-		line-height: 20px
-		cursor: pointer
-
+	&__status-switch-slider:after
 		content: 'Автопродление выключено'
-
-	&__status-switch-input:checked + .b-user-balance__status-switch-slider:after 
+	.b-switch__input:checked + .b-user-balance__status-switch-slider:after 
 		content: 'Автопродление включено'
-	
 	&__status-btn
 		margin-top: 20px
 	&__money-topic
@@ -1014,6 +1165,10 @@ a
 				margin-left: 10px
 			&:nth-child(4)
 				margin-left: 2px
+// Фикс для скролла 
+.select2-container--default .select2-results > .select2-results__options
+	> li 
+		min-height: 31px
 .promo-ok
 	@extend .b-delete-account
 	&__topic
@@ -1343,8 +1498,9 @@ a
 			position: absolute
 			top: 40px
 			margin-top: 0px
-
-
+	&__btn-new
+		@media all and (max-width: 768px)
+			margin-top: 20px
 
 .b-projects-table
 	margin-top: 20px
@@ -1547,9 +1703,69 @@ a
 		color: $color_black_main
 		line-height: 27px
 		max-width: 155px
+
 .b-page-nav
 	display: none
-
+	&__container
+		display: flex 
+		justify-content: space-between
+		align-items: flex-start
+		&:before
+			content: ''
+			display: inline-block
+			width: 240px
+			height: 0
+			font-size: 0
+			line-height: 0	
+	&__amount 
+		display: flex 
+		align-items: center 
+		width: 240px
+		justify-content: flex-end		
+		&-title
+			color: #2F353B
+			font-size: 16px
+			margin-right: 6px	
+	&__list-wrapper
+		display: flex 	
+	&__prev, &__next 
+		width: 40px
+		height: 40px
+		display: inline-flex 
+		align-items: center 
+		justify-content: center 	
+		&:before 
+			display: inline-block
+			font-family: FontAwesome
+			font-size: 36px
+			color: #A7B2BB	
+	&__next:before 
+		content: ''	
+	&__prev:before 
+		content: ''
+	
+	@media all and (max-width: 1199px) 
+		&__amount
+			display: none	
+		&__container 
+			display: block			
+			&:before 
+				content: none	
+		&__list 
+			display: flex 
+			align-items: center 
+			max-width: calc(100% - 90px)
+			padding: 10px 0
+			overflow-x: auto
+			-webkit-overflow-scrolling: touch
+			&::-webkit-scrollbar-thumb
+				background: #A7B2BB
+			&::-webkit-scrollbar
+				height: 5px		
+			&-wrapper 
+				align-items: center 
+				justify-content: center
+				
 .b-audit
 
 	@media all and (max-width: 768px)
@@ -2549,80 +2765,48 @@ a
 	font-size: 18px !important
 
 .b-page-nav
-		+b-block
-		text-align: center
-		margin-top: 30px
-		.b-page-nav__list
+	+b-block
+	text-align: center
+	margin-top: 30px
+	&__list
+		margin: 0
+	&__amount
+		ul
 			margin: 0
-		.b-page-nav__amount
-			ul
-				margin: 0
-				padding: 0
-		li
-			display: inline-block
-			position: static
-			margin-bottom: 0
-			&:before
+			padding: 0
+	li
+		display: inline-block
+		position: static
+		margin-bottom: 0
+		&:before
+			display: none
+		&.active
+			a
+				background-color: $color_red
+				color: #fff
+		@media all and (max-width: 768px)
+			&:nth-child(3)
 				display: none
-			&.active
-				a
-					background-color: $color_red
-					color: #fff
-		a
-			font-size: 16px
-			text-decoration: none
-			outline: none
-			color: $color_black_main
-			+b-flex
-			+b-flex-align(center)
-			+b-justify-center
-			min-width: 40px
-			min-height: 40px
-			+b-rounded(50%)
+			&:nth-child(5)
+				display: none
+	a
+		font-size: 16px
+		text-decoration: none
+		outline: none
+		color: $color_black_main
+		+b-flex
+		+b-flex-align(center)
+		+b-justify-center
+		min-width: 40px
+		min-height: 40px
+		+b-rounded(50%)
 
-			&:not(.ellipsis):not(.b-page-nav__prev):not(.b-page-nav__next):hover
-				color: $color_black_main
-				background-color: $color_easygrey
+		&:not(.ellipsis):not(.b-page-nav__prev):not(.b-page-nav__next):hover
+			color: $color_black_main
+			background-color: $color_easygrey
 
 .b-projects
 	padding-bottom: 30px
-
-// #header.index-page
-// 	.sub-menu-link
-// 		line-height: 24px
-// 		font-size: 15px
-// 		letter-spacing: -0.1px
-// 		color: #FFFFFF
-// 		text-decoration: none
-// 	.header__menu-list li
-// 		padding: 6px 0 0
-// 		margin-bottom: 19px
-// 		a
-// 			padding: 0 20px
-// 			text-decoration: none
-// 			color: #fff
-// 			letter-spacing: 0.4px
-// 		ul li
-// 			border: none
-// 			float: none
-// 			margin-bottom: 8px
-
-// 	.sub-menu-link__icon
-// 		display: inline-block
-// 		height: 20px
-// 		width: 20px
-// 		background-repeat: no-repeat
-// 		background-position: 0 50%
-// 		position: relative
-// 		top: 5px
-// 	.sub-menu-title
-// 		line-height: 25px
-// 		font-size: 18px
-// 		letter-spacing: -0.5px
-// 		color: #FFFFFF
-// 		opacity: .6
-// 		padding: 0 20px
-// 		margin-bottom: 9px
 
 #header.front-page.index-page
 	padding-top: 0px
@@ -2807,103 +2991,6 @@ a
 
 
 
-			// .hamburger
-			// 	z-index: 20
-			// 	position: relative
-			// 	padding: 20px
-			// 	display: inline-flex
-			// 	align-items: center
-			// 	justify-content: center
-			// 	cursor: pointer
-			// 	transition: opacity, filter, -webkit-filter 1s linear
-			// 	font: inherit
-			// 	color: inherit
-			// 	text-transform: none
-			// 	background-color: transparent
-			// 	border: 0
-			// 	margin: 0
-			// 	margin-right: 10px
-			// 	overflow: visible
-			// 	height: 60px
-			// 	width: 60px
-			// 	text-align: center
-			// 	border-right: 1px solid #f39f9c
-			// 	float: left
-			// 	opacity: 0.7
-			// 	.hamburger-box
-			// 		width: 100%
-			// 		height: 100%
-			// 		display: inline-block
-			// 		position: relative
-			// 		margin: 0
-			// 		padding: 0
-			// 		.hamburger-inner,
-			// 		.hamburger-inner::after,
-			// 		.hamburger-inner::before
-			// 			display: block
-			// 			position: absolute
-			// 			width: 20px
-			// 			height: 2px
-			// 			background-color: #fff
-			// 			position: absolute
-			// 			transition-property: transform
-			// 			transition-property: transform
-			// 			transition-duration: .15s
-			// 			transition-timing-function: ease
-			// 		.hamburger-inner
-			// 			position: absolute
-			// 			top: 3px
-			// 			margin-top: 0px
-			// 			&:before
-			// 				content: ""
-			// 				display: block
-			// 				top: 6px
-			// 			&:after
-			// 				top: 12px
-			// 				content: ""
-			// 				display: block
-			// 	&.is-active
-			// 		background-color: #C51311
-			// 		.hamburger-inner
-			// 			transform: translate3d(0, 6px, 0) rotate(45deg)
-			// 			&::after
-			// 				transform: translate3d(0, -12px, 0) rotate(-90deg)
-			// 			&::before
-			// 				transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0)
-			// 				opacity: 0
-			// .logo
-			// 	display: flex
-			// 	flex-direction: column
-			// 	align-items: flex-start
-			// 	justify-content: center
-			// 	height: 60px
-			// 	width: 169px
-			// 	position: relative
-			// 	z-index: 16
-			// 	padding-left: 36px
-			// 	padding-top: 3px
-			// 	background-image: url(../../images/saitreport-logo.svg)
-			// 	background-repeat: no-repeat
-			// 	background-size: 32px
-			// 	background-position: 0px 15px
-			// 	text-align: left
-			// 	line-height: 15px
-			// 	letter-spacing: 0px
-			// 	text-decoration: none
-			// 	span
-			// 		display: inline-block
-			// 		font-family: 'Susan'
-			// 		color: #ffffff
-			// 		&:first-child
-			// 			font-size: 20px
-			// 		&:last-child
-			// 			font-size: 12px
-						
-			// 	.logo__company-name
-			// 		display: block
-			// 		line-height: 25px
-			// 		font-size: 24px
-			// 		color: #FFFFFF
 			.btn.btn-input
 				width: 34px
 				height: 34px
@@ -2928,54 +3015,7 @@ a
 					background-repeat: no-repeat
 				&:hover:before
 					background-image: url('../../images/icon/lock-hover.svg')
-
-			// #navigation
-			// 	display: none
-			// 	position: absolute
-			// 	top: 61px
-			// 	left: 0
-			// 	width: 100%
-			// 	z-index: 15
-			// 	height: 100vh
-			// 	background-color: #C51311
-			// 	-webkit-box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
-			// 	box-shadow: -10px 5px 10px rgba(162, 174, 183, 0.29546)
-			// 	padding: 17px 0 20px
-			// 	.header__menu-list
-			// 		li
-			// 			.sub-menu-title
-			// 				padding-left: 20px
-			// 				margin-bottom: 10px
-			// 				font-size: 18px
-			// 				line-height: 25px
-			// 				color: #ffffff
-			// 				opacity: 0.6
-			// 			.sub-menu
-			// 				list-style: none
-			// 				li
-			// 					list-style-type: none
-			// 					margin: 0px
-			// 					padding: 0px
-			// 					a
-			// 						padding: 7px 15px 10px 22px
-			// 						&.active
-			// 							background: rgba(255, 255, 255, 0.2)
-			// 							position: relative
-			// 							&:before
-			// 								content: ''
-			// 								background-color: #fff
-			// 								height: 100%
-			// 								width: 4px
-			// 								top: 0
-			// 								left: 0
-			// 								position: absolute
-			// 						&:not(.active):hover
-			// 							background: rgba(255, 255, 255, 0.2)
-
-
-
-
-
+		
 #header.front-page.b-profile-page.regular-page
 	.sub-menu-link
 		line-height: 25px
@@ -3021,7 +3061,6 @@ a
 		background-repeat: no-repeat
 		background-size: 300px !important
 		background-position: 51px 0
-
 
 #header.front-page.b-profile-page.is-auth
 	background-color: $color_red
@@ -3142,7 +3181,6 @@ a
 						&:hover
 							background: rgba(198, 48, 44, 0.6)
 
-
 #header .hamburger--slider.is-active .hamburger-inner::after
 	-webkit-transform: translate3d(0, -12px, 0) rotate(-90deg)
 	transform: translate3d(0, -12px, 0) rotate(-90deg)
@@ -3190,19 +3228,6 @@ a
 				height: auto
 		.owl-dots
 			margin-top: -50px
-
-body
-	&.is-hidden
-		height: 100%
-		overflow: hidden
-
-@media all and (max-width: 768px)
-	body
-		&.menu-open  
-			position: fixed
-			width: 100%
-			overflow-y: hidden
-//Класс для ограничения скролла страницы при попапах
 			
 .sub-menu
 	padding: 0
@@ -3229,6 +3254,7 @@ body
 	right: 20px
 
 .b-user__helper-wrapper
+	z-index: 4
 	margin-top: 43px
 	ul
 		margin: 0
@@ -5900,34 +5926,6 @@ body
 		min-width: 500px
 		max-width: 500px
 
-a.overflowed
-	position: relative
-	&:after
-		content: '...'
-		position: absolute
-		bottom: 0px
-		right: 0
-		height: calc(50% + 1px)
-		width: 13px
-		text-align: right
-		display: inline-block
-		background-color: #fff
-	&:hover
-		position: absolute
-		z-index: 2
-		left: 20px
-		top: 0
-		max-height: unset !important
-		overflow: visible !important
-		padding: 5.5px 10px
-		background-color: #fff
-		box-shadow: 0 0 20px 0 rgba(162, 174, 183, 0.3)
-		tr:last-child &
-			top: unset
-			bottom: 0
-		&:after
-			display: none
-
 .clone-head-table-wrap
 	&:not(.clone-column-head-table-wrap)
 		box-shadow: 5px 0 4px 1px rgba(0,0,0,0.2)
@@ -7146,7 +7144,6 @@ a.overflowed
 		padding: 40px 0px 0px
 		.footer__menu
 			padding-bottom: 20px
-
 
 .site-analysis
 	&:before

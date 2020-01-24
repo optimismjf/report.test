@@ -1,9 +1,5 @@
-@import "bourbon/_bourbon.scss"
 @import "_fonts.sass"
-@import "_base.sass"
-
-
-
+@import "_var.sass"
 
 @media all and (min-width: 1200px)
 	.global
@@ -20,6 +16,7 @@
 		padding-left: 0px
 		&__text
 			display: block
+			width: 100%
 			max-width: 1200px
 			padding-left: 20px
 			padding-right: 20px
@@ -34,8 +31,6 @@
 		&.b-btn-flex .b-page-topic__btn
 		&.b-page-topic--checking
 			padding-right: 0px
-
-
 
 .mfp-content form button
 	@media all and (min-width: 1200px)
@@ -79,28 +74,183 @@
 			margin-top: 0px
 		&__data
 			margin-top: 0px
-@media all and (min-width: 1200px)
-	.b-user-settings__container
-		width: 100%
-		max-width: 1160px
-		margin-left: auto
-		margin-right: auto
+
+.b-user-settings
+	@media all and (min-width: 1200px)
+		padding-top: 34px
+		padding-right: 0
+		padding-bottom: 80px
+		padding-left: 0
+		background-color: #f6f8fa
+		&__topic
+			margin-top: 0px
+		&__container-outer
+			display: flex
+			width: 1160px
+			margin: 0 auto
+		&__wrapper
+			width: 900px
+		&__wrapper-buttons
+			display: block
+			width: 260px
+			vertical-align: top
+		&__button-container
+			display: block
+			position: relative
+			z-index: 1
+			width: 260px
+			height: 70px
+			font-size: 18px
+			text-align: left
+			padding-left: 20px
+			background: #F1F1F1
+			border-radius: 5px 0px 0px 5px
+			box-shadow: -10px 0px 10px -8px rgba(162, 174, 183, 0.2)
+			&.activate
+				background: white
+				pointer-events: none
+				z-index: 3
+		&__container
+			width: 900px
+			padding: 44px 60px 65px 40px
+			margin-left: auto
+			margin-right: auto
+			background-color: #fff
+		&__container-settings
+			display: none
+			position: relative
+			z-index: 2
+			padding-bottom: 40px
+			margin-bottom: 10px
+			border-radius: 0px 5px 0px 0px
+			box-shadow: 0px 0px 10px rgba(162, 174, 183, 0.2)
+			&.active
+				display: block
+		&__container-autostart
+			display: block
+			padding-top: 42px
+			padding-bottom: 33px
+			margin-bottom: 10px
+			border-radius: 0px 5px 0px 0px
+			box-shadow: 0px 0px 10px rgba(162, 174, 183, 0.2)
+			&.active
+				display: block
+		&__container-start
+			padding-top: 42px
+			padding-bottom: 40px
+			border-radius: 0px 0px 5px 5px
+			box-shadow: 0px 0px 10px rgba(162, 174, 183, 0.2)
+
+		&__line
+			+b-flex
+			&_autostart
+				border-top: 1px solid #E1E4E6
+				margin-top: 35px 
+				padding-top: 32px
+			&:not(:first-child)
+				margin-top: 47px
+		&__line-topic
+			margin-top: 0
+		&__line-topic-sources
+			padding-top: 0
+		&__line-topic-instructions
+			padding-top: 0
+		&__line-topic-reports
+			padding-top: 0
+		&__line-item
+			&:first-child
+				min-width: 260px
+		&__line-item-instructions
+			width: 366px
+		&__line-item-robotx
+			width: 794px
+		&__line-item-robot-name
+			padding-top: 18px
+			padding-left: 34px		
+		&__line-load 
+    		margin-top: 41px !important
+		&__line_start
+			padding-top: 0
+			margin-top: 0
+			border: none
+			.b-user-settings__line-item
+				&:last-child
+					max-width: 360px
+				&:first-child
+					width: auto
+		&__line_autostart
+			padding: 0
+			margin: 0
+			border: 0
+		&__stuff
+			margin-left: 260px
+		&__limit-md
+			margin-top: 24px
+		&__counts-top-line
+			margin-top: 0
+.b-settings-autostart
+	@media all and (min-width: 1200px)
+		padding-top: 29px
+		&__period
+			margin-top: 31px
+		&__input-field
+			width: 158px !important
+			height: 42px
+.b-user-robotx
+	@media all and (min-width: 1200px)
+		&__checkbox
+			margin-top: 16px
+			&:nth-child(1)
+				margin-top: 21px
+		&__textarea textarea
+			// width: 794px
+			
+		&__radio
+			margin-top: 15px
+			&:nth-child(1)
+				margin-top: 7px
+
+			
 .b-user-reports
 	@media all and (min-width: 1200px)
+		&__container
+			display: flex
+			margin-top: 21px
 		&__item:first-child
-			margin-right: 73px
+			margin-right: 40px
+		&__checkbox
+			margin-top: 11px
+			&:first-child
+				margin-top: 0
+		&__notify
+			margin-top: 13px
+		
+			
 .b-site-load
 	@media all and (min-width: 1200px)
 		&__inputs
 			min-width: 590px
+			padding-top: 12px
+			margin: 0
 		&__input
 			input
 				padding-right: 10px
+		&__notify
+			margin-top: 20px
+		&__checkbox
+			margin-top: 14px
+
 .b-user-counts
 	@media all and (min-width: 1200px)
+		width: 359px
+		padding-top: 43
+		padding-left: 0
+		margin-top: 0
 		&__btn-start, &__btn-save
 			a
 				padding: 15px 30px
+		&__btn-save
+			margin-right: 22px
 .b-user-rate
 	@media all and (min-width: 1200px)
 		&__container
@@ -275,6 +425,9 @@
 		margin-left: 140px
 		margin-right: 140px
 		max-width: 1160px
+		&.--position-in-b-projects
+			margin-left: auto
+			margin-right: auto
 .b-audit
 
 	@media all and (min-width: 1200px)

@@ -503,7 +503,7 @@ $(function() {
     });
   });
 
-  // simle toggle script
+  // simple toggle script
   $(document).on('click', '.js-slide-toggle', function (e) {
     e.preventDefault();
 

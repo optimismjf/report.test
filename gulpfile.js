@@ -1,9 +1,9 @@
 var gulp 		 = require('gulp'), // Подключаем Gulp
-    { src, dest, watch, series, parallel } = require('gulp'), // Подключаем команды Gulp
+  { src, dest, watch, series, parallel } = require('gulp'), // Подключаем команды Gulp
 	sass         = require('gulp-sass'), // Подключаем Sass пакет
-    svgSprite = require('gulp-svg-sprite'), // Подключаем сборщик спрайтов
-    webp         = require('gulp-webp'), // Подключаем компилятор Webp
-    browserSync  = require('browser-sync'), // Подключаем Browser Sync
+  svgSprite = require('gulp-svg-sprite'), // Подключаем сборщик спрайтов
+  webp         = require('gulp-webp'), // Подключаем компилятор Webp
+  browserSync  = require('browser-sync'), // Подключаем Browser Sync
 	concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
 	rename       = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
 	nib 		 = require('nib'),
@@ -19,7 +19,8 @@ var gulp 		 = require('gulp'), // Подключаем Gulp
 
 
 gulp.task('sass', function(){ // Создаем таск Sass
-	return src('marmelad/styles/*.sass') // Берем источник
+  return src('marmelad/styles/*.sass') // Берем источник
+
     .pipe(sourcemaps.init())
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
 /*		.pipe(autoprefixer({
@@ -69,11 +70,12 @@ gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: "./static",
-            index: "prices.html"
+            index: "projects_test.html"
         }
     });
 
     watch('marmelad/styles/*.sass', parallel('sass'));
+    watch('marmelad/styles/ui-kits/*.sass', parallel('sass'));
     watch('marmelad/styles/*.scss', parallel('sass'));
     watch('static/images/icon/svg-sprite/*.svg', parallel('sprite'));
     watch('marmelad/**/*.styl', parallel('stylus'));
@@ -82,7 +84,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('stylus', function() {
-  return src('marmelad/styles/style.styl')
+  return src('marmelad/styles/_import-legacy.styl')
     .pipe(sourcemaps.init())
     .pipe(plumber({
       errorHandler: notify.onError()

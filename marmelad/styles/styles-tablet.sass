@@ -1,26 +1,406 @@
-@import "bourbon/_bourbon.scss"
 @import "_fonts.sass"
-@import "_base.sass"
+@import "_var.sass"
+
+	
+/// Сборка из других файлов; разнести по классам, при возможности //
+@media all and (min-width: 1025px) and (max-width: 1399px)
+    .container 
+        max-width: 1000px
+        padding: 0 15px
+@media all and (max-width: 1199px) 
+    
+    .blocks__article-item .image,
+    .blocks__article-item:nth-child(2n+1) .image 
+        float: left
+        padding-right: 24px
+        padding-left: 0
+    
+    .blocks__article-item .intro,
+    .blocks__article-item:nth-child(2n+1) .intro 
+        padding: 0
+    
+    .blocks__article-item .intro hr,
+    .blocks__article-item .intro p,
+    .blocks__article-item:nth-child(2n+1) .intro hr,
+    .blocks__article-item:nth-child(2n+1) .intro p 
+        display: none
+    
+    .blocks__article-item .intro h3,
+    .blocks__article-item:nth-child(2n+1) .intro h3 
+        position: absolute
+        left: 0
+        width: 100%
+        text-align: center
+        top: 50px
+        margin: 0
+    
+    .blocks__article-item 
+        background: #f6f8fa
+        padding-top: 147px
+    
 
 
+    #slider-article .owl-dots 
+        margin-top: -50px
+    
 
 
+    .visible-mobile 
+        display: block
+    
+    .visible-desktop 
+        display: none
+    
 
-// @media all and (min-width: 768px)
-// @media all and (min-width: 768px)
 
-section
-	ul
-		@media only screen and (min-width: 768px)
-			padding-left: 0px
-
+    .external 
+        color: #a2aeb7
+        font-size: 15px
+@media all and (min-width: 768px) and (max-width: 1199px) 
+    .container 
+        max-width: 100%
+        padding: 0 15px
+    
+    #header.front-page 
+        background-position: 20% 50%
+        min-height: 573px
+    
+    .header_content h1 
+        font-size: 45px
+        line-height: 54px
+    
+    .header_content p 
+        font-size: 25px
+        line-height: 35px
+    
+    .header__menu 
+        display: none
+    
+    .title 
+        margin: 0 0 40px
+        font-size: 30px
+        line-height: 36px
+    
+    .social 
+        padding: 0 0 40px
+        margin: 0 0 48px
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        width: 100%
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+        -webkit-box-pack: center
+        -ms-flex-pack: center
+        justify-content: center
+        border-bottom: 1px solid #44494e
+    
+    .footer__menu 
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        width: 100%
+        -ms-flex-pack: distribute
+        justify-content: space-around
+    
+    .footer__menu>li 
+        padding-right: 15px
+    
+    .list-check li 
+        width: 100%
+    
+    .site-analysis:before 
+        top: -87px
+        left: -44px
+        -webkit-transform: rotate(35deg)
+        transform: rotate(35deg)
+    
+    #reviews .item 
+        padding-left: 0
+        text-align: center
+    
+    #reviews .item .review__image 
+        position: static
+        padding: 0
+        margin: 0 auto 20px
+        width: 110px
+        height: 110px
+    
+    #reviews .item .review__image img 
+        height: 110px
+    
+    #reviews .item .review__post 
+        float: none
+    
+    #reviews .item .review__author 
+        width: 100%
+        text-align: center
+        display: block
+    
+    .owl-dots 
+        margin-top: 40px
+    
+    .btn.btn-input 
+        margin-top: 0
+    
+    .logo img 
+        padding-top: 0
+    
+    #header 
+        padding-top: 18px
+    
+    .btn.btn-input 
+        margin-top: 0
+    
+    .logo img 
+        padding-top: 0
+    
+    #header 
+        padding-top: 18px
+    
+    .container 
+        max-width: 100%
+        padding: 0 15px
+    
+    .btn.btn-input 
+        text-indent: 100%
+        white-space: nowrap
+        overflow: hidden
+        padding: 11px
+        width: 33px
+        margin-top: 0
+        position: relative
+        z-index: 17
+        font-size: 0
+        height: 33px
+        margin-right: 12px
+        margin-top: 4px
+    
+    .btn.btn-input:before 
+        left: -1px
+        top: 7px
+        font-size: 20px
+    
+    .hamburger 
+        padding: 9px 15px
+        margin: 0
+    
+    #navigation 
+        max-width: none
+    
+    #navigation .header__menu-list>li 
+        width: 100%
+        margin-right: 0
+    
+    .user-information 
+        width: 100%
+        width: calc(100% + 40px)
+        margin: -20px 0 0 -20px
+        padding: 20px 20px
+    
+    #header.front-page 
+        background-position: 30% 50%
+        min-height: 600px
+        padding-top: 10px
+        #navigation
+            background-image: none
+        
+    
+    .header_content h1 
+        font-size: 35px
+        line-height: 41px
+    
+    .header_content p 
+        display: none
+    
+    .site-analysis 
+        width: 100%
+        max-width: 100%
+    
+    .site-analysis .input__url 
+        width: 100%
+        padding: 0 20px
+    
+    .site-analysis .input__send 
+        position: static
+        margin-top: 20px
+        width: 100%
+        height: 55px
+    
+    .header__menu 
+        display: none
+    
+    .title 
+        margin: 0 0 40px
+        font-size: 30px
+        line-height: 36px
+    
+    .blocks__list 
+        margin: 0
+    
+    .blocks__list-item 
+        width: 100%
+        margin: 0
+        -webkit-box-shadow: none
+        box-shadow: none
+        padding: 10px 10px 40px
+    
+    .blocks__list .owl-dots 
+        margin-top: -15px
+    
+    .blocks__list .icon 
+        margin-bottom: 20px
+    
+    .blocks__article-item 
+        padding-top: 80px
+        padding-bottom: 80px
+    
+    .blocks__article-item .image,
+    .blocks__article-item .intro,
+    .blocks__article-item:nth-child(2n+1) .image,
+    .blocks__article-item:nth-child(2n+1) .intro 
+        float: left
+        width: 100%
+        clear: both
+        padding: 0
+    
+    .blocks__article-item .intro,
+    .blocks__article-item:nth-child(2n+1) .intro 
+        margin-top: 20px
+    
+    .blocks__article-item .intro h3,
+    .blocks__article-item:nth-child(2n+1) .intro h3 
+        color: #2f353b
+        font-size: 18px
+        line-height: 21px
+        top: 40px
+    
+    .list-check li 
+        width: 100%
+    
+    .social 
+        padding: 0 0 40px
+        margin: 0
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        width: 100%
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+        -webkit-box-pack: center
+        -ms-flex-pack: center
+        justify-content: center
+        border-bottom: 1px solid #44494e
+    
+    .footer__menu 
+        display: none
+    
+    .mobile__menu-btn 
+        display: block
+        width: 100%
+        position: relative
+        color: #a2aeb7
+        font-size: 15px
+        line-height: 60px
+        clear: both
+        text-decoration: none
+    
+    .mobile__menu-btn:after 
+        content: "\f0d7"
+        display: inline-block
+        font: normal normal normal 14px/1 FontAwesome
+        font-size: inherit
+        text-rendering: auto
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        float: right
+        line-height: 60px
+    
+    .mobile__menu-btn:hover 
+        text-decoration: none
+    
+    .footer__menu>li 
+        padding-right: 0
+        width: 100%
+    
+    .footer__menu>li ul 
+        margin: 5px 0 5px 20px
+        padding: 0
+    
+    #footer .row__copyright .container 
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: vertical
+        -webkit-box-direction: normal
+        -ms-flex-direction: column
+        flex-direction: column
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+    
+    #footer .row__copyright .container .left 
+        margin: 0 0 15px
+        text-align: center
+    
+    #registration,
+    #restore-password,
+    #sign-in,
+    #password-sent 
+        width: 100%
+        margin: 0
+    
+    .advantages 
+        margin-top: 0
+    
+    .advantages .title 
+        margin: 0 0 10px
+    
+    .block-analysis 
+        padding: 70px 0 70px
+    
+    .block-analysis .title 
+        margin-bottom: 20px
+    
+    #footer .row__copyright .right 
+        text-align: center
+    
+    .created-by span 
+        display: block
+        padding-left: 0
+    
+    #reviews .item 
+        padding-left: 0
+        text-align: center
+    
+    #reviews .item .review__image 
+        position: static
+        padding: 0
+        margin: 0 auto 20px
+        width: 110px
+        height: 110px
+    
+    #reviews .item .review__image img 
+        height: 110px
+    
+    #reviews .item .review__post 
+        float: none
+    
+    #reviews .item .review__author 
+        width: 100%
+        text-align: center
+        display: block
+    
+    .owl-dots 
+        margin-top: 40px
 @media screen and (min-width: 1025px)
 	.b-projects
 		.b-main-button a
 			padding: 11px 22px
 	.b-main-input input
 		padding: 10px 0px
-
 	.b-main-button button,
 	.b-main-button a
 		padding-top: 12px !important
@@ -73,8 +453,6 @@ section
 		&__item
 			+b-flex
 
-
-
 .b-page-topic
 	@media all and (min-width: 768px)
 		clear: both
@@ -85,6 +463,7 @@ section
 			text-align: left
 			max-width: none
 			margin: 0
+
 		&_projects
 			border-bottom: 1px solid #E1E4E6
 	@media all and (min-width: 1200px)
@@ -258,8 +637,6 @@ section
 				top: 6px
 			&:after
 				top: 12px
-
-
 	.logo
 		display: inline-flex
 		justify-content: center
@@ -276,7 +653,6 @@ section
 			line-height: 25px
 			font-size: 24px
 			color: #FFFFFF
-
 	@media all and (max-width: 1025px) and (min-width: 768px)
 		.btn.btn-input
 			margin-top: 3px
@@ -284,7 +660,6 @@ section
 			padding-top: 9px
 			margin-right: 11px
 			padding-left: 37px
-
 	@media all and (min-width: 1200px)
 		.logo
 			.logo__company-name
@@ -395,7 +770,6 @@ section
 		font-size: 15px
 		line-height: 21px
 		color: #fff
-/*------------------settings2------------------*/
 .b-user-robotx
 	@media all and (min-width: 768px)
 		&__container
@@ -410,6 +784,8 @@ section
 				margin-right: 131px
 		&__topic
 			margin-top: 11px
+		&__checkbox-text-break
+			display: none
 		&__notify
 			margin-top: 3px
 			max-width: 165px
@@ -424,27 +800,43 @@ section
 	@media all and (min-width: 768px)
 		padding-left: 34px
 		padding-right: 34px
-		// input
-		//  padding: 10px 0px
-		//  padding-left: 10px
+		padding-bottom: 39px
+		&__container-settings
+			margin-bottom: -57px
+		&__container-autostart
+			margin-bottom: -147px
+		&__container-start
+			width: 700px
 		&__line
-			&_autostart
-				border-top: 1px solid #E1E4E6
-				margin-top: 35px !important
-				padding-top: 32px
+			display: flex
 			&_date
 				margin-top: 17px !important
-		// &__line-topic_start
 		&__line_start
-			border-top: 1px solid #E1E4E6
-			margin-top: 30px
-			padding-top: 20px
 			+b-flex
 			.b-user-settings__line-item
 				&:last-child
 					width: 65%
 				&:first-child
 					width: 35%
+		&__line-topic-settings
+			padding-left: 34px
+		&__line-topic-sources 
+    		padding-top: 36px
+		&__line-topic-reports
+			padding-top: 20px
+		&__line-item-instructions
+			display: inline-block
+			width: 366px
+		&__line-topic-instructions
+			padding-top: 20px
+		&__line-item-robotx
+			width: 100%
+		&__line-item-robot-name
+			display: inline-block
+			padding-top: 21px
+			padding-left: 34px
+		&__line-load
+			margin-top: 33px !important
 		&__index-md
 			+b-block
 			font-weight: 500
@@ -454,43 +846,27 @@ section
 			margin-bottom: 10px
 		&__index-xs
 			display: none
-		&__limit-md
-			margin-top: 40px
-	@media all and (min-width: 1200px)
-		background-color: #f6f8fa
-		padding-top: 32px
-		padding-left: 50px
-		padding-right: 50px
-		&__container
-			background-color: #fff
-			padding: 45px 60px 65px 40px
-			max-width: 1160px
-		&__topic
-			margin-top: 0px
-		&__line
-			+b-flex
-			&:first-child
-				margin-top: 35px
-			&:not(:first-child)
-				margin-top: 38px
-			&_start
-				margin-top: 48px !important
-		&__line-item
-			&:first-child
-				min-width: 260px
-		&__line_start
-			.b-user-settings__line-item
-				&:last-child
-					max-width: 360px
-				&:first-child
-					width: auto
-		&__stuff
-			margin-left: 260px
+		&__counts-date
+			display: flex
+			text-align: right
+			margin-top: 12px !important
+			margin-right: 2px
+		&__counts-date-text
+			margin-left: auto
+		&__counts-date-numbers
+			padding-top: 0 !important
+		&__counts-btn-start
+			margin-left: auto
+		&__counts-btn-link
+			padding: 12px 30px !important
+
 .b-user-counts
 	@media all and (min-width: 768px)
-		margin-top: 60px
+		width: 375px
+		padding-top: 43px
+		padding-left: 15px
 		&__top-line_yandex
-			margin-top: 35px
+			margin-top: 36px
 		&__total-container
 			margin-top: 30px
 			padding-top: 22px
@@ -503,8 +879,8 @@ section
 		&__btns
 			+b-flex
 			margin-top: 28px
-		&__btn-start
-			margin-left: 10px
+		&__btn-save
+			margin-left: 8px
 		&__btn-start, &__btn-save
 			margin-top: 0px
 			a
@@ -513,25 +889,25 @@ section
 	@media all and (min-width: 768px)
 		&__inputs
 			+b-flex
-			max-width: 590px
-			+b-justify
-			margin-top: 3px
+			margin-top: 14px			
 		&__input-wrapper
+			&:nth-child(2)
+				padding-left: 26px
+			&:nth-child(3)
+				padding-left: 31px
 			input
 				max-width: 117px
-				text-align: right
 				padding-right: 10px
 		&__notify
-			margin-top: 19px
+			margin-top: 21px
 		&__checkbox
-			margin-top: 19px
+			margin-top: 15px
 		&__input-topic
 			margin-top: 9px
 
 .b-user-reports
 	@media all and (min-width: 768px)
 		&__container
-			+b-flex
 			margin-top: 9px
 		&__item
 			&:first-child
@@ -542,28 +918,24 @@ section
 			margin-bottom: 11px
 		&__textarea
 			margin-top: 0px
-	@media all and (min-width: 1200px)
-		&__container
-			margin-top: 5px
-		&__btn
-			margin-top: 40px
-
 .b-settings-autostart
 	@media all and (min-width: 768px)
 		&__selects
 			+b-flex
+			align-items: baseline
+			padding-top: 8px
 		&__select
 			min-width: 160px
 			margin-top: 10px
-			margin-right: 41px
+			margin-right: 40px
 		&__period
-			margin-top: 30px
+			margin-top: 33px
 		&__text
 			p
 				&:first-child
-					margin-top: 18px
-				&:not(:first-child)
 					margin-top: 13px
+				&:not(:first-child)
+					margin-top: 10px
 	@media all and (min-width: 1200px)
 		&__select, &__input
 			margin-top: 0px
@@ -1168,6 +1540,8 @@ section
 			.b-page-topic__btn
 				margin-top: 2.5px
 				margin-left: 0px
+				&.--position-if-b-audit
+					display: block
 .b-audit-form
 	@media all and (min-width: 768px)
 		padding-left: 34px
@@ -1742,10 +2116,6 @@ section
 		height: 50%
 		margin-right: 0
 
-
-
-
-
 @media all and (min-width: 768px)
 	body
 		&.menu-open  
@@ -1821,7 +2191,6 @@ section
 	&.reports-header
 		height: 120px
 		max-height: 120px
-
 
 .b-inreports
 	.aside-toggle &

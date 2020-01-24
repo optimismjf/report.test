@@ -1613,30 +1613,45 @@ $(function () {
     }, 350, false, function () {
       $target.toggleClass('active'); // $target.toggle(!isActive)
     });
-  }); // simle toggle script
+  }); // simple toggle script
 
+
+/////////////////////////////////////////
+// Start of .js-slide-toggle function //
+
+  /// Variable declaration
   $(document).on('click', '.js-slide-toggle', function (e) {
     e.preventDefault();
     var $this = $(this);
     var trigger = $this.data('slidetrigger');
     var selector = $this.data('slidetoggle') || '.js-slide-toggle-content';
+    var selectorsharedclass = $this.data('selectorsharedclass');
     var context = $this.data('slidecontext');
     var mode = $this.data('slidemode');
     var thisonetoggle = $this.data('thisclass');
-    var toggleclass = $this.data('slideclasstoggle');
     var effect = $this.data('slideeffect');
     var bodycover = $this.data('bodycover');
     var bodyfix = $this.data('bodyfix');
-    var $target = selector ? context ? $(selector, $this.closest(context)) : $(selector) : $this.closest(context);
+    var $target = selector ? context ? $(selector, $this.closest(context))
+     : $(selector) : $this.closest(context);
 
     if (mode) {
       if (mode === 'desktop' && global.mobile || mode === 'mobile' && !global.mobile) {
         return;
       }
     }
-
-    if (thisonetoggle) {
-      $(this).toggleClass('activate');
+    
+    /// Change button color
+    if (thisonetoggle === ".b-user-settings__line-topic-settings" || thisonetoggle === ".b-user-settings__line-topic-autostart"  ) {
+      $('.activate2').not($this).removeClass('activate2');
+      $(`.activate`).not($(`[data-slidetoggle='${selector}']`)).removeClass('activate');
+      $this.toggleClass('activate2');
+      $(`[data-slidetoggle='${selector}']`).not($this).toggleClass('activate');
+     } else if (thisonetoggle) {
+      $('.activate').not($this).removeClass('activate');
+      $(`.activate2`).not($(`[data-slidetoggle='${selector}']`)).removeClass('activate2');
+      $this.toggleClass('activate');
+      $(`[data-slidetoggle='${selector}']`).not($this).toggleClass('activate2');
     }
 
     if (trigger) {
@@ -1644,19 +1659,87 @@ $(function () {
       return;
     }
 
+ ////////// Animation logic
     if (effect === 'fade') {
       $target.each(function () {
+        
+        if ( $(selector).not($this).is(':visible') || $(selectorsharedclass).not($this).is(':visible') ) {
+          $(selector).not($this).fadeOut(400);
+          $(selectorsharedclass).not($this).fadeOut(400);
+        };
+
+        if ($(selector).not($this).is(':visible')) {
+          $(selector).not($this).fadeOut(400);
+        };
+
         if ($(this).is(':visible')) {
-          $(this).fadeOut(250);
+          $(this).fadeOut(400);
         } else {
           $(this).addClass('animate');
-          $(this).fadeIn(250, function () {
+          $(this).fadeIn(400, function () {
             $target.removeClass('animate');
             $(window).trigger('scroll');
             $(window).trigger('resize');
           });
         }
-      });
+      });     
+    } else if (effect === 'show') {
+      $target.each(function () {
+        
+        if ( $(selector).not($this).is(':visible') || $(selectorsharedclass).not($this).is(':visible') ) {
+          $(selector).not($this).fadeOut(2);
+          $(selectorsharedclass).not($this).fadeOut(2);
+
+          $(selector).not($this).slideUp(50);
+          $(selectorsharedclass).not($this).slideUp(50);
+
+        };
+
+        if ($(this).is(':visible')) {
+          $(this).fadeOut(2);
+        } else {
+          $(this).addClass('animate');
+          $(this).fadeIn( 2, function () {
+            $target.removeClass('animate');
+            $(window).trigger('scroll');
+            $(window).trigger('resize');
+          });
+        }
+      }); 
+          
+    } else if (effect === 'scrolldown') {
+     
+      $target.each(function () {
+        
+        if ( $(selector).not($this).is(':visible') || $(selectorsharedclass).not($this).is(':visible') ) {
+          $(selector).not($this).slideUp(100);
+          $(selectorsharedclass).not($this).slideUp(100);
+
+          $(selector).not($this).fadeOut(2);
+          $(selectorsharedclass).not($this).fadeOut(2);
+        };
+
+        if ($(this).is(':visible')) {
+          $(this).slideUp(100);
+        } else {
+          $(this).addClass('animate');
+          $(this).slideDown(100, function () {
+            $target.removeClass('animate');
+            $(window).trigger('scroll');
+            $(window).trigger('resize');
+
+          }); 
+        }
+
+        if (selector === ".b-user-settings__container-autostart") {
+          $('html, body').scrollTop(0);
+        }      
+
+      }); 
+
+////////////////////////////////////////////////////
+
+
     } else if (effect === 'slideleft') {
       var isActive = $target.hasClass('active');
       var $parent = $target.parent();
@@ -1723,7 +1806,12 @@ $(function () {
     if ($this.data('slidehide')) {
       $this.toggle();
     }
+
   });
+
+// End of .js-slide-toggle function //
+/////////////////////////////////////
+
 
   function createCookie(name, value, days) {
     if (days) {
