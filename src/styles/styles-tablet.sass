@@ -1,0 +1,2315 @@
+@import "_fonts.sass"
+@import "_var.sass"
+
+	
+/// Сборка из других файлов; разнести по классам, при возможности //
+
+@media all and (min-width: 1025px) and (max-width: 1399px)
+   
+    .container 
+        max-width: 1000px
+        padding: 0 15px
+@media all and (max-width: 1199px) 
+    
+    .blocks__article-item .image,
+    .blocks__article-item:nth-child(2n+1) .image 
+        float: left
+        padding-right: 24px
+        padding-left: 0
+    
+    .blocks__article-item .intro,
+    .blocks__article-item:nth-child(2n+1) .intro 
+        padding: 0
+    
+    .blocks__article-item .intro hr,
+    .blocks__article-item .intro p,
+    .blocks__article-item:nth-child(2n+1) .intro hr,
+    .blocks__article-item:nth-child(2n+1) .intro p 
+        display: none
+    
+    .blocks__article-item .intro h3,
+    .blocks__article-item:nth-child(2n+1) .intro h3 
+        position: absolute
+        left: 0
+        width: 100%
+        text-align: center
+        top: 50px
+        margin: 0
+    
+    .blocks__article-item 
+        background: #f6f8fa
+        padding-top: 147px
+    
+
+
+    #slider-article .owl-dots 
+        margin-top: -50px
+    
+
+
+    .visible-mobile 
+        display: block
+    
+    .visible-desktop 
+        display: none
+    
+
+
+    .external 
+        color: #a2aeb7
+        font-size: 15px
+@media all and (max-width:1199px) and (min-width:768px)
+
+    
+	#header.front-page 
+		background-position: 20% 50%
+		min-height: 573px 
+	
+	.header_content p
+		font-size: 25px
+		line-height: 35px
+	
+	.header_content h1 
+		font-size: 45px
+		line-height: 54px
+    
+	.footer__menu > li
+		padding-right: 15px
+
+
+
+    
+    // .list-check li
+	// 	width: 100%
+    
+    .site-analysis:before 
+        top: -87px
+        left: -44px
+        -webkit-transform: rotate(35deg)
+        transform: rotate(35deg)
+    
+    #reviews .item 
+        padding-left: 0
+        text-align: center
+    
+    #reviews .item .review__image 
+        position: static
+        padding: 0
+        margin: 0 auto 20px
+        width: 110px
+        height: 110px
+    
+    #reviews .item .review__image img 
+        height: 110px
+    
+    #reviews .item .review__post 
+        float: none
+    
+    #reviews .item .review__author 
+        width: 100%
+        text-align: center
+        display: block
+    
+    .owl-dots 
+        margin-top: 40px
+    
+    .btn.btn-input 
+        margin-top: 0
+    
+    .logo img 
+        padding-top: 0
+    
+    #header 
+        padding-top: 18px
+    
+    .btn.btn-input 
+        margin-top: 0
+    
+    .logo img 
+        padding-top: 0
+    
+    #header 
+        padding-top: 18px
+    
+ 
+    
+    .btn.btn-input 
+        text-indent: 100%
+        white-space: nowrap
+        overflow: hidden
+        padding: 11px
+        width: 33px
+        margin-top: 0
+        position: relative
+        z-index: 17
+        font-size: 0
+        height: 33px
+        margin-right: 12px
+        margin-top: 4px
+    
+    .btn.btn-input:before 
+        left: -1px
+        top: 7px
+        font-size: 20px
+    
+    .hamburger 
+        padding: 9px 15px
+        margin: 0
+
+    #navigation 
+        max-width: none
+    
+    #navigation .header__menu-list>li 
+        width: 100%
+        margin-right: 0
+    
+    .user-information 
+        width: 100%
+        width: calc(100% + 40px)
+        margin: -20px 0 0 -20px
+        padding: 20px 20px
+    
+    #header.front-page 
+        background-position: 30% 50%
+        min-height: 600px
+        padding-top: 10px
+        #navigation
+            background-image: none
+        
+    
+    .header_content h1 
+        font-size: 35px
+        line-height: 41px
+    
+    .header_content p 
+        display: none
+    
+    .site-analysis 
+        width: 100%
+        max-width: 100%
+    
+    .site-analysis .input__url 
+        width: 100%
+        padding: 0 20px
+    
+    .site-analysis .input__send 
+        position: static
+        margin-top: 20px
+        width: 100%
+        height: 55px
+    
+    .header__menu 
+        display: none
+    
+    .title 
+        margin: 0 0 40px
+        font-size: 30px
+        line-height: 36px
+    
+    .blocks__list 
+        margin: 0
+    
+    .blocks__list-item 
+        width: 100%
+        margin: 0
+        -webkit-box-shadow: none
+        box-shadow: none
+        padding: 10px 10px 40px
+    
+    .blocks__list .owl-dots 
+        margin-top: -15px
+    
+    .blocks__list .icon 
+        margin-bottom: 20px
+    
+    .blocks__article-item 
+        padding-top: 80px
+        padding-bottom: 80px
+    
+    .blocks__article-item .image,
+    .blocks__article-item .intro,
+    .blocks__article-item:nth-child(2n+1) .image,
+    .blocks__article-item:nth-child(2n+1) .intro 
+        float: left
+        width: 100%
+        clear: both
+        padding: 0
+    
+    .blocks__article-item .intro,
+    .blocks__article-item:nth-child(2n+1) .intro 
+        margin-top: 20px
+    
+    .blocks__article-item .intro h3,
+    .blocks__article-item:nth-child(2n+1) .intro h3 
+        color: #2f353b
+        font-size: 18px
+        line-height: 21px
+        top: 40px
+    
+    .list-check li 
+        width: 100%
+   
+  
+
+
+    
+ 
+  
+
+    
+    .advantages 
+        margin-top: 0
+    
+    .advantages .title 
+        margin: 0 0 10px
+    
+    .block-analysis 
+        padding: 70px 0 70px
+    
+    .block-analysis .title 
+        margin-bottom: 20px
+ 
+    
+    .created-by span 
+        display: block
+        padding-left: 0
+    
+    #reviews .item 
+        padding-left: 0
+        text-align: center
+    
+    #reviews .item .review__image 
+        position: static
+        padding: 0
+        margin: 0 auto 20px
+        width: 110px
+        height: 110px
+    
+    #reviews .item .review__image img 
+        height: 110px
+    
+    #reviews .item .review__post 
+        float: none
+    
+    #reviews .item .review__author 
+        width: 100%
+        text-align: center
+        display: block
+    
+    .owl-dots 
+        margin-top: 40px
+
+@media screen and (min-width: 1025px)
+	.b-projects
+		.b-main-button a
+			padding: 11px 22px
+	.b-main-input input
+		padding: 10px 0px 10px 10px
+	.b-main-button button,
+	.b-main-button a
+		padding-top: 12px !important
+		padding-bottom: 12px !important
+
+.container
+	@media all and (min-width: 767px) and (max-width: 1199px)
+		max-width: 100%
+		padding: 0 15px
+.b-profile-tabs
+	@media all and (min-width: 768px)
+		display: none
+.b-top-wrapper
+	@media all and (min-width: 768px)
+		.header__menu
+			display: none
+		&__sections
+			+b-flex
+		&__item
+			&:first-child
+				+b-flex
+				+b-flex-align(center)
+				margin-top: -4px
+		&__section
+			+b-relative
+			&.active
+				&:before
+					content: "\f0d8"
+					+b-absolute
+					left: 50%
+					margin-left: -10px
+					bottom: -24px
+					display: inline-block
+					font: normal normal normal 22px/1 FontAwesome
+					color: #fff
+					text-rendering: auto
+					-webkit-font-smoothing: antialiased
+					-moz-osx-font-smoothing: grayscale
+
+			&:first-child
+				margin-right: 30px
+				margin-left: 40px
+			> a
+				font-size: 15px
+				line-height: 25px
+				color: #fff
+				+b-block
+				text-decoration: none
+	@media all and (min-width: 1200px)
+		min-height: 60px
+		max-height: 60px
+		&__item:first-child
+			margin-top: 0px
+		&__item
+			+b-flex
+    
+.b-main-radios
+	@media only screen and (min-width: 768px)
+		margin-left: 26px
+
+.b-page-topic
+	@media all and (min-width: 768px)
+		clear: both
+		padding-left: 34px
+		padding-top: 12px
+		padding-bottom: 12px
+		&__text
+			text-align: left
+			max-width: none
+			margin: 0
+
+		&_projects
+			border-bottom: 1px solid #E1E4E6
+	@media all and (min-width: 1200px)
+		padding-left: 50px
+.b-personal-form
+	@media all and (min-width: 768px)
+		padding-left: 34px
+		padding-right: 34px
+		&__radios
+			margin-left: 46px
+		&__requisites
+			margin-bottom: 32px
+			& > div:first-child
+				margin-top: 0				
+			.b-personal-form__topic
+				margin-top: 0px
+		&__passw
+			display: none
+			margin-bottom: 32px
+		&__line
+			+b-flex
+			margin-top: 30px			
+			&_inputfile
+				margin-top: 20px
+		&__input-label
+			min-width: 200px
+			font-size: 15px
+			line-height: 25px
+			margin-top: 12px
+		&__input
+			width: 100%
+			&_iputfile
+				margin-top: 20px
+		&__topic
+			font-size: 18px
+			line-height: 21px
+		&__data
+			margin-top: 28px
+		&__checkbox
+			margin-top: 22px
+	@media all and (min-width: 1200px)
+		&__input
+			max-width: 414px
+			&_number
+				max-width: 161px
+		&__checkbox label
+			white-space: nowrap
+		&__input-label
+			margin: 7px 17px 6px 0
+.b-personal-data
+	@media all and (min-width: 768px)
+		&__btn
+	        margin-left: 200px
+		&__btn-requisites
+			margin-top: 0
+			margin-bottom: 20px
+
+		&__btns
+			+b-flex-align(center)
+			+b-flex
+			+b-justify
+			+b-flex-direction(row-reverse)
+			margin-top: 22px
+			padding-top: 40px
+			border-top: 1px solid #E1E4E6
+		&__save-btn
+			min-width: 200px
+		&__delete-btn, &__save-btn
+			margin-top: 0px
+		&__delete-btn-requisites
+			margin-left: 80px
+	@media all and (min-width: 1200px)
+		background-color: #f6f8fa
+		padding-top: 32px
+		&__container
+			+b-flex
+			+b-flex-align(flex-start)
+			margin-left: 50px
+			margin-right: 50px
+		&__item
+			&:first-child
+				background-color: #fff
+				+b-box-shadow(0 0 10px 0 rgba(162,174,183,0.2))
+				width: calc(100% - 300px)
+				margin-right: 0
+				max-width: 860px
+		&__item:last-child
+			+b-block
+			margin-left: 40px
+			width: 260px
+			max-width: 260px
+		&__card
+			padding: 34px 47px
+			padding-left: 31px
+			padding-right: 0
+		&__card-list
+			li
+				list-style-type: none
+				margin-top: 20px
+				&:first-child
+					margin-top: 0px
+			a
+				text-decoration: none
+				font-size: 15px
+				color: #2E97DF
+				+b-relative
+				&.active
+					&:before
+						content: ''
+						+b-absolute
+						top: 5px
+						left: -18px
+						height: 8px
+						width: 8px
+						border-radius: 100px
+						background-color: #E03632
+.b-card-list
+	@media all and (min-width: 1200px)
+		+b-block
+		padding: 26px 34px 7px 34px
+		+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
+		background-color: #fff
+		h2
+			font-size: 20px
+			margin-top: 0
+			margin-bottom: 23px
+		nav
+			div
+				margin-bottom: 19px
+
+		&__item
+			color: $color_blue
+
+		&__item-active
+			color: $color_black_main
+
+			&:before
+				content: ''
+				display: inline-block
+				padding: 4px
+				border-radius: 100px
+				margin-right: 13px
+				margin-bottom: 1px
+				margin-left: -21px
+				background-color: #E03632
+
+		hr
+			margin: 23px 0 17px
+			border: 0
+			height: 1px
+			background: #E1E4E6
+		&__container
+			li
+				list-style-type: none
+				margin-top: 20px
+				&:first-child
+					margin-top: 0px
+			a
+				text-decoration: none
+				font-size: 15px
+				color: #2E97DF
+				+b-relative
+				&.active
+					&:before
+						content: ''
+						+b-absolute
+						top: 5px
+						left: -18px
+						height: 8px
+						width: 8px
+						border-radius: 100px
+						background-color: #E03632
+#header.front-page
+	.hamburger
+		.hamburger-inner,
+		.hamburger-inner::after,
+		.hamburger-inner::before
+			width: 21px
+		.hamburger-inner
+			top: 5px
+			&:before
+				top: 6px
+			&:after
+				top: 12px
+	.logo
+		display: inline-flex
+		justify-content: center
+		margin-left: 0px
+		margin-top: 0px
+		letter-spacing: 1px
+		float: none
+		line-height: 59px
+		text-decoration: none
+		width: 160px
+		height: 59px
+		.logo__company-name
+			display: block
+			line-height: 25px
+			font-size: 24px
+			color: #FFFFFF
+	@media all and (max-width: 1025px) and (min-width: 768px)
+		.btn.btn-input
+			margin-top: 3px
+			height: 33px
+			padding-top: 9px
+			margin-right: 11px
+			padding-left: 37px
+	@media all and (min-width: 1200px)
+		.logo
+			.logo__company-name
+				display: none
+		& > .container
+			max-width: none
+
+#header.front-page.b-profile-page
+	.hamburger
+		float: left
+		margin-left: 0
+		padding: 9px 4px
+		.hamburger-inner,
+		.hamburger-inner::after,
+		.hamburger-inner::before
+			width: 21px
+		.hamburger-inner
+			top: 5px
+			&:before
+				top: 6px
+			&:after
+				top: 12px
+
+	.logo
+		float: left
+		margin-left: 11px
+		margin-top: 6px
+		letter-spacing: 0.6px
+		text-decoration: none
+		img
+			display: none
+		.logo__company-name
+			display: block
+			line-height: 25px
+			font-size: 24px
+			color: #FFFFFF
+
+	@media all and (min-width: 768px)
+		.btn.btn-input
+			margin-top: 3px
+			height: 33px
+			padding-top: 9px
+			margin-right: 11px
+			padding-left: 37px
+
+	@media all and (min-width: 1200px)
+		min-height: 60px
+		max-height: 60px
+		padding-top: 0px
+		background-image: url('./../img/profile/bg@2x.png')
+		background-position: 0 -137px
+		.logo
+			img
+				max-width: 140px
+				padding-top: 0px
+			.logo__company-name
+				display: none
+		& > .container
+			max-width: none
+			padding-left: 30px
+			padding-right: 30px
+
+.b-user
+	+b-flex
+	+b-flex-align(center)
+	&__name
+		+b-block
+		color: #fff
+		font-size: 15px
+		+b-relative
+		padding-right: 15px
+		cursor: pointer
+
+		&:before
+			content: "\f0d7"
+			+b-absolute
+			top: 2px
+			right: 0
+			display: inline-block
+			font: normal normal normal 14px/1 FontAwesome
+			text-rendering: auto
+			color: #fff
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			pointer-events: none
+
+	&__item
+
+		// &:nth-child(1)
+		//  margin-right: 40px
+		&:nth-child(1)
+			+b-block
+		&:nth-child(2)
+			+b-relative
+	&__name-wrapper
+		+b-flex
+		+b-flex-align(center)
+		margin-left: 42px
+	&__name-ico
+		margin-right: 8px
+		cursor: pointer
+	&__link a
+		font-size: 13px
+		line-height: 25px
+		color: #fff
+	&__text
+		font-weight: 500
+		font-size: 15px
+		line-height: 21px
+		color: #fff
+.b-user-robotx
+	@media all and (min-width: 768px)
+		&__container
+			+b-flex-direction(unset)
+		&__select
+			max-width: 160px
+		&__radio
+			margin-top: 15px
+		&__item
+			&:first-child
+				margin-top: 0px
+				margin-right: 131px
+		&__topic
+			margin-top: 11px
+		&__checkbox-text-break
+			display: none
+		&__notify
+			margin-top: 3px
+			max-width: 165px
+			white-space: nowrap
+.inputfile-2
+	@media all and (min-width: 768px)
+		& + label
+			min-width: 129px
+			padding: 10px 0px
+			text-align: center
+.b-user-settings
+	@media all and (min-width: 768px)
+		padding-left: 34px
+		padding-right: 34px
+		padding-bottom: 39px
+		&__container-settings
+			margin-bottom: -57px
+		&__container-autostart
+			margin-bottom: -147px
+		&__container-start
+			width: 700px
+		&__line
+			display: flex
+			&_date
+				margin-top: 17px !important
+		&__line_start
+			+b-flex
+			.b-user-settings__line-item
+				&:last-child
+					width: 65%
+				&:first-child
+					width: 35%
+		&__line-topic-settings
+			padding-left: 34px
+		&__line-topic-sources 
+    		padding-top: 36px
+		&__line-topic-reports
+			padding-top: 20px
+		&__line-item-instructions
+			display: inline-block
+			width: 366px
+		&__line-topic-instructions
+			padding-top: 20px
+		&__line-item-robotx
+			width: 100%
+		&__line-item-robot-name
+			display: inline-block
+			padding-top: 21px
+			padding-left: 34px
+		&__line-load
+			margin-top: 33px !important
+		&__index-md
+			+b-block
+			font-weight: 500
+			font-size: 15px
+			color: #2F353B
+			margin-top: 45px
+			margin-bottom: 10px
+		&__index-xs
+			display: none
+		&__counts-date
+			display: flex
+			text-align: right
+			margin-top: 12px !important
+			margin-right: 2px
+		&__counts-date-text
+			margin-left: auto
+		&__counts-date-numbers
+			padding-top: 0 !important
+		&__counts-btn-start
+			margin-left: auto
+		&__counts-btn-link
+			padding: 12px 30px !important
+
+.b-user-counts
+	@media all and (min-width: 768px)
+		width: 375px
+		padding-top: 43px
+		padding-left: 15px
+		&__top-line_yandex
+			margin-top: 36px
+		&__total-container
+			margin-top: 30px
+			padding-top: 22px
+		&__date
+			margin-top: 11px
+		&__notify
+			margin-top: 32px
+			padding: 20px 30px 20px 13px
+
+		&__btns
+			+b-flex
+			margin-top: 28px
+		&__btn-save
+			margin-left: 8px
+		&__btn-start, &__btn-save
+			margin-top: 0px
+			a
+				padding: 15px 30px
+.b-site-load
+	@media all and (min-width: 768px)
+		&__inputs
+			+b-flex
+			margin-top: 14px			
+		&__input-wrapper
+			&:nth-child(2)
+				padding-left: 26px
+			&:nth-child(3)
+				padding-left: 31px
+			input
+				max-width: 117px
+				padding-right: 10px
+		&__notify
+			margin-top: 21px
+		&__checkbox
+			margin-top: 15px
+		&__input-topic
+			margin-top: 9px
+
+.b-user-reports
+	@media all and (min-width: 768px)
+		&__container
+			margin-top: 9px
+		&__item
+			&:first-child
+				margin-right: 30px
+		&__notify
+			margin-top: 15px
+		&__btn
+			margin-bottom: 11px
+		&__textarea
+			margin-top: 0px
+.b-settings-autostart
+	@media all and (min-width: 768px)
+		&__selects
+			+b-flex
+			align-items: baseline
+			padding-top: 8px
+		&__select
+			min-width: 160px
+			margin-top: 10px
+			margin-right: 40px
+		&__period
+			margin-top: 33px
+		&__text
+			p
+				&:first-child
+					margin-top: 13px
+				&:not(:first-child)
+					margin-top: 10px
+	@media all and (min-width: 1200px)
+		&__select, &__input
+			margin-top: 0px
+			&-topic
+				margin-top: 0px
+.b-user-balance
+	@media all and (min-width: 768px)
+		&__notify
+			margin-left: 34px
+			margin-right: 34px
+			@media all and (max-width: 1199px)
+				max-width: 643px
+				margin-top: 21px
+				margin-left: 0
+		&__money-count-wrapper, &__btn-wrapper
+			+b-flex
+			+b-flex-align(baseline)
+		&__btn-wrapper
+			margin-top: 25px
+		&__money-status
+			margin-left: 10px
+			font-size: 13px
+		&__status-btn
+			&.b-main-button_red
+				max-width: 208px
+				margin-top: 32px
+		&__money-btn
+			max-width: 183px
+			min-width: 183px
+		&__money-wrapper
+			margin-top: 45px
+			padding-right: 0px
+		&__status-wrapper
+			border-bottom: none
+			margin-top: 40px
+			padding-left: 0px
+			@media all and ( max-width: 1199px )
+				padding-bottom: 29px
+				margin-top: 31px
+				
+		&__input-topic
+			margin-left: 30px
+		&__status-topic, &__money-topic, &__input-topic, &__money-btn
+			padding-top: 4px
+			margin-top: 0px
+		&__item
+			width: 48%
+			@media all and ( max-width: 1199px )
+				width: 100%
+				padding: 0px 34px 0px 34px
+				border-bottom: 1px solid #E1E4E6	
+
+		&__item-stats
+			@media all and ( max-width: 1199px )
+				width: 100%
+		&__accbalance, &__money-blocked
+			margin-top: 0px
+		&__money-blocked
+			margin-left: 10px
+			@media all and ( max-width: 1199px )
+				margin-left: 0
+		&__select-wrapper
+			+b-flex
+			.b-user-balance__select
+				width: 64%
+			.b-user-balance__select-text
+				width: 46%
+		&__status-content
+			margin-left: 0px
+			margin-right: 0px
+			padding-left: 0px
+			padding-right: 0px
+			margin-top: 19px
+			padding-top: 26px
+
+		&__select_price
+			margin-top: 21px
+		&__notify_up
+			margin-left: 0px
+			margin-right: 0px
+			margin-top: 20px
+		&__notify-btn
+			a
+				padding: 12px 0px
+		&__cansel-wrapper
+			+b-flex
+		&__cansel-btn, &__money-push
+			width: 50%
+		&__money-push
+			margin-left: 10px
+		&__promo-code-text
+			text-align: center
+			display: none
+		&__select_payment
+			margin-top: 21px
+		.b-info-wrapper
+			@media all and (max-width: 1199px)
+				padding-top: 30px
+				padding-left: 0
+
+		.b-info
+			@media all and (max-width: 1199px)
+				display: inline-block
+				width: 279px
+				padding-right: 0
+				padding-bottom: 19px
+				float: none
+				&:nth-child(2)
+					margin-left: 76px
+	@media all and (min-width: 1200px)
+		background-color: #fff
+		padding-left: 40px
+		padding-right: 35px
+		padding-bottom: 20px
+		+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
+
+		&__notify
+			width: 110.5%
+			margin-left: 0px
+			margin-right: 0px
+			margin-bottom: -15px
+		&__notify-tarif-off
+			margin-bottom: 20px
+		&__container
+			padding-left: 0px
+			padding-right: 0px
+		&__status-wrapper
+			+b-relative
+			&:before
+				content: ''
+				+b-absolute
+				top: -10.5px
+				bottom: 10px
+				right: -21.3%
+				width: 1px
+				background-color: #F0F1F2
+		&__money-count
+			font-size: 26px
+			.fa
+				font-size: 24px
+		&__money-status
+			font-size: 11px
+			.fa
+				font-size: 10px
+		&__input-topic
+			margin-left: 21px
+		&__btn-wrapper
+			+b-flex-align(center)
+	@media all and (min-width: 1200px)
+		&__select-wrapper
+			+b-block
+			.b-user-balance__select-text
+				text-align: left
+.b-balance-tabs
+	@media all and (min-width: 768px)
+		&__item
+			@media all and ( max-width: 1199px )
+				width: 643px
+		&__buttons
+			width: 500px
+			padding-top: 15px
+			@media all and ( max-width: 1199px )
+				padding-top: 20px
+		& &__button 
+			@media all and ( max-width: 1199px)
+				width: 200px
+				height: 42px
+				font-size: 15px
+				padding: 13px 0px		
+
+
+.b-user-filters
+	@media all and (min-width: 768px)
+		padding-left: 34px
+		padding-right: 34px
+		margin-top: 30px
+
+		&__container
+			+b-flex
+			align-items: center
+			align-content: center
+
+		&__item
+			display: inline-block
+			min-width: 150px
+
+			&:nth-child(2)
+				margin-left: 20px
+				
+		&__item-sum
+			display: inline-block
+			font-size: 15px
+			margin-left: auto
+				
+		&__select
+			height: 42px
+			width: 200px
+	@media all and (min-width: 1200px)
+		padding-left: 0px
+		padding-right: 0px
+		margin-top: 60px
+
+.b-user-table
+	@media all and (min-width: 768px)
+		padding-left: 40.5px
+		padding-right: 34px
+		margin-top: 30px
+		@media all and ( max-width: 1199px )
+			padding-left: 34px
+			padding-right: 34px
+			margin-top: 39px
+
+		&__top-line
+			+b-flex
+
+		&__content
+			margin-top: 15px
+
+		&__time, &__operation, &__money, &__rate, &__text
+			font-size: 13px
+			color: #A2AEB7
+		&__time
+			width: 16.75%
+			@media all and ( max-width: 1199px )
+				width: 18.75%
+		&__operation
+			width: 23%
+			@media all and ( max-width: 1199px )
+				width: 27%
+		&__money
+			width: 10.3%
+			text-align: right
+		&__rate
+			width: 16%
+			padding-left: 30px
+		&__text
+			width: 27%
+			padding-left: 35px
+		&__documents
+			width: 21%
+			padding-left: 0
+		&__item-time, &__item-operation, &__item-money, &__item-rate, &__item-text
+			margin-top: 0px
+		&__item-time
+			width: 16.6%
+			@media all and ( max-width: 1199px )
+				width: 18.75%
+			.b-time
+				margin-left: 4px
+		&__item-operation
+			width: 23%
+			@media all and ( max-width: 1199px )
+				width: 27%
+		&__item-money
+			width: 10.3%
+			text-align: right
+		&__item-rate
+			width: 16%
+			padding-left: 30px
+
+		&__item-text
+			width: 27%
+			padding-left: 34px
+
+			span
+				display: block
+
+		&__item
+			padding: 16px 0px
+			+b-flex-align(center)
+
+	@media all and (min-width: 1200px)
+		background-color: #fff
+		+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
+		margin-top: 20px
+		padding-top: 33.5px
+		padding-bottom: 38px
+.b-invoices
+	padding-bottom: 125px
+.b-invoices-table
+	padding-top: 49px
+	margin-top: 0
+	&__operation-number
+		width: 26.5%
+		font-size: 13px
+		color: #A2AEB7
+	&__time
+		width: 21.5%
+
+	&__item
+		padding: 14px 0
+	&__item-invoice-number
+		width: 26.5%
+	&__item-time
+		width: 21.5%
+
+.b-user-rate
+	@media all and (min-width: 768px)
+		&__btn-more
+			margin-left: 34px
+			margin-right: 34px
+	@media all and ( min-width: 768px ) and ( max-width: 1199px )
+		padding-bottom: 20px
+		
+	
+	@media all and (min-width: 1200px)
+		background-color: #f6f8fa
+		padding-top: 31px
+		&__container
+			+b-flex
+			margin-left: 50px
+			margin-right: 50px
+		&__item
+			&:first-child
+				width: calc(100% - 300px)
+				max-width: 860px
+			&:last-child
+				width: 260px
+				margin-left: 40px
+		&__btn-more
+			margin-left: 0px
+			margin-right: 0px
+			margin-top: 30px
+.b-copywriter
+	@media all and (min-width: 768px)
+		&__container
+			padding-left: 34px
+			padding-right: 34px
+	@media all and (min-width: 1200px)
+		padding-top: 32px
+		background-color: #f6f8fa
+		padding-bottom: 64px
+		&__container
+			+b-flex
+			padding-left: 50px
+			padding-right: 50px
+		&__item
+			&:first-child
+				background-color: #fff
+				+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
+				width: calc(100% - 300px)
+				margin-right: 0
+				max-width: 860px
+			&:last-child
+				margin-left: 40px
+				width: 260px
+				max-width: 260px
+
+.b-rewrite
+	@media all and (min-width: 768px)
+		&__btn a
+			padding: 16px 30px
+		&__main-topic
+			font-size: 30px
+		&__text
+			margin-top: 10px
+		&__select-wrap
+			&_hidden
+				display: block
+		&__select-wrap
+			+b-flex
+			+b-flex-align(center)
+			.b-rewrite__select
+				width: 100%
+		&__textarea-wrap
+			margin-top: 28px
+		&__result
+			margin-left: 0px
+			margin-right: 0px
+		&__list
+			padding-left: 15px
+	@media all and (min-width: 1200px)
+		padding-left: 34px
+		padding-right: 34px
+		padding-bottom: 66px
+		&__select-wrap
+			max-width: 620px
+
+.b-tools
+	@media all and (min-width: 768px)
+		margin-left: -34px
+		margin-right: -34px
+		padding-left: 34px
+		padding-right: 34px
+		margin-top: 40px
+	@media all and (min-width: 1200px)
+		margin: 0px
+		padding: 34px 47px
+		padding-left: 31px
+		padding-right: 0
+		+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
+		background-color: #fff
+.b-news
+	@media all and (min-width: 768px)
+		&__item
+			padding-left: 34px
+			padding-right: 34px
+			padding: 20px 34px 23px 34px
+			&:first-child
+				padding-top: 34px
+			+b-flex
+		&__img
+			float: none
+			margin-right: 20px
+			img
+				max-width: 100px
+		&__about-topic
+			font-size: 18px
+		&__about-text
+			padding-top: 10px
+	@media all and (min-width: 1200px)
+		&__item
+			margin-left: 34px
+			margin-right: 34px
+			padding-left: 0px
+			padding-right: 0px
+.b-news-wrap
+	@media all and (min-width: 768px)
+		+b-block
+		&__btn-wrap
+			padding-left: 34px
+			padding-right: 34px
+	@media all and (min-width: 1200px)
+		background-color: #f6f8fa
+		padding: 32px 50px 90px 50px
+		&__item
+			&:first-child
+				background-color: #fff
+				+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
+				width: 77%
+				margin-right: 10px
+				max-width: 860px
+			&:last-child
+				+b-block
+				margin-left: 10px
+				width: 23%
+				max-width: 260px
+		&__container
+			+b-flex
+			padding-left: 0px
+			padding-right: 0px
+		&__btn-wrap
+			margin-left: 0px
+			margin-right: 0px
+			width: 77%
+			max-width: 860px
+			width: -webkit-calc(77% - 15px)
+			width: -moz-calc(77% - 15px)
+			width: calc(77% - 15px)
+			width: calc(77% - 15px)
+			padding-left: 0px
+			padding-right: 0px
+			border-top: none
+			padding-bottom: 0px
+.b-news-nav
+	@media all and (min-width: 1200px)
+		padding: 34px 47px
+		padding-left: 41px
+		padding-right: 0
+		+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
+		background-color: #fff
+		&__list
+			padding-left: 0
+			li
+				list-style-type: none
+				margin-top: 20px
+				&:before
+					display: none
+				&:first-child
+					margin-top: 0px
+			a
+				text-decoration: none
+				font-size: 15px
+				color: #2E97DF
+				+b-relative
+				&.active
+					pointer-events: none
+					cursor: default
+					color: #2F353B
+					&:before
+						content: ''
+						+b-absolute
+						top: 5px
+						left: -18px
+						height: 8px
+						width: 8px
+						+b-rounded(100px)
+						background-color: #E03632
+.b-faq-wrap
+	@media all and (min-width: 768px)
+		&__container
+			padding-left: 34px
+			padding-right: 34px
+	@media all and (min-width: 1200px)
+		background-color: #f6f8fa
+		padding: 32px 50px 90px 50px
+		&__container
+			+b-flex
+			padding-left: 0px
+			padding-right: 0px
+			width: 1160px
+			
+		&__item
+			&:first-child
+				background-color: #fff
+				+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
+				width: calc(100% - 300px)
+				margin-right: 0
+				max-width: 860px
+			&:last-child
+				+b-block
+				margin-left: 40px
+				width: 260px
+				max-width: 260px
+.b-faq
+	@media all and (min-width: 768px)
+		&__link-wrap
+			padding-left: 34px
+			padding-right: 34px
+	@media all and (min-width: 1200px)
+		&__link-wrap
+			padding-top: 30px
+			width: 77%
+			max-width: 860px
+			width: -webkit-calc(77% - 15px)
+			width: -moz-calc(77% - 15px)
+			width: calc(77% - 15px)
+			width: calc(77% - 15px)
+			padding-left: 0px
+			padding-right: 0px
+			border-top: none
+			padding-bottom: 0px
+		&__list-item
+			padding-left: 30px
+.b-projects
+	@media all and (min-width: 768px)
+		&__top-wrap
+			+b-flex
+			+b-flex-align(center)
+			+b-flex-direction(row-reverse)
+			+b-justify
+		&__search
+			margin-top: 0px
+			min-width: 250px
+
+		&__btn-new
+			a
+				padding-left: 22px
+				padding-right: 22px
+		&__container
+			padding-top: 30px
+			padding-left: 34px
+			padding-right: 34px
+	&-empty
+		padding: 0 0px 25px
+		margin: 0
+		overflow-x: unset
+		&__title
+			padding-left: 0
+			padding-right: 0
+			margin-bottom: 30px
+		&__actions
+		&__action
+			width: calc((100% - 40px) / 3)
+
+	@media all and (min-width: 1200px)
+		background-color: #f6f8fa
+		padding-top: 32px
+		padding-bottom: 60px
+		&__container
+			margin-left: 50px
+			margin-right: 50px
+			background-color: #fff
+			+b-box-shadow(0 0 10px 0 rgba(162, 174, 183, 0.2))
+			max-width: 1160px
+			padding-bottom: 35px
+		&__search
+			min-height: 40px
+			input
+				min-height: 40px
+		&__btn-new a
+			padding: 11px 22px
+.b-email-verification
+	@media all and (max-width: 1199px)
+		padding-bottom: 280px
+	&__text, &__icon
+		display: inline-block
+		vertical-align: top
+	&__text
+		padding-top: 30px
+		@media all and (max-width: 1199px)
+			width: 420px
+	
+	&__list-header
+		@media all and (max-width: 1199px)
+			margin-top: 28px
+	&__icon
+		@media all and (max-width: 1199px)
+			margin-top: 15px
+			margin-left: 47px
+
+.b-projects-table
+	@media all and (min-width: 768px)
+		margin-top: 26px
+		&__top-wrap
+			+b-flex
+		&__item
+			font-size: 13px
+			color: #A2AEB7
+			margin-bottom: 10px
+			&:nth-child(1)
+				width: 40%
+			&:nth-child(2)
+				width: 24%
+			&:nth-child(3)
+				width: 24%
+			&:nth-child(4)
+				display: none
+			&:nth-child(5)
+				display: none
+			&:nth-child(6)
+				width: 12%
+				text-align: right
+		&__line
+			+b-flex-direction(row)
+			+b-flex-align(center)
+			margin-left: 0px
+			margin-right: 0px
+			padding-left: 0px
+			padding-right: 0px
+		&__limit-wrap
+			margin-top: 4px
+		&__limit-text
+			display: none
+		&__options
+			top: 0
+			right: 0
+			margin-right: -2px
+			+b-relative
+			+b-justify-end
+		&__options-body
+			right: 0px
+		&__options-head
+			width: 12%
+			order: 3 !important
+		&__link
+			width: 40%
+			order: 0 !important
+		&__limit-wrap
+			width: 24%
+			order: 1 !important
+		&__date
+			margin-top: 2px
+			width: 24%
+			order: 2  !important
+			span
+				font-size: 15px !important
+				&:nth-child(2)
+					color: #2F353B
+		&__limit
+			margin-left: 0px
+			font-size: 15px
+			span
+				&:first-child
+					color: #2F353B
+	@media all and (min-width: 1200px)
+		&__options-body
+			right: -57px
+			&:before
+				margin-left: -7px
+.b-projects-analist
+	@media all and (min-width: 768px)
+		margin-left: -34px
+		margin-right: -34px
+		padding-left: 34px
+		padding-right: 34px
+	@media all and (min-width: 1200px)
+		display: none
+.b-projects-faq
+	@media all and (min-width: 768px)
+		margin-left: -34px
+		margin-right: -34px
+		a
+			padding-left: 34px
+			padding-right: 34px
+			&:before
+				right: 30px
+	@media all and (min-width: 1200px)
+		display: none
+.b-page-nav
+	@media all and (min-width: 1200px)
+		margin-left: 50px
+		margin-right: 50px
+			
+.b-page-topic
+	@media all and (min-width: 768px)
+		&.b-btn-flex
+			.b-page-topic__btn
+				a
+					padding: 5px 20px 5px 32px !important
+	@media all and (min-width: 768px)
+		&.b-btn-flex
+			.b-page-topic__btn
+				margin-top: 2.5px
+				margin-left: 0px
+				&.--position-if-b-audit
+					display: block
+.b-audit-form
+	@media all and (min-width: 768px)
+		padding-left: 34px
+		padding-right: 34px
+	@media all and (min-width: 1200px)
+		+b-box-shadow(0 0 10px 0 rgba(162,174,183,0.2))
+		background-color: #fff
+		padding-left: 40px
+		padding-right: 40px
+		padding-top: 40px
+		max-width: 560px
+.b-audit
+
+	@media all and (min-width: 768px)
+		height: calc(100% - 600px)
+		min-height: 212px
+
+	@media all and (min-width: 1200px)
+		background-color: #f6f8fa
+		&__item
+			width: 50%
+			&:last-child
+				+b-block
+		&__container
+			+b-flex
+			padding: 32px 50px 60px 50px
+.b-audit-info
+	@media all and (min-width: 1200px)
+		margin-left: 50px
+		&__triggers
+			+b-flex
+		&__topic, &__text
+			font-size: 18px
+			color: #2F353B
+		&__text
+			font-size: 15px
+			margin-top: 10px
+			line-height: 25px
+		&__triggers
+			margin-top: 35px
+		&__trigger-text
+			font-size: 15px
+			color: #2F353B
+			margin-top: 14px
+			max-width: 142px
+		&__trigger
+			&:first-child
+				margin-right: 20px
+		&__trigger-img-text
+			font-size: 30px
+			color: #E03632
+		.b-round
+			width: 75px
+			height: 75px
+			border: 1px solid #E1E4E6
+			+b-rounded(50%)
+			+b-flex
+			+b-flex-align(center)
+			+b-justify-center
+		&__trigger-img-sv
+			padding-left: 5px
+			img
+				width: 45px
+				margin: auto
+				background: transparent
+.b-prices
+	&__container
+		background-color: #F6F8FA
+	@media all and (min-width: 768px)
+		&__buy-btn
+			a
+				+b-rounded(100px)
+				padding: 10px 0px
+	@media all and (min-width: 768px)
+		&__top-text
+			padding-left: 34px
+			padding-right: 34px
+		&__top-text
+			background-color: #f6f8fa
+		&__buy-btn-wrap
+			display: none
+		&__reviews
+			margin-top: 0px
+	@media all and (min-width: 1200px)
+		&__top-text
+			padding-left: 50px
+			padding-right: 50px
+
+.b-prices-content
+	@media all and (min-width: 768px)
+		background-color: #f6f8fa
+		&__tariff-slider, &__options, &__table
+			display: none !important
+		&__options_md
+			display: -webkit-box !important
+			display: -ms-flexbox !important
+			display: -webkit-flex !important
+			display: flex !important
+			padding-left: 0px !important
+		.not-check
+			&:before
+				margin-left: -5px
+		.check
+			&:before
+				margin-left: -8px
+
+
+
+.b-prices-clients
+	@media all and (min-width: 768px)
+		+b-block
+		margin-top: 50px
+		margin-left: 40px
+
+.b-prices-howto
+	@media all and (min-width: 768px)
+		margin-top: 50px
+		padding: 0px 34px 60px 34px
+		&__topic
+			text-align: left
+			line-height: 0.85
+			margin-top: 0px
+
+	@media all and (min-width: 1200px)
+		padding-left: 50px
+		padding-right: 50px
+.b-prices-tariffs
+	@media all and (min-width: 768px)
+		+b-block
+		padding-top: 30px
+		margin-left: 34px
+		overflow-x: auto
+		.line1, .line2, .line3, .line4, .line5, .line6, .line7, .line8, .line9, .line10, .line11, .line12, .line13, .line14
+			&.active
+				background-color: #FAF7DC
+		&__item-container
+			+b-flex
+			width: 100%
+			overflow-x: auto
+		&__container
+			+b-flex
+		&__menu-list
+			min-width: 220px
+			padding-left: 0
+			margin-top: 232px
+			li
+				padding-left: 0
+				margin-bottom: 0
+				color: #2F353B
+				font-size: 15px
+				height: 40px
+				&:before
+					display: none
+				+b-flex
+				+b-flex-align(center)
+				padding-left: 20px
+				list-style-type: none
+				// border-bottom: 1px solid #E1E4E6
+				&:first-child
+					height: 54px
+				&.extra
+					height: 50px
+				&.topic
+					font-weight: 500
+			.tech
+				padding-right: 30px
+		&__menu-warn
+			color: #A2AEB7
+			font-size: 13px
+			line-height: 25px
+			max-width: 185px
+			padding-left: 20px
+			margin-top: 10px
+	@media all and (min-width: 1200px)
+		margin-left: 50px
+
+.select2-container--default .select2-results > .select2-results__options > li
+	@media all and (min-width: 768px) 
+		line-height: 1.2
+		padding: 8px 6px 9px 10px
+
+.b-prices-table
+	@media all and (min-width: 768px)
+		background-color: #fff
+		margin-top: 135px
+		+b-rounded(5px)
+		+b-box-shadow(0 0 10px 0 rgba(162,174,183,0.2))
+		//padding-top: 25px
+		padding-bottom: 43px
+		.select2-container .select2-selection--single
+			height: 40px
+		.select2-container--default .select2-selection--single .select2-selection__rendered
+			line-height: 40px
+		.select2-container--default .select2-selection--single .select2-selection__arrow
+			height: 40px
+		&__wrapper
+			position: absolute
+			z-index: 1
+			right: 34px
+			width: 480px
+			min-height: 80px
+			padding: 25px 23px 21px 23px
+			margin-top: -124px
+			border-radius: 5px
+			background-color: #fff
+
+			&-border
+				position: absolute
+				bottom: 0
+				width: 434px
+				margin: 0 auto
+				border-width: 0 0 1px 0
+				border-color: $color_easygrey
+				border-style: solid
+
+			// &.--desktop-version
+			// 	position: absolute
+			// 	z-index: 1
+			// 	right: 34px
+			// 	width: 480px
+			// 	background-color: #fff
+			// 	padding-top: 25px
+			// 	padding-bottom: 21px
+			// 	border-radius: 5px
+			// 	margin-top: -124px
+
+
+		&__scroll-button-left, &__scroll-button-right
+			position: absolute
+			z-index: 3
+			margin-top: 170px
+			width: 15px
+			height: 25px
+			background-image: url(./../img/prices/arrow2.png)
+			background-repeat: no-repeat
+			background-size: contain
+
+		&__scroll-button-left
+			margin-left: 225px
+			transform: rotate(180deg)
+
+		&__scroll-button-right	
+			right: 7px
+
+		&__tariff-aftertopic, &__tariff-aftertopic, &__tariff-aftertopic, &__tariff-aftertopic
+			max-width: 120px
+			margin: 0 auto
+		&__container
+			+b-flex
+		&__tariff-topic
+			color: #2F353B
+			font-size: 18px
+			height: 21px
+			line-height: 21px
+			+b-flex
+			+b-flex-align(center)
+			+b-justify-center
+		&__tariff-aftertopic
+			color: #A2AEB7
+			font-size: 13px
+		&__tariff
+			margin-top: 21px
+			min-width: 158px
+			text-align: center
+			.check:before
+				margin-left: -7px
+			.not-check:before
+				margin-left: -6px
+		&__tariff-aftertopic
+			margin-top: 12px
+			margin-bottom: 13px
+			height: 30px
+			&.agancy
+				max-width: 111px
+				margin: 0 auto
+				margin-top: 12px
+				margin-bottom: 13px
+		&__tariff-prices
+			padding-bottom: 10px
+			+b-relative
+			height: 54px
+			+b-flex
+			+b-flex-align(center)
+			+b-justify-center
+			&.active
+				.b-prices-table__tariff-old-price
+					+b-block
+			&:before
+				content: ''
+				+b-absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 1px
+				border-bottom: 1px solid rgba(225, 228, 230, .5)
+		&__tariff-new-price
+			color: #E03632
+			font-size: 18px
+			.fa
+				font-size: 15px
+				margin-left: 3px
+		&__tariff-old-price
+			color: #A2AEB7
+			font-size: 15px
+			text-decoration: line-through
+			margin-top: 8px
+			display: none
+			// padding-bottom: 5px
+			// +b-relative
+			// &:before
+			//  content: ''
+			//  +b-absolute
+			//  bottom: 0
+			//  // left: 36px
+			//  left: 0
+			//  width: 100%
+			//  height: 1px
+			//  border-bottom: 1px solid #E1E4E6
+			// &.first
+			//  &:before
+			//	  width: 90%
+			//	  width: -webkit-calc(100% - 36px)
+			//	  width: -moz-calc(100% - 36px)
+			//	  width: calc(100% - 36px)
+			//	  width: calc(100% - 36px)
+			//	  left: 36px
+			.fa
+				font-size: 13px
+		&__tariff-month-token, &__tariff-token-cost, &__tariff-period, &__tariff-session, &__tariff-api, &__tariff-min-audit, &__tariff-max-audit, &__tariff-price-per-page, &__tariff-max-pages, &__tariff-table-topic, &__tariff-claster, &__tariff-request, &__tariff-key-words, &__tariff-calc
+			font-size: 15px
+			color: #2F353B
+			height: 30px
+			.fa
+				font-size: 13px
+				margin-left: 3px
+
+		&__tariff-key-words
+			&.extra
+				height: 50px
+		&__tariff-api, &__tariff-tech-support
+			height: 40px
+			&:after
+				content: ''
+				+b-absolute
+				bottom: 0
+				left: 0
+				width: 100%
+				height: 1px
+				border-bottom: 1px solid rgba(225, 228, 230, .5)
+		&__tariff-month-token, &__tariff-token-cost, &__tariff-period, &__tariff-session, &__tariff-api, &__tariff-min-audit, &__tariff-max-audit, &__tariff-price-per-page, &__tariff-max-pages, &__tariff-table-topic, &__tariff-claster, &__tariff-request, &__tariff-key-words, &__tariff-calc
+				min-height: 40px
+				+b-relative
+				+b-flex
+				+b-flex-align(center)
+				+b-justify-center
+				// &.first
+				//  &:before
+				//	  width: 90%
+				//	  width: -webkit-calc(100% - 36px)
+				//	  width: -moz-calc(100% - 36px)
+				//	  width: calc(100% - 36px)
+				//	  width: calc(100% - 36px)
+				//	  left: 36px
+				&:before
+					content: ''
+					+b-absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					height: 1px
+					border-bottom: 1px solid rgba(225, 228, 230, .5)
+		&__tariff-min-audit,
+		&__tariff-max-audit,
+		&__tariff-price-per-page,
+		&__tariff-max-pages,
+		&__tariff-table-topic,
+		&__tariff-claster,
+		&__tariff-request,
+		&__tariff-key-words
+			.icon
+				display: none
+			&.activeIcon
+				.icon
+					+b-block
+		&__tariff-table-topic
+			font-weight: 500
+		&__tariff-help
+			background-color: #FAF7DC
+			min-height: 40px !important
+			margin-top: 11px
+			+b-flex
+			+b-flex-align(center)
+			+b-justify-center
+			&.check
+				&:before
+					font-size: 18px
+		&__tariff-api
+			+b-relative
+			&.check
+				&:before
+					font-size: 18px
+					margin-top: -11px
+			// &.first
+			//  &:after
+			//	  width: 90%
+			//	  width: -webkit-calc(100% - 36px)
+			//	  width: -moz-calc(100% - 36px)
+			//	  width: calc(100% - 36px)
+			//	  width: calc(100% - 36px)
+			//	  left: 36px
+			// &:after
+			//  content: ''
+			//  +b-absolute
+			//  bottom: 0
+			//  left: 0
+			//  width: 100%
+			//  height: 1px
+			//  border-bottom: 1px solid #E1E4E6
+		&__tariff-links, &__tariff-competitors
+			&.check
+				font-size: 18px
+
+		&__tariff-links, &__tariff-competitors
+			min-height: 40px !important
+			+b-relative
+			// &.first
+				// &:after
+					// width: 90%
+					// width: -webkit-calc(100% - 36px)
+					// width: -moz-calc(100% - 36px)
+					// width: calc(100% - 36px)
+					// width: calc(100% - 36px)
+				//  left: 36px
+			// &:after
+			//  content: ''
+			//  +b-absolute
+			//  bottom: 0
+			//  left: 0
+			//  width: 100%
+			//  height: 1px
+			//  border-bottom: 1px solid #E1E4E6
+		&__buy-btn
+			margin-top: 34px
+			a
+				+b-rounded(100px !important)
+				padding: 10px 0px !important
+				max-width: 110px
+				margin: 0 auto
+		&__tariff.tariff-start
+			.b-prices-table__tariff-prices,
+			.b-prices-table__tariff-month-token,.b-prices-table__tariff-token-cost,
+			.b-prices-table__tariff-period,
+			.b-prices-table__tariff-session,
+			.b-prices-table__tariff-min-audit,
+			.b-prices-table__tariff-max-audit,.b-prices-table__tariff-price-per-page,.b-prices-table__tariff-max-pages,
+			.b-prices-table__tariff-table-topic,
+			.b-prices-table__tariff-claster,
+			.b-prices-table__tariff-request,
+			.b-prices-table__tariff-key-words,
+			.b-prices-table__tariff-calc
+				&:before
+					width: 90%
+					width: -webkit-calc(100% - 20px)
+					width: -moz-calc(100% - 20px)
+					width: calc(100% - 20px)
+					width: calc(100% - 20px)
+					left: 20px
+			.b-prices-table__tariff-tech-support,
+			.b-prices-table__tariff-api,
+				&:after
+					width: 90%
+					width: -webkit-calc(100% - 20px)
+					width: -moz-calc(100% - 20px)
+					width: calc(100% - 20px)
+					width: calc(100% - 20px)
+					left: 20px
+
+.main-container
+	@media all and (min-width: 1200px)
+		margin-left: 50px
+		margin-right: 50px 
+.main-wrapper
+	.main-content
+		@media all and (min-width: 768px)
+			padding: 30px 34px
+.b-prices-off
+	@media all and (min-width: 768px)
+		background-color: #fff
+		position: relative
+		z-index: 2
+		margin-top: 130px
+		+b-rounded(5px)
+		+b-box-shadow(0 0 10px 0 rgba(162,174,183,0.2))
+		border-top-left-radius: 0px
+		border-bottom-left-radius: 0px
+		min-width: 174px
+		text-align: center
+		padding-top: 24px
+		padding-bottom: 25px
+		.b-prices-table__tariff-prices
+			height: 69px
+		.b-prices-table__buy-btn a
+			background-color: #E03632
+			border: 1px solid transparent
+			color: #fff
+		.b-prices-table__tariff-aftertopic
+			margin-bottom: 0px
+			height: 30px
+		.b-prices-table__tariff-api.not-check
+			&:before
+				margin-left: -8px
+		.b-prices-table__tariff-off-price
+			min-height: 54px
+			+b-flex
+			+b-flex-align(center)
+			+b-justify-center
+			+b-relative
+			.not-check
+				&:before
+					margin-top: 2px
+			span
+				font-size: 18px
+				color: #2F353B
+				margin-top: -12px
+			.fa
+				font-size: 16px
+		.icon
+			width: auto !important
+		.b-prices-table__tariff-tech-support,
+		.b-prices-table__tariff-api,
+		.b-prices-table__tariff-calc,
+		.b-prices-table__tariff-prices,
+		.b-prices-table__tariff-month-token,
+		.b-prices-table__tariff-token-cost,
+		.b-prices-table__tariff-period,
+		.b-prices-table__tariff-session,
+		.b-prices-table__tariff-table-topic,
+		.b-prices-table__tariff-min-audit,
+		.b-prices-table__tariff-max-audit,
+		.b-prices-table__tariff-price-per-page,
+		.b-prices-table__tariff-max-pages,
+		.b-prices-table__tariff-claster,
+		.b-prices-table__tariff-request,
+		.b-prices-table__tariff-key-words
+			width: 90%
+			width: -webkit-calc(100% - 20px)
+			width: -moz-calc(100% - 20px)
+			width: calc(100% - 20px)
+			width: calc(100% - 20px)
+.line1
+	@media all and (min-width: 768px)
+		&.active
+			background-color: blue
+#header.front-page.b-profile-page.is-auth
+	.logo
+		margin-top: 0
+	.b-user__name-wrapper
+		margin-left: 20px
+	.b-user__text
+		line-height: 20px
+		font-size: 15px
+		position: relative
+		top: -4px
+	.header__menu
+		margin-right: 43px
+	#navigation
+		max-width: 250px
+		height: auto
+	#navigation-profile
+		left: auto
+		right: 0
+		width: 50%
+		height: 50%
+		margin-right: 0
+
+@media all and (min-width: 768px)
+	body
+		&.menu-open  
+		//	overflow-y: hidden
+
+	#header.front-page.index-page
+		.container
+			.front-page__header
+				#navigation
+					max-width: 250px
+					height: auto
+					.header__menu-list
+						.visible-desktop
+							display: none
+						.visible-mobile
+							display: block
+				.btn.btn-input
+					width: 100px
+					height: 34px
+					padding: 10px 15px
+					&:before
+						margin-right: 10px
+						margin-top: -2px
+
+.main-wrapper
+	.banners-list
+		padding: 0
+		width: 100%
+		max-width: 720px
+		margin: 0 auto
+		.banner
+			width: 340px
+			height: 310px
+			box-shadow: 0 0 10px rgba(162, 174, 183, 0.2)
+			margin-bottom: 20px
+			&:hover
+				text-decoration: none
+				box-shadow: 0px 0px 20px rgba(162, 174, 183, 0.29546), 0px 0px 10px rgba(162, 174, 183, 0.29546)
+			.banner-logo
+				height: 100px
+
+#header
+	&.main-header
+		.b-user
+			width: 310px
+		&__item:nth-child(2)
+			min-width: 100px
+		.btn.btn-input
+			display: inline-block
+			width: 100px
+			height: 34px
+			padding: 8px 21px 8px 38px
+			&:before
+				top: 9px
+				left: 15px
+
+		#navigation
+			max-width: 250px
+			height: auto
+
+		@media all and (min-width: 768px)	
+			.b-user
+				&__helper
+					&:before
+						left: 50%
+					&:after
+						left: 50%
+					&-wrapper
+						margin-top: 43px
+						right: -15px
+			.b-top-wrapper__item-project
+				height: 60px
+	&.reports-header
+		height: 120px
+		max-height: 120px
+
+.b-inreports
+	.aside-toggle &
+		&__aside
+			width: 250px !important
+.b-project
+	padding: 0 34px
+	&__item
+		margin-right: 15px
+		&:last-child
+			flex-grow: 1
+	&__report-wrapper:hover .b-project__helper-wrapper
+		left: -20px
+
+.b-form	
+	padding: 30px 20px
+	&__row	
+		flex-flow: row nowrap
+		align-items: center
+		&-right	
+			width: 70%
+			padding-left: 15px
+		&-left
+			width: auto
+			margin-bottom: 0
+
+.social
+	@media all and ( min-width: 767px ) and ( max-width: 1199px )
+		padding: 0 0 40px
+		margin: 0 0 48px
+		display: -webkit-box
+		display: -ms-flexbox
+		display: flex
+		width: 100%
+		-webkit-box-align: center
+		-ms-flex-align: center
+		align-items: center
+		-webkit-box-pack: center
+		-ms-flex-pack: center
+		justify-content: center
+		border-bottom: 1px solid #44494e
+@media only screen and (min-width: 768px)
+	.advantages
+		margin-bottom: 44px
+		.blocks__list
+			max-width: 700px
+			&-item
+				width: 340px
+				height: 310px
+				margin-right: 20px
+				margin-bottom: 20px
+				box-shadow: 0 0 10px 0 rgba(162, 174, 183, .2)
+				&:nth-child(2n)
+					margin-right: 0px
+				&:nth-child(3n)
+					margin-right: inherit
+
+	section
+		.blocks__article-item
+			.image
+				img
+					margin: 0 auto 14px
+	.informer
+		.visible-desktop
+			display:block !important
+		.visible-mobile
+			display: none
+	.reviews
+		padding: 70px 0 76px
+
+	.blocks
+		&__article
+			&-item, &-item:nth-child(2n+1)
+				.intro h3
+					top: 70px
+		&__article
+			&#slider-article
+				.owl-dots
+					margin-top: -65px
+.site-analysis
+	&:before
+		content: ""
+
+
+@media all and (min-width: 768px)
+	#header.main-header
+		#navigation
+			position: absolute
+	#header.front-page.index-page
+		padding-top: 0px
+		.container
+			margin: 0 auto
+			.front-page__header
+				#navigation.header__menu
+					position: absolute
+					max-width: 250px
+					height: auto

@@ -1,0 +1,344 @@
+{% set title = 'Внешние без target="blank"' %}
+{% set header_class = "reports-header" %}
+{% set header_logo = "sa" %}
+{% set auth = 1 %}
+{% set layout = "report" %}
+
+{% extends "src/views/layout/main.njk" %}
+
+{% from "src/views/macro/macros.njk" import informSlide, informHover %}
+
+{% block content %}
+<div class="b-inreports" id="content">
+	{% include "src/views/parts/aside_ext.njk" %}
+	<main class="b-inreports__main">
+		<h1 class="b-inreports__main-name">{{ title }}</h1>
+		{{ informSlide('b-inreports__main-desc', 'Большинство создают внешние ссылки через target="_blank" и не знают одного интересного нюанса — страница, на которую мы попадем таким образом, получит частичный контроль над ссылающейся на нее страницей через js свойство window.opener.') }}
+		<div class="b-inreports__workarea">
+			{% include "src/views/parts/table_filters.njk" %}
+
+			<div class="freeze-table">
+				<table class="b-inreports__table table editable-items" id="svodnaya">
+					<thead>
+						<tr>
+							<th class="w-400" width="400" data-action="sort-column" data-sortable="url">
+								<div class="b-inreports__table-edit"></div>
+								<div class="b-inreports__table-headname">
+									<span>URL</span>
+									{{ informHover('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus.', 'span') }}
+								</div>
+							</th>
+							<th class="w-400" width="400" data-action="sort-column" data-sortable="link">
+								<div class="b-inreports__table-headname">
+									<span>Ссылка</span>
+									{{ informHover('Я подсказко', 'span') }}
+								</div>
+							</th>
+							<th class="w-100" width="100" data-action="sort-column" data-sortable="type">
+								<div class="b-inreports__table-headname">
+									<span>Тип <br>анкора</span>
+									{{ informHover('Я подсказко', 'span') }}
+								</div>
+							</th>
+							<th class="w-300" width="300" data-action="sort-column" data-sortable="anchor">
+								<div class="b-inreports__table-headname">
+									<span>Анкор</span>
+									{{ informHover('Я подсказко', 'span') }}
+								</div>
+							</th>
+							<th class="w-200" width="200" data-action="sort-column" data-sortable="backlinks">
+								<div class="b-inreports__table-headname">
+									<span>Обратные ссылки</span>
+									{{ informHover('Я подсказко', 'span') }}
+								</div>
+							</th>
+							<th class="w-400" data-action="sort-column" data-sortable="linkclone">
+								<div class="b-inreports__table-headname">
+									<span>Ссылка</span>
+									{{ informHover('Я подсказко', 'span') }}
+								</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www." title="https://www.">https://www.</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.pnghttps://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png
+								</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+						<tr class="b-inreports__table-item">
+							<td class="w-400" width="400">
+								<div class="b-inreports__table-edit" data-item-id="1"></div>
+								<a href="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png" title="https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png">https://www.optimism.ru/local/templates/optimism/img/clients-logo/kfc.png</a>
+							</td>
+							<td class="w-400" width="400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+							<td class="w-100" width="100">Картинка</td>
+							<td class="w-300" width="300">2013 год — Проектирование катка в Новороссийске, ФОК «Черноморец»</td>
+							<td class="w-200" width="200">105</td>
+							<td class="w-400"><a href="http://top100.rambler.ru/navi/2923700/">http://top100.rambler.ru/navi/2923700/</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+</div>
+
+{% include "src/views/parts/table_popups.njk" %}
+
+{% endblock %}
+
+{% block extjs %}
+
+<script src="js/freezytable.js"></script>
+
+{% endblock %}

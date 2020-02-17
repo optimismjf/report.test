@@ -1,0 +1,276 @@
+{% set title = 'Создание новой задачи' %}
+{% set header_logo = "sa" %}
+{% set auth = 1 %}
+{% set layout = "new-challenge" %}
+{% set body_class = "app--inner" %}
+{% set nomobile = 1 %}
+{% set top_h1 = 1 %}
+
+{% extends "src/views/layout/main.njk" %}
+              
+{% block content %}
+<div class="b-site-content">
+<div class="global__fix-container">
+	<div class="b-site-content__inner">
+		<form action="#" novalidate="" class="b-challenge">
+			<a href="#" class="b-challenge__close"></a><!-- <= close -->
+			<div class="b-challenge__inner">
+				<div class="b-challenge__item b-challenge__item--large-indent">
+					<div class="b-challenge__item-title b-challenge__item-title--bold">
+						Название задачи
+					</div><!-- <= item-title -->
+					<div class="b-challenge__item-content">
+						<input type="text" name="challenge-name">
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+				<div class="b-challenge__item">
+					<div class="b-challenge__item-title">
+						Настройки анализа
+					</div><!-- <= item-title -->
+					<div class="b-challenge__item-content"></div><!-- <= item-content -->
+				</div><!-- <= item -->
+				<div class="b-challenge__item b-challenge__item--picking">
+					<div class="b-challenge__item-title b-challenge__item-title--bold">
+						Подбор конкурентов
+						<div class="b-help">
+							<a href="#" class="b-help__button">?</a><!-- <= button -->
+							<div class="b-help__content">
+								Здесь должна располагаться подсказка для разъяснения различных вопросов по интерфейсу.
+							</div><!-- <= content -->
+						</div><!-- /b-help -->
+					</div><!-- <= item-title -->
+					<div class="b-challenge__item-content">
+						<div class="b-main-radios">
+							<div class="b-main-radios__item">
+								<input type="radio" name="picking" id="radio1" checked="checked">
+								<label for="radio1">Автоматический</label>
+							</div>
+							<div class="b-main-radios__item">
+								<input type="radio" name="picking" id="radio2">
+								<label for="radio2">Ручной</label>
+							</div>
+						</div>
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+				<div class="b-challenge__item js-auto-fit">
+					<div class="b-challenge__item-title b-challenge__item-title--bold">
+						Регион
+						<div class="b-help">
+							<a href="#" class="b-help__button">?</a><!-- <= button -->
+							<div class="b-help__content">
+								Здесь должна располагаться подсказка для разъяснения различных вопросов по интерфейсу.
+							</div><!-- <= content -->
+						</div><!-- /b-help -->
+					</div><!-- <= item-title -->
+					<div class="b-challenge__item-content">
+						<div class="b-challenge__region">
+							<input type="text" data-region="213" value="Москва">
+							<ul class="b-challenge__region-list">
+							
+							</ul><!-- <= region-list -->
+						</div><!-- <= region -->
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+				<div class="b-challenge__item js-auto-fit">
+					<div class="b-challenge__item-title"></div><!-- <= item-title -->
+					<div class="b-challenge__item-content">
+						<div class="b-main-checkbox">
+							<input type="checkbox" checked="checked" name="block1" id="b-challenge2">
+							<label for="b-challenge2">Ручное подтверждение конкурентов</label>
+							<div class="b-help">
+								<a href="#" class="b-help__button">?</a><!-- <= button -->
+								<div class="b-help__content">
+									Здесь должна располагаться подсказка для разъяснения различных вопросов по интерфейсу.
+								</div><!-- <= content -->
+							</div><!-- /b-help -->
+						</div>
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+				<div class="b-challenge__item">
+					<div class="b-challenge__item-title"></div><!-- <= item-title -->
+					<div class="b-challenge__item-content">
+						<div class="b-main-checkbox">
+							<input type="checkbox" checked="checked" name="block1" id="b-challenge1">
+							<label for="b-challenge1">Пропускать текст в noindex</label>
+							<div class="b-help">
+								<a href="#" class="b-help__button">?</a><!-- <= button -->
+								<div class="b-help__content">
+									Здесь должна располагаться подсказка для разъяснения различных вопросов по интерфейсу.
+								</div><!-- <= content -->
+							</div><!-- /b-help -->
+						</div>
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+			</div><!-- <= inner -->
+			<div class="b-challenge__inner">
+				<div class="b-challenge__item b-challenge__item--top">
+					<div class="b-challenge__item-title">
+						Ключевые слова
+					</div><!-- <= item-title -->
+					<div class="b-challenge__item-content">
+						<div class="b-challenge__group">
+							<a href="#" class="b-challenge__group-delete">
+								<img src="images/icon/back_red.svg" alt="delete">
+							</a><!-- <= group-delete -->
+							<div class="b-challenge__group-list">
+								<textarea name="group-list" cols="30" rows="10" placeholder="Список запросов"></textarea>	
+							</div><!-- <= group-list -->
+							<div class="b-challenge__group-add-text">
+								<div class="b-challenge__group-item">
+									<div class="b-challenge__group-item-title">
+										Добавить свой текст
+										<div class="b-help">
+											<a href="#" class="b-help__button">?</a><!-- <= button -->
+											<div class="b-help__content">
+												Здесь должна располагаться подсказка для разъяснения различных вопросов по интерфейсу.
+											</div><!-- <= content -->
+										</div><!-- /b-help -->
+									</div><!-- <= group-item-title -->
+									<div class="b-main-radios">
+										<div class="b-main-radios__item">
+											<input type="radio" name="selection" id="radio3" checked="">
+											<label for="radio3">по URL</label>
+										</div>
+										<div class="b-main-radios__item">
+											<input type="radio" name="selection" id="radio4">
+											<label for="radio4">через форму</label>
+										</div>
+									</div>
+									<input type="text" name="add-url" placeholder="http://" class="js-text-add">
+									<div class="b-challenge__text-add js-text-add">
+										<a href="#add-text" class="b-challenge__text-add-button">Добавить текст</a>
+									</div>
+								</div><!-- <= group-item -->
+								<div class="b-challenge__group-item b-challenge__group-item--pages js-auto-fit">
+									<textarea name="group-pages" cols="30" rows="7" placeholder="Страницы конкурентов"></textarea>
+								</div><!-- <= group-item -->
+							</div><!-- <= group-add -->
+						</div><!-- <= group -->
+						<div class="b-challenge__group-add">
+							<a href="#"><span>+ добавить группу</span></a>
+						</div><!-- <= group-add -->
+						<div class="b-challenge__group-footer b-main-button b-main-button_white">
+							<a href="#batch-upload" class="b-challenge__batch-upload">Пакетное добавление ключевых слов</a><!-- <= batch-upload -->
+							<div class="b-challenge__group-text">
+								После загрузки ключевых слов вы можете отредактировать группы и добавить свои тексты для анализа.
+							</div><!-- <= group-text -->
+						</div><!-- <= group-footer -->
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+			</div><!-- <= inner -->
+			<div class="b-challenge__inner">
+				<div class="b-challenge__item b-challenge__item--top">
+					<div class="b-challenge__item-title">
+						Запуск
+					</div><!-- <= item-title -->
+					<div class="b-challenge__item-content">
+						<div class="b-challenge__sum">
+							<div class="b-challenge__sum-item">
+								<div class="b-challenge__sum-item-content">
+									<div class="b-challenge__sum-checkbox b-main-checkbox disabled">
+										<input type="checkbox" name="challengeSum" checked="checked" disabled="disabled" id="b-checkSum1">
+										<label for="b-checkSum1">Текстовый анализ</label>
+										<div class="b-challenge__sum-amount">
+											Ключевых слов - 
+											<span class="b-challenge__word-amount">0</span><!-- <= word-amount -->,
+											групп - 
+											<span class="b-challenge__group-amount">1</span><!-- <= group-amount -->
+										</div><!-- <= sum-amount -->
+									</div>
+								</div><!-- <= sum-item-content -->
+								<div class="b-challenge__sum-item-price b-challenge__sum-item-price--amount">0</div><!-- <= sum-item-price -->
+							</div><!-- <= sum-item -->
+							<div class="b-challenge__sum-item">
+								<div class="b-challenge__sum-item-content">
+									<div class="b-user-counts__checkbox b-main-checkbox">
+										<input type="checkbox" name="challengeSum" id="b-checkSum2">
+										<label for="b-checkSum2">Поиск тематических слов</label>
+									</div>
+								</div><!-- <= sum-item-content -->
+								<div class="b-challenge__sum-item-price b-challenge__sum-item-price--word">0</div><!-- <= sum-item-price -->
+							</div><!-- <= sum-item -->
+							<div class="b-challenge__sum-item b-challenge__sum-item--all">
+								<div class="b-challenge__sum-item-content">Итого</div><!-- <= sum-item-content -->
+								<div class="b-challenge__sum-item-price b-challenge__sum-item-price--all">0</div><!-- <= sum-item-price -->
+							</div><!-- <= sum-all -->
+						</div><!-- <= sum -->
+						<div class="b-user-counts__notify few-limits">
+							<span>Для запуска аудита не хватает лимитов:</span> <strong><span class="limits-amount">500</span>.</strong>
+							<a target="blank" class="buy-limits" href="/settings01.html#buy">Купить лимиты</a> <span>или</span>
+							<a target="blank" href="/settings01.html#start[1]">приобрести подписку</a>
+						</div>
+						<div class="b-challenge__footer">
+							<div class="b-challenge__save b-main-button b-main-button_white">
+								<a href="#">Сохранить и запустить позже</a>
+							</div>
+							<div class="b-challenge__button b-main-button">
+								<button type="submit">Запустить задачу</button>
+							</div>
+						</div><!-- <= footer -->
+					</div><!-- <= item-content -->
+				</div><!-- <= item -->
+			</div><!-- <= inner -->
+		</form><!-- /b-challenge -->
+	</div><!-- <= inner -->
+</div><!-- /b-site-content -->
+<div class="b-challenge-popup b-challenge">
+	<div class="b-challenge-popup__form-wrapper">
+		<a href="#" class="b-challenge-popup__close"></a><!-- <= close -->
+		<form action="#" id="add-text" class="b-challenge-popup__form b-challenge-popup__form--add-text">
+			<div class="b-challenge-popup__title">Добавление своего текста</div><!-- <= title -->
+			<div class="b-challenge-popup__item">
+				<div class="b-challenge-popup__item-title">Title</div><!-- <= item-title -->
+				<div class="b-challenge-popup__item-content">
+					<input type="text" name="add-text-title">
+				</div><!-- <= item-content -->
+			</div><!-- <= item -->
+			<div class="b-challenge-popup__item">
+				<div class="b-challenge-popup__item-title">Текст</div><!-- <= item-title -->
+				<div class="b-challenge-popup__item-note">
+					Вы можете добавить как готовую вёрстку, так и чистый текст, разместив его с помощью редактора. <br>
+					Обязательно выделите заголовки в тексте в соответствии с тем, как они будут размещены на сайте.
+				</div><!-- <= item-note -->
+				<div class="b-challenge-popup__item-content">
+					<textarea name="add-text" id="text-added" cols="30" rows="10"></textarea>
+				</div><!-- <= item-content -->
+			</div><!-- <= item -->
+			<div class="b-challenge-popup__footer">
+				<div class="b-challenge-popup__cancel b-main-button b-main-button_white">
+					<a href="#">Отмена</a>
+				</div><!-- <= cancel -->
+				<div class="b-challenge-popup__save b-main-button">
+					<button>Сохранить</button>
+				</div><!-- <= save -->
+			</div><!-- <= footer -->
+		</form><!-- <= form -->
+		<form action="#" id="batch-upload" class="b-challenge-popup__form b-challenge-popup__form--batch-upload">
+			<div class="b-challenge-popup__title">Пакетное добавление ключевых слов</div><!-- <= title -->
+			<div class="b-challenge-popup__item">
+				<div class="b-challenge-popup__item-note">
+					Вставьте в поле ввода ключевые слова и URL, к которым они относятся. Разделитель - табуляция. Вместо URL <br>
+					можно использовать названия групп ключевых слов. 
+				</div><!-- <= item-note -->
+				<div class="b-challenge-popup__item-content">
+					<textarea name="batch-upload" cols="30" rows="10" placeholder="seo аудит сайта	https://saitreport.ru/
+seo аудит сайта онлайн	https://saitreport.ru/
+seo аудит сайта цены	https://saitreport.ru/prices
+аудит сайта цены	https://saitreport.ru/prices
+ссылочный анализ	группа 1
+ссылочный анализ сайта	группа 1
+сбор семантики сайта онлайн	группа 2
+подбор семантики сайта онлайн	группа 2"></textarea>
+				</div><!-- <= item-content -->
+			</div><!-- <= item -->
+			<div class="b-challenge-popup__footer">
+				<div class="b-challenge-popup__cancel b-main-button b-main-button_white">
+					<a href="#">Отмена</a>
+				</div><!-- <= cancel -->
+				<div class="b-challenge-popup__save b-main-button">
+					<button>Сохранить</button>
+				</div><!-- <= save -->
+			</div><!-- <= footer -->
+		</form><!-- <= form -->
+	</div><!-- <= form-wrapper -->
+	</div>
+</div><!-- /b-add-text -->
+{% endblock %}

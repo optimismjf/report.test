@@ -1,0 +1,317 @@
+{% set title = 'Структрура сайта' %}
+{% set header_class = "reports-header" %}
+{% set header_logo = "sa" %}
+{% set auth = 1 %}
+{% set layout = "report" %}
+
+{% extends "src/views/layout/main.njk" %}
+
+{% from "src/views/macro/macros.njk" import informSlide, informHover %}
+
+{% block content %}
+
+<div class="b-inreports" id="content">
+	{% include "src/views/parts/aside_ext.njk" %}
+	<main class="b-inreports__main">
+		<h1 class="b-inreports__main-name">{{ title }}</h1>
+		{{ informSlide('b-inreports__main-desc') }}
+		<div class="b-inreports__workarea">
+			{% include "src/views/parts/table_filters.njk" %}
+			<div class="freeze-table">
+				<table class="b-inreports__table table group-items" id="sitemap">
+					<thead>
+						<tr>
+							<th class="w-500" rowspan="2" data-action="sort-column" data-sortable="url">
+								<div class="b-inreports__table-level"></div>
+								<div class="b-inreports__table-headname">
+									<span>Подраздел</span>
+									{{ informHover('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo velit provident autem atque consequuntur sed incidunt reiciendis corporis quos natus.', 'span') }}
+								</div>
+							</th>
+							<th class="w-200" width="200" rowspan="2" data-action="sort-column" data-sortable="uploaded">
+								<div class="b-inreports__table-headname">
+									<span>Загружено</span>
+									{{ informHover('Я подсказко', 'span') }}
+								</div>
+							</th>
+							<th class="w-220" width="220" rowspan="2" data-action="sort-column" data-sortable="without_sub_parts">
+								<div class="b-inreports__table-headname">
+									<span>Страниц без подразделов</span>
+									{{ informHover('Я подсказко', 'span') }}
+								</div>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="b-inreports__table-item level-1">
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="1"></div>
+								<a href="https://www.optimism.ru/" title="https://www.optimism.ru/">https://www.optimism.ru/</a>
+							</td>
+							<td width="200" class="w-200 text-center">500</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+						<tr class="b-inreports__table-item level-2"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="2"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent='/uslugi/']"></div>
+									<a href="https://www.optimism.ru/uslugi/" title="https://www.optimism.ru/uslugi/">/uslugi/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">15</td>
+							<td width="220" class="w-220 text-center">2</td>								
+						</tr>
+						<tr class="b-inreports__table-item level-3" data-parent="/uslugi/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="3"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent='/seo/']"></div>
+									<a href="https://www.optimism.ru/seo/" title="https://www.optimism.ru/seo/">/seo/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">13</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/seo/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/prodvizhenie-po-poziciyam/" title="https://www.optimism.ru/prodvizhenie-po-poziciyam/">/prodvizhenie-po-poziciyam/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">3</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/seo/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/prodvizhenie-po-trafiku/" title="https://www.optimism.ru/prodvizhenie-po-trafiku/">/prodvizhenie-po-trafiku/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">3</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/seo/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/prodvizhenie-po-lidam/" title="https://www.optimism.ru/prodvizhenie-po-lidam/">/prodvizhenie-po-lidam/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">3</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/seo/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/prodvizhenie-portalov/" title="https://www.optimism.ru/prodvizhenie-portalov/">/prodvizhenie-portalov/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">3</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/seo/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/optimizaciya-sajta/" title="https://www.optimism.ru/optimizaciya-sajta/">/optimizaciya-sajta/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">3</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/seo/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/semantika/" title="https://www.optimism.ru/semantika/">/semantika/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">3</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/seo/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/seo-audit/" title="https://www.optimism.ru/seo-audit/">/seo-audit/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">3</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/seo/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/kompleksnoe-prodvizhenie/" title="https://www.optimism.ru/kompleksnoe-prodvizhenie/">/kompleksnoe-prodvizhenie/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">3</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-3 level-last" data-parent="/uslugi/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="3"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/reklama/" title="https://www.optimism.ru/reklama/">/reklama/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">13</td>
+							<td width="220" class="w-220 text-center">13</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-3" data-parent="/uslugi/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="3"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent='/analytics/']"></div>
+									<a href="https://www.optimism.ru/analytics/" title="https://www.optimism.ru/analytics/">/analytics/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">18</td>
+							<td width="220" class="w-220 text-center">13</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/analytics/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/kompleksnaya-veb-analitika/" title="https://www.optimism.ru/kompleksnaya-veb-analitika/">/kompleksnaya-veb-analitika/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">3</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/analytics/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/nastroyka-sistem-analitiki/" title="https://www.optimism.ru/nastroyka-sistem-analitiki/">/nastroyka-sistem-analitiki/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">3</td>
+							<td width="220" class="w-220 text-center">3</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-2"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="2"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent='/wiki/']"></div>
+									<a href="https://www.optimism.ru/wiki/" title="https://www.optimism.ru/wiki/">/wiki/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">256</td>
+							<td width="220" class="w-220 text-center">123</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-3 level-last" data-parent="/wiki/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="3"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/wiki/CMS-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B_%D0%A0%D1%83%D0%BD%D0%B5%D1%82%D0%B0:_%D1%80%D0%B5%D0%B9%D1%82%D0%B8%D0%BD%D0%B3%D0%B8,_%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0,_%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D0%B8" title="https://www.optimism.ru/wiki/CMS-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B_%D0%A0%D1%83%D0%BD%D0%B5%D1%82%D0%B0:_%D1%80%D0%B5%D0%B9%D1%82%D0%B8%D0%BD%D0%B3%D0%B8,_%D1%81%D1%82%D0%B0%D1%82%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0,_%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D0%B8">/CMS-системы_Рунета:_рейтинги,_статистика,_возможности</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">18</td>
+							<td width="220" class="w-220 text-center">13</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-2"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="2"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent='/blog/']"></div>
+									<a href="https://www.optimism.ru/blog/" title="https://www.optimism.ru/blog/">/blog/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">256</td>
+							<td width="220" class="w-220 text-center">123</td>
+						</tr>
+						
+						<tr class="b-inreports__table-item level-3" data-parent="/blog/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="3"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent='/kejs-kak-my-za-mesyac-utroili-kolichestvo-obrashhenij-v-slozhnoj-tematike/']"></div>
+									<a href="https://www.optimism.ru/blog/kejs-kak-my-za-mesyac-utroili-kolichestvo-obrashhenij-v-slozhnoj-tematike/" title="https://www.optimism.ru/blog/kejs-kak-my-za-mesyac-utroili-kolichestvo-obrashhenij-v-slozhnoj-tematike/">/kejs-kak-my-za-mesyac-utroili-kolichestvo-obrashhenij-v-slozhnoj-tematike/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">18</td>
+							<td width="220" class="w-220 text-center">13</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/kejs-kak-my-za-mesyac-utroili-kolichestvo-obrashhenij-v-slozhnoj-tematike/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/blog/kejs-kak-my-za-mesyac-utroili-kolichestvo-obrashhenij-v-slozhnoj-tematike/" title="https://www.optimism.ru/blog/kejs-kak-my-za-mesyac-utroili-kolichestvo-obrashhenij-v-slozhnoj-tematike/">/kejs-kak-my-za-mesyac-utroili-kolichestvo-obrashhenij-v-slozhnoj-tematike/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">18</td>
+							<td width="220" class="w-220 text-center">13</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-2"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="2"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent='/test/']"></div>
+									<a href="https://www.optimism.ru/test/" title="https://www.optimism.ru/test/">/test/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">18</td>
+							<td width="220" class="w-220 text-center">13</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-3" data-parent="/test/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="3"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<div class="b-inreports__table-toggler" data-action="toggle-childs" data-target="[data-parent='/test2/']"></div>
+									<a href="https://www.optimism.ru/test/test2/" title="https://www.optimism.ru/test/test2/">/test2/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">18</td>
+							<td width="220" class="w-220 text-center">13</td>
+						</tr>
+
+						<tr class="b-inreports__table-item level-4 level-last" data-parent="/test2/"> 
+							<td class="w-500">
+								<div class="b-inreports__table-level" data-group="4"></div>
+								<div class="b-inreports__table-toggler-wrapper">
+									<a href="https://www.optimism.ru/test/test2/test3/" title="https://www.optimism.ru/test/test2/test3/">/test3/</a>
+								</div>
+							</td>
+							<td width="200" class="w-200 text-center">18</td>
+							<td width="220" class="w-220 text-center">13</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+</div>
+
+{% include "src/views/parts/table_popups.njk" %}
+
+{% endblock %}
+
+{% block extjs %}
+
+<script src="js/freezytable.js"></script>
+
+{% endblock %}

@@ -1,0 +1,399 @@
+{% set title = "Счета" %}
+{% set header_logo = "sa" %}
+{% set auth = 1 %}
+{% set layout = "invoices" %}
+{% set top_h1 = 1 %}
+
+{% extends "src/views/layout/main.njk" %}
+
+{% block content %}
+<section class="b-user-rate b-invoices">
+	<div class="b-user-rate__container">
+		<div class="b-user-rate__item">
+
+			<div class="b-invoices-table b-user-table" id="b-table">
+				<div class="b-user-table__top-line">
+					<div class="b-invoices-table__operation-number">№</div>
+					<div class="b-invoices-table__time b-user-table__time">Дата создания</div>
+					<div class="b-invoices-table__time b-user-table__time">Дата оплаты</div>
+					<div class="b-invoices-table__documents b-user-table__documents">Документы</div>
+				</div>
+				<div class="b-user-table__content">
+
+					<div class="b-invoices-table__item b-user-table__item">
+
+						<div class="b-invoices-table__item-invoice-number b-user-table__item-operation">SR-20-12/17000017</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата создания: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-invoices-table__item-warning b-invoices-table__item-time b-user-table__item-time">
+							<span> Не оплачен </span>
+						</div>
+
+						<div class="b-user-table__documents">
+
+							<div class="b-user-table__document-contract">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Договор</a>
+							</div>
+
+							<div class="b-user-table__document-invoice">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Счет</a>
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="b-invoices-table__item b-user-table__item">
+
+						<div class="b-invoices-table__item-invoice-number b-user-table__item-operation">SR-20-12/17000017</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата создания: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата оплаты: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-user-table__documents">
+
+							<div class="b-user-table__document-contract">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Договор</a>
+							</div>
+
+							<div class="b-user-table__document-invoice">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Счет</a>
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="b-invoices-table__item b-user-table__item">
+
+						<div class="b-invoices-table__item-invoice-number b-user-table__item-operation">SR-20-12/17000017</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата создания: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата оплаты: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-user-table__documents">
+
+							<div class="b-user-table__document-contract">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Договор</a>
+							</div>
+
+							<div class="b-user-table__document-invoice">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Счет</a>
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="b-invoices-table__item b-user-table__item">
+
+						<div class="b-invoices-table__item-invoice-number b-user-table__item-operation">SR-20-12/17000017</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата создания: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата оплаты: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-user-table__documents">
+
+							<div class="b-user-table__document-contract">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Договор</a>
+							</div>
+
+							<div class="b-user-table__document-invoice">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Счет</a>
+							</div>
+
+						</div>
+
+
+					</div>
+
+
+					<div class="b-invoices-table__item b-user-table__item">
+
+						<div class="b-invoices-table__item-invoice-number b-user-table__item-operation">SR-20-12/17000017</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата создания: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата оплаты: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-user-table__documents">
+
+							<div class="b-user-table__document-contract">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Договор</a>
+							</div>
+
+							<div class="b-user-table__document-invoice">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Счет</a>
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="b-invoices-table__item b-user-table__item">
+
+						<div class="b-invoices-table__item-invoice-number b-user-table__item-operation">SR-20-12/17000017</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата создания: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата оплаты: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-user-table__documents">
+
+							<div class="b-user-table__document-contract">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Договор</a>
+							</div>
+
+							<div class="b-user-table__document-invoice">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Счет</a>
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="b-invoices-table__item b-user-table__item">
+
+						<div class="b-invoices-table__item-invoice-number b-user-table__item-operation">SR-20-12/17000017</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата создания: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата оплаты: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-user-table__documents">
+
+							<div class="b-user-table__document-contract">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Договор</a>
+							</div>
+
+							<div class="b-user-table__document-invoice">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Счет</a>
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="b-invoices-table__item b-user-table__item">
+
+						<div class="b-invoices-table__item-invoice-number b-user-table__item-operation">SR-20-12/17000017</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата создания: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата оплаты: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-user-table__documents">
+
+							<div class="b-user-table__document-contract">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Договор</a>
+							</div>
+
+							<div class="b-user-table__document-invoice">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Счет</a>
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="b-invoices-table__item b-user-table__item">
+
+						<div class="b-invoices-table__item-invoice-number b-user-table__item-operation">SR-20-12/17000017</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата создания: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-invoices-table__item-time b-user-table__item-time">
+							<span class="b-invoices-table__item-time-text"> Дата оплаты: </span>
+							<span class="b-date">22.09.01</span>
+							<span class="b-time">18:00</span>
+						</div>
+
+						<div class="b-user-table__documents">
+
+							<div class="b-user-table__document-contract">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Договор</a>
+							</div>
+
+							<div class="b-user-table__document-invoice">
+								<svg class="b-user-table__documents-icon">
+									<use xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-document"></use>
+								</svg>
+								<a>Счет</a>
+							</div>
+
+						</div>
+
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="b-page-nav b-page-nav--settings">
+				<div class="b-page-nav__container">
+					<div class="b-page-nav__list-wrapper">
+						<a href="#" class="b-page-nav__prev"></a>
+						<ul class="b-page-nav__list">
+							<li><a href="#">1</a></li>
+							<li><a class="ellipsis" href="#">...</a></li>
+							<li><a href="#">4</a></li>
+							<li class="active"><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a class="ellipsis" href="#">...</a></li>
+							<li><a href="#">100</a></li>
+						</ul>
+						<a href="#" class="b-page-nav__next"></a>
+					</div>
+					{# <div class="b-page-nav__amount">
+						<div class="b-page-nav__amount-title">Элементов:</div>
+						<ul>
+							<li><a href="#">50</a></li>
+							<li class="active"><a href="#">250</a></li>
+							<li><a href="#">500</a></li>
+						</ul>
+					</div> #}
+				</div>
+			</div>
+
+		</div>
+
+		<div class="b-user-rate__item">
+			<div class="b-card-list">
+				<nav>
+					<div><a class="b-card-list__item" href="">Настройки профиля</a></div>
+					<div><a class="b-card-list__item" href="">Баланс и статистика</a></div>
+					<div><span class="b-card-list__item-active">Счета</span></div>
+					<div><a class="b-card-list__item" href="">Партнерская программа</a></div>
+				</nav>
+			</div>
+		</div>
+
+	</div>
+</section>
+{% endblock %}

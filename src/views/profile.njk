@@ -1,0 +1,268 @@
+{% set title = "Настройки профиля" %}
+{% set header_logo = "sa" %}
+{% set auth = 1 %}
+{% set layout = "profile" %}
+{% set top_h1 = 1 %}
+
+{% extends "src/views/layout/main.njk" %}
+
+{% block content %}
+<section class="b-personal-data">
+    <div class="b-personal-data__container">
+      <div class="b-personal-data__item">
+        <form class="b-personal-form" action="#" novalidate="">
+          <div class="b-personal-form__data">
+            <div class="b-personal-form__topic">Персональные данные</div>
+            <div class="b-personal-form__line">
+              <div class="b-personal-form__input-label">Ваше имя</div>
+              <div class="b-personal-form__input b-main-input">
+                <input type="text" name="name" value="Константин">
+              </div>
+            </div>
+            <div class="b-personal-form__line">
+              <div class="b-personal-form__input-label">Email</div>
+              <div class="b-personal-form__input b-personal-form__input-email b-main-input">
+                <input type="email" value="konstantin@gmail.com" disabled="true">
+              </div>
+            </div>
+            <div class="b-personal-form__line">
+              <div class="b-personal-form__input-label">Телефон</div>
+              <div class="b-personal-form__input b-personal-form__input_number b-main-input">
+                
+                <input type="tel" name="phone" autocomplete="no" autocomplete="off" value="123456"/>
+                
+                <div class="b-personal-form__checkbox b-main-checkbox disabled">
+                  <input type="checkbox" name="sms" id="b-check1">
+                  <label for="b-check1">Получать SMS-уведомления</label>
+                </div>
+              </div>
+            </div>
+            <div class="b-personal-form__line b-personal-form__line_inputfile">
+              <div class="b-personal-form__input-label">Аватар</div>
+              <div class="b-personal-form__input b-personal-form__input_inputfile js-inputfile">
+                <input class="inputfile inputfile-1" type="file" id="file-1">
+                <label for="file-1"><span>+</span></label><img class="b-prev-img" src="" alt="preview">
+              </div>
+            </div>
+          </div>
+
+          <div class="b-personal-form__requisites">
+
+            <div class="b-personal-form__line">
+              <div class="b-personal-form__requisites-topic">Реквизиты для оплаты</div>
+              <div class="b-personal-form__radios b-main-radios">
+                <div class="b-main-radios__item ">
+                  <input id="b-personal-form__requisites-button-company" type="radio" name="requisites-radio" checked="" data-content="company" >
+                  <label for="b-personal-form__requisites-button-company">Компания</label>
+                </div>
+                <div class="b-main-radios__item ">
+                  <input id="b-personal-form__requisites-button-individual" type="radio" name="requisites-radio" data-content="individual" >
+                  <label for="b-personal-form__requisites-button-individual">Индивидуальный предприниматель</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="b-personal-form__requisites-content-all b-personal-form__requisites-company">
+
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">Компания</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input class="b-personal-form__input-company-name" type="text" name="company" value="ООО Баланс" >
+                </div>
+              </div>
+
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">ИНН</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" name="inn" value="1234567890">
+                </div>
+              </div>
+
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">КПП</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" name="kpp" value="123456789">
+                </div>
+              </div>
+             
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">Р/с</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" name="rs" value="12345678901234567890">
+                </div>
+              </div>
+                    
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">К/с</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" name="ks" value="12345678901234567890">
+                </div>
+              </div>
+              
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">БИК</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" name="bik" value="123456789">
+                </div>
+              </div>
+                
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">Почтовый адрес</div>
+                <div class="b-personal-form__input b-main-input">
+                  <textarea class="b-personal-form__input-tall" name="Text1" cols="40" rows="5"></textarea>
+                </div>
+              </div>
+
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">Юридический адрес</div>
+                <div class="b-personal-form__input b-main-input">
+                  <textarea class="b-personal-form__input-tall" name="Text1" cols="40" rows="5"></textarea>
+                </div>
+              </div>
+
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">ОГРН</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" class="no-validation">
+                </div>
+              </div>
+
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">ФИО директора</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" class="no-validation">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="b-personal-form__requisites-content-all b-personal-form__requisites-individual">
+
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">ФИО</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input class="b-personal-form__input-individual-name" type="text" name="individual-name" value="Bruce Wayne Anderson">
+                </div>
+              </div>
+
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">ИНН</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" name="individual-inn" value="123456789012">
+                </div>
+              </div>
+              
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">Р/с</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" name="individual-rs" value="12345678901234567890">
+                </div>
+              </div>
+                            
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">К/с</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" name="individual-ks" value="12345678901234567890">
+                </div>
+              </div>
+              
+              
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">БИК</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" name="individual-bik" value="123456789">
+                </div>
+              </div>
+                            
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">Почтовый адрес</div>
+                <div class="b-personal-form__input b-main-input">
+                  <textarea class="b-personal-form__input-tall" name="Text1" cols="40" rows="5"></textarea>
+                </div>
+              </div>
+
+                            
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">Юридический адрес</div>
+                <div class="b-personal-form__input b-main-input">
+                  <textarea class="b-personal-form__input-tall" name="Text1" cols="40" rows="5"></textarea>
+                </div>
+              </div>
+
+              <div class="b-personal-form__line">
+                <div class="b-personal-form__input-label">ОГРН</div>
+                <div class="b-personal-form__input b-main-input">
+                  <input type="text" class="no-validation">
+                </div>
+              </div>
+
+              
+            </div>
+
+          </div>
+
+          <div class="b-personal-data__btn-wrapper">
+            <div class="b-personal-data__btn b-personal-data__btn-requisites js-slide-toggle" data-buttontext=".b-personal-data__btn-requisites-text" data-slidecontext=".b-personal-data__item"
+             data-slidetoggle=".b-personal-form__requisites">
+            <span class="b-personal-data__btn-requisites-text">Добавить реквизиты компании</span></div>
+          </div>
+
+          <div class="b-personal-form__passw">
+            <div class="b-personal-form__topic">Сменить пароль</div>
+            <div class="b-personal-form__line">
+              <div class="b-personal-form__input-label">Старый</div>
+              <div class="b-personal-form__input b-main-input">
+                <input type="password" name="old-password" value="">
+              </div>
+            </div>
+            <div class="b-personal-form__line">
+              <div class="b-personal-form__input-label">Новый пароль</div>
+              <div class="b-personal-form__input b-main-input">
+                <input type="password" name="new-password" value="">
+              </div>
+            </div>
+            <div class="b-personal-form__line">
+              <div class="b-personal-form__input-label">Повторить новый</div>
+              <div class="b-personal-form__input b-main-input">
+                <input type="password" name="repeat-password" value="">
+              </div>
+            </div>
+          </div>
+
+          <div class="b-personal-data__btn-wrapper">
+            <div class="b-personal-data__btn b-personal-data__btn-passw js-slide-toggle" data-buttontext=".b-personal-data__btn-passw-text" data-slidecontext=".b-personal-data__item" 
+            data-slidetoggle=".b-personal-form__passw">
+              <span class="b-personal-data__btn-passw-text">Сменить пароль</span>
+            </div>
+          </div>
+
+          <div class="b-personal-data__btn-wrapper">
+            <div class="b-personal-data__btns">
+              <div class="b-personal-data__save-btn b-main-button">
+                <button type="submit" data-error="Исправьте ошибки в полях формы">Сохранить изменения</button>
+              </div>
+
+              <div class="b-personal-data__delete-btn b-personal-data__delete-btn-requisites js-magnific"><a href="#b-delete-requisites">Удалить реквизиты</a></div>
+
+              <div class="b-personal-data__delete-btn js-magnific"><a href="#b-delete-account">Удалить аккаунт</a></div>
+
+            </div>
+          </div>
+          
+        </form>
+      </div>
+      <div class="b-personal-data__item">
+
+        <div class="b-card-list">
+          <nav>
+            <div><span class="b-card-list__item-active">Настройки профиля</span></div>
+            <div><a class="b-card-list__item" href="">Баланс и статистика</a></div>
+            <div><a class="b-card-list__item" href="">Партнерская программа</a></div>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
