@@ -1,0 +1,38 @@
+{% set title = "Подтверждение регистрации" %}
+{% set header_logo = "sa" %}
+{% set auth = 1 %}
+{% set layout = "email-verification" %}
+{% set top_h1 = 1 %}
+
+{% extends "src/views/layout/main.njk" %}
+
+{% block content %}
+<section class="b-email-verification b-projects">
+<div class="b-email-verification__container b-projects__container">
+
+		<div class="b-email-verification__title">
+			Проверьте свою электронную почту
+		</div>
+
+		<div class="b-email-verification__text"> 
+			Мы отправили вам на email@site.ru ссылку для активации аккаунта.
+			<h3 class="b-email-verification__list-header"> Не можете найти письмо с подтверждением? </h3>
+			<ol class="b-email-verification__list">
+				<li><span class="b-email-verification__list-item">Проверьте правильность адреса.</span></li>
+				<li><span class="b-email-verification__list-item">Проверьте папку Спам.</span></li>
+				<li><a class="b-email-verification__list-item">Отправьте запрос ещё раз.</a></li>
+				<li><span class="b-email-verification__list-item">Обратитесь в службу поддержки.</span></li>
+			</ol>
+		</div>
+
+		<svg class="b-email-verification__icon">
+			<use xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="images/icon/svg-sprite/symbol/svg/sprite.symbol.svg#icon-letter"></use>
+		</svg>
+
+
+</div>
+</section>
+
+{% endblock %}
+
+{% block extjs %}{% endblock %}

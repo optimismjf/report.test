@@ -1,0 +1,16 @@
+{% set title = 'Дубликаты Description' %}
+{% set header_class = "reports-header" %}
+{% set header_logo = "sa" %}
+{% set auth = 1 %}
+{% set layout = "report" %}
+
+{% extends "src/views/layout/main.njk" %}
+
+{% block content %}
+
+<div class="b-inreports" id="content">
+	{% include "src/views/parts/aside_errors.njk" %}
+	<main class="b-inreports__main"></main>
+</div>
+
+{% endblock %}

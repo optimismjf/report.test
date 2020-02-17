@@ -1,0 +1,18 @@
+{% set title = 'Сканируем страницы сайта' %}
+{% set header_class = "reports-header" %}
+{% set header_logo = "sa" %}
+{% set auth = 1 %}
+{% set layout = "report" %}
+{% set in_process = 1 %}
+
+{% extends "src/views/layout/main.njk" %}
+
+{% block content %}
+<div class="b-inreports" id="content">
+	{% include "src/views/parts/aside.njk" %}
+	<main class="b-inreports__main">
+		<h1 class="b-inreports__main-name in-process">Сканируем страницы сайта 100 <span>/ 5000</span></h1>
+		<img src="/images/icon/in_process_icon.svg" alt="Сканируем страницы сайта" class="in-process__icon">
+	</main>
+</div>
+{% endblock %}

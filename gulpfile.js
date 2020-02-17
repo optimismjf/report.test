@@ -17,18 +17,17 @@ var gulp 		 = require('gulp'), // Подключаем Gulp
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
   sourcemaps = require('gulp-sourcemaps');
 
-
 gulp.task('sass', function(){ // Создаем таск Sass
-  return src('marmelad/styles/*.sass') // Берем источник
+  return src('src/styles/*.sass') // Берем источник
 
     .pipe(sourcemaps.init())
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
-/*		.pipe(autoprefixer({
-	      browsers: ['last 15 versions'],
-	      cascade: false
-	    })) // Создаем префиксы*/
+		// .pipe(autoprefixer({
+	  //     browsers: ['last 15 versions'],
+	  //     cascade: false
+	  //   })) // Создаем префиксы
     .pipe(sourcemaps.write())
-		.pipe(dest('static/css')) // Выгружаем результата в папку app/css
+		.pipe(dest('build/css')) // Выгружаем результата в папку app/css
     .pipe(browserSync.stream());
 });
 
@@ -45,68 +44,48 @@ gulp.task ('sprite', function () {
         mode: { symbol: true }
     };
 
-    return src('static/images/icon/svg-sprite/*.svg'/*,{ cwd: 'images/svg' }*/)
+    return src('build/images/icon/svg-sprite/*.svg'/*,{ cwd: 'images/svg' }*/)
         .pipe(svgSprite(config))
-        .pipe(dest('static/images/icon/svg-sprite/'));
+        .pipe(dest('build/images/icon/svg-sprite/'));
 });
 
 gulp.task("webp", function () {
-    return src("static/images/**/*.{png,jpg}")
+    return src("build/images/**/*.{png,jpg}")
         .pipe(webp({quality: 100}))
-        .pipe(dest("static/images/webp"));
+        .pipe(dest("build/images/webp"));
 });
 
 gulp.task('nunjucks', function() {
-  return src('marmelad/views/*.njk')
+  return src('src/views/*.njk')
     .pipe(njkRender())
     .pipe(prettify({
       indent_size : 4 // размер отступа - 4 пробела
     }))
-    .pipe(dest('static'));
+    .pipe(dest('build'));
 });
 
 gulp.task('browser-sync', function() {
 
     browserSync.init({
         server: {
-            baseDir: "./static",
-            index: "projects_test.html"
+            baseDir: "./build",
+            index: "invoices.html"
         }
     });
 
-    watch('marmelad/styles/*.sass', parallel('sass'));
-    watch('marmelad/styles/ui-kits/*.sass', parallel('sass'));
-    watch('marmelad/styles/*.scss', parallel('sass'));
-    watch('static/images/icon/svg-sprite/*.svg', parallel('sprite'));
-    watch('marmelad/**/*.styl', parallel('stylus'));
-    watch('marmelad/views/**/*.njk', parallel('nunjucks'));
-    browserSync.watch('static/**/*.*').on('change', browserSync.reload);
+    watch('src/styles/*.sass', parallel('sass'));
+    watch('src/styles/ui-kits/*.sass', parallel('sass'));
+    watch('src/styles/*.scss', parallel('sass'));
+    watch('build/images/icon/svg-sprite/*.svg', parallel('sprite'));
+    watch('src/views/**/*.njk', parallel('nunjucks'));
+    browserSync.watch('build/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('stylus', function() {
-  return src('marmelad/styles/_import-legacy.styl')
-    .pipe(sourcemaps.init())
-    .pipe(plumber({
-      errorHandler: notify.onError()
-    }))
-    .pipe(stylus({
-      use: nib(),
-      compress: false,
-    }))
-    .pipe(autoprefixer({
-      browsers: ['last 15 versions'],
-      cascade: false
-    }))
-    .pipe(sourcemaps.write())
-    .pipe(dest('static/css'))
-    .pipe(notify('Stylus SUCCESS'));
-});
- 
 gulp.task('deploy', async function () {
 
 	// Файлы для копирования по ftp
 	var globs = [
-	    'static/**/*.*'
+	    'build/**/*.*'
 	],
 
 	conn = ftp.create({
@@ -119,6 +98,6 @@ gulp.task('deploy', async function () {
     .pipe( conn.dest( '/public_html/m.kolyadin' ) );
 });
 
-gulp.task('watch', parallel('browser-sync', 'sass', 'stylus', 'sprite', 'nunjucks'));
+gulp.task('watch', parallel('browser-sync', 'sass', 'sprite', 'nunjucks'));
 
-gulp.task('default', parallel('watch'));
+ gulp.task('default', parallel('watch'));
